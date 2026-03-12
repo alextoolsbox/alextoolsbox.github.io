@@ -30,11 +30,11 @@ max-width:900px;
 margin:auto;
 display:flex;
 align-items:center;
-gap:15px;
+gap:12px;
 }
 
 .logo{
-width:40px;
+height:32px;
 }
 
 .container{
@@ -74,19 +74,6 @@ margin-top:20px;
 background:#4c44d4;
 }
 
-.box{
-background:#f7f8fc;
-padding:22px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.steps{
-background:#f0f2fa;
-padding:20px;
-border-radius:10px;
-}
-
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -101,20 +88,22 @@ border-radius:10px;
 text-align:center;
 }
 
-.feature-icon{
-font-size:30px;
-}
-
-.faq{
-background:#fafafa;
+.steps{
+background:#f0f2fa;
 padding:20px;
 border-radius:10px;
-margin-top:20px;
 }
 
 .tip{
 background:#eaf0ff;
 padding:18px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.faq{
+background:#fafafa;
+padding:20px;
 border-radius:10px;
 margin-top:20px;
 }
@@ -136,7 +125,7 @@ text-align:center;
 
 <div class="header-container">
 
-<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Revolut_logo_icon.png">
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Revolut_logo.svg">
 
 <b>Guida Revolut</b>
 
@@ -155,7 +144,7 @@ Revolut è uno dei conti digitali più diffusi in Europa. In questa guida trovi 
 <h2>Cos'è Revolut</h2>
 
 <p>
-Revolut è un conto digitale con carta associata che può essere gestito direttamente da smartphone tramite app. È molto utilizzato per pagamenti online, viaggi all'estero e gestione quotidiana del denaro.
+Revolut è un conto digitale con carta associata che può essere gestito direttamente da smartphone tramite app.
 </p>
 
 <h2>Vantaggi di Revolut</h2>
@@ -163,27 +152,23 @@ Revolut è un conto digitale con carta associata che può essere gestito diretta
 <div class="features">
 
 <div class="feature">
-<div class="feature-icon">💳</div>
-<b>Carta virtuale immediata</b>
-<p>Puoi pagare online subito dopo l'apertura del conto.</p>
+💳
+<p><b>Carta virtuale immediata</b></p>
 </div>
 
 <div class="feature">
-<div class="feature-icon">🌍</div>
-<b>Pagamenti all'estero</b>
-<p>Ideale per viaggi e acquisti internazionali.</p>
+🌍
+<p><b>Pagamenti all'estero</b></p>
 </div>
 
 <div class="feature">
-<div class="feature-icon">📱</div>
-<b>App intuitiva</b>
-<p>Gestisci tutto direttamente dal tuo smartphone.</p>
+📱
+<p><b>App semplice da usare</b></p>
 </div>
 
 <div class="feature">
-<div class="feature-icon">🔔</div>
-<b>Notifiche istantanee</b>
-<p>Ricevi notifiche per ogni pagamento.</p>
+🔔
+<p><b>Notifiche istantanee</b></p>
 </div>
 
 </div>
@@ -192,26 +177,42 @@ Revolut è un conto digitale con carta associata che può essere gestito diretta
 
 <p>
 Revolut offre periodicamente una promozione chiamata <b>"invita un amico"</b>.  
-Quando una persona si registra tramite un link invito e completa alcuni passaggi richiesti dall'app, chi ha condiviso il link può ricevere una ricompensa.
+Se una persona si registra tramite un link invito e completa alcuni passaggi richiesti dall'app, chi ha condiviso il link può ricevere una ricompensa.
 </p>
 
 <div class="tip">
-Le condizioni della promozione possono cambiare nel tempo, quindi è sempre consigliabile verificare i dettagli nell'app Revolut.
+Le condizioni della promozione possono cambiare nel tempo.
 </div>
 
-<h2>Passaggi richiesti per completare la registrazione</h2>
+<h2>Passaggi richiesti</h2>
 
 <div class="steps">
 
 <ol>
 <li>Registrarsi tramite il link invito</li>
-<li>Verificare la propria identità</li>
-<li>Ricaricare il conto Revolut</li>
-<li>Ordinare la carta Revolut</li>
-<li>Effettuare almeno 3 pagamenti con carta</li>
+<li>Verificare identità</li>
+<li>Ricaricare il conto</li>
+<li>Ordinare la carta</li>
+<li>Effettuare 3 pagamenti con carta</li>
 </ol>
 
 </div>
+
+<h2>Come fare i 3 pagamenti senza perdere soldi</h2>
+
+<p>
+Molte persone fanno semplicemente tre piccoli acquisti che avrebbero fatto comunque.
+</p>
+
+<ul>
+<li>pagamento al supermercato</li>
+<li>ricarica telefono</li>
+<li>pagamento online</li>
+</ul>
+
+<p>
+Sono pagamenti normali che non comportano costi extra.
+</p>
 
 <h2>Apri Revolut</h2>
 
@@ -219,7 +220,7 @@ Le condizioni della promozione possono cambiare nel tempo, quindi è sempre cons
 Puoi registrarti utilizzando il link qui sotto:
 </p>
 
-<a class="button" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
+<a class="button" onclick="trackClick()" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
 Apri Revolut
 </a>
 
@@ -228,26 +229,33 @@ Apri Revolut
 <div class="faq">
 
 <p><b>Serve la carta fisica?</b><br>
-Di solito è necessario ordinarla per completare la promozione.</p>
+Di solito sì.</p>
 
 <p><b>I pagamenti devono essere reali?</b><br>
-Sì, devono essere normali acquisti effettuati con la carta Revolut.</p>
+Sì, devono essere normali acquisti.</p>
 
 <p><b>Il conto Revolut è gratuito?</b><br>
-Revolut offre diversi piani, incluso un piano base gratuito.</p>
+Esiste anche un piano base gratuito.</p>
 
 </div>
 
 <div class="footer">
 
 <p>
-Questa pagina è una guida informativa su come aprire un conto Revolut utilizzando un link invito. Revolut può modificare in qualsiasi momento le condizioni delle promozioni.
+Pagina informativa su come aprire un conto Revolut tramite link invito.
 </p>
 
 </div>
 
 </div>
 
-</body>
+<script>
 
+function trackClick(){
+console.log("Click referral");
+}
+
+</script>
+
+</body>
 </html>
