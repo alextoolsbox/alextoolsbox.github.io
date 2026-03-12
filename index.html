@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aprire Revolut con link invito – Guida completa</title>
+<title>Aprire Revolut con link invito - Guida completa</title>
 
-<meta name="description" content="Guida completa per aprire un conto Revolut tramite link invito e completare correttamente tutti i passaggi richiesti dalla promozione invita un amico.">
+<meta name="description" content="Guida completa per aprire un conto Revolut tramite link invito e completare correttamente tutti i passaggi richiesti.">
 
 <style>
 
 body{
-font-family:Arial, sans-serif;
-background:#f3f5fa;
+font-family:Arial;
 margin:0;
+background:#f4f6fb;
 line-height:1.7;
 }
 
-.hero{
-background:linear-gradient(135deg,#635bff,#8b7fff);
-color:white;
-text-align:center;
-padding:70px 20px;
+/* MENU */
+
+.navbar{
+background:white;
+position:sticky;
+top:0;
+border-bottom:1px solid #eee;
+z-index:100;
 }
 
-.hero img{
-height:60px;
+.nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px;
+}
+
+.nav-logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+}
+
+.nav-logo img{
+height:28px;
+}
+
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#635bff,#8a7fff);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.hero-logo{
+height:50px;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:38px;
+font-size:40px;
 margin-bottom:10px;
 }
 
@@ -40,30 +80,45 @@ font-size:18px;
 opacity:0.9;
 }
 
+.hero-card{
+margin-top:30px;
+height:160px;
+}
+
 .button{
-display:inline-block;
+display:inline-flex;
+align-items:center;
+gap:10px;
 background:white;
 color:#635bff;
-padding:16px 32px;
+padding:16px 28px;
 border-radius:8px;
 font-weight:bold;
 text-decoration:none;
 margin-top:25px;
 }
 
+.button img{
+height:20px;
+}
+
+/* CONTAINER */
+
 .container{
 max-width:900px;
 margin:auto;
 background:white;
-padding:40px;
+padding:50px;
 margin-top:-40px;
 border-radius:10px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 h2{
-margin-top:45px;
+margin-top:50px;
 }
+
+/* FEATURES */
 
 .features{
 display:grid;
@@ -79,138 +134,189 @@ border-radius:10px;
 text-align:center;
 }
 
+/* STEPS */
+
 .steps{
 background:#eef1ff;
 padding:20px;
 border-radius:10px;
 }
 
-.tip{
-background:#e9efff;
-padding:18px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.review{
-background:#f9fafc;
-padding:20px;
-border-radius:10px;
-margin-top:20px;
-}
+/* CTA */
 
 .cta{
 text-align:center;
 margin-top:40px;
 }
 
+/* FOOTER */
+
 .footer{
 text-align:center;
-margin-top:50px;
+margin-top:60px;
 font-size:14px;
 color:#777;
 }
 
 </style>
 
+<!-- FAQ SEO -->
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"Il conto Revolut è gratuito?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Revolut offre diversi piani tra cui un piano base gratuito."
+}
+},
+{
+"@type":"Question",
+"name":"Serve la carta fisica?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Nella maggior parte dei casi è necessario ordinarla per completare la promozione."
+}
+},
+{
+"@type":"Question",
+"name":"I pagamenti devono essere reali?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sì, devono essere normali acquisti effettuati con la carta Revolut."
+}
+}
+]
+}
+</script>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="nav-container">
+
+<div class="nav-logo">
+
+<img src="revolut-logo.svg">
+
+<span>Guida Revolut</span>
+
+</div>
+
+<div class="nav-links">
+
+<a href="#cos-e">Cos'è</a>
+<a href="#vantaggi">Vantaggi</a>
+<a href="#guida">Guida</a>
+<a href="#faq">FAQ</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HERO -->
+
 <div class="hero">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Revolut_logo.svg">
+<img class="hero-logo" src="revolut-logo.svg">
 
 <h1>Aprire Revolut con link invito</h1>
 
-<p>Guida completa per registrarsi su Revolut e completare i passaggi richiesti.</p>
+<p>Guida semplice per registrarsi e completare tutti i passaggi richiesti.</p>
 
-<a class="button" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
+<img class="hero-card" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Revolut_card.jpg">
+
+<br>
+
+<a class="button" onclick="trackClick()" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
+
+<img src="Revolut_R.svg">
+
 Apri Revolut
+
 </a>
 
 </div>
 
 <div class="container">
 
-<h2>Cos'è Revolut</h2>
+<h2 id="cos-e">Cos'è Revolut</h2>
 
 <p>
-Revolut è un conto digitale con carta di pagamento che può essere gestito completamente tramite smartphone. A differenza dei conti bancari tradizionali, Revolut è stato progettato come servizio fintech pensato per semplificare pagamenti, trasferimenti e gestione delle spese quotidiane.
+Revolut è un conto digitale con carta che può essere gestito completamente tramite smartphone. A differenza dei conti bancari tradizionali, Revolut è progettato come servizio fintech per semplificare pagamenti e gestione delle spese quotidiane.
 </p>
 
 <p>
-Dopo l'apertura del conto è possibile utilizzare una carta virtuale immediata per pagamenti online, richiedere una carta fisica e controllare tutte le operazioni direttamente dall'applicazione mobile.
+Dopo l'apertura del conto è possibile utilizzare una carta virtuale immediata per pagamenti online e richiedere una carta fisica.
 </p>
 
-<p>
-Grazie alla sua semplicità di utilizzo e alle numerose funzionalità disponibili nell'app, Revolut è diventato uno dei servizi finanziari digitali più utilizzati in Europa.
-</p>
-
-<h2>Perché molte persone utilizzano Revolut</h2>
+<h2 id="vantaggi">Perché usare Revolut</h2>
 
 <div class="features">
 
 <div class="card">
+
 💳
+
 <p><b>Carta virtuale immediata</b></p>
-<p>Dopo l'apertura del conto puoi iniziare subito a pagare online.</p>
+
 </div>
 
 <div class="card">
+
 🌍
+
 <p><b>Pagamenti all'estero</b></p>
-<p>Molto utilizzato per viaggi e acquisti internazionali.</p>
+
 </div>
 
 <div class="card">
+
 📱
+
 <p><b>App intuitiva</b></p>
-<p>Tutte le operazioni sono gestite direttamente dallo smartphone.</p>
+
 </div>
 
 <div class="card">
+
 🔔
+
 <p><b>Notifiche in tempo reale</b></p>
-<p>Ricevi una notifica per ogni pagamento effettuato.</p>
-</div>
 
 </div>
 
-<h2>Come funziona il programma invita un amico</h2>
-
-<p>
-Revolut offre periodicamente una promozione chiamata <b>"Invita un amico"</b>. Gli utenti che hanno già un conto Revolut possono condividere un link invito con altre persone.
-</p>
-
-<p>
-Se una persona si registra tramite il link invito e completa alcuni passaggi richiesti dalla promozione, Revolut può riconoscere una ricompensa a chi ha condiviso il link.
-</p>
-
-<div class="tip">
-Le condizioni della promozione possono cambiare nel tempo. È sempre consigliabile verificare i dettagli direttamente nell'app Revolut.
 </div>
 
-<h2>Passaggi richiesti per completare la registrazione</h2>
+<h2 id="guida">Passaggi richiesti</h2>
 
 <div class="steps">
 
 <ol>
+
 <li>Registrarsi tramite il link invito</li>
-<li>Verificare la propria identità caricando un documento</li>
-<li>Ricaricare il conto Revolut</li>
-<li>Ordinare la carta Revolut</li>
-<li>Effettuare alcuni pagamenti con la carta</li>
+<li>Verificare identità</li>
+<li>Ricaricare il conto</li>
+<li>Ordinare la carta</li>
+<li>Effettuare pagamenti con carta</li>
 
 </ol>
 
 </div>
 
-<h2>Come fare i pagamenti richiesti</h2>
-
-<p>
-I pagamenti richiesti dalla promozione sono semplicemente normali acquisti effettuati con la carta Revolut.
-</p>
+<h2>Come fare i pagamenti</h2>
 
 <p>
 Molte persone utilizzano la carta Revolut per spese quotidiane come:
@@ -224,40 +330,52 @@ Molte persone utilizzano la carta Revolut per spese quotidiane come:
 
 </ul>
 
-<p>
-In questo modo i pagamenti richiesti dalla promozione coincidono con spese che si farebbero comunque.
-</p>
-
-<h2>È sicuro usare Revolut?</h2>
-
-<p>
-Revolut è una società fintech che offre servizi finanziari digitali utilizzati da milioni di utenti in Europa. L'app permette di controllare tutte le operazioni in tempo reale e gestire facilmente le impostazioni della carta.
-</p>
-
-<h2>Recensioni utenti</h2>
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-Molte persone utilizzano Revolut per la comodità dell'app e la possibilità di gestire facilmente pagamenti e spese quotidiane.
-</div>
-
 <div class="cta">
 
-<a class="button" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
+<a class="button" onclick="trackClick()" href="https://revolut.com/referral/?referral-code=remoli!MAR1-26-AR-L1&geo-redirect">
+
+<img src="Revolut_R.svg">
+
 Apri Revolut
+
 </a>
 
 </div>
 
+<h2 id="faq">Domande frequenti</h2>
+
+<p><b>Il conto Revolut è gratuito?</b></p>
+<p>Sì, esiste un piano base gratuito.</p>
+
+<p><b>Serve la carta fisica?</b></p>
+<p>Di solito sì per completare la promozione.</p>
+
+<p><b>I pagamenti devono essere reali?</b></p>
+<p>Sì, devono essere normali acquisti.</p>
+
 <div class="footer">
 
-<p>
-Questa pagina è una guida informativa su come aprire un conto Revolut utilizzando un link invito.
-</p>
+<p>Pagina informativa su come aprire un conto Revolut tramite link invito.</p>
 
 </div>
 
 </div>
+
+<script>
+
+function trackClick(){
+
+let count = localStorage.getItem("ref_clicks") || 0;
+
+count++;
+
+localStorage.setItem("ref_clicks",count);
+
+console.log("Referral clicks:",count);
+
+}
+
+</script>
 
 </body>
 </html>
