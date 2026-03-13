@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alextoolsbox.github.io/revolut-guide/sitemap.xml
