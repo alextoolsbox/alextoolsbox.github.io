@@ -70,7 +70,9 @@ margin-left:auto;
 text-decoration:none;
 color:#333;
 font-weight:500;
-font-size:15px;
+display:flex;
+align-items:center;
+gap:4px;
 }
 
 .nav-links a:hover{
