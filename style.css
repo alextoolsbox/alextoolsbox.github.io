@@ -1,171 +1,46 @@
-body{
-font-family:Arial, sans-serif;
-margin:0;
-background:#f4f6fb;
-line-height:1.7;
-}
+/* MENU */
 
-/* BARRA PROMO */
-
-.promo-bar{
-background:#111;
-color:white;
-text-align:center;
-padding:8px;
-font-size:14px;
-}
-
-/* NAVBAR */
-
-.navbar{
-background:white;
-position:sticky;
-top:0;
-border-bottom:1px solid #eee;
-z-index:100;
-}
-
-.nav-container{
-max-width:1100px;
-margin:auto;
+.nav-links{
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:15px;
-}
-
-.nav-logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:bold;
-}
-
-.nav-logo img{
-height:30px;
+gap:20px;
 }
 
 .nav-links a{
-margin-left:20px;
 text-decoration:none;
 color:#333;
 font-weight:500;
 }
 
-/* HERO */
+/* DROPDOWN */
 
-.hero{
-background:linear-gradient(135deg,#635bff,#8a7fff);
-color:white;
-text-align:center;
-padding:70px 20px;
+.dropdown{
+position:relative;
 }
 
-.hero-logo{
-height:60px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero-description{
-max-width:750px;
-margin:15px auto;
-font-size:17px;
-}
-
-.button{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#2d2dff;
-color:white;
-padding:14px 28px;
-border-radius:10px;
-font-weight:bold;
-text-decoration:none;
-margin-top:25px;
-}
-
-/* CONTENT */
-
-.container{
-max-width:900px;
-margin:auto;
+.dropdown-menu{
+display:none;
+position:absolute;
+top:35px;
+left:0;
 background:white;
-padding:40px;
-margin-top:-30px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+border:1px solid #eee;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:8px;
+min-width:200px;
+padding:10px 0;
 }
 
-h2{
-margin-top:40px;
-font-size:28px;
+.dropdown-menu a{
+display:block;
+padding:10px 15px;
+margin:0;
 }
 
-p{
-margin:12px 0;
+.dropdown-menu a:hover{
+background:#f4f6fb;
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:18px;
-margin-top:15px;
-}
-
-.card{
-background:#f7f8fc;
-padding:18px;
-border-radius:10px;
-text-align:center;
-}
-
-.steps{
-background:#eef1ff;
-padding:20px;
-border-radius:10px;
-}
-
-.tip{
-background:#e9edff;
-padding:20px;
-border-radius:10px;
-margin-top:15px;
-}
-
-.table{
-width:100%;
-border-collapse:collapse;
-margin-top:15px;
-}
-
-.table td{
-border:1px solid #ddd;
-padding:10px;
-}
-
-.faq{
-background:#f7f8fc;
-padding:20px;
-border-radius:10px;
-margin-top:15px;
-}
-
-.trust{
-background:#f7f8fc;
-padding:20px;
-border-radius:10px;
-margin-top:25px;
-text-align:center;
-}
-
-.footer{
-text-align:center;
-margin-top:50px;
-font-size:14px;
-color:#777;
+.dropdown:hover .dropdown-menu{
+display:block;
 }
