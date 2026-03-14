@@ -43,11 +43,16 @@ padding:15px 20px;
 display:flex;
 align-items:center;
 gap:10px;
-font-weight:bold;
+font-weight:600;
 }
 
 .nav-logo img{
-height:30px;
+height:44px;
+}
+
+.nav-logo span{
+font-size:16px;
+color:#111;
 }
 
 /* MENU */
