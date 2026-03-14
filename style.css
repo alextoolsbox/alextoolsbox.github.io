@@ -98,7 +98,8 @@ gap:4px;
 .dropdown > a::after{
 content:"▾";
 font-size:12px;
-margin-left:4px;
+margin-left:5px;
+margin-right:10px;
 }
 
 .nav-links a:hover{
