@@ -76,10 +76,6 @@ transition:0.3s;
 width:100%;
 }
 
-.arrow{
-font-size:12px;
-margin-left:3px;
-}
 
 /* MENU */
 
@@ -97,6 +93,12 @@ font-weight:500;
 display:flex;
 align-items:center;
 gap:4px;
+}
+
+.dropdown > a::after{
+content:"▾";
+font-size:12px;
+margin-left:4px;
 }
 
 .nav-links a:hover{
