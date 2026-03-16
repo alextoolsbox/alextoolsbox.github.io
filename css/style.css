@@ -382,3 +382,28 @@ transition:transform 0.2s ease, box-shadow 0.2s ease;
 transform:translateY(-3px);
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
+
+/* TABLE */
+
+.plans-table{
+width:100%;
+border-collapse:collapse;
+margin:25px 0;
+font-size:15px;
+}
+
+.plans-table th{
+background:#f5f5f5;
+text-align:left;
+padding:12px;
+border-bottom:2px solid #ddd;
+}
+
+.plans-table td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.plans-table tr:hover{
+background:#fafafa;
+}
