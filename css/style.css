@@ -20,16 +20,10 @@ font-size:14px;
 /* NAVBAR */
 
 .navbar{
-position: fixed;
+position: sticky;
 top: 0;
-left: 0;
-width: 100%;
 z-index: 1000;
 background: white;
-}
-
-body{
-padding-top:80px;
 }
 
 .nav-container{
