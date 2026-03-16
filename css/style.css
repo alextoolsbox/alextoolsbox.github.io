@@ -338,4 +338,30 @@ border-top:1px solid #222;
 padding-top:20px;
 letter-spacing:0.5px;
 }
+.author-box{
+display:flex;
+gap:15px;
+align-items:flex-start;
+margin-top:10px;
+}
 
+.author-photo{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.author-text p{
+margin:5px 0;
+font-size:14px;
+}
+
+.footer-legal{
+margin-top:8px;
+font-size:14px;
+}
+
+.footer-legal a{
+margin-right:15px;
+}
