@@ -27,6 +27,7 @@ z-index:1000;
 
 .navbar{
 background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 .nav-container{
 max-width:1100px;
