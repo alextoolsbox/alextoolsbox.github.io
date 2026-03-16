@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chi sono | AlexToolsBox</title>
+
+<meta name="description" content="Scopri chi c'è dietro AlexToolsBox, un progetto dedicato a guide pratiche su Revolut, strumenti digitali e servizi fintech.">
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("/includes/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+</script>
+
+
+<div class="container">
+
+<h1>Chi c'è dietro AlexToolsBox</h1>
+
+<p>
+Mi chiamo <strong>Alex</strong> e lavoro come consulente IT. Nel mio lavoro mi occupo di tecnologia e sistemi informatici, ma nel tempo ho sviluppato anche un forte interesse per il mondo delle app fintech e degli strumenti digitali che possono semplificare la vita quotidiana.
+</p>
+
+<p>
+Negli anni ho provato diversi servizi online, conti digitali e piattaforme che promettono vantaggi agli utenti. Alcuni sono realmente utili, altri invece sono poco chiari o difficili da capire per chi si avvicina per la prima volta a questo tipo di strumenti.
+</p>
+
+<h2>Perché ho creato AlexToolsBox</h2>
+
+<p>
+AlexToolsBox nasce proprio con l'obiettivo di raccogliere guide semplici e spiegazioni pratiche su alcuni dei servizi digitali più diffusi.
+</p>
+
+<p>
+L'idea è quella di creare un piccolo punto di riferimento dove trovare informazioni chiare su piattaforme come <strong>Revolut</strong>, <strong>Microsoft Rewards</strong> e altri strumenti online utili nella vita digitale.
+</p>
+
+<h2>Come sono scritte le guide</h2>
+
+<p>
+Le guide pubblicate su questo sito sono basate sulla mia esperienza personale con le piattaforme che utilizzo. Cerco sempre di spiegare i passaggi in modo semplice e diretto, evitando tecnicismi inutili e concentrandomi su ciò che è davvero utile sapere.
+</p>
+
+<p>
+L'obiettivo è aiutare chi vuole iniziare a utilizzare questi servizi in modo consapevole e capire meglio come funzionano.
+</p>
+
+<h2>Trasparenza</h2>
+
+<p>
+Alcuni link presenti nel sito possono essere link di invito o link affiliati. Questo significa che potrei ricevere una piccola commissione se decidi di utilizzare i servizi consigliati, senza costi aggiuntivi per te.
+</p>
+
+<p>
+Cerco comunque di consigliare solo strumenti che ho realmente provato o che ritengo utili.
+</p>
+
+</div>
+
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
