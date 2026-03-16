@@ -282,12 +282,9 @@ padding:50px 20px 30px 20px;
 }
 
 .footer-container{
-max-width:1100px;
-margin:auto;
 display:grid;
-grid-template-columns:1.3fr 1fr 1fr;
-gap:60px;
-padding:20px 0;
+grid-template-columns: 2fr 1fr 1fr 1fr;
+gap:40px;
 }
 
 .footer h3{
