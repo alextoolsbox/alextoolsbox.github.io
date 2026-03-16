@@ -19,13 +19,15 @@ font-size:14px;
 
 /* NAVBAR */
 
-.navbar{
-position: sticky;
-top: 0;
-z-index: 1000;
-background: white;
+.site-header{
+position:sticky;
+top:0;
+z-index:1000;
 }
 
+.navbar{
+background:white;
+}
 .nav-container{
 max-width:1100px;
 margin:auto;
