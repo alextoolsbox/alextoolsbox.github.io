@@ -20,12 +20,16 @@ font-size:14px;
 /* NAVBAR */
 
 .navbar{
-background:white;
-position:sticky;
-top:0;
-border-bottom:1px solid #eee;
-z-index:1000;
-width:100%;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background: white;
+}
+
+body{
+padding-top:80px;
 }
 
 .nav-container{
