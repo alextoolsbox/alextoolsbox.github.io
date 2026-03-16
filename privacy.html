@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | AlexToolsBox</title>
+
+<meta name="description" content="Informativa sulla privacy del sito AlexToolsBox.">
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("/includes/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+</script>
+
+
+<div class="container">
+
+<h1>Privacy Policy</h1>
+
+<p>
+La presente informativa descrive le modalità di gestione del sito AlexToolsBox in riferimento al trattamento dei dati personali degli utenti che lo visitano.
+</p>
+
+<p>
+Questa informativa è resa ai sensi del Regolamento UE 2016/679 (GDPR) a coloro che interagiscono con il sito web AlexToolsBox.
+</p>
+
+
+<h2>Dati raccolti</h2>
+
+<p>
+Il sito AlexToolsBox non raccoglie direttamente dati personali degli utenti, ad eccezione di quelli eventualmente forniti volontariamente tramite servizi di terze parti.
+</p>
+
+<p>
+Durante la navigazione alcune informazioni tecniche possono essere raccolte automaticamente dai sistemi informatici e dai servizi utilizzati per il funzionamento del sito.
+</p>
+
+
+<h2>Cookie</h2>
+
+<p>
+Il sito può utilizzare cookie tecnici necessari al corretto funzionamento delle pagine.
+</p>
+
+<p>
+Eventuali servizi di terze parti utilizzati dal sito possono utilizzare cookie o tecnologie simili per migliorare l'esperienza utente o per analisi statistiche.
+</p>
+
+
+<h2>Link esterni</h2>
+
+<p>
+All'interno del sito possono essere presenti link verso siti esterni. AlexToolsBox non è responsabile delle politiche sulla privacy adottate da tali siti.
+</p>
+
+
+<h2>Link affiliati</h2>
+
+<p>
+Alcuni link presenti nel sito possono essere link affiliati o link di invito. Questo significa che l'autore del sito potrebbe ricevere una commissione se l'utente decide di utilizzare i servizi consigliati, senza costi aggiuntivi per l'utente.
+</p>
+
+
+<h2>Aggiornamenti</h2>
+
+<p>
+La presente informativa può essere aggiornata nel tempo per adeguarsi a eventuali modifiche normative o aggiornamenti dei servizi utilizzati dal sito.
+</p>
+
+</div>
+
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
