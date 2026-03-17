@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Deposito senza vincoli Revolut: rendimento e calcolo guadagni | AlexToolsBox</title>
+
+<meta name="description" content="Scopri quanto rende il deposito senza vincoli Revolut e calcola i guadagni in base al capitale e al piano scelto.">
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("/includes/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+</script>
+
+
+<div class="hero">
+
+<h1>Deposito senza vincoli Revolut</h1>
+
+<p class="hero-description">
+Uno dei vantaggi più interessanti di Revolut è il deposito senza vincoli: puoi ottenere un rendimento sul denaro mantenendo la libertà di prelevare quando vuoi.
+</p>
+
+</div>
+
+
+<div class="container">
+
+<h2>Cos'è il deposito senza vincoli Revolut</h2>
+
+<p>
+Il deposito senza vincoli è una funzionalità che permette di ottenere un rendimento sul denaro mantenuto nel conto Revolut, senza dover bloccare i fondi per un periodo prestabilito.
+</p>
+
+<p>
+A differenza dei classici conti deposito, puoi prelevare il denaro in qualsiasi momento senza penali.
+</p>
+
+
+<h2>Quanto rende il deposito Revolut</h2>
+
+<p>
+Il rendimento dipende dal piano Revolut utilizzato. In generale:
+</p>
+
+<ul>
+<li>Standard / Plus: fino a circa 1,5% annuo</li>
+<li>Premium: fino a circa 2% annuo</li>
+<li>Metal: fino a circa 2,25% annuo</li>
+<li>Ultra: fino a circa 2,5% annuo</li>
+</ul>
+
+<p>
+Gli interessi vengono calcolati giornalmente e accreditati direttamente nell'app.
+</p>
+
+
+<h2>Calcola quanto puoi guadagnare</h2>
+
+<p>
+Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
+</p>
+
+<div class="calculator">
+
+<label>Capitale (€):</label><br>
+<input type="number" id="amount" placeholder="Es. 10000"><br><br>
+
+<label>Piano Revolut:</label><br>
+<select id="plan">
+<option value="1.5">Standard / Plus (1.5%)</option>
+<option value="2">Premium (2%)</option>
+<option value="2.25">Metal (2.25%)</option>
+<option value="2.5">Ultra (2.5%)</option>
+</select>
+
+<br><br>
+
+<button onclick="calculate()">Calcola rendimento</button>
+
+<p id="result"></p>
+
+</div>
+
+
+<script>
+function calculate() {
+let amount = document.getElementById("amount").value;
+let rate = document.getElementById("plan").value;
+
+if(amount === "") {
+document.getElementById("result").innerHTML = "Inserisci un importo valido";
+return;
+}
+
+let yearly = (amount * rate) / 100;
+
+document.getElementById("result").innerHTML =
+"Guadagno annuo stimato: <strong>" + yearly.toFixed(2) + "€</strong>";
+}
+</script>
+
+
+<h2>Conviene davvero?</h2>
+
+<p>
+Dalla mia esperienza, il deposito senza vincoli è uno dei motivi principali per cui utilizzare Revolut.
+</p>
+
+<p>
+Il vantaggio principale è la flessibilità: puoi ottenere un rendimento senza bloccare il capitale, mantenendo sempre la possibilità di utilizzare il denaro quando vuoi.
+</p>
+
+<p>
+Con capitali più elevati, i piani superiori diventano più interessanti perché aumentano il rendimento percentuale.
+</p>
+
+<p>
+Questo è semplicemente quello che ho osservato utilizzando Revolut nel tempo: ogni situazione è diversa e dipende sempre da quanto utilizzi il conto e dal capitale che mantieni al suo interno.
+</p>
+
+
+<div class="trust">
+
+<h3>Vuoi provare Revolut?</h3>
+
+<p>
+Puoi aprire gratuitamente un conto Revolut e iniziare subito a utilizzare il deposito senza vincoli.
+</p>
+
+<a class="button" href="/revolut/">
+Vai alla guida per aprire Revolut
+</a>
+
+</div>
+
+</div>
+
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
