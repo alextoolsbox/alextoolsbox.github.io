@@ -91,25 +91,29 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 </select>
 </select>
 
-<label>
+<div class="option-row">
 <input type="checkbox" id="includeCost">
-Considera costo piano nel calcolo
-</label>
+<label for="includeCost">Considera costo piano</label>
+</div>
   
 <br><br>
 <br><br>
 
 <label><strong>Tipo pagamento piano:</strong></label><br>
 
-<label>
+<div class="radio-group">
+
+<label class="radio-item">
 <input type="radio" name="billing" value="monthly" checked>
-Mensile
+<span>Mensile</span>
 </label>
 
-<label>
+<label class="radio-item">
 <input type="radio" name="billing" value="yearly">
-Annuale (scontato)
+<span>Annuale (scontato)</span>
 </label>
+
+</div>
   
 <button onclick="calculate()">Calcola rendimento</button>
 
