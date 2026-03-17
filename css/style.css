@@ -412,7 +412,7 @@ background:#fafafa;
 
 .calculator-box {
 width: 100%;
-max-width: 900px;
+max-width: 100%;
 margin: 15px auto;
 padding: 16px;
 background: #ffffff;
