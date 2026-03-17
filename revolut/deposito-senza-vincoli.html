@@ -8,7 +8,7 @@
 
 <title>Deposito senza vincoli Revolut: rendimento e calcolo guadagni | AlexToolsBox</title>
 
-<meta name="description" content="Scopri quanto rende il deposito senza vincoli Revolut e calcola i guadagni in base al capitale e al piano scelto.">
+<meta name="description" content="Scopri quanto rende il deposito senza vincoli Revolut e calcola i guadagni reali (netto tasse) in base al capitale e al piano.">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -27,13 +27,16 @@ document.getElementById("header").innerHTML = data;
 });
 </script>
 
+<!-- HERO -->
 <div class="hero">
 
 <h1>Deposito senza vincoli Revolut</h1>
 
 <p class="hero-description">
-Uno dei vantaggi più interessanti di Revolut è il deposito senza vincoli: puoi ottenere un rendimento sul denaro mantenendo la libertà di prelevare quando vuoi.
+Scopri quanto puoi guadagnare con Revolut e quale piano conviene davvero in base al tuo capitale.
 </p>
+
+<a href="#calcolatore" class="button">Calcola subito il rendimento</a>
 
 </div>
 
@@ -42,17 +45,17 @@ Uno dei vantaggi più interessanti di Revolut è il deposito senza vincoli: puoi
 <h2>Cos'è il deposito senza vincoli Revolut</h2>
 
 <p>
-Il deposito senza vincoli è una funzionalità che permette di ottenere un rendimento sul denaro mantenuto nel conto Revolut, senza dover bloccare i fondi per un periodo prestabilito.
+Il deposito senza vincoli Revolut permette di ottenere un rendimento sul denaro mantenuto nel conto, senza bloccare i fondi.
 </p>
 
 <p>
-A differenza dei classici conti deposito, puoi prelevare il denaro in qualsiasi momento senza penali.
+A differenza dei conti deposito tradizionali, puoi prelevare quando vuoi senza penali.
 </p>
 
 <h2>Quanto rende il deposito Revolut</h2>
 
 <p>
-Il rendimento dipende dal piano Revolut utilizzato. In generale:
+Il rendimento dipende dal piano Revolut:
 </p>
 
 <ul>
@@ -63,17 +66,17 @@ Il rendimento dipende dal piano Revolut utilizzato. In generale:
 </ul>
 
 <p>
-Gli interessi vengono calcolati giornalmente e accreditati direttamente nell'app.
+Gli interessi sono calcolati giornalmente e accreditati automaticamente.
 </p>
 
 <h2>Calcola quanto puoi guadagnare</h2>
 
 <p>
-Inserisci il capitale e seleziona il piano per stimare il rendimento.
+Con questo calcolatore puoi stimare il rendimento reale (al netto del 26% di tasse) e capire quale piano conviene davvero.
 </p>
 
 <!-- CALCOLATORE -->
-<div class="calculator-box">
+<div id="calcolatore" class="calculator-box">
 
 <h3>Calcolatore rendimento Revolut</h3>
 
@@ -116,19 +119,19 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento.
 <h2>Conviene davvero?</h2>
 
 <p>
-Dalla mia esperienza, il deposito senza vincoli è uno dei motivi principali per cui utilizzare Revolut.
+Dalla mia esperienza, il deposito senza vincoli è uno dei motivi principali per usare Revolut.
 </p>
 
 <p>
-Il vantaggio principale è la flessibilità: puoi ottenere un rendimento senza bloccare il capitale, mantenendo sempre la possibilità di utilizzare il denaro quando vuoi.
+Il vantaggio principale è la flessibilità: rendimento senza bloccare il capitale.
 </p>
 
 <p>
-Con capitali più elevati, i piani superiori diventano più interessanti perché aumentano il rendimento percentuale.
+Con capitali più alti, i piani superiori diventano più interessanti.
 </p>
 
 <p>
-Questo è semplicemente quello che ho osservato utilizzando Revolut nel tempo: ogni situazione è diversa e dipende sempre da quanto utilizzi il conto e dal capitale che mantieni al suo interno.
+Questo è quello che ho osservato nel tempo: ogni situazione è diversa.
 </p>
 
 <div class="trust">
@@ -136,7 +139,7 @@ Questo è semplicemente quello che ho osservato utilizzando Revolut nel tempo: o
 <h3>Vuoi provare Revolut?</h3>
 
 <p>
-Puoi aprire gratuitamente un conto Revolut e iniziare subito a utilizzare il deposito senza vincoli.
+Puoi aprire gratuitamente un conto Revolut e iniziare subito.
 </p>
 
 <a class="button" href="/revolut/">
@@ -145,7 +148,7 @@ Vai alla guida per aprire Revolut
 
 </div>
 
-</div> <!-- FINE CONTAINER -->
+</div>
 
 <div id="footer"></div>
 
@@ -176,26 +179,19 @@ document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
-// ===== CALCOLO PIANO SELEZIONATO =====
 let yearlyGross = (amount * rate) / 100;
 let yearlyNet = yearlyGross * (1 - 0.26);
 
 let cost = 0;
 
 if(includeCost){
-if (billing === "monthly") {
-cost = monthlyCost * 12;
-} else {
-cost = yearlyCostPlan;
-}
+cost = billing === "monthly" ? monthlyCost * 12 : yearlyCostPlan;
 }
 
 let finalYearly = yearlyNet - cost;
 let monthly = finalYearly / 12;
 let daily = finalYearly / 365;
 
-
-// ===== CALCOLO MIGLIOR PIANO =====
 let plans = [
   { name: "Standard / Plus", rate: 1.5, monthly: 0, yearly: 0 },
   { name: "Premium", rate: 2, monthly: 9.99, yearly: 100 },
@@ -208,44 +204,33 @@ let bestValue = -Infinity;
 
 plans.forEach(p => {
 
-  // se NON consideri il costo → ignora piani a pagamento
-  if(!includeCost && p.monthly > 0){
-    return;
-  }
+if(!includeCost && p.monthly > 0) return;
 
-  let gross = (amount * p.rate) / 100;
-  let net = gross * (1 - 0.26);
+let gross = (amount * p.rate) / 100;
+let net = gross * (1 - 0.26);
 
-  let planCost = 0;
+let planCost = includeCost
+  ? (billing === "monthly" ? p.monthly * 12 : p.yearly)
+  : 0;
 
-  if(includeCost){
-    if (billing === "monthly") {
-      planCost = p.monthly * 12;
-    } else {
-      planCost = p.yearly;
-    }
-  }
+let final = net - planCost;
 
-  let final = net - planCost;
-
-  if(final > bestValue){
-    bestValue = final;
-    bestPlan = p.name;
-  }
+if(final > bestValue){
+bestValue = final;
+bestPlan = p.name;
+}
 
 });
 
-// ===== CONFRONTO =====
 let isBest = Math.abs(finalYearly - bestValue) < 0.01;
 let difference = bestValue - finalYearly;
 
-// ===== MESSAGGIO =====
 let message = "";
 let color = "";
 
 if(!includeCost){
-  message = "ℹ️ Attiva 'Includi costo piano' per vedere quale piano conviene davvero";
-  color = "#6b7280";
+  message = "💡 Attiva 'Includi costo piano' per vedere quale conviene davvero";
+  color = "#2563eb";
 }
 else if(isBest){
   message = "✅ Questo è il piano migliore per questo capitale";
@@ -256,7 +241,6 @@ else{
   color = "#f59e0b";
 }
 
-// ===== OUTPUT =====
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
@@ -268,17 +252,18 @@ document.getElementById("result").innerHTML = `
 ${message}
 </p>
 
-${includeCost ? `
-<p><small>
-Costo piano: ${cost.toFixed(2)} € / anno
-</small></p>
-` : ""}
+${includeCost ? `<p><small>Costo piano: ${cost.toFixed(2)} € / anno</small></p>` : ""}
 
 <hr>
 
-<p><small>
-Calcolo netto (26% tasse). Valori indicativi.
-</small></p>
+<p><small>Calcolo netto (26% tasse). Valori indicativi.</small></p>
+
+${includeCost && !isBest ? `
+<a class="button" href="/revolut/" style="margin-top:10px;">
+Attiva ${bestPlan}
+</a>
+` : ""}
+
 `;
 }
 </script>
