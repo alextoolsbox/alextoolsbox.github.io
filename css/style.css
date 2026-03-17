@@ -446,10 +446,15 @@ font-size: 14px;
 
 /* checkbox row FIX */
 .option-row {
+margin: 4px 0 6px;
+}
+
+.checkbox-inline {
 display: flex;
 align-items: center;
-gap: 8px; /* distanza controllata */
-margin: 4px 0 6px;
+gap: 6px;
+font-size: 14px;
+cursor: pointer;
 }
 
 .option-row input {
