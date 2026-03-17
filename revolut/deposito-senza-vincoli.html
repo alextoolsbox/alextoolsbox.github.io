@@ -211,15 +211,20 @@ plans.forEach(p => {
   let gross = (amount * p.rate) / 100;
   let net = gross * (1 - 0.26);
 
-  let planCost = 0;
+ // se NON consideri il costo → ignora i piani a pagamento
+if(!includeCost && p.monthly > 0){
+  return; // salta Premium, Metal, Ultra
+}
 
-  if(includeCost){
-    if (billing === "monthly") {
-      planCost = p.monthly * 12;
-    } else {
-      planCost = p.yearly;
-    }
+let planCost = 0;
+
+if(includeCost){
+  if (billing === "monthly") {
+    planCost = p.monthly * 12;
+  } else {
+    planCost = p.yearly;
   }
+}
 
   let final = net - planCost;
 
