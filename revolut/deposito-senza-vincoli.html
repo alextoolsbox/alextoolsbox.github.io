@@ -27,7 +27,6 @@ document.getElementById("header").innerHTML = data;
 });
 </script>
 
-
 <div class="hero">
 
 <h1>Deposito senza vincoli Revolut</h1>
@@ -37,7 +36,6 @@ Uno dei vantaggi più interessanti di Revolut è il deposito senza vincoli: puoi
 </p>
 
 </div>
-
 
 <div class="container">
 
@@ -50,7 +48,6 @@ Il deposito senza vincoli è una funzionalità che permette di ottenere un rendi
 <p>
 A differenza dei classici conti deposito, puoi prelevare il denaro in qualsiasi momento senza penali.
 </p>
-
 
 <h2>Quanto rende il deposito Revolut</h2>
 
@@ -69,13 +66,13 @@ Il rendimento dipende dal piano Revolut utilizzato. In generale:
 Gli interessi vengono calcolati giornalmente e accreditati direttamente nell'app.
 </p>
 
-
 <h2>Calcola quanto puoi guadagnare</h2>
 
 <p>
-Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
+Inserisci il capitale e seleziona il piano per stimare il rendimento.
 </p>
 
+<!-- CALCOLATORE -->
 <div class="calculator-box">
 
 <h3>Calcolatore rendimento Revolut</h3>
@@ -114,10 +111,51 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 
 <div id="result" class="result-box"></div>
 
-</div>  
+</div>
+
+<h2>Conviene davvero?</h2>
+
+<p>
+Dalla mia esperienza, il deposito senza vincoli è uno dei motivi principali per cui utilizzare Revolut.
+</p>
+
+<p>
+Il vantaggio principale è la flessibilità: puoi ottenere un rendimento senza bloccare il capitale, mantenendo sempre la possibilità di utilizzare il denaro quando vuoi.
+</p>
+
+<p>
+Con capitali più elevati, i piani superiori diventano più interessanti perché aumentano il rendimento percentuale.
+</p>
+
+<p>
+Questo è semplicemente quello che ho osservato utilizzando Revolut nel tempo: ogni situazione è diversa e dipende sempre da quanto utilizzi il conto e dal capitale che mantieni al suo interno.
+</p>
+
+<div class="trust">
+
+<h3>Vuoi provare Revolut?</h3>
+
+<p>
+Puoi aprire gratuitamente un conto Revolut e iniziare subito a utilizzare il deposito senza vincoli.
+</p>
+
+<a class="button" href="/revolut/">
+Vai alla guida per aprire Revolut
+</a>
 
 </div>
 
+</div> <!-- FINE CONTAINER -->
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
 
 <script>
 function calculate() {
@@ -132,7 +170,6 @@ let yearlyCostPlan = parseFloat(select.options[select.selectedIndex].dataset.yea
 
 let includeCost = document.getElementById("includeCost").checked;
 
-// billing
 let billing = document.querySelector('input[name="billing"]:checked').value;
 
 if (isNaN(amount) || amount <= 0) {
@@ -140,12 +177,10 @@ document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
-// rendimento
 let yearlyGross = (amount * rate) / 100;
 let tax = yearlyGross * 0.26;
 let yearlyNet = yearlyGross - tax;
 
-// costo piano
 let cost = 0;
 
 if(includeCost) {
@@ -156,12 +191,10 @@ cost = yearlyCostPlan;
 }
 }
 
-// risultato finale
 let finalYearly = yearlyNet - cost;
 let monthly = finalYearly / 12;
 let daily = finalYearly / 365;
 
-// output
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
@@ -182,52 +215,6 @@ Calcolo netto (26% tasse). Valori indicativi.
 </small></p>
 `;
 }
-</script>
-
-<h2>Conviene davvero?</h2>
-
-<p>
-Dalla mia esperienza, il deposito senza vincoli è uno dei motivi principali per cui utilizzare Revolut.
-</p>
-
-<p>
-Il vantaggio principale è la flessibilità: puoi ottenere un rendimento senza bloccare il capitale, mantenendo sempre la possibilità di utilizzare il denaro quando vuoi.
-</p>
-
-<p>
-Con capitali più elevati, i piani superiori diventano più interessanti perché aumentano il rendimento percentuale.
-</p>
-
-<p>
-Questo è semplicemente quello che ho osservato utilizzando Revolut nel tempo: ogni situazione è diversa e dipende sempre da quanto utilizzi il conto e dal capitale che mantieni al suo interno.
-</p>
-
-
-<div class="trust">
-
-<h3>Vuoi provare Revolut?</h3>
-
-<p>
-Puoi aprire gratuitamente un conto Revolut e iniziare subito a utilizzare il deposito senza vincoli.
-</p>
-
-<a class="button" href="/revolut/">
-Vai alla guida per aprire Revolut
-</a>
-
-</div>
-
-</div>
-
-
-<div id="footer"></div>
-
-<script>
-fetch("/includes/footer.html")
-.then(response => response.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
 </script>
 
 </body>
