@@ -457,6 +457,10 @@ width: auto !important;
 display: inline-block;
 }
 
+.option-row {
+white-space: nowrap;
+}
+
 .option-row input {
 margin: 0;
 }
