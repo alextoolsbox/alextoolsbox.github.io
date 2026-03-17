@@ -83,12 +83,17 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 
 <label>Piano Revolut:</label><br>
 <select id="plan">
-<option value="1.5">Standard / Plus (1.5%)</option>
-<option value="2">Premium (2%)</option>
-<option value="2.25">Metal (2.25%)</option>
-<option value="2.5">Ultra (2.5%)</option>
+<option value="1.5" data-cost="0">Standard / Plus (1.5%)</option>
+<option value="2" data-cost="9.99">Premium (2%)</option>
+<option value="2.25" data-cost="15.99">Metal (2.25%)</option>
+<option value="2.5" data-cost="45">Ultra (2.5%)</option>
 </select>
 
+<label>
+<input type="checkbox" id="includeCost">
+Considera costo piano nel calcolo
+</label>
+  
 <br><br>
 
 <button onclick="calculate()">Calcola rendimento</button>
@@ -102,40 +107,48 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 function calculate() {
 
 let amount = parseFloat(document.getElementById("amount").value);
-let rate = parseFloat(document.getElementById("plan").value);
+let select = document.getElementById("plan");
+let rate = parseFloat(select.value);
+let costMonthly = parseFloat(select.options[select.selectedIndex].dataset.cost);
+let includeCost = document.getElementById("includeCost").checked;
 
 if (isNaN(amount) || amount <= 0) {
 document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
-// rendimento lordo annuo
+// rendimento lordo
 let yearlyGross = (amount * rate) / 100;
 
-// tasse 26%
+// tasse
 let tax = yearlyGross * 0.26;
 
-// netto annuo
+// netto
 let yearlyNet = yearlyGross - tax;
 
-// mensile
-let monthlyNet = yearlyNet / 12;
+// costo piano
+let yearlyCost = costMonthly * 12;
 
-// giornaliero
-let dailyNet = yearlyNet / 365;
+// netto finale
+let finalYearly = includeCost ? (yearlyNet - yearlyCost) : yearlyNet;
+
+// breakdown
+let monthly = finalYearly / 12;
+let daily = finalYearly / 365;
 
 document.getElementById("result").innerHTML = `
-<h3>Risultato stimato (netto)</h3>
+<h3>Risultato stimato</h3>
 
-<p><strong>Annuale:</strong> ${yearlyNet.toFixed(2)} €</p>
-<p><strong>Mensile:</strong> ${monthlyNet.toFixed(2)} €</p>
-<p><strong>Giornaliero:</strong> ${dailyNet.toFixed(2)} €</p>
+<p><strong>Annuale:</strong> ${finalYearly.toFixed(2)} €</p>
+<p><strong>Mensile:</strong> ${monthly.toFixed(2)} €</p>
+<p><strong>Giornaliero:</strong> ${daily.toFixed(2)} €</p>
+
+${includeCost ? `<p><small>Costo piano incluso: ${yearlyCost.toFixed(2)} €/anno</small></p>` : ""}
 
 <hr>
 
 <p><small>
-Calcolo basato su rendimento annuo del ${rate}% e tassazione del 26%.
-Valori indicativi.
+Calcolo netto (26% tasse). Valori indicativi.
 </small></p>
 `;
 }
