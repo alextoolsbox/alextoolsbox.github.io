@@ -194,6 +194,20 @@ cost = yearlyCostPlan;
 let finalYearly = yearlyNet - cost;
 let monthly = finalYearly / 12;
 let daily = finalYearly / 365;
+// CONVIENE?
+let isConvenient = finalYearly > 0;
+
+// BREAK EVEN
+let netRate = rate * (1 - 0.26);
+let breakEven = 0;
+
+if(includeCost && netRate > 0){
+  breakEven = cost / (netRate / 100);
+}
+
+// colore + messaggio
+let color = isConvenient ? "#16a34a" : "#dc2626";
+let message = isConvenient ? "✅ Conviene" : "❌ Non conviene";
 
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
@@ -202,10 +216,26 @@ document.getElementById("result").innerHTML = `
 <p><strong>Mensile:</strong> ${monthly.toFixed(2)} €</p>
 <p><strong>Giornaliero:</strong> ${daily.toFixed(2)} €</p>
 
+<p style="font-weight:bold; color:${color}; margin-top:10px;">
+${message}
+</p>
+
 ${includeCost ? `
 <p><small>
-Costo piano (${billing === "monthly" ? "mensile" : "annuale"}): ${cost.toFixed(2)} € / anno
+Costo piano: ${cost.toFixed(2)} € / anno
 </small></p>
+
+<p><small>
+Break-even: ${breakEven.toFixed(0)} €
+</small></p>
+` : ""}
+
+<hr>
+
+<p><small>
+Calcolo netto (26% tasse). Valori indicativi.
+</small></p>
+`;
 ` : ""}
 
 <hr>
