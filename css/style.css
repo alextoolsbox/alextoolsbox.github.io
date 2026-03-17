@@ -240,6 +240,16 @@ border-radius:10px;
 margin-top:15px;
 }
 
+/* TIP POTENZIATO */
+.tip.highlight {
+background: #eef2ff;
+border-left: 4px solid #635bff;
+padding: 15px 18px;
+border-radius: 8px;
+margin-bottom: 20px;
+font-size: 15px;
+}
+
 /* TABLE */
 
 .table{
