@@ -93,28 +93,53 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 
 <button onclick="calculate()">Calcola rendimento</button>
 
-<p id="result"></p>
+<div id="result" class="result-box"></div>
 
 </div>
 
 
 <script>
 function calculate() {
-let amount = document.getElementById("amount").value;
-let rate = document.getElementById("plan").value;
 
-if(amount === "") {
+let amount = parseFloat(document.getElementById("amount").value);
+let rate = parseFloat(document.getElementById("plan").value);
+
+if (isNaN(amount) || amount <= 0) {
 document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
-let yearly = (amount * rate) / 100;
+// rendimento lordo annuo
+let yearlyGross = (amount * rate) / 100;
 
-document.getElementById("result").innerHTML =
-"Guadagno annuo stimato: <strong>" + yearly.toFixed(2) + "€</strong>";
+// tasse 26%
+let tax = yearlyGross * 0.26;
+
+// netto annuo
+let yearlyNet = yearlyGross - tax;
+
+// mensile
+let monthlyNet = yearlyNet / 12;
+
+// giornaliero
+let dailyNet = yearlyNet / 365;
+
+document.getElementById("result").innerHTML = `
+<h3>Risultato stimato (netto)</h3>
+
+<p><strong>Annuale:</strong> ${yearlyNet.toFixed(2)} €</p>
+<p><strong>Mensile:</strong> ${monthlyNet.toFixed(2)} €</p>
+<p><strong>Giornaliero:</strong> ${dailyNet.toFixed(2)} €</p>
+
+<hr>
+
+<p><small>
+Calcolo basato su rendimento annuo del ${rate}% e tassazione del 26%.
+Valori indicativi.
+</small></p>
+`;
 }
 </script>
-
 
 <h2>Conviene davvero?</h2>
 
