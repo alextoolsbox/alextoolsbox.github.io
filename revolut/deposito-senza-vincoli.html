@@ -258,9 +258,11 @@ ${includeCost ? `<p><small>Costo piano: ${cost.toFixed(2)} € / anno</small></p
 
 <p><small>Calcolo netto (26% tasse). Valori indicativi.</small></p>
 
-${includeCost && !isBest ? `
+${includeCost ? `
 <a class="button" href="/revolut/" style="margin-top:10px;">
-Attiva ${bestPlan}
+${isBest 
+  ? "Apri Revolut" 
+  : "Passa a " + bestPlan}
 </a>
 ` : ""}
 
