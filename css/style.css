@@ -447,9 +447,13 @@ font-size: 14px;
 /* checkbox row FIX */
 .option-row {
 display: flex;
-justify-content: space-between;
 align-items: center;
+gap: 8px; /* distanza controllata */
 margin: 4px 0 6px;
+}
+
+.option-row input {
+margin-left: 4px;
 }
 
 .option-row label {
