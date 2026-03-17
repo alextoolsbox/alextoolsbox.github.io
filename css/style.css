@@ -446,19 +446,19 @@ font-size: 14px;
 
 /* checkbox row FIX */
 .option-row {
-display: flex;
-align-items: center;
-gap: 6px;          /* distanza controllata */
-margin: 6px 0 8px;
+display: inline-flex !important;
+align-items: center !important;
+gap: 6px !important;
+margin: 6px 0 8px !important;
+width: auto !important;
+}
+
+.option-row span {
+display: inline-block;
 }
 
 .option-row input {
-margin-left: 4px;  /* micro aggiustamento */
-}
-
-.option-row label {
 margin: 0;
-white-space: nowrap;
 }
 
 /* radio inline compatto */
