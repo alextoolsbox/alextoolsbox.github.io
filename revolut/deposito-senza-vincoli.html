@@ -208,23 +208,23 @@ let bestValue = -Infinity;
 
 plans.forEach(p => {
 
+  // se NON consideri il costo → ignora piani a pagamento
+  if(!includeCost && p.monthly > 0){
+    return;
+  }
+
   let gross = (amount * p.rate) / 100;
   let net = gross * (1 - 0.26);
 
- // se NON consideri il costo → ignora i piani a pagamento
-if(!includeCost && p.monthly > 0){
-  return; // salta Premium, Metal, Ultra
-}
+  let planCost = 0;
 
-let planCost = 0;
-
-if(includeCost){
-  if (billing === "monthly") {
-    planCost = p.monthly * 12;
-  } else {
-    planCost = p.yearly;
+  if(includeCost){
+    if (billing === "monthly") {
+      planCost = p.monthly * 12;
+    } else {
+      planCost = p.yearly;
+    }
   }
-}
 
   let final = net - planCost;
 
@@ -237,22 +237,26 @@ if(includeCost){
 
 // ===== CONFRONTO =====
 let isBest = Math.abs(finalYearly - bestValue) < 0.01;
+let difference = bestValue - finalYearly;
 
-// ===== BREAK EVEN =====
-let netRate = rate * (1 - 0.26);
-let breakEven = 0;
+// ===== MESSAGGIO =====
+let message = "";
+let color = "";
 
-if(includeCost && netRate > 0){
-  breakEven = cost / (netRate / 100);
+if(!includeCost){
+  message = "ℹ️ Attiva il costo piano per confrontare i piani";
+  color = "#6b7280";
+}
+else if(isBest){
+  message = "✅ Questo è il piano migliore per questo capitale";
+  color = "#16a34a";
+}
+else{
+  message = `⚠️ Meglio: ${bestPlan}<br>💰 +${difference.toFixed(2)} € / anno`;
+  color = "#f59e0b";
 }
 
 // ===== OUTPUT =====
-let message = isBest
-  ? "✅ Questo è il piano migliore per questo capitale"
-  : `⚠️ Meglio: ${bestPlan}`;
-
-let color = isBest ? "#16a34a" : "#f59e0b";
-
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
@@ -268,10 +272,6 @@ ${includeCost ? `
 <p><small>
 Costo piano: ${cost.toFixed(2)} € / anno
 </small></p>
-
-<p><small>
-Break-even: ${breakEven.toFixed(0)} €
-</small></p>
 ` : ""}
 
 <hr>
@@ -280,7 +280,6 @@ Break-even: ${breakEven.toFixed(0)} €
 Calcolo netto (26% tasse). Valori indicativi.
 </small></p>
 `;
-
 }
 </script>
 
