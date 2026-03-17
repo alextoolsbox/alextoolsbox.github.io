@@ -77,29 +77,26 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 </p>
 
 <div class="calculator-box">
+
 <h3>Calcolatore rendimento Revolut</h3>
 
-<label>Capitale (€):</label><br>
-<input type="number" id="amount" placeholder="Es. 10000"><br><br>
+<label>Capitale (€)</label>
+<input type="number" id="amount" placeholder="Es. 10000">
 
-<label>Piano Revolut:</label><br>
+<label>Piano Revolut</label>
 <select id="plan">
 <option value="1.5" data-monthly="0" data-yearly="0">Standard / Plus (1.5%)</option>
 <option value="2" data-monthly="9.99" data-yearly="100">Premium (2%)</option>
 <option value="2.25" data-monthly="15.99" data-yearly="155">Metal (2.25%)</option>
 <option value="2.5" data-monthly="45" data-yearly="540">Ultra (2.5%)</option>
 </select>
-</select>
 
 <div class="option-row">
 <label for="includeCost">Considera costo piano</label>
 <input type="checkbox" id="includeCost">
 </div>
-  
-<br><br>
-<br><br>
 
-<label><strong>Tipo pagamento piano:</strong></label><br>
+<label><strong>Tipo pagamento</strong></label>
 
 <div class="radio-group">
 <label class="radio-item">
@@ -112,7 +109,12 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 <span>Annuale</span>
 </label>
 </div>
-  
+
+<button onclick="calculate()">Calcola rendimento</button>
+
+<div id="result" class="result-box"></div>
+
+</div>  
 <button onclick="calculate()">Calcola rendimento</button>
 
 <div id="result" class="result-box"></div>
