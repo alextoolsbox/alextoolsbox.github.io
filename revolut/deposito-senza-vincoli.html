@@ -169,7 +169,6 @@ let monthlyCost = parseFloat(select.options[select.selectedIndex].dataset.monthl
 let yearlyCostPlan = parseFloat(select.options[select.selectedIndex].dataset.yearly);
 
 let includeCost = document.getElementById("includeCost").checked;
-
 let billing = document.querySelector('input[name="billing"]:checked').value;
 
 if (isNaN(amount) || amount <= 0) {
@@ -177,13 +176,13 @@ document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
+// ===== CALCOLO PIANO SELEZIONATO =====
 let yearlyGross = (amount * rate) / 100;
-let tax = yearlyGross * 0.26;
-let yearlyNet = yearlyGross - tax;
+let yearlyNet = yearlyGross * (1 - 0.26);
 
 let cost = 0;
 
-if(includeCost) {
+if(includeCost){
 if (billing === "monthly") {
 cost = monthlyCost * 12;
 } else {
@@ -194,10 +193,47 @@ cost = yearlyCostPlan;
 let finalYearly = yearlyNet - cost;
 let monthly = finalYearly / 12;
 let daily = finalYearly / 365;
-// CONVIENE?
-let isConvenient = finalYearly > 0;
 
-// BREAK EVEN
+
+// ===== CALCOLO MIGLIOR PIANO =====
+let plans = [
+  { name: "Standard / Plus", rate: 1.5, monthly: 0, yearly: 0 },
+  { name: "Premium", rate: 2, monthly: 9.99, yearly: 100 },
+  { name: "Metal", rate: 2.25, monthly: 15.99, yearly: 155 },
+  { name: "Ultra", rate: 2.5, monthly: 45, yearly: 540 }
+];
+
+let bestPlan = "";
+let bestValue = -Infinity;
+
+plans.forEach(p => {
+
+  let gross = (amount * p.rate) / 100;
+  let net = gross * (1 - 0.26);
+
+  let planCost = 0;
+
+  if(includeCost){
+    if (billing === "monthly") {
+      planCost = p.monthly * 12;
+    } else {
+      planCost = p.yearly;
+    }
+  }
+
+  let final = net - planCost;
+
+  if(final > bestValue){
+    bestValue = final;
+    bestPlan = p.name;
+  }
+
+});
+
+// ===== CONFRONTO =====
+let isBest = Math.abs(finalYearly - bestValue) < 0.01;
+
+// ===== BREAK EVEN =====
 let netRate = rate * (1 - 0.26);
 let breakEven = 0;
 
@@ -205,9 +241,12 @@ if(includeCost && netRate > 0){
   breakEven = cost / (netRate / 100);
 }
 
-// colore + messaggio
-let color = isConvenient ? "#16a34a" : "#dc2626";
-let message = isConvenient ? "✅ Conviene" : "❌ Non conviene";
+// ===== OUTPUT =====
+let message = isBest
+  ? "✅ Questo è il piano migliore per questo capitale"
+  : `⚠️ Meglio: ${bestPlan}`;
+
+let color = isBest ? "#16a34a" : "#f59e0b";
 
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
@@ -236,14 +275,7 @@ Break-even: ${breakEven.toFixed(0)} €
 Calcolo netto (26% tasse). Valori indicativi.
 </small></p>
 `;
-` : ""}
 
-<hr>
-
-<p><small>
-Calcolo netto (26% tasse). Valori indicativi.
-</small></p>
-`;
 }
 </script>
 
