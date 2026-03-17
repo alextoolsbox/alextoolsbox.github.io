@@ -413,8 +413,8 @@ background:#fafafa;
 .calculator-box {
 width: 100%;
 max-width: 800px; /* più largo */
-margin: 20px auto;
-padding: 20px;
+margin: 15px auto;
+padding: 18px;
 background: #ffffff;
 border-radius: 15px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -422,7 +422,7 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 
 /* titolo */
 .calculator-box h3 {
-margin-bottom: 12px;
+margin-bottom: 8px;
 font-size: 20px;
 }
 
@@ -438,7 +438,7 @@ font-size: 14px;
 .calculator-box select {
 width: 100%;
 padding: 10px;
-margin-bottom: 8px; /* meno spazio */
+margin-bottom: 6px; /* meno spazio */
 border-radius: 8px;
 border: 1px solid #ddd;
 font-size: 14px;
@@ -465,16 +465,16 @@ opacity: 0.85;
 /* checkbox */
 .option-row {
 display: flex;
+justify-content: space-between;
 align-items: center;
-gap: 8px;
-margin: 8px 0;
+margin: 6px 0 10px; /* meno spazio */
 }
 
 /* radio */
 .radio-group {
 display: flex;
 gap: 25px;
-margin: 8px 0 15px;
+margin: 6px 0 10px;
 }
 
 .radio-item {
