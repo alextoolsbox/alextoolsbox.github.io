@@ -83,10 +83,11 @@ Inserisci il capitale e seleziona il piano per stimare il rendimento annuale.
 
 <label>Piano Revolut:</label><br>
 <select id="plan">
-<option value="1.5" data-cost="0">Standard / Plus (1.5%)</option>
-<option value="2" data-cost="9.99">Premium (2%)</option>
-<option value="2.25" data-cost="15.99">Metal (2.25%)</option>
-<option value="2.5" data-cost="45">Ultra (2.5%)</option>
+<option value="1.5" data-monthly="0" data-yearly="0">Standard / Plus (1.5%)</option>
+<option value="2" data-monthly="9.99" data-yearly="100">Premium (2%)</option>
+<option value="2.25" data-monthly="15.99" data-yearly="155">Metal (2.25%)</option>
+<option value="2.5" data-monthly="45" data-yearly="540">Ultra (2.5%)</option>
+</select>
 </select>
 
 <label>
@@ -95,7 +96,20 @@ Considera costo piano nel calcolo
 </label>
   
 <br><br>
+<br><br>
 
+<label><strong>Tipo pagamento piano:</strong></label><br>
+
+<label>
+<input type="radio" name="billing" value="monthly" checked>
+Mensile
+</label>
+
+<label>
+<input type="radio" name="billing" value="yearly">
+Annuale (scontato)
+</label>
+  
 <button onclick="calculate()">Calcola rendimento</button>
 
 <div id="result" class="result-box"></div>
@@ -108,34 +122,44 @@ function calculate() {
 
 let amount = parseFloat(document.getElementById("amount").value);
 let select = document.getElementById("plan");
+
 let rate = parseFloat(select.value);
-let costMonthly = parseFloat(select.options[select.selectedIndex].dataset.cost);
+
+let monthlyCost = parseFloat(select.options[select.selectedIndex].dataset.monthly);
+let yearlyCostPlan = parseFloat(select.options[select.selectedIndex].dataset.yearly);
+
 let includeCost = document.getElementById("includeCost").checked;
+
+// billing
+let billing = document.querySelector('input[name="billing"]:checked').value;
 
 if (isNaN(amount) || amount <= 0) {
 document.getElementById("result").innerHTML = "Inserisci un importo valido";
 return;
 }
 
-// rendimento lordo
+// rendimento
 let yearlyGross = (amount * rate) / 100;
-
-// tasse
 let tax = yearlyGross * 0.26;
-
-// netto
 let yearlyNet = yearlyGross - tax;
 
 // costo piano
-let yearlyCost = costMonthly * 12;
+let cost = 0;
 
-// netto finale
-let finalYearly = includeCost ? (yearlyNet - yearlyCost) : yearlyNet;
+if(includeCost) {
+if (billing === "monthly") {
+cost = monthlyCost * 12;
+} else {
+cost = yearlyCostPlan;
+}
+}
 
-// breakdown
+// risultato finale
+let finalYearly = yearlyNet - cost;
 let monthly = finalYearly / 12;
 let daily = finalYearly / 365;
 
+// output
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
@@ -143,7 +167,11 @@ document.getElementById("result").innerHTML = `
 <p><strong>Mensile:</strong> ${monthly.toFixed(2)} €</p>
 <p><strong>Giornaliero:</strong> ${daily.toFixed(2)} €</p>
 
-${includeCost ? `<p><small>Costo piano incluso: ${yearlyCost.toFixed(2)} €/anno</small></p>` : ""}
+${includeCost ? `
+<p><small>
+Costo piano (${billing === "monthly" ? "mensile" : "annuale"}): ${cost.toFixed(2)} € / anno
+</small></p>
+` : ""}
 
 <hr>
 
