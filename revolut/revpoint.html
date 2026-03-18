@@ -95,37 +95,66 @@ Come vedi, la differenza tra i piani è enorme: più sali di livello, più veloc
 <h2>Quanto valgono davvero i RevPoints</h2>
 
 <p>
-Qui viene la parte interessante: i RevPoints non hanno un valore fisso uguale per tutti.
+I RevPoints non hanno un valore fisso: dipende da come li utilizzi.
 </p>
 
 <p>
-Il loro valore dipende da come li utilizzi (sconti, offerte, vantaggi), quindi non esiste un equivalente preciso in euro.
-</p>
-
-<p>
-In generale però, il valore reale è relativamente basso se accumuli pochi punti, mentre diventa più interessante se utilizzi Revolut spesso per pagamenti quotidiani.
+In generale il loro valore è relativamente basso, ma può diventare interessante se utilizzi Revolut spesso per le spese quotidiane.
 </p>
 
 <h2>Esempio pratico</h2>
 
-<p>
-Facciamo un esempio semplice:
-</p>
-
 <ul>
 <li>Spendi 1.000€ al mese</li>
-<li>Con piano Standard → circa 100 punti</li>
-<li>Con piano Metal → circa 500 punti</li>
+<li>Standard → circa 100 punti</li>
+<li>Metal → circa 500 punti</li>
 </ul>
 
 <p>
-In questo caso la differenza è significativa, ma ha senso solo se utilizzi davvero Revolut per le spese di tutti i giorni.
+La differenza è significativa, ma ha senso solo se utilizzi davvero Revolut come conto principale.
+</p>
+
+<!-- CALCOLATORE REVPOINT -->
+<h2>Calcola quanti RevPoints puoi accumulare</h2>
+
+<p>
+Inserisci quanto spendi ogni mese e scopri quanti punti puoi ottenere.
+</p>
+
+<div class="calculator-box">
+
+<label>Spesa mensile (€)</label>
+<input type="number" id="spesa" placeholder="Es. 1000">
+
+<label>Piano Revolut</label>
+<select id="revplan">
+<option value="10">Standard / Plus (1 punto ogni 10€)</option>
+<option value="4">Premium (1 punto ogni 4€)</option>
+<option value="2">Metal (1 punto ogni 2€)</option>
+<option value="1">Ultra (1 punto ogni 1€)</option>
+</select>
+
+<button onclick="calcPoints()">Calcola RevPoints</button>
+
+<div id="resultPoints" class="result-box"></div>
+
+</div>
+
+<!-- CONFRONTO -->
+<h2>RevPoints vs guadagno reale</h2>
+
+<p>
+I RevPoints sono utili, ma non sono la fonte principale di guadagno.
+</p>
+
+<p>
+Con il deposito senza vincoli guadagni euro reali ogni giorno, mentre i RevPoints offrono vantaggi indiretti.
 </p>
 
 <div class="tip">
 
 <p>
-💡 Se vuoi capire quanto puoi guadagnare davvero con Revolut (non solo punti, ma anche rendimento sul saldo), usa il calcolatore:
+💡 Vuoi vedere quanto puoi guadagnare davvero?
 </p>
 
 <a href="/deposito-senza-vincoli.html" class="button">
@@ -134,36 +163,42 @@ Vai al calcolatore →
 
 </div>
 
+<!-- PREMI -->
+<h2>Cosa puoi ottenere con i RevPoints</h2>
+
+<ul>
+<li>Sconti su acquisti e offerte</li>
+<li>Vantaggi e promozioni</li>
+<li>Benefici legati ai viaggi (in alcuni casi)</li>
+</ul>
+
+<p>
+Il valore reale dipende da come li utilizzi: alcune offerte sono più convenienti di altre.
+</p>
+
 <h2>Conviene davvero accumulare RevPoints?</h2>
 
 <p>
-Dipende molto da come utilizzi Revolut.
+Dipende da quanto utilizzi Revolut.
 </p>
 
 <p>
-Se fai poche spese, i RevPoints hanno un impatto minimo e probabilmente non cambiano nulla.
+Se fai poche spese → impatto minimo  
+Se usi Revolut ogni giorno → diventano un extra interessante
 </p>
 
 <p>
-Se invece utilizzi Revolut come conto principale per pagamenti quotidiani, possono diventare un piccolo extra interessante nel tempo.
+Personalmente li considero un bonus: meglio averli che no, ma non sono il motivo principale per usare Revolut.
+</p>
+
+<h2>Meglio RevPoints o deposito?</h2>
+
+<p>
+Se devo essere diretto: il valore vero è nel deposito senza vincoli.
 </p>
 
 <p>
-Personalmente li considero un bonus: non sono il motivo principale per usare Revolut, ma sono un vantaggio aggiuntivo che si somma agli altri (come il deposito senza vincoli).
-</p>
-
-<h2>Meglio RevPoints o rendimento sul deposito?</h2>
-
-<p>
-Se devo essere diretto: il vero valore di Revolut non sono i RevPoints, ma il rendimento sul saldo.
-</p>
-
-<p>
-I RevPoints sono un extra, mentre il deposito senza vincoli può generare un guadagno reale e costante nel tempo.
-</p>
-
-<p>
-Per questo motivo ha senso guardare sempre il quadro completo.
+I RevPoints sono un extra, il rendimento è guadagno reale.
 </p>
 
 <div class="trust">
@@ -171,11 +206,11 @@ Per questo motivo ha senso guardare sempre il quadro completo.
 <h3>Vuoi provare Revolut?</h3>
 
 <p>
-Puoi aprire gratuitamente un conto Revolut e iniziare a utilizzare sia i RevPoints che il deposito senza vincoli.
+Apri gratuitamente un conto Revolut e inizia subito.
 </p>
 
 <a class="button" href="/revolut/">
-Vai alla guida per aprire Revolut
+Vai alla guida
 </a>
 
 </div>
@@ -190,6 +225,27 @@ fetch("/includes/footer.html")
 .then(data => {
 document.getElementById("footer").innerHTML = data;
 });
+</script>
+
+<script>
+function calcPoints(){
+
+let spesa = parseFloat(document.getElementById("spesa").value);
+let ratio = parseFloat(document.getElementById("revplan").value);
+
+if (isNaN(spesa) || spesa <= 0){
+document.getElementById("resultPoints").innerHTML = "Inserisci un importo valido";
+return;
+}
+
+let monthlyPoints = spesa / ratio;
+let yearlyPoints = monthlyPoints * 12;
+
+document.getElementById("resultPoints").innerHTML = `
+<p><strong>RevPoints mensili:</strong> ${monthlyPoints.toFixed(0)}</p>
+<p><strong>RevPoints annuali:</strong> ${yearlyPoints.toFixed(0)}</p>
+`;
+}
 </script>
 
 </body>
