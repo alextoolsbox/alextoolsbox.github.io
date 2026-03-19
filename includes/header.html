@@ -1,9 +1,44 @@
 <div class="site-header">
 
-<div class="promo-inline">
-⏳ <strong>Promo attiva:</strong> <span class="promo-text"></span>
+<div id="promo-bar">
+⏳ <span id="promo-text"></span>
 </div>
 
+<script>
+function updatePromo(){
+
+  const promoStart = new Date("2026-03-12"); // CAMBIA SOLO QUESTO
+  const promoDuration = 19;
+
+  const today = new Date();
+  const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
+
+  let promoText = "";
+
+  if (diffDays < 0) {
+    promoText = "Nuova promozione in arrivo";
+  }
+  else if (diffDays < 7) {
+    promoText = "Nuova promozione attiva";
+  }
+  else if (diffDays < 14) {
+    promoText = "Ancora disponibile per alcuni giorni";
+  }
+  else if (diffDays < promoDuration) {
+    promoText = "Ultimi giorni disponibili";
+  }
+  else {
+    promoText = "Nuova promozione attiva";
+  }
+
+  const el = document.getElementById("promo-text");
+  if (el) {
+    el.innerText = promoText;
+  }
+
+}
+</script>
+  
 <div class="navbar">
 
 <div class="nav-container">
