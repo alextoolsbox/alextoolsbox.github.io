@@ -525,3 +525,10 @@ border-radius: 10px;
   padding: 6px 10px;
   letter-spacing: 0.3px;
 }
+
+.promo-inline {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px auto;
+  color: #555;
+}
