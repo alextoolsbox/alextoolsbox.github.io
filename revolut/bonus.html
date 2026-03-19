@@ -270,5 +270,34 @@ Registrazione gratuita • bastano pochi minuti
 
 <div id="footer"></div>
 
+<script>
+fetch("/includes/header.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("header").innerHTML = data;
+
+  // 💣 SCRIPT QUI (UNICO PUNTO)
+
+  const promoStart = new Date("2026-03-12");
+  const promoDuration = 19;
+
+  const today = new Date();
+  const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
+
+  let promoText = "";
+
+  if (diffDays < 0) promoText = "Nuova promozione in arrivo";
+  else if (diffDays < 7) promoText = "Nuova promozione attiva";
+  else if (diffDays < 14) promoText = "Ancora disponibile per alcuni giorni";
+  else if (diffDays < promoDuration) promoText = "Ultimi giorni disponibili";
+  else promoText = "Nuova promozione attiva";
+
+  document.querySelectorAll(".promo-text").forEach(el => {
+    el.innerText = promoText;
+  });
+
+});
+</script>
+  
 </body>
 </html>
