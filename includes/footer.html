@@ -91,7 +91,9 @@ aggiuntivi per te se decidi di utilizzare i servizi consigliati.
 </div>
 
 <script>
-const promoStart = new Date("2026-03-12"); // CAMBIA SOLO QUESTO
+function updatePromo(){
+
+const promoStart = new Date("2026-03-12");
 const promoDuration = 19;
 
 const today = new Date();
@@ -115,10 +117,21 @@ else {
   promoText = "Nuova promozione attiva";
 }
 
-// aggiorna solo se esiste
-document.querySelectorAll(".promo-text").forEach(el => {
+// retry finché trova elementi
+const elements = document.querySelectorAll(".promo-text");
+
+if (elements.length === 0){
+  setTimeout(updatePromo, 200); // riprova tra 200ms
+  return;
+}
+
+elements.forEach(el => {
   el.innerText = promoText;
 });
+
+}
+
+updatePromo();
 </script>
   
 </footer>
