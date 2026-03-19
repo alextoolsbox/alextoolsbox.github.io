@@ -24,7 +24,7 @@ fetch("/includes/header.html")
 .then(data => {
   document.getElementById("header").innerHTML = data;
 
-  // 👉 QUI aggiorni la promo
+  // 💣 QUESTO DEVE STARE QUI
   updatePromo();
 });
 </script>
@@ -270,52 +270,5 @@ Registrazione gratuita • bastano pochi minuti
 
 <div id="footer"></div>
 
-<script>
-fetch("/includes/footer.html")
-.then(response => response.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
-</script>
-
-<script>
-const promoStart = new Date("2026-03-12"); // CAMBIA SOLO QUESTO
-const promoDuration = 19;
-
-const today = new Date();
-const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
-
-let promoText = "";
-let box = document.getElementById("promo-box");
-
-if (diffDays < 0) {
-  promoText = "nuova promozione in arrivo";
-  box.style.borderColor = "#2196f3";
-  box.style.background = "#e3f2fd";
-}
-else if (diffDays < 7) {
-  promoText = "nuova promozione attiva";
-  box.style.borderColor = "#4caf50";
-  box.style.background = "#e8f5e9";
-}
-else if (diffDays < 14) {
-  promoText = "ancora disponibile per alcuni giorni";
-  box.style.borderColor = "#ff9800";
-  box.style.background = "#fff3e0";
-}
-else if (diffDays < promoDuration) {
-  promoText = "in scadenza a breve";
-  box.style.borderColor = "#f44336";
-  box.style.background = "#ffebee";
-}
-else {
-  promoText = "nuova promozione attiva";
-  box.style.borderColor = "#4caf50";
-  box.style.background = "#e8f5e9";
-}
-
-document.getElementById("promo-text").innerText = promoText;
-</script>
-  
 </body>
 </html>
