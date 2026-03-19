@@ -91,6 +91,8 @@ aggiuntivi per te se decidi di utilizzare i servizi consigliati.
 </div>
 
 <script>
+function updatePromo(){
+
 const promoStart = new Date("2026-03-12");
 const promoDuration = 19;
 
@@ -115,29 +117,12 @@ else {
   promoText = "Nuova promozione attiva";
 }
 
-// funzione aggiorna quando trova elementi
-function applyText() {
+// aggiorna tutto quello che trova
+document.querySelectorAll(".promo-text").forEach(el => {
+  el.innerText = promoText;
+});
 
-  let updated = false;
-
-  const headerEl = document.getElementById("promo-text-header");
-  if (headerEl) {
-    headerEl.innerText = promoText;
-    updated = true;
-  }
-
-  const pageEl = document.getElementById("promo-text-page");
-  if (pageEl) {
-    pageEl.innerText = promoText;
-    updated = true;
-  }
-
-  if (!updated) {
-    setTimeout(applyText, 200);
-  }
 }
-
-applyText();
 </script>
   
 </footer>
