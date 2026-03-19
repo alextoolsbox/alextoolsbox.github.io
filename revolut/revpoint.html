@@ -226,6 +226,14 @@ document.getElementById("footer").innerHTML = data;
 </script>
 
 <script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script>
 function calcPoints(){
 
 let spesa = parseFloat(document.getElementById("spesa").value);
@@ -233,6 +241,7 @@ let ratio = parseFloat(document.getElementById("revplan").value);
 
 if (isNaN(spesa) || spesa <= 0){
 document.getElementById("resultPoints").innerHTML = "Inserisci un importo valido";
+document.getElementById("resultSummary").innerHTML = "";
 return;
 }
 
@@ -243,15 +252,20 @@ let euroLow = yearlyPoints * 0.007;
 let euroHigh = yearlyPoints * 0.02;
 
 let avgEuro = (euroLow + euroHigh) / 2;
+let monthlyEuro = avgEuro / 12;
+let coffees = avgEuro / 1.5;
 
 document.getElementById("resultPoints").innerHTML = `
 <p><strong>RevPoints mensili:</strong> ${monthlyPoints.toFixed(0)}</p>
 <p><strong>RevPoints annuali:</strong> ${yearlyPoints.toFixed(0)}</p>
 <p><strong>Valore stimato:</strong> ${euroLow.toFixed(0)}€ – ${euroHigh.toFixed(0)}€</p>
+<p><strong>Valore mensile:</strong> ${monthlyEuro.toFixed(2)}€</p>
 `;
 
 document.getElementById("resultSummary").innerHTML = `
-<p><strong>👉 Con ${spesa.toFixed(0)}€ al mese puoi ottenere circa ${avgEuro.toFixed(0)}€ all’anno in RevPoints.</strong></p>
+<p><strong>👉 Con ${spesa.toFixed(0)}€ al mese accumuli circa ${avgEuro.toFixed(0)}€ all’anno in RevPoints.</strong></p>
+<p>È un extra automatico sulle tue spese, senza fare nulla di diverso.</p>
+<p>☕ Circa ${coffees.toFixed(0)} caffè all’anno</p>
 `;
 }
 </script>
