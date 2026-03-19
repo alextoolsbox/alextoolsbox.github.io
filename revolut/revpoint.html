@@ -136,6 +136,7 @@ Inserisci quanto spendi ogni mese e scopri quanti punti puoi ottenere e quanto v
 <button onclick="calcPoints()">Calcola RevPoints</button>
 
 <div id="resultPoints" class="result-box"></div>
+<div id="resultSummary" class="result-summary"></div>
 
 </div>
 
@@ -241,10 +242,16 @@ let yearlyPoints = monthlyPoints * 12;
 let euroLow = yearlyPoints * 0.007;
 let euroHigh = yearlyPoints * 0.02;
 
+let avgEuro = (euroLow + euroHigh) / 2;
+
 document.getElementById("resultPoints").innerHTML = `
 <p><strong>RevPoints mensili:</strong> ${monthlyPoints.toFixed(0)}</p>
 <p><strong>RevPoints annuali:</strong> ${yearlyPoints.toFixed(0)}</p>
 <p><strong>Valore stimato:</strong> ${euroLow.toFixed(0)}€ – ${euroHigh.toFixed(0)}€</p>
+`;
+
+document.getElementById("resultSummary").innerHTML = `
+<p><strong>👉 Con ${spesa.toFixed(0)}€ al mese puoi ottenere circa ${avgEuro.toFixed(0)}€ all’anno in RevPoints.</strong></p>
 `;
 }
 </script>
