@@ -91,38 +91,41 @@ aggiuntivi per te se decidi di utilizzare i servizi consigliati.
 </div>
 
 <script>
-function updatePromo(){
+document.addEventListener("DOMContentLoaded", function () {
 
-const promoStart = new Date("2026-03-12");
-const promoDuration = 19;
+  const promoStart = new Date("2026-03-12");
+  const promoDuration = 19;
 
-const today = new Date();
-const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
+  const today = new Date();
+  const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
 
-let promoText = "";
+  let promoText = "";
 
-if (diffDays < 0) {
-  promoText = "Nuova promozione in arrivo";
-}
-else if (diffDays < 7) {
-  promoText = "Nuova promozione attiva";
-}
-else if (diffDays < 14) {
-  promoText = "Ancora disponibile per alcuni giorni";
-}
-else if (diffDays < promoDuration) {
-  promoText = "Ultimi giorni disponibili";
-}
-else {
-  promoText = "Nuova promozione attiva";
-}
+  if (diffDays < 0) {
+    promoText = "Nuova promozione in arrivo";
+  }
+  else if (diffDays < 7) {
+    promoText = "Nuova promozione attiva";
+  }
+  else if (diffDays < 14) {
+    promoText = "Ancora disponibile per alcuni giorni";
+  }
+  else if (diffDays < promoDuration) {
+    promoText = "Ultimi giorni disponibili";
+  }
+  else {
+    promoText = "Nuova promozione attiva";
+  }
 
-// aggiorna tutto quello che trova
-document.querySelectorAll(".promo-text").forEach(el => {
-  el.innerText = promoText;
+  const elements = document.querySelectorAll(".promo-text");
+
+  if (elements.length > 0) {
+    elements.forEach(el => {
+      el.innerText = promoText;
+    });
+  }
+
 });
-
-}
 </script>
   
 </footer>
