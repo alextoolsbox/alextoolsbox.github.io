@@ -286,11 +286,21 @@ fetch("/includes/header.html")
 
   let promoText = "";
 
-  if (diffDays < 0) promoText = "Nuova promozione in arrivo";
-  else if (diffDays < 7) promoText = "Nuova promozione attiva";
-  else if (diffDays < 14) promoText = "Ancora disponibile per alcuni giorni";
-  else if (diffDays < promoDuration) promoText = "Ultimi giorni disponibili";
-  else promoText = "Nuova promozione attiva";
+if (diffDays < 0) {
+  promoText = "🔜 Bonus Revolut in arrivo: nuova promo disponibile a breve";
+}
+else if (diffDays < 7) {
+  promoText = "🔥 Bonus Revolut attivo: approfittane ora";
+}
+else if (diffDays < 14) {
+  promoText = "💸 Bonus Revolut disponibile: ancora per pochi giorni";
+}
+else if (diffDays < promoDuration) {
+  promoText = "⏳ Bonus Revolut in scadenza: ultimi giorni disponibili";
+}
+else {
+  promoText = "🔥 Nuova promo Revolut attiva: puoi ottenere il bonus";
+}
 
   document.querySelectorAll(".promo-text").forEach(el => {
     el.innerText = promoText;
