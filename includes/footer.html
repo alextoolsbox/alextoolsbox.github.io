@@ -91,7 +91,7 @@ aggiuntivi per te se decidi di utilizzare i servizi consigliati.
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+function updatePromo(){
 
   const promoStart = new Date("2026-03-12");
   const promoDuration = 19;
@@ -117,15 +117,11 @@ document.addEventListener("DOMContentLoaded", function () {
     promoText = "Nuova promozione attiva";
   }
 
-  const elements = document.querySelectorAll(".promo-text");
+  document.querySelectorAll(".promo-text").forEach(el => {
+    el.innerText = promoText;
+  });
 
-  if (elements.length > 0) {
-    elements.forEach(el => {
-      el.innerText = promoText;
-    });
-  }
-
-});
+}
 </script>
   
 </footer>
