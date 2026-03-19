@@ -45,6 +45,13 @@ Registrazione gratuita • attivazione in pochi minuti
 
 </div>
 
+ <!-- PROMO DINAMICA -->
+<div id="promo-box" class="tip" style="margin:20px auto;max-width:900px;">
+<p>
+⏳ <strong>Promo attuale:</strong> <span id="promo-text"></span>
+</p>
+</div> 
+  
 <div class="container">
 
 <!-- HOOK -->
@@ -68,6 +75,11 @@ Non è automatico: devi seguire una sequenza precisa di azioni direttamente dall
 👉 In questa guida ti mostro esattamente cosa fare per ottenere il bonus senza errori.
 </p>
 
+<div class="tip">
+<p>
+💡 Revolut aggiorna periodicamente la promozione "Invita un amico": l’importo del bonus e le scadenze possono cambiare, ma i passaggi richiesti restano generalmente gli stessi.
+</p>
+</div>
 
 <h2>Passaggi per ottenere il bonus Revolut</h2>
 
@@ -266,5 +278,44 @@ document.getElementById("footer").innerHTML = data;
 });
 </script>
 
+<script>
+const promoStart = new Date("2026-03-12"); // CAMBIA SOLO QUESTO
+const promoDuration = 19;
+
+const today = new Date();
+const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
+
+let promoText = "";
+let box = document.getElementById("promo-box");
+
+if (diffDays < 0) {
+  promoText = "nuova promozione in arrivo";
+  box.style.borderColor = "#2196f3";
+  box.style.background = "#e3f2fd";
+}
+else if (diffDays < 7) {
+  promoText = "nuova promozione attiva";
+  box.style.borderColor = "#4caf50";
+  box.style.background = "#e8f5e9";
+}
+else if (diffDays < 14) {
+  promoText = "ancora disponibile per alcuni giorni";
+  box.style.borderColor = "#ff9800";
+  box.style.background = "#fff3e0";
+}
+else if (diffDays < promoDuration) {
+  promoText = "in scadenza a breve";
+  box.style.borderColor = "#f44336";
+  box.style.background = "#ffebee";
+}
+else {
+  promoText = "nuova promozione attiva";
+  box.style.borderColor = "#4caf50";
+  box.style.background = "#e8f5e9";
+}
+
+document.getElementById("promo-text").innerText = promoText;
+</script>
+  
 </body>
 </html>
