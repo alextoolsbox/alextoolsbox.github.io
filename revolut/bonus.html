@@ -269,6 +269,15 @@ Registrazione gratuita • bastano pochi minuti
 
 </div>
 
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
   
 </body>
 </html>
