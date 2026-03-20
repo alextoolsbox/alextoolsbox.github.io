@@ -30,9 +30,10 @@ Informativa sul trattamento dei dati personali per gli utenti che visitano il si
 
 <script>
 fetch("/includes/header.html")
-.then(response => response.text())
+.then(res => res.text())
 .then(data => {
-document.getElementById("header").innerHTML = data;
+  document.getElementById("header").innerHTML = data;
+  updatePromo();
 });
 </script>
 
