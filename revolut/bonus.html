@@ -269,46 +269,6 @@ Registrazione gratuita • bastano pochi minuti
 
 </div>
 
-<div id="footer"></div>
-
-<script>
-fetch("/includes/header.html")
-.then(response => response.text())
-.then(data => {
-  document.getElementById("header").innerHTML = data;
-
-  // 💣 SCRIPT QUI (UNICO PUNTO)
-
-  const promoStart = new Date("2026-03-12");
-  const promoDuration = 19;
-
-  const today = new Date();
-  const diffDays = Math.floor((today - promoStart) / (1000 * 60 * 60 * 24));
-
-  let promoText = "";
-
-if (diffDays < 0) {
-  promoText = "🔜 Bonus Revolut in arrivo: nuova promo disponibile a breve";
-}
-else if (diffDays < 7) {
-  promoText = "🔥 Bonus Revolut attivo: approfittane ora";
-}
-else if (diffDays < 14) {
-  promoText = "💸 Bonus Revolut disponibile: ancora per pochi giorni";
-}
-else if (diffDays < promoDuration) {
-  promoText = "⏳ Bonus Revolut in scadenza: ultimi giorni disponibili";
-}
-else {
-  promoText = "🔥 Nuova promo Revolut attiva: puoi ottenere il bonus";
-}
-
-  document.querySelectorAll(".promo-text").forEach(el => {
-    el.innerText = promoText;
-  });
-
-});
-</script>
   
 </body>
 </html>
