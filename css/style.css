@@ -165,7 +165,9 @@ pointer-events:auto;
 
 /* SUBMENU (livello 2) */
 
-.dropdown-sub{
+.dropdown-sub > a::after{
+content:"›";
+float:right;
 position:relative;
 }
 
@@ -173,9 +175,9 @@ position:relative;
 
 .dropdown-submenu{
 position:absolute;
-top:0;
+top:-10px;
 left:100%;
-margin-left:10px;
+margin-left:2px;
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
