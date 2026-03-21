@@ -175,9 +175,9 @@ position:relative;
 
 .dropdown-submenu{
 position:absolute;
-top:-10px;
+top:0;
 left:100%;
-margin-left:2px;
+margin-left:0px;
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
