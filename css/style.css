@@ -80,6 +80,7 @@ color:#333;
 font-weight:500;
 display:inline-block;
 position:relative;
+transition:0.2s;
 }
 
 /* linea hover sotto il menu */
@@ -117,31 +118,49 @@ margin-left:4px;
 position:relative;
 }
 
+/* menu nascosto di base */
+
 .dropdown-menu{
-display:none;
 position:absolute;
-top:30px;
+top:100%;
 left:0;
+margin-top:10px;
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 border-radius:8px;
 min-width:200px;
 padding:10px 0;
+
+opacity:0;
+transform:translateY(10px);
+transition:all 0.2s ease;
+pointer-events:none;
+z-index:999;
 }
+
+/* link dentro dropdown */
 
 .dropdown-menu a{
 display:block;
 padding:10px 15px;
 margin:0;
+color:#333;
 }
+
+/* hover dropdown */
 
 .dropdown-menu a:hover{
 background:#f4f6fb;
+color:#635bff;
 }
 
+/* apertura dropdown */
+
 .dropdown:hover .dropdown-menu{
-display:block;
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
 /* HERO */
