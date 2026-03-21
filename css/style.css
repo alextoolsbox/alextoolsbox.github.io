@@ -107,7 +107,7 @@ color:#635bff;
 /* freccia dropdown */
 
 .dropdown > a::after{
-content:" ▾";
+content:" ▸";
 font-size:12px;
 margin-left:4px;
 }
@@ -161,6 +161,53 @@ color:#635bff;
 opacity:1;
 transform:translateY(0);
 pointer-events:auto;
+}
+
+/* SUBMENU (livello 2) */
+
+.dropdown-sub{
+position:relative;
+}
+
+/* menu a destra */
+
+.dropdown-submenu{
+position:absolute;
+top:0;
+left:100%;
+margin-left:10px;
+background:white;
+border:1px solid #eee;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:8px;
+min-width:200px;
+padding:10px 0;
+
+opacity:0;
+transform:translateX(10px);
+transition:all 0.2s ease;
+pointer-events:none;
+}
+
+/* hover attiva submenu */
+
+.dropdown-sub:hover .dropdown-submenu{
+opacity:1;
+transform:translateX(0);
+pointer-events:auto;
+}
+
+/* link submenu */
+
+.dropdown-submenu a{
+display:block;
+padding:10px 15px;
+color:#333;
+}
+
+.dropdown-submenu a:hover{
+background:#f4f6fb;
+color:#635bff;
 }
 
 /* HERO */
