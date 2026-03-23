@@ -600,3 +600,14 @@ border-radius: 10px;
   margin: 20px auto;
   color: #555;
 }
+
+/* ALEX TIPS */
+
+.alex-tip {
+  background: #f5f7ff;
+  border-left: 4px solid #4f46e5;
+  padding: 10px 12px;
+  margin: 8px 0 16px 0;
+  border-radius: 6px;
+  font-size: 14px;
+}
