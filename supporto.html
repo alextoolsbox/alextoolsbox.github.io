@@ -61,7 +61,7 @@ Ti rispondo nel più breve tempo possibile.
 <form 
   action="https://formspree.io/f/mgopwqep"
   method="POST"
-  onsubmit="redirectDopoInvio()"
+  onsubmit="handleSubmit()"
 >
 
 <!-- redirect -->
@@ -170,9 +170,9 @@ function mostraSottoMenu() {
 }
 </script>
 <script>
-function redirectDopoInvio() {
+function handleSubmit() {
   setTimeout(function() {
-    window.location.href = "https://alextoolsbox.it/grazie.html";
+    window.location.href = "/grazie.html";
   }, 800);
 }
 </script>
