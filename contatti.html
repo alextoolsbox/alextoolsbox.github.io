@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contatti - AlexToolsBox</title>
+<title>Supporto - AlexToolsBox</title>
 
-<meta name="description" content="Contattami per supporto o per richiedere l'incentivo Revolut.">
+<meta name="description" content="Richiedi supporto o l'incentivo Revolut.">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -27,32 +27,46 @@ document.getElementById("header").innerHTML = data;
 });
 </script>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero" style="padding:60px 20px;">
 
-<h1>Contattami</h1>
+<h1>Supporto</h1>
 
-<p>
-Puoi scrivermi per supporto oppure per richiedere l’incentivo Revolut dopo aver completato correttamente tutti i passaggi.
+<p class="hero-description">
+Hai dubbi oppure vuoi richiedere l’incentivo Revolut? Scrivimi qui sotto.
 </p>
 
-<div class="tip">
-
-<p>
-💣 Se stai richiedendo l’incentivo, assicurati di aver completato tutti i passaggi prima di scrivere.
-</p>
-
-<p class="alex-tip">
-🔥 <span class="alex-label">Alex’s Tip:</span> Le richieste incomplete non vengono accettate.
+<p class="hero-description">
+Ti rispondo nel più breve tempo possibile.
 </p>
 
 </div>
 
-<h2>Invia un messaggio</h2>
+<div class="container">
 
-<form action="mailto:alextoolsboxai@gmail.com" method="post" enctype="text/plain">
+<div class="tip">
+
+<p>
+💣 Le richieste per l’incentivo vengono verificate manualmente.
+</p>
+
+<p>
+👉 Se la procedura non è completa o corretta, non vengono accettate.
+</p>
+
+</div>
+
+<h2>Invia una richiesta</h2>
+
+<!-- FORM -->
+<form 
+  action="https://formspree.io/f/mgopwqep"
+  method="POST"
+  enctype="multipart/form-data"
+>
 
 <label>Categoria</label><br>
-<select id="categoria" name="categoria" style="width:100%;padding:10px;margin-bottom:15px;" onchange="mostraSottoMenu()">
+<select id="categoria" name="categoria" required style="width:100%;padding:10px;margin-bottom:15px;" onchange="mostraSottoMenu()">
 <option value="">-- Seleziona --</option>
 <option value="generale">Generale</option>
 <option value="revolut">Revolut</option>
@@ -83,37 +97,34 @@ Puoi scrivermi per supporto oppure per richiedere l’incentivo Revolut dopo ave
 <option>Bonifico</option>
 </select>
 
-<label>Messaggio</label><br>
-<textarea name="messaggio" rows="6" style="width:100%;padding:10px;margin-bottom:15px;"></textarea>
+<label>Carica screenshot completamento (obbligatorio per incentivo)</label><br>
+<input type="file" name="screenshot" style="margin-bottom:15px;"><br>
 
-<button type="submit" class="button">Invia messaggio</button>
+<label>Messaggio</label><br>
+<textarea name="messaggio" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;"></textarea>
+
+<button type="submit" class="button">Invia richiesta</button>
+
+<input type="hidden" name="_subject" value="Nuova richiesta AlexToolsBox">
+<input type="hidden" name="_redirect" value="https://alextoolsbox.it/grazie.html">
 
 </form>
 
----
-
-<h2>Importante per l'incentivo</h2>
-
-<p>
-Se stai richiedendo l’incentivo, assicurati di:
-</p>
+<!-- INFO -->
+<h2 style="margin-top:40px;">Informazioni importanti</h2>
 
 <ul>
-<li>Aver completato tutti i passaggi</li>
-<li>Usato il link corretto</li>
-<li>Effettuato i pagamenti richiesti</li>
+<li>Le richieste vengono verificate manualmente</li>
+<li>L'incentivo viene inviato solo dopo verifica</li>
+<li>I tempi di risposta sono generalmente 24-72 ore</li>
 </ul>
 
 <p class="alex-tip">
-🔥 <span class="alex-label">Alex’s Tip:</span> Se hai dubbi, scrivimi prima di inviare la richiesta.
-</p>
-
-<p>
-👉 Dopo aver inviato la richiesta, invia anche uno screenshot via email per completare la verifica.
+🔥 <span class="alex-label">Alex’s Tip:</span> Se hai dubbi, chiedi supporto prima di completare la procedura.
 </p>
 
 <div class="tip highlight">
-💸 Se la procedura è corretta, riceverai l'incentivo.
+💸 Se tutto è corretto, riceverai l'incentivo.
 </div>
 
 </div>
@@ -140,6 +151,6 @@ function mostraSottoMenu() {
   }
 }
 </script>
-  
+
 </body>
 </html>
