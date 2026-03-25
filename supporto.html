@@ -61,6 +61,7 @@ Ti rispondo nel più breve tempo possibile.
 <form 
   action="https://formspree.io/f/mgopwqep"
   method="POST"
+  onsubmit="redirectDopoInvio()"
 >
 
 <!-- redirect -->
@@ -166,6 +167,13 @@ function mostraSottoMenu() {
   } else {
     sotto.style.display = "none";
   }
+}
+</script>
+<script>
+function redirectDopoInvio() {
+  setTimeout(function() {
+    window.location.href = "https://alextoolsbox.it/grazie.html";
+  }, 800);
 }
 </script>
 
