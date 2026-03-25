@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Richiesta inviata - AlexToolsBox</title>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("/includes/header.html")
+.then(r => r.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+</script>
+
+<div class="container" style="text-align:center;padding:60px 20px;">
+
+<h1>Richiesta inviata ✅</h1>
+
+<p style="font-size:18px;margin-top:10px;">
+Ho ricevuto la tua richiesta e la controllerò il prima possibile.
+</p>
+
+<p style="margin-top:10px;">
+👉 Ti risponderò via email entro <b>24-72 ore</b>.
+</p>
+
+---
+
+<div class="tip highlight" style="margin-top:30px;text-align:left;">
+
+<p><strong>📸 Passaggio importante</strong></p>
+
+<p>
+Se stai richiedendo l’incentivo Revolut, devi inviare uno screenshot che dimostri il completamento corretto di tutti i passaggi.
+</p>
+
+<p>
+👉 Rispondi alla mail che riceverai allegando lo screenshot.
+</p>
+
+<p class="alex-tip">
+🔥 <span class="alex-label">Alex’s Tip:</span> Senza screenshot non è possibile verificare la richiesta.
+</p>
+
+</div>
+
+---
+
+<h2 style="margin-top:40px;">Cosa succede adesso</h2>
+
+<div style="text-align:left;max-width:600px;margin:20px auto;">
+
+<p>✔ Ricevo la tua richiesta</p>
+<p>✔ Controllo che tutti i passaggi siano corretti</p>
+<p>✔ Ti rispondo via email</p>
+<p>✔ Se tutto è ok → invio incentivo</p>
+
+</div>
+
+---
+
+<div class="tip" style="margin-top:30px;text-align:left;">
+
+<p>
+💣 Se la procedura non è completa o contiene errori, la richiesta non può essere approvata.
+</p>
+
+<p>
+👉 In caso di dubbi, puoi sempre scrivere nella sezione supporto.
+</p>
+
+</div>
+
+---
+
+<div style="margin-top:40px;">
+
+<a href="/revolut/bonus.html" class="button">
+Torna alla guida bonus
+</a>
+
+</div>
+
+<div style="margin-top:15px;">
+
+<a href="/" style="font-size:14px;">
+Torna alla home
+</a>
+
+</div>
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+.then(r => r.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
