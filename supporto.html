@@ -58,12 +58,16 @@ Ti rispondo nel più breve tempo possibile.
 
 <h2>Invia una richiesta</h2>
 
-<!-- FORM -->
 <form 
   action="https://formspree.io/f/mgopwqep"
   method="POST"
-  enctype="multipart/form-data"
 >
+
+<!-- redirect -->
+<input type="hidden" name="_next" value="https://alextoolsbox.it/grazie.html">
+
+<!-- subject -->
+<input type="hidden" name="_subject" value="Nuova richiesta AlexToolsBox">
 
 <label>Categoria</label><br>
 <select id="categoria" name="categoria" required style="width:100%;padding:10px;margin-bottom:15px;" onchange="mostraSottoMenu()">
@@ -97,34 +101,47 @@ Ti rispondo nel più breve tempo possibile.
 <option>Bonifico</option>
 </select>
 
-<label>Carica screenshot completamento (obbligatorio per incentivo)</label><br>
-<input type="file" name="screenshot" style="margin-bottom:15px;"><br>
-
 <label>Messaggio</label><br>
-<textarea name="messaggio" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;"></textarea>
+<textarea name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;"></textarea>
 
 <button type="submit" class="button">Invia richiesta</button>
 
-<input type="hidden" name="_subject" value="Nuova richiesta AlexToolsBox">
-<input type="hidden" name="_redirect" value="https://alextoolsbox.it/grazie.html">
-
 </form>
+
+<!-- INFO SCREENSHOT -->
+<div class="tip highlight" style="margin-top:30px;">
+
+<p><strong>📸 Per richieste incentivo</strong></p>
+
+<p>
+Dopo aver inviato il form, riceverai una email.
+</p>
+
+<p>
+👉 Rispondi allegando lo screenshot del completamento.
+</p>
+
+<p class="alex-tip">
+🔥 <span class="alex-label">Alex’s Tip:</span> Senza screenshot la richiesta non può essere verificata.
+</p>
+
+</div>
 
 <!-- INFO -->
 <h2 style="margin-top:40px;">Informazioni importanti</h2>
 
 <ul>
-<li>Le richieste vengono verificate manualmente</li>
+<li>Le richieste vengono controllate manualmente</li>
 <li>L'incentivo viene inviato solo dopo verifica</li>
-<li>I tempi di risposta sono generalmente 24-72 ore</li>
+<li>Tempo di risposta: 24-72 ore</li>
 </ul>
 
 <p class="alex-tip">
 🔥 <span class="alex-label">Alex’s Tip:</span> Se hai dubbi, chiedi supporto prima di completare la procedura.
 </p>
 
-<div class="tip highlight">
-💸 Se tutto è corretto, riceverai l'incentivo.
+<div class="tip">
+💣 Se i passaggi non sono corretti, l'incentivo non viene riconosciuto.
 </div>
 
 </div>
