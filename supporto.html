@@ -64,21 +64,21 @@ Ti rispondo nel più breve tempo possibile.
   onsubmit="handleSubmit()"
 >
 
-<!-- redirect -->
 <input type="hidden" name="_next" value="https://alextoolsbox.it/grazie.html">
-
-<!-- subject -->
 <input type="hidden" name="_subject" value="Nuova richiesta AlexToolsBox">
 
 <label>Categoria</label><br>
-<select id="categoria" name="categoria" required style="width:100%;padding:10px;margin-bottom:15px;" onchange="mostraSottoMenu()">
+<select id="categoria" name="categoria" required 
+style="width:100%;padding:10px;margin-bottom:15px;" 
+onchange="gestisciCampi()">
 <option value="">-- Seleziona --</option>
 <option value="generale">Generale</option>
 <option value="revolut">Revolut</option>
 <option value="rewards">Microsoft Rewards</option>
 </select>
 
-<div id="sotto-revolut" style="display:none;">
+<!-- BLOCCO REVOLUT -->
+<div id="campi-revolut" style="display:none;">
 
 <label>Tipo richiesta Revolut</label><br>
 <select name="tipo_revolut" style="width:100%;padding:10px;margin-bottom:15px;">
@@ -86,11 +86,6 @@ Ti rispondo nel più breve tempo possibile.
 <option value="supporto">Supporto</option>
 <option value="incentivo">Richiesta incentivo 10€</option>
 </select>
-
-</div>
-
-<label>Email</label><br>
-<input type="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;">
 
 <label>Username Revolut (solo incentivo)</label><br>
 <input type="text" name="username" style="width:100%;padding:10px;margin-bottom:15px;">
@@ -102,6 +97,11 @@ Ti rispondo nel più breve tempo possibile.
 <option>Bonifico</option>
 </select>
 
+</div>
+
+<label>Email</label><br>
+<input type="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;">
+
 <label>Messaggio</label><br>
 <textarea name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;"></textarea>
 
@@ -109,7 +109,6 @@ Ti rispondo nel più breve tempo possibile.
 
 </form>
 
-<!-- INFO SCREENSHOT -->
 <div class="tip highlight" style="margin-top:30px;">
 
 <p><strong>📸 Per richieste incentivo</strong></p>
@@ -128,7 +127,6 @@ Dopo aver inviato il form, riceverai una email.
 
 </div>
 
-<!-- INFO -->
 <h2 style="margin-top:40px;">Informazioni importanti</h2>
 
 <ul>
@@ -158,17 +156,21 @@ document.getElementById("footer").innerHTML = data;
 </script>
 
 <script>
-function mostraSottoMenu() {
+function gestisciCampi() {
   var categoria = document.getElementById("categoria").value;
-  var sotto = document.getElementById("sotto-revolut");
+  var campi = document.getElementById("campi-revolut");
 
   if (categoria === "revolut") {
-    sotto.style.display = "block";
+    campi.style.display = "block";
   } else {
-    sotto.style.display = "none";
+    campi.style.display = "none";
+
+    // reset campi quando nascosti
+    campi.querySelectorAll("input, select").forEach(el => el.value = "");
   }
 }
 </script>
+
 <script>
 function handleSubmit() {
   setTimeout(function() {
