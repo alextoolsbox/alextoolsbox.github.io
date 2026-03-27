@@ -56,7 +56,7 @@ Ti rispondo nel più breve tempo possibile.
 
 </div>
 
-<h2>Invia una richiesta</h2>
+<h2 id="titolo-form">Invia una richiesta</h2>
 
 <form 
   action="https://formspree.io/f/mgopwqep"
@@ -78,14 +78,20 @@ onchange="gestisciCampi()">
 </select>
 
 <!-- BLOCCO REVOLUT -->
-<div id="campi-revolut" style="display:none;">
+<div id="blocco-revolut" style="display:none;">
 
 <label>Tipo richiesta Revolut</label><br>
-<select name="tipo_revolut" onchange="gestisciCampi()"> style="width:100%;padding:10px;margin-bottom:15px;">
+<select name="tipo_revolut" onchange="gestisciCampi()" 
+style="width:100%;padding:10px;margin-bottom:15px;">
 <option value="">-- Seleziona --</option>
 <option value="supporto">Supporto</option>
 <option value="incentivo">Richiesta incentivo 10€</option>
 </select>
+
+</div>
+
+<!-- CAMPI SOLO INCENTIVO -->
+<div id="campi-incentivo" style="display:none;">
 
 <label>Username Revolut (solo incentivo)</label><br>
 <input type="text" name="username" style="width:100%;padding:10px;margin-bottom:15px;">
@@ -158,25 +164,25 @@ document.getElementById("footer").innerHTML = data;
 <script>
 function gestisciCampi() {
   var categoria = document.getElementById("categoria").value;
-  var tipo = document.querySelector('select[name="tipo_revolut"]').value;
-  var campi = document.getElementById("campi-revolut");
+  var tipoSelect = document.querySelector('select[name="tipo_revolut"]');
+  var tipo = tipoSelect ? tipoSelect.value : "";
 
-  // Mostra il blocco Revolut solo se categoria = revolut
+  var bloccoRevolut = document.getElementById("blocco-revolut");
+  var campiIncentivo = document.getElementById("campi-incentivo");
+
   if (categoria === "revolut") {
-    document.getElementById("sotto-revolut").style.display = "block";
+    bloccoRevolut.style.display = "block";
   } else {
-    document.getElementById("sotto-revolut").style.display = "none";
-    campi.style.display = "none";
+    bloccoRevolut.style.display = "none";
+    campiIncentivo.style.display = "none";
   }
 
-  // Mostra i campi SOLO se incentivo
   if (categoria === "revolut" && tipo === "incentivo") {
-    campi.style.display = "block";
+    campiIncentivo.style.display = "block";
   } else {
-    campi.style.display = "none";
+    campiIncentivo.style.display = "none";
 
-    // reset valori
-    campi.querySelectorAll("input, select").forEach(el => el.value = "");
+    campiIncentivo.querySelectorAll("input, select").forEach(el => el.value = "");
   }
 }
 </script>
@@ -188,6 +194,7 @@ function handleSubmit() {
   }, 800);
 }
 </script>
+
 <script>
 window.addEventListener("DOMContentLoaded", function() {
   const params = new URLSearchParams(window.location.search);
@@ -196,13 +203,14 @@ window.addEventListener("DOMContentLoaded", function() {
   const tipo = params.get("tipo");
 
   const selectCategoria = document.getElementById("categoria");
-  const campiRevolut = document.getElementById("campi-revolut");
+  const bloccoRevolut = document.getElementById("blocco-revolut");
+  const campiIncentivo = document.getElementById("campi-incentivo");
 
   if (categoria) {
     selectCategoria.value = categoria;
 
     if (categoria === "revolut") {
-      campiRevolut.style.display = "block";
+      bloccoRevolut.style.display = "block";
     }
   }
 
@@ -213,11 +221,10 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // 💣 QUI METTI LA MODIFICA TITOLO
   if (categoria === "revolut" && tipo === "incentivo") {
-    document.querySelector("h2").innerText = "Richiedi il tuo incentivo Revolut";
+    campiIncentivo.style.display = "block";
+    document.getElementById("titolo-form").innerText = "Richiedi il tuo incentivo Revolut";
   }
-
 });
 </script>
 
