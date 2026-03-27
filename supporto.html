@@ -178,6 +178,33 @@ function handleSubmit() {
   }, 800);
 }
 </script>
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+  const params = new URLSearchParams(window.location.search);
+
+  const categoria = params.get("categoria");
+  const tipo = params.get("tipo");
+
+  const selectCategoria = document.getElementById("categoria");
+  const campiRevolut = document.getElementById("campi-revolut");
+
+  if (categoria) {
+    selectCategoria.value = categoria;
+
+    // mostra i campi revolut
+    if (categoria === "revolut") {
+      campiRevolut.style.display = "block";
+    }
+  }
+
+  if (tipo) {
+    const tipoSelect = document.querySelector('select[name="tipo_revolut"]');
+    if (tipoSelect) {
+      tipoSelect.value = tipo;
+    }
+  }
+});
+</script>
 
 </body>
 </html>
