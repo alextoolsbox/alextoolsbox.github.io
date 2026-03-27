@@ -191,7 +191,6 @@ window.addEventListener("DOMContentLoaded", function() {
   if (categoria) {
     selectCategoria.value = categoria;
 
-    // mostra i campi revolut
     if (categoria === "revolut") {
       campiRevolut.style.display = "block";
     }
@@ -203,6 +202,12 @@ window.addEventListener("DOMContentLoaded", function() {
       tipoSelect.value = tipo;
     }
   }
+
+  // 💣 QUI METTI LA MODIFICA TITOLO
+  if (categoria === "revolut" && tipo === "incentivo") {
+    document.querySelector("h2").innerText = "Richiedi il tuo incentivo Revolut";
+  }
+
 });
 </script>
 
