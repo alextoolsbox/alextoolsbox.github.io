@@ -124,7 +124,7 @@ position:relative;
 position:absolute;
 top:100%;
 left:0;
-margin-top:10px;
+margin-top:0; /* FIX */
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
@@ -133,7 +133,7 @@ min-width:200px;
 padding:10px 0;
 
 opacity:0;
-transform:translateY(10px);
+transform:translateY(5px); /* FIX */
 transition:all 0.2s ease;
 pointer-events:none;
 z-index:999;
@@ -163,6 +163,17 @@ transform:translateY(0);
 pointer-events:auto;
 }
 
+/* ===== FIX VERO (QUESTO RISOLVE IL BUG) ===== */
+
+.dropdown::after{
+content:"";
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+height:10px;
+}
+
 /* SUBMENU (livello 2) */
 
 .dropdown-sub > a::after{
@@ -186,7 +197,7 @@ min-width:200px;
 padding:10px 0;
 
 opacity:0;
-transform:translateX(10px);
+transform:translateX(5px); /* FIX */
 transition:all 0.2s ease;
 pointer-events:none;
 }
