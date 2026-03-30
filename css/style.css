@@ -187,10 +187,9 @@ position:relative;
 /* link con freccia (FIX DEFINITIVO) */
 
 .dropdown-sub > a{
-display:flex;
+display:flex !important;
 align-items:center;
-justify-content:space-between; /* tiene la freccia vicina ma ordinata */
-padding:10px 15px;
+justify-content:space-between;
 }
 
 .dropdown-sub > a::after{
