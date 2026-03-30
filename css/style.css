@@ -35,6 +35,18 @@ letter-spacing:0.3px;
 .navbar{
 background:white;
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:relative;
+}
+
+/* FIX linea */
+.navbar::after{
+content:"";
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+height:1px;
+background:white;
 }
 
 .nav-container{
@@ -61,10 +73,6 @@ font-weight:600;
 height:28px;
 }
 
-.nav-logo span{
-font-size:16px;
-}
-
 /* ===== MENU ===== */
 
 .nav-links{
@@ -81,8 +89,6 @@ font-weight:500;
 position:relative;
 transition:0.2s;
 }
-
-/* linea hover */
 
 .nav-links a::after{
 content:"";
@@ -136,15 +142,11 @@ pointer-events:none;
 z-index:999;
 }
 
-/* apertura */
-
 .dropdown:hover .dropdown-menu{
 opacity:1;
 transform:translate(-50%, 0);
 pointer-events:auto;
 }
-
-/* link dropdown */
 
 .dropdown-menu a{
 display:block;
@@ -161,13 +163,9 @@ background:#f1f3ff;
 color:#635bff;
 }
 
-/* separatori */
-
 .dropdown-menu a + a{
 border-top:1px solid #f1f1f1;
 }
-
-/* ponte invisibile */
 
 .dropdown::after{
 content:"";
@@ -184,21 +182,19 @@ height:8px;
 position:relative;
 }
 
-/* link con freccia ATTACCATA */
-
 .dropdown-sub > a{
 display:flex;
 align-items:center;
-gap:6px;
+justify-content:space-between;
+white-space:nowrap;
 }
 
 .dropdown-sub > a::after{
 content:"›";
 font-size:13px;
 opacity:0.7;
+margin-left:10px;
 }
-
-/* submenu attaccato */
 
 .dropdown-submenu{
 position:absolute;
@@ -231,6 +227,7 @@ background:linear-gradient(135deg,#635bff,#8a7fff);
 color:white;
 text-align:center;
 padding:90px 20px 70px;
+margin-top:-1px;
 }
 
 .hero h1{
@@ -289,6 +286,15 @@ p{
 margin:12px 0;
 }
 
+/* ===== GRID ===== */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
+margin-top:15px;
+}
+
 /* ===== CARD ===== */
 
 .card-link{
@@ -308,15 +314,6 @@ transition:transform 0.2s ease, box-shadow 0.2s ease;
 .card:hover{
 transform:translateY(-3px);
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* ===== GRID ===== */
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:18px;
-margin-top:15px;
 }
 
 /* ===== SEZIONI ===== */
