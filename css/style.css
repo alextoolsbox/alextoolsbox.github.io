@@ -184,25 +184,27 @@ height:8px;
 position:relative;
 }
 
-/* freccia a destra */
+/* link con freccia ATTACCATA */
 
 .dropdown-sub > a{
 display:flex;
-justify-content:space-between;
 align-items:center;
+gap:6px;
 }
 
 .dropdown-sub > a::after{
 content:"›";
-font-size:14px;
-opacity:0.6;
+font-size:13px;
+opacity:0.7;
 }
+
+/* submenu attaccato */
 
 .dropdown-submenu{
 position:absolute;
 top:0;
 left:100%;
-margin-left:6px;
+margin-left:0;
 
 background:#fff;
 box-shadow:0 12px 30px rgba(0,0,0,0.12);
@@ -211,7 +213,7 @@ min-width:180px;
 padding:6px 0;
 
 opacity:0;
-transform:translateX(5px);
+transform:translateX(3px);
 transition:all 0.2s ease;
 pointer-events:none;
 }
