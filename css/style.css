@@ -70,13 +70,13 @@ color:#111;
 .nav-links{
 display:flex;
 align-items:center;
-gap:25px; /* normale tra tutti */
+gap:25px;
 margin-left:auto;
 }
 
-/* SPACCO VISIVO TRA I 2 GRUPPI */
+/* separazione gruppo */
 .nav-links a:nth-child(4){
-margin-left:40px; /* stacca "Guadagnare Online" */
+margin-left:50px; /* stacca Guadagnare Online dal blocco prima */
 }
 
 .nav-links a{
@@ -87,6 +87,7 @@ font-weight:500;
 display:inline-block;
 position:relative;
 transition:0.2s;
+white-space:nowrap; /* evita che si incollino visivamente */
 }
 
 /* linea hover sotto il menu */
