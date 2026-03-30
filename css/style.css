@@ -1,4 +1,4 @@
-/* ===== BASE ===== */
+/* BASE */
 
 body{
 font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -8,7 +8,7 @@ line-height:1.7;
 padding-top:100px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .site-header{
 position:fixed;
@@ -18,38 +18,25 @@ width:100%;
 z-index:1000;
 }
 
-/* ===== PROMO BAR ===== */
+/* PROMO BAR */
 
-.promo-bar,
-#promo-bar{
+.promo-bar{
 background:#111;
 color:#fff;
 text-align:center;
-padding:6px;
-font-size:13px;
+padding:5px;
+font-size:12px;
 letter-spacing:0.3px;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 
 .navbar{
 background:white;
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
-position:relative;
-}
+padding:6px 0;
 
-/* FIX linea */
-.navbar::after{
-content:"";
-position:absolute;
-bottom:-1px;
-left:0;
-width:100%;
-height:1px;
-background:white;
-}
-
-.nav-container{
+}.nav-container{
 max-width:1100px;
 margin:auto;
 display:flex;
@@ -58,7 +45,7 @@ justify-content:space-between;
 padding:15px 20px;
 }
 
-/* ===== LOGO ===== */
+/* LOGO */
 
 .nav-logo{
 display:flex;
@@ -73,7 +60,12 @@ font-weight:600;
 height:28px;
 }
 
-/* ===== MENU ===== */
+.nav-logo span{
+font-size:16px;
+color:#111;
+}
+
+/* MENU */
 
 .nav-links{
 display:flex;
@@ -86,9 +78,12 @@ margin-left:auto;
 text-decoration:none;
 color:#333;
 font-weight:500;
+display:inline-block;
 position:relative;
 transition:0.2s;
 }
+
+/* linea hover sotto il menu */
 
 .nav-links a::after{
 content:"";
@@ -109,110 +104,94 @@ width:100%;
 color:#635bff;
 }
 
-/* freccia menu principale */
+/* freccia dropdown */
 
 .dropdown > a::after{
-content:"▾";
-font-size:11px;
-margin-left:5px;
-opacity:0.7;
+content:" ▸";
+font-size:12px;
+margin-left:4px;
 }
 
-/* ===== DROPDOWN ===== */
+/* DROPDOWN */
 
 .dropdown{
 position:relative;
 }
 
+/* menu nascosto di base */
+
 .dropdown-menu{
 position:absolute;
 top:100%;
-left:50%;
-transform:translate(-50%, 5px);
-
-background:#fff;
-box-shadow:0 15px 35px rgba(0,0,0,0.12);
-border-radius:12px;
-min-width:180px;
-padding:6px 0;
+left:0;
+margin-top:10px;
+background:white;
+border:1px solid #eee;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:8px;
+min-width:200px;
+padding:10px 0;
 
 opacity:0;
+transform:translateY(10px);
 transition:all 0.2s ease;
 pointer-events:none;
 z-index:999;
 }
 
-.dropdown:hover .dropdown-menu{
-opacity:1;
-transform:translate(-50%, 0);
-pointer-events:auto;
-}
+/* link dentro dropdown */
 
 .dropdown-menu a{
 display:block;
-padding:12px 16px;
-font-size:14px;
-color:#222;
-border-radius:6px;
-margin:2px 6px;
-transition:all 0.15s ease;
+padding:10px 15px;
+margin:0;
+color:#333;
 }
 
+/* hover dropdown */
+
 .dropdown-menu a:hover{
-background:#f1f3ff;
+background:#f4f6fb;
 color:#635bff;
 }
 
-.dropdown-menu a + a{
-border-top:1px solid #f1f1f1;
+/* apertura dropdown */
+
+.dropdown:hover .dropdown-menu{
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
-.dropdown::after{
-content:"";
-position:absolute;
-top:100%;
-left:0;
-width:100%;
-height:8px;
-}
-
-/* ===== SUBMENU ===== */
-
-.dropdown-sub{
-position:relative;
-}
-
-.dropdown-sub > a{
-display:flex;
-align-items:center;
-justify-content:space-between;
-white-space:nowrap;
-}
+/* SUBMENU (livello 2) */
 
 .dropdown-sub > a::after{
 content:"›";
-font-size:13px;
-opacity:0.7;
-margin-left:10px;
+float:right;
+position:relative;
 }
+
+/* menu a destra */
 
 .dropdown-submenu{
 position:absolute;
 top:0;
 left:100%;
-margin-left:0;
-
-background:#fff;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
-border-radius:12px;
-min-width:180px;
-padding:6px 0;
+margin-left:0px;
+background:white;
+border:1px solid #eee;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:8px;
+min-width:200px;
+padding:10px 0;
 
 opacity:0;
-transform:translateX(3px);
+transform:translateX(10px);
 transition:all 0.2s ease;
 pointer-events:none;
 }
+
+/* hover attiva submenu */
 
 .dropdown-sub:hover .dropdown-submenu{
 opacity:1;
@@ -220,14 +199,26 @@ transform:translateX(0);
 pointer-events:auto;
 }
 
-/* ===== HERO ===== */
+/* link submenu */
+
+.dropdown-submenu a{
+display:block;
+padding:10px 15px;
+color:#333;
+}
+
+.dropdown-submenu a:hover{
+background:#f4f6fb;
+color:#635bff;
+}
+
+/* HERO */
 
 .hero{
 background:linear-gradient(135deg,#635bff,#8a7fff);
 color:white;
 text-align:center;
 padding:90px 20px 70px;
-margin-top:-1px;
 }
 
 .hero h1{
@@ -244,7 +235,7 @@ font-size:18px;
 opacity:0.95;
 }
 
-/* ===== BUTTON ===== */
+/* CTA BUTTON */
 
 .button{
 display:inline-flex;
@@ -263,7 +254,7 @@ margin-top:25px;
 background:#1f1fff;
 }
 
-/* ===== CONTENT ===== */
+/* CONTENT */
 
 .container{
 max-width:900px;
@@ -275,8 +266,6 @@ border-radius:10px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* ===== ELEMENTI ===== */
-
 h2{
 margin-top:40px;
 font-size:28px;
@@ -286,7 +275,7 @@ p{
 margin:12px 0;
 }
 
-/* ===== GRID ===== */
+/* FEATURES */
 
 .features{
 display:grid;
@@ -295,43 +284,22 @@ gap:18px;
 margin-top:15px;
 }
 
-/* ===== CARD ===== */
-
-.card-link{
-text-decoration:none;
-color:inherit;
-display:block;
-}
-
 .card{
 background:#f7f8fc;
 padding:18px;
 border-radius:10px;
 text-align:center;
-transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-}
+/* STEPS */
 
-/* ===== SEZIONI ===== */
-
-.steps,
-.faq,
-.trust{
-background:#f7f8fc;
+.steps{
+background:#eef1ff;
 padding:20px;
 border-radius:10px;
-margin-top:15px;
 }
 
-.trust{
-text-align:center;
-}
-
-/* ===== TIP ===== */
+/* TIP */
 
 .tip{
 background:#e9edff;
@@ -340,99 +308,98 @@ border-radius:10px;
 margin-top:15px;
 }
 
-.tip.highlight{
-background:#eef2ff;
-border-left:4px solid #635bff;
-padding:15px 18px;
-border-radius:8px;
-margin-bottom:20px;
-font-size:15px;
+/* TIP POTENZIATO */
+.tip.highlight {
+background: #eef2ff;
+border-left: 4px solid #635bff;
+padding: 15px 18px;
+border-radius: 8px;
+margin-bottom: 20px;
+font-size: 15px;
 }
 
-/* ===== TABLE ===== */
+/* TABLE */
 
-.table,
-.plans-table{
+.table{
 width:100%;
 border-collapse:collapse;
-margin:20px 0;
-font-size:15px;
+margin-top:15px;
 }
 
-.plans-table th{
-background:#f5f5f5;
-text-align:left;
-padding:12px;
-border-bottom:2px solid #ddd;
-}
-
-.plans-table td,
 .table td{
-padding:12px;
-border-bottom:1px solid #eee;
-}
-
-.plans-table tr:hover{
-background:#fafafa;
-}
-
-/* ===== CALCOLATORE ===== */
-
-.calculator-box{
-width:100%;
-margin:15px auto;
-padding:16px;
-background:#fff;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.calculator-box input,
-.calculator-box select{
-width:100%;
-padding:10px;
-margin-bottom:6px;
-border-radius:8px;
 border:1px solid #ddd;
+padding:10px;
 }
 
-.calculator-box button{
-width:100%;
-padding:12px;
-border:none;
+/* FAQ */
+
+.faq{
+background:#f7f8fc;
+padding:20px;
 border-radius:10px;
-background:#000;
-color:#fff;
-cursor:pointer;
+margin-top:15px;
 }
 
-.result-box{
-margin-top:12px;
-padding:14px;
-background:#f5f5f5;
+/* TRUST */
+
+.trust{
+background:#f7f8fc;
+padding:20px;
 border-radius:10px;
+margin-top:25px;
+text-align:center;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 .footer{
 background:#111;
 color:#ddd;
 margin-top:60px;
-padding:50px 20px 30px;
+padding:50px 20px 30px 20px;
 }
 
 .footer-container{
 display:grid;
-grid-template-columns:1.6fr 1fr 1fr 1fr;
+grid-template-columns: 1.6fr 1fr 1fr 1fr;
 gap:25px;
 max-width:1200px;
 margin:auto;
 }
 
+.footer h3{
+font-size:20px;
+margin-bottom:15px;
+color:#fff;
+}
+
+.footer h4{
+font-size:16px;
+margin-bottom:12px;
+color:#fff;
+}
+
+.footer p{
+font-size:15px;
+line-height:1.6;
+color:#bbb;
+margin-bottom:14px;
+}
+
+.footer ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.footer li{
+margin:8px 0;
+}
+
 .footer a{
 color:#bbb;
 text-decoration:none;
+transition:0.2s;
 }
 
 .footer a:hover{
@@ -446,4 +413,204 @@ font-size:14px;
 color:#888;
 border-top:1px solid #222;
 padding-top:20px;
+letter-spacing:0.5px;
+}
+
+.author-box{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-top:8px;
+}
+
+.author-photo{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+margin-right:10px;
+}
+
+.author-text p{
+margin:5px 0;
+font-size:14px;
+}
+
+.footer-legal{
+margin-top:8px;
+font-size:14px;
+}
+
+.footer-legal a{
+margin-right:15px;
+}
+/* CARD */
+
+.card-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+.card{
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+
+.plans-table{
+width:100%;
+border-collapse:collapse;
+margin:25px 0;
+font-size:15px;
+}
+
+.plans-table th{
+background:#f5f5f5;
+text-align:left;
+padding:12px;
+border-bottom:2px solid #ddd;
+}
+
+.plans-table td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.plans-table tr:hover{
+background:#fafafa;
+}
+
+/* ===== CALCOLATORE ===== */
+
+.calculator-box {
+width: 100%;
+max-width: 100%;
+margin: 15px auto;
+padding: 16px;
+background: #ffffff;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* titolo */
+.calculator-box h3 {
+margin-bottom: 8px;
+font-size: 20px;
+}
+
+/* label */
+.calculator-box label {
+display: block;
+margin-bottom: 3px;
+font-size: 14px;
+}
+
+/* input e select */
+.calculator-box input,
+.calculator-box select {
+width: 100%;
+padding: 10px;
+margin-bottom: 6px;
+border-radius: 8px;
+border: 1px solid #ddd;
+font-size: 14px;
+}
+
+/* checkbox row FIX */
+.option-row {
+display: inline-flex !important;
+align-items: center !important;
+gap: 6px !important;
+margin: 6px 0 8px !important;
+width: auto !important;
+}
+
+.option-row span {
+display: inline-block;
+}
+
+.option-row {
+white-space: nowrap;
+}
+
+.option-row input {
+margin: 0;
+}
+
+/* radio inline compatto */
+.radio-group {
+display: flex;
+gap: 15px;
+margin: 4px 0 8px;
+}
+
+.radio-item {
+display: flex;
+align-items: center;
+gap: 4px;
+font-size: 14px;
+}
+
+/* bottone */
+.calculator-box button {
+width: 100%;
+padding: 12px;
+border: none;
+border-radius: 10px;
+background: #000;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+transition: 0.2s;
+margin-top: 8px;
+}
+
+.calculator-box button:hover {
+opacity: 0.85;
+}
+
+/* risultato */
+.result-box {
+margin-top: 12px;
+padding: 14px;
+background: #f5f5f5;
+border-radius: 10px;
+}
+
+/* NEW PROMOBAR */
+
+#promo-bar {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 6px 10px;
+  letter-spacing: 0.3px;
+}
+
+.promo-inline {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px auto;
+  color: #555;
+}
+
+/* ALEX TIPS */
+
+.alex-label {
+  color: #dc2626;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.alex-tip {
+  margin: 12px 0 20px 0;
+  font-size: 14px;
+  line-height: 1.6;
 }
