@@ -70,16 +70,16 @@ color:#111;
 .nav-links{
 display:flex;
 align-items:center;
-gap:25px;
+gap:25px; /* normale tra tutti */
 margin-left:auto;
 }
 
-/* separazione gruppo */
+/* SPACCO VISIVO TRA I 2 GRUPPI */
 .nav-links a:nth-child(4){
-margin-left:50px; /* stacca Guadagnare Online dal blocco prima */
+margin-left:40px; /* stacca "Guadagnare Online" */
 }
 
-.nav-links > a{
+.nav-links a{
 text-decoration:none;
 color:#333;
 padding:6px 0;
@@ -87,7 +87,6 @@ font-weight:500;
 display:inline-block;
 position:relative;
 transition:0.2s;
-white-space:nowrap;
 }
 
 /* linea hover sotto il menu */
@@ -117,49 +116,51 @@ content:" ▸";
 font-size:12px;
 margin-left:4px;
 }
-/* ===== DROPDOWN ===== */
+
+/* DROPDOWN */
 
 .dropdown{
 position:relative;
 }
 
-/* ===== MENU PRINCIPALE ===== */
+/* menu nascosto di base */
 
 .dropdown-menu{
 position:absolute;
 top:100%;
 left:0;
-background:#fff;
+margin-top:0; /* FIX */
+background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 border-radius:8px;
 min-width:200px;
-padding:8px 0;
+padding:10px 0;
 
 opacity:0;
-transform:translateY(4px);
+transform:translateY(5px); /* FIX */
 transition:all 0.2s ease;
 pointer-events:none;
 z-index:999;
 }
 
-/* link dropdown */
+/* link dentro dropdown */
 
 .dropdown-menu a{
 display:block;
 padding:10px 15px;
+margin:0;
 color:#333;
-text-align:left;
-white-space:nowrap;
-transition:0.15s;
 }
+
+/* hover dropdown */
 
 .dropdown-menu a:hover{
 background:#f4f6fb;
 color:#635bff;
 }
 
-/* apertura */
+/* apertura dropdown */
 
 .dropdown:hover .dropdown-menu{
 opacity:1;
@@ -167,7 +168,7 @@ transform:translateY(0);
 pointer-events:auto;
 }
 
-/* ponte invisibile anti-bug */
+/* ===== FIX VERO (QUESTO RISOLVE IL BUG) ===== */
 
 .dropdown::after{
 content:"";
@@ -175,50 +176,38 @@ position:absolute;
 top:100%;
 left:0;
 width:100%;
-height:8px;
+height:10px;
 }
 
-/* ===== SUBMENU ===== */
-
-.dropdown-sub{
-position:relative;
-}
-
-/* link con freccia (FIX DEFINITIVO) */
-
-.dropdown-sub > a{
-display:flex !important;
-align-items:center;
-justify-content:space-between;
-}
+/* SUBMENU (livello 2) */
 
 .dropdown-sub > a::after{
 content:"›";
-font-size:13px;
-opacity:0.7;
-margin-left:8px;
+float:right;
+position:relative;
 }
 
-/* ===== SUBMENU A DESTRA ===== */
+/* menu a destra */
 
 .dropdown-submenu{
 position:absolute;
 top:0;
 left:100%;
-background:#fff;
+margin-left:0px;
+background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 border-radius:8px;
 min-width:200px;
-padding:8px 0;
+padding:10px 0;
 
 opacity:0;
-transform:translateX(4px);
+transform:translateX(5px); /* FIX */
 transition:all 0.2s ease;
 pointer-events:none;
 }
 
-/* apertura submenu */
+/* hover attiva submenu */
 
 .dropdown-sub:hover .dropdown-submenu{
 opacity:1;
@@ -232,15 +221,13 @@ pointer-events:auto;
 display:block;
 padding:10px 15px;
 color:#333;
-text-align:left;
-white-space:nowrap;
-transition:0.15s;
 }
 
 .dropdown-submenu a:hover{
 background:#f4f6fb;
 color:#635bff;
 }
+
 /* HERO */
 
 .hero{
@@ -642,29 +629,4 @@ border-radius: 10px;
   margin: 12px 0 20px 0;
   font-size: 14px;
   line-height: 1.6;
-}
-/* ===== FORCE FIX DROPDOWN (ANTI-OVERRIDE) ===== */
-
-.nav-links .dropdown-sub > a{
-display:flex !important;
-align-items:center !important;
-justify-content:space-between !important;
-padding:10px 15px !important;
-}
-
-.nav-links .dropdown-sub > a::after{
-content:"›" !important;
-float:none !important;
-position:static !important;
-margin-left:8px !important;
-font-size:13px !important;
-opacity:0.7 !important;
-}
-
-/* allineamento link submenu (fix "Deposito") */
-.nav-links .dropdown-submenu a{
-display:block !important;
-text-align:left !important;
-white-space:nowrap !important;
-padding:10px 15px !important;
 }
