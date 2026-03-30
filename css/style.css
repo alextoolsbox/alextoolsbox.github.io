@@ -118,50 +118,50 @@ font-size:12px;
 margin-left:4px;
 }
 
-/* DROPDOWN */
+/* ===== DROPDOWN ===== */
 
 .dropdown{
 position:relative;
 }
 
-/* menu nascosto di base */
+/* menu principale */
 
 .dropdown-menu{
 position:absolute;
 top:100%;
 left:0;
-margin-top:0; /* FIX */
+margin-top:0;
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 border-radius:8px;
 min-width:200px;
-padding:10px 0;
+padding:8px 0;
 
 opacity:0;
-transform:translateY(5px); /* FIX */
+transform:translateY(5px);
 transition:all 0.2s ease;
 pointer-events:none;
 z-index:999;
 }
 
-/* link dentro dropdown */
+/* link dropdown */
 
 .dropdown-menu a{
 display:block;
 padding:10px 15px;
-margin:0;
 color:#333;
+text-align:left;
+white-space:nowrap;
+transition:0.15s;
 }
-
-/* hover dropdown */
 
 .dropdown-menu a:hover{
 background:#f4f6fb;
 color:#635bff;
 }
 
-/* apertura dropdown */
+/* apertura */
 
 .dropdown:hover .dropdown-menu{
 opacity:1;
@@ -169,7 +169,7 @@ transform:translateY(0);
 pointer-events:auto;
 }
 
-/* ===== FIX VERO (QUESTO RISOLVE IL BUG) ===== */
+/* ponte invisibile anti-bug */
 
 .dropdown::after{
 content:"";
@@ -180,35 +180,48 @@ width:100%;
 height:10px;
 }
 
-/* SUBMENU (livello 2) */
+/* ===== SUBMENU ===== */
 
-.dropdown-sub > a::after{
-content:"›";
-float:right;
+.dropdown-sub{
 position:relative;
 }
 
-/* menu a destra */
+/* link con freccia vicina */
+
+.dropdown-sub > a{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.dropdown-sub > a::after{
+content:"›";
+font-size:13px;
+opacity:0.7;
+}
+
+/* submenu */
 
 .dropdown-submenu{
 position:absolute;
 top:0;
 left:100%;
-margin-left:0px;
+margin-left:0;
+
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 border-radius:8px;
 min-width:200px;
-padding:10px 0;
+padding:8px 0;
 
 opacity:0;
-transform:translateX(5px); /* FIX */
+transform:translateX(5px);
 transition:all 0.2s ease;
 pointer-events:none;
 }
 
-/* hover attiva submenu */
+/* apertura submenu */
 
 .dropdown-sub:hover .dropdown-submenu{
 opacity:1;
@@ -222,13 +235,15 @@ pointer-events:auto;
 display:block;
 padding:10px 15px;
 color:#333;
+text-align:left;
+white-space:nowrap;
+transition:0.15s;
 }
 
 .dropdown-submenu a:hover{
 background:#f4f6fb;
 color:#635bff;
 }
-
 /* HERO */
 
 .hero{
