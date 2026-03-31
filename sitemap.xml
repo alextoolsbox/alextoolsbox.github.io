@@ -2,55 +2,88 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://alextoolsbox.it/</loc>
-<priority>1.0</priority>
-</url>
+  <!-- HOME -->
+  <url>
+    <loc>https://alextoolsbox.it/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/chi-sono.html</loc>
-<priority>0.6</priority>
-</url>
+  <!-- PAGINE BASE -->
+  <url>
+    <loc>https://alextoolsbox.it/chi-sono.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/privacy.html</loc>
-<priority>0.4</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/privacy.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.3</priority>
+  </url>
 
-<!-- REVOLUT MAIN -->
-<url>
-<loc>https://alextoolsbox.it/revolut/</loc>
-<priority>0.9</priority>
-</url>
+  <!-- ===================== -->
+  <!-- REVOLUT CLUSTER -->
+  <!-- ===================== -->
 
-<url>
-<loc>https://alextoolsbox.it/revolut/bonus.html</loc>
-<priority>1.0</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.95</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/revolut/piani.html</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/bonus.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/revolut/deposito-senza-vincoli.html</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/deposito-senza-vincoli.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.95</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/revolut/revpoint.html</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/faq.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/revolut/faq.html</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/piani.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.85</priority>
+  </url>
 
-<url>
-<loc>https://alextoolsbox.it/revolut/sicurezza.html</loc>
-<priority>0.7</priority>
-</url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/revpoint.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://alextoolsbox.it/revolut/sicurezza.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===================== -->
+  <!-- MICROSOFT REWARDS CLUSTER -->
+  <!-- ===================== -->
+
+  <!-- HUB -->
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- PAGINE -->
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/come-iniziare.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.95</priority>
+  </url>
 
 </urlset>
