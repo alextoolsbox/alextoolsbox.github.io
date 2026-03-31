@@ -244,7 +244,7 @@ gap:10px;
 background:#2d2dff;
 color:white;
 padding:14px 28px;
-border-radius:10px;
+border-radius:12px;
 font-weight:bold;
 text-decoration:none;
 margin-top:25px;
@@ -287,8 +287,9 @@ margin-top:15px;
 .card{
 background:#f7f8fc;
 padding:18px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
+transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* STEPS */
@@ -302,20 +303,22 @@ border-radius:10px;
 /* TIP */
 
 .tip{
-background:#e9edff;
-padding:20px;
-border-radius:10px;
-margin-top:15px;
+background: linear-gradient(90deg, #eef2ff, #ffffff);
+padding: 18px;
+border-radius: 10px;
+margin: 20px 0;
+line-height: 1.5;
 }
 
 /* TIP POTENZIATO */
 .tip.highlight {
-background: #eef2ff;
+background: linear-gradient(90deg, #eef2ff, #ffffff);
 border-left: 4px solid #635bff;
-padding: 15px 18px;
-border-radius: 8px;
-margin-bottom: 20px;
+padding: 16px 18px;
+border-radius: 10px;
+margin: 25px 0;
 font-size: 15px;
+line-height: 1.5;
 }
 
 /* TABLE */
@@ -334,10 +337,11 @@ padding:10px;
 /* FAQ */
 
 .faq{
-background:#f7f8fc;
-padding:20px;
-border-radius:10px;
-margin-top:15px;
+background: #f7f8fc;
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+line-height: 1.5;
 }
 
 /* TRUST */
