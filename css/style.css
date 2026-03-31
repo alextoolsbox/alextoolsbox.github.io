@@ -603,14 +603,16 @@ border-radius: 10px;
 
 /* ALEX TIPS */
 
-.alex-label {
-  color: #dc2626;
-  font-weight: 700;
-  margin-right: 6px;
+.alex-tip {
+  background: linear-gradient(90deg, #fff4e5, #fff);
+  border-left: 4px solid #ff9800;
+  padding: 16px 18px;
+  border-radius: 10px;
+  margin: 25px 0;
+  font-size: 15px;
 }
 
-.alex-tip {
-  margin: 12px 0 20px 0;
-  font-size: 14px;
-  line-height: 1.6;
+.alex-label {
+  font-weight: 700;
+  color: #ff6a00;
 }
