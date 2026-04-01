@@ -328,17 +328,41 @@ document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
 ${includeCost ? `
-<p><strong>Annuale (senza piano):</strong> ${yearlyNet.toFixed(2)} €</p>
-<p><strong>Annuale (con piano):</strong> ${finalYearly.toFixed(2)} €</p>
 
-<p style="margin-top:10px; font-size:18px; font-weight:bold; color:#16a34a;">
-💰 Guadagno giornaliero (senza piano): ${(yearlyNet / 365).toFixed(2)} €
-</p>
+<table style="width:100%; border-collapse:collapse; margin-top:10px;">
+<thead>
+<tr style="border-bottom:1px solid #ddd;">
+<th style="text-align:left; padding:6px;">Periodo</th>
+<th style="text-align:right; padding:6px;">Senza piano</th>
+<th style="text-align:right; padding:6px;">Con piano</th>
+</tr>
+</thead>
 
-<p><strong>Giornaliero reale (con piano):</strong> ${daily.toFixed(2)} €</p>
+<tbody>
+<tr>
+<td style="padding:6px;"><strong>Annuale</strong></td>
+<td style="padding:6px; text-align:right;">${yearlyNet.toFixed(2)} €</td>
+<td style="padding:6px; text-align:right;">${finalYearly.toFixed(2)} €</td>
+</tr>
 
-<p><strong>Mensile:</strong> ${monthly.toFixed(2)} €</p>
+<tr>
+<td style="padding:6px;"><strong>Mensile</strong></td>
+<td style="padding:6px; text-align:right;">${(yearlyNet/12).toFixed(2)} €</td>
+<td style="padding:6px; text-align:right;">${monthly.toFixed(2)} €</td>
+</tr>
+
+<tr style="background:#f0fdf4;">
+<td style="padding:6px;"><strong>Giornaliero</strong></td>
+<td style="padding:6px; text-align:right; font-weight:bold; color:#16a34a;">
+💰 ${(yearlyNet/365).toFixed(2)} €
+</td>
+<td style="padding:6px; text-align:right;">${daily.toFixed(2)} €</td>
+</tr>
+</tbody>
+</table>
+
 ` : `
+
 <p><strong>Annuale:</strong> ${yearlyNet.toFixed(2)} €</p>
 
 <p style="margin-top:10px; font-size:18px; font-weight:bold; color:#16a34a;">
@@ -346,6 +370,7 @@ ${includeCost ? `
 </p>
 
 <p><strong>Mensile:</strong> ${(yearlyNet / 12).toFixed(2)} €</p>
+
 `}
 
 <p style="font-weight:bold; color:${color}; margin-top:10px;">
