@@ -327,15 +327,32 @@ else{
 document.getElementById("result").innerHTML = `
 <h3>Risultato stimato</h3>
 
-<p><strong>Annuale:</strong> ${finalYearly.toFixed(2)} €</p>
+${includeCost ? `
+<p><strong>Annuale (senza piano):</strong> ${yearlyNet.toFixed(2)} €</p>
+<p><strong>Annuale (con piano):</strong> ${finalYearly.toFixed(2)} €</p>
+
+<p style="margin-top:10px; font-size:18px; font-weight:bold; color:#16a34a;">
+💰 Guadagno giornaliero (senza piano): ${(yearlyNet / 365).toFixed(2)} €
+</p>
+
+<p><strong>Giornaliero reale (con piano):</strong> ${daily.toFixed(2)} €</p>
+
 <p><strong>Mensile:</strong> ${monthly.toFixed(2)} €</p>
-<p><strong>Giornaliero:</strong> ${daily.toFixed(2)} €</p>
+` : `
+<p><strong>Annuale:</strong> ${yearlyNet.toFixed(2)} €</p>
+
+<p style="margin-top:10px; font-size:18px; font-weight:bold; color:#16a34a;">
+💰 Guadagno giornaliero: ${(yearlyNet / 365).toFixed(2)} €
+</p>
+
+<p><strong>Mensile:</strong> ${(yearlyNet / 12).toFixed(2)} €</p>
+`}
 
 <p style="font-weight:bold; color:${color}; margin-top:10px;">
 ${message}
 </p>
 
-${includeCost ? `<p><small>Costo piano: ${cost.toFixed(2)} € / anno</small></p>` : ""}
+${includeCost ? `<p><small>Impatto costo piano: -${cost.toFixed(2)} € / anno</small></p>` : ""}
 
 <hr>
 
