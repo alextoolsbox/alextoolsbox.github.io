@@ -636,3 +636,20 @@ border-radius: 10px;
 .alex-tip + h2 {
   margin-top: 20px;
 }
+.image-box {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.image-box img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.image-caption {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
