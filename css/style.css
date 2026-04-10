@@ -638,7 +638,7 @@ border-radius: 10px;
 }
 .image-box {
   text-align: center;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .image-box img {
@@ -646,10 +646,14 @@ border-radius: 10px;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
 }
 
 .image-caption {
   font-size: 13px;
   color: #666;
   margin-top: 8px;
+}
+.image-box img:hover {
+  transform: scale(1.02);
 }
