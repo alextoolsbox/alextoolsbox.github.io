@@ -259,10 +259,9 @@ background:#1f1fff;
 
 .container{
 max-width:900px;
-margin:auto;
+margin:40px auto;
 background:white;
 padding:50px 40px;
-margin-top:-50px;
 border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
