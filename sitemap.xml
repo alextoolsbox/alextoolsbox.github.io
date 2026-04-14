@@ -79,11 +79,30 @@
     <priority>0.95</priority>
   </url>
 
-  <!-- PAGINE -->
+  <!-- CORE -->
   <url>
     <loc>https://alextoolsbox.it/microsoft-rewards/come-iniziare.html</loc>
     <lastmod>2026-03-31</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/esperienza-giornaliera.html</loc>
+    <lastmod>2026-03-31</lastmod>
     <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/premi.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- SUPPORT -->
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/faq.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.85</priority>
   </url>
 
 </urlset>
