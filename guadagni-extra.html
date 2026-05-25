@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guadagni Extra – Microsoft Rewards e altre app | AlexToolsBox</title>
+    <meta name="description" content="Metodi semplici per guadagnare punti, buoni Amazon e piccoli extra con Microsoft Rewards e app passive. Guide pratiche e basate su esperienza reale.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <div class="hero" style="background:linear-gradient(135deg,#ff9800,#ffb74d);">
+        <h1>Guadagni Extra</h1>
+        <p class="hero-description">
+            Trasforma qualche minuto libero in buoni regalo e piccoli guadagni. Metodi veri, senza competenze particolari, spiegati in modo semplice.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <h2>💰 Le opportunità che seguo</h2>
+        <p>Ogni metodo è provato personalmente. Non prometto cifre esagerate, ma risultati reali e costanti nel tempo.</p>
+
+        <div class="features">
+            <!-- Microsoft Rewards -->
+            <a href="/microsoft-rewards/" class="card-link">
+                <div class="card">
+                    <h3>Microsoft Rewards</h3>
+                    <p>Accumula punti con ricerche e attività giornaliere, convertili in buoni Amazon, Xbox e molto altro.</p>
+                    <span class="button" style="background:#ff9800; margin-top:10px;">Vai alla guida</span>
+                </div>
+            </a>
+
+            <!-- App passive (presto) -->
+            <div class="card" style="opacity:0.6;">
+                <h3>App passive</h3>
+                <p>Guadagna piccoli importi con app di cashback, sondaggi e raccolta dati in modo passivo. In arrivo a breve.</p>
+                <span style="font-size:13px; color:#888;">(presto)</span>
+            </div>
+        </div>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Non servono ore. Con costanza e le guide giuste, puoi accumulare crediti utili per le tue spese quotidiane. Inizia da Rewards, è il più facile."</em>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
