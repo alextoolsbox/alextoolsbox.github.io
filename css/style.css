@@ -1,3 +1,7 @@
+/* ============================================
+   ALEXTOOLSBOX - CSS COMPLETO (con modifiche)
+   ============================================ */
+
 /* BASE */
 
 body{
@@ -124,7 +128,7 @@ position:relative;
 position:absolute;
 top:100%;
 left:0;
-margin-top:0; /* FIX */
+margin-top:0;
 background:white;
 border:1px solid #eee;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
@@ -133,7 +137,7 @@ min-width:200px;
 padding:10px 0;
 
 opacity:0;
-transform:translateY(5px); /* più piccolo */
+transform:translateY(5px);
 transition:all 0.2s ease;
 pointer-events:none;
 z-index:999;
@@ -458,6 +462,7 @@ font-size:14px;
 .footer-legal a{
 margin-right:15px;
 }
+
 /* CARD */
 
 .card-link{
@@ -635,6 +640,7 @@ border-radius: 10px;
 .alex-tip + h2 {
   margin-top: 20px;
 }
+
 .image-box {
   text-align: center;
   margin: 30px 0;
@@ -653,6 +659,175 @@ border-radius: 10px;
   color: #666;
   margin-top: 8px;
 }
+
 .image-box img:hover {
   transform: scale(1.02);
+}
+
+
+/* ============================================
+   MODIFICHE INTEGRATE
+   ============================================ */
+
+/* 1. SKIP LINK (accessibilità) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 2000;
+    font-size: 14px;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* 2. HAMBURGER MENU (mobile) */
+
+/* Nascondi checkbox e icona su desktop */
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+/* Media query: scatta sotto 768px */
+@media (max-width: 768px) {
+
+    /* Mostra icona hamburger */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1100;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    /* Hamburger animazione opzionale (non necessaria, ma carina) */
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Menu: nascosto di default su mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        gap: 0;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Mostra menu quando checkbox è attivo */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Voci del menu a tutta larghezza */
+    .nav-links a {
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Dropdown sempre visibili su mobile */
+    .dropdown-menu,
+    .dropdown-submenu {
+        position: static;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0 0 0 15px;
+        min-width: auto;
+        background: transparent;
+        display: block;
+        max-height: none;
+    }
+
+    .dropdown-menu a,
+    .dropdown-submenu a {
+        padding: 10px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #f8f8f8;
+    }
+
+    /* Rimuove frecce e stili desktop */
+    .dropdown > a::after,
+    .dropdown-sub > a::after {
+        content: "";
+        margin: 0;
+    }
+
+    /* Dropdown e submenu sempre aperti */
+    .dropdown:hover .dropdown-menu,
+    .dropdown-sub:hover .dropdown-submenu {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    /* Footer: colonne in pila */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .author-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Container meno padding */
+    .container {
+        padding: 30px 20px;
+    }
+
+    /* Hero ridotta */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    /* Pulsanti hero in pila */
+    .hero div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Riduci padding-top body su mobile */
+    body {
+        padding-top: 80px;
+    }
 }
