@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conti e Carte Digitali – Guide Revolut, Satispay, N26 | AlexToolsBox</title>
+    <meta name="description" content="Guide pratiche per aprire e usare conti digitali come Revolut, Satispay e N26. Confronti, bonus di benvenuto e consigli basati su esperienza reale.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <div class="hero" style="background:linear-gradient(135deg,#635bff,#8a7fff);">
+        <h1>Conti e Carte Digitali</h1>
+        <p class="hero-description">
+            Guide indipendenti per scegliere il conto digitale giusto. Revolut, Satispay, N26 e altri: confronto, bonus e istruzioni passo passo.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <h2>💳 I conti che puoi conoscere</h2>
+        <p>Ogni guida è basata sulla mia esperienza personale. Scelgo solo servizi che ho testato e che uso (o ho usato) nella vita reale.</p>
+
+        <div class="features">
+            <!-- Revolut -->
+            <a href="/revolut/" class="card-link">
+                <div class="card">
+                    <h3>Revolut</h3>
+                    <p>Apri un conto multivaluta, ottieni il bonus di benvenuto e gestisci le tue finanze in modo moderno.</p>
+                    <span class="button" style="background:#635bff; margin-top:10px;">Vai alla guida</span>
+                </div>
+            </a>
+
+            <!-- Satispay (presto) -->
+            <div class="card" style="opacity:0.6;">
+                <h3>Satispay</h3>
+                <p>Pagamenti veloci tra amici, risparmio e cashback. In arrivo a breve.</p>
+                <span style="font-size:13px; color:#888;">(presto)</span>
+            </div>
+
+            <!-- N26 (presto) -->
+            <div class="card" style="opacity:0.6;">
+                <h3>N26</h3>
+                <p>Conto corrente digitale con IBAN italiano, carta gratuita e bonifici istantanei. In arrivo a breve.</p>
+                <span style="font-size:13px; color:#888;">(presto)</span>
+            </div>
+        </div>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Aprire un conto digitale non è mai stato così semplice. La differenza è usarlo bene. Le mie guide ti fanno risparmiare tempo e ti mostrano come ottenere tutti i bonus disponibili."</em>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
