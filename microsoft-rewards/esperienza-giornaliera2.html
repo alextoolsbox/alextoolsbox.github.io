@@ -1,1 +1,680 @@
 
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Rewards: la mia esperienza reale (routine giornaliera) | AlexToolsBox</title>
+    <meta name="description" content="La mia routine quotidiana con Microsoft Rewards dopo mesi di utilizzo. Come fare 250 punti al giorno tra app e PC, errori da evitare e risultati reali.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Microsoft Rewards: la mia esperienza reale (routine giornaliera)",
+        "description": "La mia routine quotidiana con Microsoft Rewards dopo mesi di utilizzo. Come fare 250 punti al giorno tra app e PC, errori da evitare e risultati reali.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-03-20",
+        "dateModified": "2026-05-26"
+    }
+    </script>
+
+    <!-- SCHEMA HOWTO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Routine giornaliera Microsoft Rewards",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Apri l'app Bing e fai il check-in",
+                "text": "Apri l'app Bing, fai il check-in giornaliero e controlla i punti disponibili per la giornata."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Completa il set giornaliero",
+                "text": "Clicca su ogni attività del set giornaliero. Ogni attività vale circa 10 punti, per un totale di circa 30 punti."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Fai le ricerche da smartphone",
+                "text": "Usa le ricerche suggerite dall'app Bing. Ogni ricerca vale circa 3 punti. Completa fino a 60 punti (circa 20 ricerche)."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Leggi gli articoli per guadagnare",
+                "text": "Apri gli articoli suggeriti, scorri velocemente e torna indietro. Ogni articolo vale circa 3 punti, fino a 30 punti totali."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Passa al PC e completa le ricerche",
+                "text": "Apri Bing su PC e fai ricerche semplici (nomi di città, parole casuali). Completa fino a 90 punti (circa 30 ricerche)."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Attività extra (opzionale)",
+                "text": "Se hai tempo, completa le attività extra nella dashboard: quiz, puzzle, frase del giorno. Punti facili extra."
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quanti punti posso fare ogni giorno con Microsoft Rewards?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con il sistema attuale (maggio 2026), puoi fare circa 250 punti al giorno: 90 da PC, 60 da app, 30 dalle news, 30 dal set giornaliero, più bonus sequenza e attività extra."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo serve per la routine giornaliera?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In media 2-3 minuti al giorno. La routine è: app Bing (set giornaliero, ricerche, news) in 2 minuti, PC (ricerche) in 1 minuto. Le attività extra sono opzionali."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se salto un giorno?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perdi i punti di quel giorno e la sequenza bonus potrebbe azzerarsi. Puoi usare la protezione della serie (fino a 14 giorni disponibili), ma meglio non saltare per non perdere i bonus."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Guadagni Extra", "item": "https://alextoolsbox.it/guadagni-extra.html" },
+            { "@type": "ListItem", "position": 3, "name": "Microsoft Rewards", "item": "https://alextoolsbox.it/microsoft-rewards/" },
+            { "@type": "ListItem", "position": 4, "name": "Esperienza Giornaliera", "item": "https://alextoolsbox.it/microsoft-rewards/esperienza-giornaliera.html" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Come uso Microsoft Rewards ogni giorno</h1>
+        <p class="hero-description">
+            Questa è la mia routine reale dopo mesi di utilizzo: cosa faccio davvero,
+            quanto tempo ci metto e cosa puoi evitare.
+        </p>
+        <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:25px;">
+            <a href="#routine" class="button" style="background:#ff9800;">
+                📱 Vedi la routine
+            </a>
+            <a href="/microsoft-rewards/come-iniziare.html" class="button">
+                🚀 Non hai ancora iniziato?
+            </a>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Dopo mesi di test, ho trovato una routine semplice e veloce per fare <strong>circa
+                250 punti al giorno</strong> con Microsoft Rewards. Parto dallo <strong>smartphone</strong>
+                (app Bing: set giornaliero, ricerche, news) e finisco dal <strong>PC</strong>
+                (ricerche su Bing). Tempo totale: <strong>2-3 minuti</strong>. In questa pagina
+                ti mostro esattamente cosa faccio io, con screenshot reali, così puoi copiare
+                la mia routine e iniziare subito.
+            </p>
+        </div>
+
+        <!-- INTRO -->
+        <p>
+            Dopo aver testato Microsoft Rewards per mesi, ho trovato un modo semplice e veloce
+            per usarlo ogni giorno.
+        </p>
+        <p>
+            Completo tutte le attività e arrivo sempre al massimo dei punti disponibili.
+        </p>
+        <p>
+            E la cosa migliore è che bastano pochi minuti.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"All'inizio sembra complicato, ma dopo pochi giorni diventa automatico.
+                Come lavarsi i denti: lo fai e basta."</em>
+        </div>
+
+        <!-- COSA SERVE -->
+        <h2>Cosa ti serve per seguire la mia routine</h2>
+        <p>Per replicare esattamente quello che faccio io, ti bastano due cose:</p>
+        <ul>
+            <li><strong>📱 Smartphone</strong> con l'app <strong>Bing</strong> installata (gratis)</li>
+            <li><strong>💻 PC</strong> con il browser <strong>Edge</strong> (o qualunque altro browser)</li>
+            <li><strong>🔑 Account Microsoft</strong> (lo stesso che usi per Windows, Xbox o Outlook)</li>
+            <li><strong>⏰ 2-3 minuti al giorno</strong> di costanza</li>
+        </ul>
+        <p>
+            Se non hai ancora iniziato, vai alla <a href="/microsoft-rewards/come-iniziare.html">guida passo passo</a>.
+        </p>
+
+        <!-- QUANTI PUNTI -->
+        <h2>Quanti punti puoi fare ogni giorno</h2>
+        <p>
+            Facendo tutte le attività disponibili ogni giorno, puoi arrivare a circa
+            <strong>250 punti giornalieri</strong>. Ecco la ripartizione:
+        </p>
+
+        <table class="plans-table">
+            <tr>
+                <th>Attività</th>
+                <th>Dove</th>
+                <th>Punti</th>
+                <th>Tempo stimato</th>
+            </tr>
+            <tr>
+                <td><strong>Set giornaliero</strong></td>
+                <td>App o PC</td>
+                <td>~30 punti</td>
+                <td>30 secondi</td>
+            </tr>
+            <tr>
+                <td><strong>Ricerche da smartphone</strong></td>
+                <td>App Bing</td>
+                <td>~60 punti</td>
+                <td>1 minuto</td>
+            </tr>
+            <tr>
+                <td><strong>Lettura news</strong></td>
+                <td>App Bing</td>
+                <td>~30 punti</td>
+                <td>30 secondi</td>
+            </tr>
+            <tr>
+                <td><strong>Ricerche da PC</strong></td>
+                <td>PC (Bing/Edge)</td>
+                <td>~90 punti</td>
+                <td>1 minuto</td>
+            </tr>
+            <tr>
+                <td><strong>Bonus sequenza ed extra</strong></td>
+                <td>Vari</td>
+                <td>~40 punti (media giornaliera)</td>
+                <td>30 secondi</td>
+            </tr>
+            <tr style="background:#f0fdf4;">
+                <td><strong>💰 Totale giornaliero</strong></td>
+                <td></td>
+                <td><strong>~250 punti</strong></td>
+                <td><strong>~3 minuti</strong></td>
+            </tr>
+        </table>
+
+        <p>
+            👉 Questa è la base giornaliera. Con i bonus sequenza e i puzzle, il totale mensile
+            sale ancora.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Una volta che capisci questo schema, diventa tutto automatico. Io lo faccio
+                mentre bevo il caffè al mattino. Dopo una settimana non ci pensi più."</em>
+        </div>
+
+        <!-- ROUTINE -->
+        <h2 id="routine">Come organizzo la mia routine (APP + PC)</h2>
+        <p>
+            Nel tempo ho trovato un modo semplice per fare tutto senza perdere tempo.
+        </p>
+        <p>
+            Parto sempre dallo smartphone e poi finisco dal PC.
+        </p>
+        <p>
+            👉 Prima faccio tutte le attività dall'app, poi completo le ricerche dal computer.
+        </p>
+        <p>
+            In questo modo riesco a fare tutto in pochi minuti, senza pensarci troppo.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"Separare app e PC ti semplifica tutto: fai prima e non ti perdi nulla.
+                L'app per le attività veloci, il PC per le ricerche."</em>
+        </div>
+
+        <!-- PARTE 1: SMARTPHONE -->
+        <h2>📱 1. Da smartphone (app Bing)</h2>
+        <p>
+            La prima parte della mia routine la faccio sempre da smartphone usando l'app Bing.
+            Qui riesco a fare una buona parte dei punti giornalieri in pochi minuti.
+        </p>
+
+        <h3>1. Apro l'app Bing</h3>
+        <p>
+            Appena entro, vedo subito i punti disponibili per la giornata.
+        </p>
+        <p>
+            👉 Di solito trovi qualcosa tipo <strong>0 / 210 punti</strong> da completare.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/punti_giornalieri.jpg" alt="Punti Giorno totali">
+            <p class="image-caption">Schermata iniziale: qui vedi i punti giornalieri disponibili da completare</p>
+        </div>
+
+        <h3>2. Check-in giornaliero</h3>
+        <p>La prima cosa che faccio è il check-in giornaliero.</p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/check-in.jpg" alt="Check-in">
+            <p class="image-caption">Check-in Giornaliero app</p>
+        </div>
+
+        <p>Ogni giorno consecutivo aumenta i punti che ricevi:</p>
+        <ul>
+            <li>Giorno 1–2 → 5 punti</li>
+            <li>Giorno 3–4 → 10 punti</li>
+            <li>Giorno 5–6 → 15 punti</li>
+            <li>Giorno 7 → 50 punti + 1 pezzo puzzle</li>
+        </ul>
+        <p>
+            👉 Ogni 7 giorni ottieni anche un pezzo del puzzle.
+            Arrivato a <strong>12 pezzi</strong>, ottieni un bonus di <strong>1.000 punti</strong>.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/puzzle.jpg" alt="Puzzle">
+            <p class="image-caption">Puzzle</p>
+        </div>
+
+        <p>
+            👉 Facendo tutto ogni giorno (check-in + ricerche), ci vogliono circa <strong>6 settimane</strong>
+            per completare il puzzle.
+        </p>
+        <p>
+            👉 I pezzi si accumulano automaticamente mentre usi l'app, senza fare nulla di diverso.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"Il puzzle è uno di quei bonus che accumuli senza accorgertene: più sei
+                costante, più vale. 1.000 punti extra ogni 6 settimane sono un bel boost."</em>
+        </div>
+
+        <h3>3. Attività Set Giornaliero</h3>
+        <p>
+            La prima cosa che faccio ogni giorno è completare il set giornaliero. Sono le attività
+            principali che trovi nella dashboard e servono anche per avanzare nella sequenza.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/set_giornaliero.jpg" alt="Set giornaliero Microsoft Rewards">
+            <p class="image-caption">Set giornaliero Microsoft Rewards</p>
+        </div>
+
+        <p>
+            Ogni attività richiede solo un click: si apre una pagina e puoi tornare subito indietro.
+        </p>
+        <p>
+            👉 Non serve leggere tutto, basta aprirle.
+        </p>
+        <p>
+            Il click su ogni singola attività vale circa <strong>10 punti</strong>, quindi il set
+            giornaliero ti permette di fare circa <strong>30 punti al giorno</strong> in modo molto
+            semplice.
+        </p>
+        <p>
+            👉 Queste attività possono essere completate sia da <strong>PC che da app</strong>.
+        </p>
+        <p>
+            Ma la parte interessante è questa: ai 30 punti giornalieri si aggiungono anche
+            <strong>bonus extra</strong> della sequenza, che vengono sbloccati solo in determinati giorni.
+        </p>
+
+        <h3>Sequenza giornaliera: quanto paga</h3>
+        <p>
+            La sequenza è uno dei modi migliori per accumulare punti nel tempo. Più giorni
+            consecutivi completi il set, più bonus ricevi.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/sequenza_giorno.jpg" alt="Sequenza Microsoft Rewards">
+            <p class="image-caption">I bonus della sequenza giornaliera</p>
+        </div>
+
+        <table class="plans-table">
+            <tr><th>Giorno</th><th>Punti bonus</th></tr>
+            <tr><td>3° giorno</td><td>45 punti</td></tr>
+            <tr><td>8° giorno</td><td>75 punti</td></tr>
+            <tr><td>13° giorno</td><td>75 punti</td></tr>
+            <tr><td>20° giorno</td><td>105 punti</td></tr>
+            <tr><td>27° giorno</td><td>105 punti</td></tr>
+            <tr><td>34° giorno</td><td>150 punti</td></tr>
+            <tr><td>Ogni 10 giorni dopo</td><td>150 punti</td></tr>
+        </table>
+
+        <p>
+            👉 In pratica: ogni giorno fai circa <strong>30 punti base</strong> + <strong>bonus extra</strong>
+            dalla sequenza.
+        </p>
+        <p>
+            Se salti un giorno, puoi usare la <strong>protezione della serie</strong>: hai fino a
+            14 giorni disponibili. Meglio comunque non usarla, perché perdere la sequenza rallenta tutto.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"Il set giornaliero è la base: 30 punti fissi + bonus nel tempo. È il modo più
+                semplice per accumulare senza sforzo. Non saltarlo mai."</em>
+        </div>
+
+        <h3>4. Ricerche da app</h3>
+        <p>Poi passo alle ricerche da effettuare da app Bing.</p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/ricerca_app.jpg" alt="Ricerca da app">
+            <p class="image-caption">Ricerca da APP</p>
+        </div>
+
+        <p>
+            Uso direttamente le ricerche suggerite dall'app per fare più veloce. Ogni ricerca
+            vale circa <strong>3 punti</strong>.
+        </p>
+        <p>
+            👉 Apro la ricerca, aspetto qualche secondo e torno indietro.
+        </p>
+        <p>
+            Ripeto fino ad arrivare a circa <strong>60 punti</strong> (circa 20 ricerche).
+        </p>
+        <p>Anche qui c'è un piccolo bonus giornaliero:</p>
+        <ul>
+            <li>Giorno 1–6 → 3 punti extra</li>
+            <li>Giorno 7 → 100 punti + 1 pezzo puzzle</li>
+        </ul>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Usa le ricerche già pronte: fai prima e non devi pensare a cosa scrivere.
+                L'app te le suggerisce in base alle tendenze del momento."</em>
+        </div>
+
+        <h3>5. Leggi per guadagnare</h3>
+        <p>Infine faccio la parte "leggi per guadagnare".</p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/leggi_per_guadagnare.jpg" alt="Leggi per guadagnare">
+            <p class="image-caption">Leggi per guadagnare</p>
+        </div>
+
+        <p>
+            👉 In totale sono circa <strong>30 punti</strong>. Ogni articolo vale circa
+            <strong>3 punti</strong>, quindi bastano circa 10 articoli.
+        </p>
+        <p>Non serve leggere davvero:</p>
+        <ul>
+            <li>apri l'articolo</li>
+            <li>scorri velocemente</li>
+            <li>torna indietro</li>
+        </ul>
+        <p>
+            👉 Puoi usare anche gli articoli suggeriti dall'app per fare più veloce.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Questa è una delle parti più veloci: in meno di un minuto hai finito.
+                Io la faccio mentre aspetto il caffè."</em>
+        </div>
+
+        <h3>Conclusione parte smartphone</h3>
+        <p>
+            In pochi minuti da smartphone riesco già a fare una buona parte dei punti giornalieri.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/punti_post_app.jpg" alt="Punti post attività APP">
+            <p class="image-caption">Punti giornalieri guadagnati da APP dopo le attività</p>
+        </div>
+
+        <p>A questo punto passo al PC per completare tutto.</p>
+
+        <!-- PARTE 2: PC -->
+        <h2>💻 2. Da PC (ricerche)</h2>
+        <p>
+            Una volta finito con lo smartphone, passo al PC per completare le ricerche. Qui devi
+            arrivare a circa <strong>90 punti</strong>, quindi parliamo di circa <strong>30 ricerche</strong>.
+            Ogni ricerca vale circa <strong>3 punti</strong>.
+        </p>
+
+        <h3>Come faccio le ricerche</h3>
+        <p>
+            Non serve complicarsi la vita: faccio ricerche veloci e passo subito alla successiva.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/ricerca_da_pc.jpg" alt="Ricerche Bing da PC" style="max-width: 900px; width: 100%;">
+            <p class="image-caption">Esempio di ricerca su Bing: puoi usare qualsiasi parola o frase semplice</p>
+        </div>
+
+        <p>
+            👉 Apro una ricerca, aspetto qualche secondo e torno indietro.
+        </p>
+        <p>
+            👉 Poi clicco su un altro risultato o scrivo qualcosa di diverso.
+        </p>
+        <p>Ripeto fino a completare tutti i punti.</p>
+
+        <h3>Metodo veloce</h3>
+        <p>Per fare prima, uso ricerche semplici e veloci:</p>
+        <ul>
+            <li>nomi di città</li>
+            <li>nomi di persone</li>
+            <li>parole casuali</li>
+        </ul>
+        <p>
+            👉 L'obiettivo non è cercare qualcosa di specifico, ma completare le ricerche.
+        </p>
+        <p>
+            👉 Con un po' di pratica trovi il tuo metodo per farle molto più velocemente.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"È la parte più noiosa, lo ammetto. Ma basta farla veloce senza pensarci troppo.
+                Io apro una lista di città italiane e cerco una per una. In 60 secondi ho finito."</em>
+        </div>
+
+        <!-- ATTIVITÀ EXTRA -->
+        <h2>🎯 Attività extra (punti facili in più)</h2>
+        <p>
+            Oltre alle attività principali, ci sono anche altre attività che trovi ogni giorno
+            nella dashboard.
+        </p>
+
+        <div class="image-box">
+            <img src="/microsoft-rewards/img/attività_extra.jpg" alt="Attività extra Microsoft Rewards" style="max-width: 900px; width: 100%;">
+            <p class="image-caption">Esempio di attività extra disponibili nella dashboard</p>
+        </div>
+
+        <p>
+            👉 Questa parte puoi farla sia da <strong>app che da PC</strong>, quindi puoi
+            completarla quando vuoi. Io le faccio quando ho tempo, perché sono veloci e nel
+            tempo fanno salire ancora di più i punti.
+        </p>
+
+        <h3>Cosa trovi ogni giorno</h3>
+        <ul>
+            <li><strong>Attività settimanali</strong> → circa 15 punti ciascuna (2 disponibili a settimana)</li>
+            <li><strong>Attività giornaliere</strong> → circa 10 punti ciascuna (dal lunedì al venerdì)</li>
+            <li><strong>Quiz / puzzle / frase del giorno</strong> → circa 5 punti</li>
+        </ul>
+        <p>
+            👉 Sono tutte attività molto veloci: basta aprire e completare in pochi secondi.
+        </p>
+        <p>
+            👉 Non sono fondamentali, ma nel tempo fanno la differenza.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Se hai 1-2 minuti in più, fallo: sono punti facili che si sommano senza sforzo.
+                A fine mese, quelle attività extra ti hanno dato 300-400 punti in più."</em>
+        </div>
+
+        <!-- CTA INTERMEDIA -->
+        <div class="tip highlight" style="text-align:center;">
+            <p><strong>🚀 Non hai ancora iniziato?</strong></p>
+            <p>Con la mia guida passo passo, in 5 minuti hai già i primi punti.
+                Inizia oggi e in meno di un mese hai il tuo primo buono Amazon.</p>
+            <a class="button" href="/microsoft-rewards/come-iniziare.html">
+                Inizia subito in 5 minuti →
+            </a>
+        </div>
+
+        <!-- RISULTATI REALI -->
+        <h2>I miei risultati dopo mesi di utilizzo</h2>
+        <p>
+            Dopo mesi di routine quotidiana, ecco cosa ho ottenuto con Microsoft Rewards:
+        </p>
+        <ul>
+            <li><strong>💰 Buoni Amazon:</strong> circa 5-7€ al mese, cioè 60-80€ all'anno in buoni regalo</li>
+            <li><strong>🎮 Xbox Game Pass Ultimate:</strong> rinnovato gratis per 6 mesi con l'auto-redeem</li>
+            <li><strong>📦 Prodotti reali:</strong> un Echo Dot, diversi libri e una scheda microSD, tutti presi con i buoni</li>
+            <li><strong>⏰ Tempo investito:</strong> meno di 3 minuti al giorno</li>
+        </ul>
+        <p>
+            Non sono diventato ricco, ma ho ottenuto cose che prima pagavo di tasca mia.
+            Tutto senza fare nulla di diverso da quello che faccio normalmente.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"All'inizio ero scettico anch'io. Poi ho visto i primi buoni Amazon accumularsi
+                e ho capito che funziona davvero. Non è una rendita, ma è roba gratis che
+                prima non avevo."</em>
+        </div>
+
+        <!-- ERRORI DA EVITARE -->
+        <h2>⚠️ Errori da evitare</h2>
+        <p>
+            Dopo mesi di utilizzo, questi sono gli errori più comuni che ho visto (e fatto
+            anche io all'inizio).
+        </p>
+        <ul>
+            <li><strong>❌ Perdere tempo a leggere tutto</strong> → non serve, basta cliccare e andare avanti. I quiz puoi farli a caso, non ci sono penalità.</li>
+            <li><strong>❌ Saltare giorni</strong> → perdi la sequenza e i bonus, ed è la cosa che pesa di più nel tempo. La costanza è tutto.</li>
+            <li><strong>❌ Fare tutto lentamente</strong> → questo sistema funziona quando vai veloce, non quando ti fermi a leggere. Automatizza e vai.</li>
+            <li><strong>❌ Pensare troppo al sistema</strong> → è molto più semplice di quanto sembra. Apri, clicca, accumula.</li>
+            <li><strong>❌ Usare bot o script automatici</strong> → Microsoft sospende l'account se rileva attività non umane. Fai tutto a mano, ci vogliono 3 minuti.</li>
+        </ul>
+
+        <div class="alex-tip">
+            <span class="alex-label">🔥 Alex's Tip</span><br>
+            <em>"Non devi capire tutto: apri, clicca, vai avanti. Dopo 2-3 giorni diventa
+                automatico. Il trucco è non pensarci troppo."</em>
+        </div>
+
+        <!-- FAQ -->
+        <h2>Domande frequenti sulla routine</h2>
+        <div class="faq">
+            <h3>Quanto tempo ci metto esattamente?</h3>
+            <p>
+                In media <strong>2-3 minuti al giorno</strong>. La parte smartphone (set giornaliero,
+                ricerche, news) richiede circa 2 minuti. La parte PC (ricerche) circa 1 minuto.
+                Le attività extra sono opzionali e richiedono 1 minuto aggiuntivo.
+            </p>
+
+            <h3>Devo per forza fare tutto ogni giorno?</h3>
+            <p>
+                No, ma più fai, più punti accumuli. Anche solo le ricerche da smartphone (60 punti)
+                e il set giornaliero (30 punti) ti danno 90 punti al giorno. Non è il massimo,
+                ma è già qualcosa.
+            </p>
+
+            <h3>Cosa succede se salto un giorno?</h3>
+            <p>
+                Perdi i punti di quel giorno e la sequenza bonus potrebbe azzerarsi. Puoi usare
+                la protezione della serie (fino a 14 giorni disponibili), ma ti consiglio di
+                non saltare mai per più di un giorno.
+            </p>
+
+            <h3>Posso fare tutto da PC senza smartphone?</h3>
+            <p>
+                Sì, ma perdi i punti delle ricerche da app (60 punti) e delle news (30 punti).
+                Ti restano le ricerche da PC (90 punti) e il set giornaliero (30 punti).
+                Totale: circa 120 punti al giorno invece di 250.
+            </p>
+        </div>
+
+        <!-- LINK CORRELATI -->
+        <h2>Esplora le guide Microsoft Rewards</h2>
+        <ul>
+            <li><a href="/microsoft-rewards/">📘 Guida introduttiva</a></li>
+            <li><a href="/microsoft-rewards/come-iniziare.html">🚀 Come iniziare</a></li>
+            <li><a href="/microsoft-rewards/premi.html">🎁 Premi e buoni regalo</a></li>
+            <li><a href="/microsoft-rewards/faq.html">❓ FAQ complete</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni su questa guida</h3>
+            <p>
+                Guida basata su mesi di utilizzo reale di Microsoft Rewards in Italia,
+                aggiornata a maggio 2026. Le immagini sono screenshot reali della mia routine.
+                Non sono affiliato a Microsoft: racconto solo la mia esperienza.
+            </p>
+            <p>
+                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                document.getElementById("last-modified").textContent = document.lastModified;
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
