@@ -106,6 +106,34 @@
         ]
     }
     </script>
+
+    <!-- 🆕 BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://alextoolsbox.it/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Conti Digitali",
+                "item": "https://alextoolsbox.it/conti-digitali.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Revolut",
+                "item": "https://alextoolsbox.it/revolut/"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -171,10 +199,13 @@
             pagamenti, bonifici, cambio valuta, investimenti, criptovalute e molto altro.
         </p>
 
-        <!-- IMMAGINE APP -->
+        <!-- 🆕 IMMAGINE (placeholder con istruzioni) -->
         <div class="image-box">
-            <img src="revolut-app-dashboard.jpg" alt="Schermata principale dell'app Revolut con saldo e movimenti" style="max-width:300px;">
-            <p class="image-caption">La dashboard di Revolut: semplice e immediata. (Sostituisci con uno screenshot reale della tua app)</p>
+            <img src="revolut-app-dashboard.jpg" alt="Schermata principale dell'app Revolut con saldo e movimenti recenti" style="max-width:300px;">
+            <p class="image-caption">
+                La dashboard di Revolut dopo il login: saldo, movimenti e accesso rapido a tutte le funzioni.<br>
+                <em>(Sostituisci con uno screenshot reale della tua app, senza mostrare dati sensibili)</em>
+            </p>
         </div>
 
         <p>
@@ -234,7 +265,10 @@
             <li>Una carta di debito/credito o un conto per fare la prima ricarica (anche 10€ bastano)</li>
             <li>Residenza in Italia (o in uno dei paesi supportati)</li>
         </ul>
-        <p>Non servono buste paga, redditi minimi o garanzie particolari. Revolut apre conti a chiunque abbia almeno 18 anni.</p>
+        <p>
+            Non servono buste paga, redditi minimi o garanzie particolari. Revolut apre conti a chiunque abbia almeno
+            18 anni. Se vuoi anche il bonus, ti conviene seguire la <a href="bonus.html">guida dedicata →</a>.
+        </p>
 
         <!-- È SICURO? -->
         <h2>Revolut è sicuro?</h2>
@@ -414,6 +448,7 @@
             <li><a href="/revolut/faq.html">❓ Domande frequenti su Revolut</a></li>
         </ul>
 
+        <!-- TRUST + DATA AUTOMATICA -->
         <div class="trust">
             <h3>Informazioni sulla guida</h3>
             <p>
@@ -422,6 +457,13 @@
                 senza costi extra per te.
             </p>
             <p><a href="/trasparenza.html">Leggi la pagina Trasparenza →</a></p>
+            <!-- 🆕 DATA ULTIMA MODIFICA AUTOMATICA -->
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                document.getElementById("last-modified").textContent = document.lastModified;
+            </script>
         </div>
 
     </div>
