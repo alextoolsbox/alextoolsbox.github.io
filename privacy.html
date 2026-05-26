@@ -2,111 +2,161 @@
 <html lang="it">
 
 <head>
-    
-<div class="hero">
-
-<h1>Privacy Policy</h1>
-
-<p class="hero-description">
-Informativa sul trattamento dei dati personali per gli utenti che visitano il sito AlexToolsBox.
-</p>
-
-</div>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Privacy Policy | AlexToolsBox</title>
-
-<meta name="description" content="Informativa sulla privacy del sito AlexToolsBox.">
-
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" type="image/png" href="/img/favicon.png">
-<script src="/js/promo.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | AlexToolsBox</title>
+    <meta name="description" content="Informativa sulla privacy del sito AlexToolsBox. Come vengono trattati i dati personali, cookie, link affiliati e aggiornamenti.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
 </head>
 
 <body>
 
-<div id="header"></div>
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
 
-<script>
-fetch("/includes/header.html")
-.then(res => res.text())
-.then(data => {
-  document.getElementById("header").innerHTML = data;
-  updatePromo();
-});
-</script>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p class="hero-description">
+            Come vengono trattati i dati personali su AlexToolsBox, in modo semplice e trasparente.
+        </p>
+    </div>
 
+    <div class="container" id="main-content">
 
-<div class="container">
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                AlexToolsBox <strong>non raccoglie direttamente dati personali</strong>. Non uso
+                form di contatto nativi né database. Uso solo strumenti di terze parti (come
+                Formspree per il supporto) che trattano i dati secondo le loro policy. Il sito
+                può usare cookie tecnici essenziali e contiene link affiliati. Se vuoi saperne
+                di più, leggi qui sotto.
+            </p>
+        </div>
 
-<h1>Privacy Policy</h1>
+        <p>
+            La presente informativa descrive le modalità di gestione del sito AlexToolsBox in
+            riferimento al trattamento dei dati personali degli utenti che lo visitano. Questa
+            informativa è resa ai sensi del Regolamento UE 2016/679 (GDPR).
+        </p>
 
-<p>
-La presente informativa descrive le modalità di gestione del sito AlexToolsBox in riferimento al trattamento dei dati personali degli utenti che lo visitano.
-</p>
+        <h2>Dati raccolti</h2>
+        <p>
+            Il sito AlexToolsBox <strong>non raccoglie direttamente</strong> dati personali
+            degli utenti. L'unica eccezione è il <strong>form di contatto</strong> nella
+            pagina <a href="/supporto.html">Supporto</a>, che è gestito tramite
+            <strong>Formspree</strong> (servizio di terze parti). I dati che inserisci
+            volontariamente (email, messaggio) vengono trasmessi a Formspree e trattati
+            secondo la loro privacy policy.
+        </p>
+        <p>
+            Durante la navigazione, alcune informazioni tecniche (come l'indirizzo IP o il
+            tipo di browser) possono essere raccolte automaticamente dai sistemi informatici
+            e dai servizi utilizzati per il funzionamento del sito (es. GitHub Pages). Non
+            vengono usati strumenti di tracciamento o analytics.
+        </p>
 
-<p>
-Questa informativa è resa ai sensi del Regolamento UE 2016/679 (GDPR) a coloro che interagiscono con il sito web AlexToolsBox.
-</p>
+        <h2>Cookie</h2>
+        <p>
+            Il sito <strong>non utilizza cookie di profilazione</strong>. Possono essere
+            presenti <strong>cookie tecnici</strong> necessari al corretto funzionamento
+            delle pagine (ad esempio, per mantenere la sessione di navigazione). Eventuali
+            servizi di terze parti integrati nel sito (come Formspree) potrebbero utilizzare
+            cookie propri secondo le rispettive policy.
+        </p>
 
+        <h2>Servizi di terze parti</h2>
+        <p>AlexToolsBox si appoggia ai seguenti servizi esterni:</p>
+        <ul>
+            <li><strong>GitHub Pages:</strong> hosting del sito. Potrebbe raccogliere dati tecnici di base (indirizzo IP) per garantire la sicurezza e il funzionamento del servizio.</li>
+            <li><strong>Formspree:</strong> gestisce il form di contatto nella pagina Supporto. I dati inviati tramite il form sono soggetti alla loro privacy policy.</li>
+            <li><strong>Aruba:</strong> fornisce il dominio alextoolsbox.it. Non raccoglie dati personali tramite il sito.</li>
+        </ul>
+        <p>
+            Per maggiori dettagli, ti invito a consultare le privacy policy dei rispettivi
+            servizi.
+        </p>
 
-<h2>Dati raccolti</h2>
+        <h2>Link esterni</h2>
+        <p>
+            All'interno del sito possono essere presenti link verso siti esterni (es. Revolut,
+            Microsoft Rewards). AlexToolsBox <strong>non è responsabile</strong> delle
+            politiche sulla privacy adottate da tali siti. Quando clicchi su un link esterno,
+            ti consiglio di leggere la loro informativa.
+        </p>
 
-<p>
-Il sito AlexToolsBox non raccoglie direttamente dati personali degli utenti, ad eccezione di quelli eventualmente forniti volontariamente tramite servizi di terze parti.
-</p>
+        <h2>Link affiliati</h2>
+        <p>
+            Alcuni link presenti nel sito sono <strong>link affiliati</strong> o
+            <strong>link di invito</strong>. Questo significa che, se decidi di utilizzare
+            i servizi consigliati tramite quei link, io potrei ricevere una piccola
+            commissione, <strong>senza costi aggiuntivi per te</strong>. Per maggiori
+            dettagli su come funziona, leggi la <a href="/trasparenza.html">pagina Trasparenza</a>.
+        </p>
 
-<p>
-Durante la navigazione alcune informazioni tecniche possono essere raccolte automaticamente dai sistemi informatici e dai servizi utilizzati per il funzionamento del sito.
-</p>
+        <h2>I tuoi diritti</h2>
+        <p>
+            Ai sensi del GDPR, hai il diritto di:
+        </p>
+        <ul>
+            <li>Chiedere conferma sull'esistenza o meno di tuoi dati personali</li>
+            <li>Chiedere la rettifica o la cancellazione dei dati</li>
+            <li>Opporti al trattamento dei dati</li>
+            <li>Richiedere la portabilità dei dati</li>
+        </ul>
+        <p>
+            Poiché AlexToolsBox non raccoglie direttamente dati personali (se non quelli che
+            invii volontariamente via form), per qualsiasi richiesta puoi scrivermi dalla
+            pagina <a href="/supporto.html">Supporto</a>.
+        </p>
 
+        <h2>Aggiornamenti</h2>
+        <p>
+            La presente informativa può essere aggiornata nel tempo per adeguarsi a eventuali
+            modifiche normative o aggiornamenti dei servizi utilizzati dal sito. La data
+            dell'ultimo aggiornamento è indicata qui sotto.
+        </p>
 
-<h2>Cookie</h2>
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Hai domande sulla privacy?</h3>
+            <p>
+                Se qualcosa non ti è chiaro, scrivimi dalla pagina Supporto. Ti rispondo
+                personalmente.
+            </p>
+            <a class="button" href="/supporto.html">Vai al Supporto</a>
+            <p style="margin-top:15px;">
+                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                document.getElementById("last-modified").textContent = document.lastModified;
+            </script>
+        </div>
 
-<p>
-Il sito può utilizzare cookie tecnici necessari al corretto funzionamento delle pagine.
-</p>
+    </div>
 
-<p>
-Eventuali servizi di terze parti utilizzati dal sito possono utilizzare cookie o tecnologie simili per migliorare l'esperienza utente o per analisi statistiche.
-</p>
-
-
-<h2>Link esterni</h2>
-
-<p>
-All'interno del sito possono essere presenti link verso siti esterni. AlexToolsBox non è responsabile delle politiche sulla privacy adottate da tali siti.
-</p>
-
-
-<h2>Link affiliati</h2>
-
-<p>
-Alcuni link presenti nel sito possono essere link affiliati o link di invito. Questo significa che l'autore del sito potrebbe ricevere una commissione se l'utente decide di utilizzare i servizi consigliati, senza costi aggiuntivi per l'utente.
-</p>
-
-
-<h2>Aggiornamenti</h2>
-
-<p>
-La presente informativa può essere aggiornata nel tempo per adeguarsi a eventuali modifiche normative o aggiornamenti dei servizi utilizzati dal sito.
-</p>
-
-</div>
-
-
-<div id="footer"></div>
-
-<script>
-fetch("/includes/footer.html")
-.then(response => response.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
-</script>
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
