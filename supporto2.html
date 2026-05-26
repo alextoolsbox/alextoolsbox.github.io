@@ -4,38 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supporto – Scrivimi per aiuto o per richiedere l'incentivo | AlexToolsBox</title>
-    <meta name="description" content="Hai dubbi su Revolut, Microsoft Rewards o vuoi richiedere l'incentivo di 10€? Scrivimi qui. Rispondo personalmente entro 24-72 ore.">
+    <title>Supporto - AlexToolsBox</title>
+    <meta name="description" content="Hai dubbi o vuoi richiedere l'incentivo? Scrivi ad AlexToolsBox. Guide disponibili per Revolut, Microsoft Rewards e conti digitali.">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/js/promo.js" defer></script>
-
-    <!-- SCHEMA ORGANIZATION -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AlexToolsBox",
-        "url": "https://alextoolsbox.it",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "availableLanguage": "Italian"
-        }
-    }
-    </script>
-
-    <!-- BREADCRUMBLIST -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
-            { "@type": "ListItem", "position": 2, "name": "Supporto", "item": "https://alextoolsbox.it/supporto.html" }
-        ]
-    }
-    </script>
 </head>
 
 <body>
@@ -51,59 +24,40 @@
     </script>
 
     <!-- HERO -->
-    <div class="hero" style="padding:60px 20px;">
+    <div class="hero">
         <h1>Supporto</h1>
         <p class="hero-description">
-            Hai dubbi su Revolut, Microsoft Rewards o vuoi richiedere l'incentivo di 10€?
-            Scrivimi qui sotto. Ti rispondo personalmente.
-        </p>
-        <p class="hero-description">
-            Tempo di risposta: <strong>24-72 ore</strong>.
+            Hai dubbi, vuoi richiedere l'incentivo o semplicemente vuoi dirmi qualcosa?
+            Scrivi qui sotto, ti rispondo nel più breve tempo possibile.
         </p>
     </div>
 
     <div class="container" id="main-content">
 
-        <!-- IN SINTESI -->
+        <!-- PRIMA DI SCRIVERE -->
         <div class="tip highlight">
-            <p><strong>📌 In sintesi</strong></p>
+            <p><strong>📚 Prima di scrivere, dai un'occhiata alle guide</strong></p>
             <p>
-                Usa questa pagina per <strong>chiedere aiuto</strong> su Revolut, Microsoft Rewards
-                o su qualsiasi altra guida del sito, oppure per <strong>richiedere l'incentivo
-                di 10€</strong> dopo aver completato i passaggi del bonus. Ogni richiesta viene
-                <strong>verificata manualmente</strong> da me (Alex). Rispondo sempre, nel giro
-                di 24-72 ore.
+                Molte risposte le trovi già nelle guide del sito. Ho raccolto tutto in
+                pagine semplici e dirette, basate sulla mia esperienza reale.
             </p>
-        </div>
-
-        <!-- AVVISO IMPORTANTE -->
-        <div class="tip highlight">
-            <p><strong>⚠️ Prima di scrivere, leggi qui</strong></p>
-            <p>
-                Le richieste per l'incentivo vengono <strong>verificate manualmente</strong>.
-                Se la procedura non è completa o non è corretta, l'incentivo non può essere
-                riconosciuto.
-            </p>
-            <p>
-                👉 <a href="/revolut/bonus.html">Controlla di aver fatto tutti i passaggi →</a>
+            <p style="margin-top:10px;">
+                <a href="/conti-digitali.html">💳 Guide conti digitali →</a><br>
+                <a href="/guadagni-extra.html">💰 Guide guadagni extra →</a><br>
+                <a href="/revolut/faq.html">❓ FAQ Revolut →</a><br>
+                <a href="/microsoft-rewards/faq.html">❓ FAQ Microsoft Rewards →</a>
             </p>
         </div>
 
         <!-- FORM -->
         <h2 id="titolo-form">Invia una richiesta</h2>
 
-        <form
-            action="https://formspree.io/f/mgopwqep"
-            method="POST"
-            onsubmit="handleSubmit()"
-        >
+        <form action="https://formspree.io/f/mgopwqep" method="POST" onsubmit="handleSubmit()">
             <input type="hidden" name="_next" value="https://alextoolsbox.it/grazie.html">
             <input type="hidden" name="_subject" value="Nuova richiesta AlexToolsBox">
 
             <label>Categoria</label><br>
-            <select id="categoria" name="categoria" required
-                style="width:100%;padding:10px;margin-bottom:15px;"
-                onchange="gestisciCampi()">
+            <select id="categoria" name="categoria" required style="width:100%;padding:10px;margin-bottom:15px;" onchange="gestisciCampi()">
                 <option value="">-- Seleziona --</option>
                 <option value="generale">Generale</option>
                 <option value="revolut">Revolut</option>
@@ -113,8 +67,7 @@
             <!-- BLOCCO REVOLUT -->
             <div id="blocco-revolut" style="display:none;">
                 <label>Tipo richiesta Revolut</label><br>
-                <select name="tipo_revolut" onchange="gestisciCampi()"
-                    style="width:100%;padding:10px;margin-bottom:15px;">
+                <select name="tipo_revolut" onchange="gestisciCampi()" style="width:100%;padding:10px;margin-bottom:15px;">
                     <option value="">-- Seleziona --</option>
                     <option value="supporto">Supporto</option>
                     <option value="incentivo">Richiesta incentivo 10€</option>
@@ -125,7 +78,6 @@
             <div id="campi-incentivo" style="display:none;">
                 <label>Username Revolut (solo incentivo)</label><br>
                 <input type="text" name="username" style="width:100%;padding:10px;margin-bottom:15px;">
-
                 <label>Metodo pagamento (solo incentivo)</label><br>
                 <select name="pagamento" style="width:100%;padding:10px;margin-bottom:15px;">
                     <option value="">-- Seleziona --</option>
@@ -143,72 +95,47 @@
             <button type="submit" class="button">Invia richiesta</button>
         </form>
 
-        <!-- ISTRUZIONI INCENTIVO -->
+        <!-- INFO INCENTIVO -->
         <div class="tip highlight" style="margin-top:30px;">
-            <p><strong>📸 Stai richiedendo l'incentivo?</strong></p>
+            <p><strong>📸 Per richieste incentivo</strong></p>
             <p>
-                Dopo aver inviato il form, riceverai una email di conferma.
-                <strong>Rispondi a quella email allegando lo screenshot</strong> che prova
-                il completamento dei passaggi.
+                Dopo aver inviato il form, riceverai una email.
             </p>
             <p>
-                👉 Senza screenshot, la richiesta non può essere verificata.
+                👉 Rispondi allegando lo screenshot del completamento.
             </p>
-
             <div class="alex-tip">
                 <span class="alex-label">🔥 Alex's Tip</span><br>
-                <em>"Prima di inviare la richiesta, controlla di aver fatto tutto: link
-                    referral, verifica identità, ricarica, carta fisica, 3 acquisti.
-                    Un passaggio mancante e l'incentivo non parte."</em>
+                <em>"Senza screenshot la richiesta non può essere verificata. Ti basta
+                    incollare l'immagine nella risposta all'email."</em>
             </div>
         </div>
 
-        <!-- INFO UTILI -->
-        <h2>Informazioni utili</h2>
+        <!-- INFO IMPORTANTI -->
+        <h2 style="margin-top:40px;">Informazioni importanti</h2>
         <ul>
-            <li><strong>✅ Verifica manuale:</strong> ogni richiesta viene controllata personalmente da me</li>
-            <li><strong>⏰ Tempo di risposta:</strong> 24-72 ore (spesso molto meno)</li>
-            <li><strong>💰 Incentivo:</strong> inviato solo dopo verifica completa e corretta</li>
-            <li><strong>📧 Email:</strong> riceverai una conferma dopo l'invio del form</li>
-            <li><strong>🔄 Aggiornamenti:</strong> se hai già inviato una richiesta, non inviarne una seconda. Ti rispondo appena possibile</li>
+            <li>✅ Le richieste vengono controllate manualmente, una per una</li>
+            <li>✅ L'incentivo viene inviato solo dopo verifica completa</li>
+            <li>✅ Tempo di risposta: 24-72 ore</li>
+            <li>✅ Se hai dubbi, chiedi supporto prima di completare la procedura</li>
         </ul>
 
-        <!-- CTA CORRELATE -->
-        <div class="tip highlight" style="text-align:center; margin-top:30px;">
-            <p><strong>🔍 Prima di scrivere, dai un'occhiata alle guide</strong></p>
-            <p>Molte risposte le trovi già nelle guide del sito.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:15px;">
-                <a class="button" href="/revolut/">
-                    <img src="Revolut_R.svg" alt="" style="height:20px;margin-right:8px;">
-                    Guide Revolut
-                </a>
-                <a class="button" href="/microsoft-rewards/" style="background:#ff9800;">
-                    🎁 Guide Microsoft Rewards
-                </a>
-                <a class="button" href="/revolut/faq.html">
-                    ❓ FAQ
-                </a>
-            </div>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Se i passaggi non sono corretti, l'incentivo non può essere riconosciuto.
+                Controlla bene la guida bonus prima di inviare la richiesta."</em>
         </div>
 
-        <!-- TRUST -->
-        <div class="trust">
-            <h3>Rispondo sempre personalmente</h3>
-            <p>
-                Dietro questo sito c'è una persona vera. Ogni messaggio che arriva lo leggo
-                io (Alex) e rispondo di persona. Se la tua richiesta è corretta, riceverai
-                l'incentivo o la risposta nel giro di pochi giorni.
-            </p>
-            <p>
-                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
-            </p>
-            <p style="font-size:13px; color:#888; margin-top:10px;">
-                Ultimo aggiornamento: <span id="last-modified"></span>
-            </p>
-            <script>
-                document.getElementById("last-modified").textContent = document.lastModified;
-            </script>
-        </div>
+        <!-- LINK CORRELATI -->
+        <h2>Guide utili</h2>
+        <ul>
+            <li><a href="/revolut/">📘 Guida Revolut</a></li>
+            <li><a href="/revolut/bonus.html">🎁 Bonus Revolut 10€</a></li>
+            <li><a href="/microsoft-rewards/">📘 Guida Microsoft Rewards</a></li>
+            <li><a href="/microsoft-rewards/come-iniziare.html">🚀 Come iniziare con Rewards</a></li>
+            <li><a href="/chi-sono.html">👤 Chi sono</a></li>
+            <li><a href="/trasparenza.html">🌿 Trasparenza</a></li>
+        </ul>
 
     </div>
 
@@ -226,7 +153,6 @@
             var categoria = document.getElementById("categoria").value;
             var tipoSelect = document.querySelector('select[name="tipo_revolut"]');
             var tipo = tipoSelect ? tipoSelect.value : "";
-
             var bloccoRevolut = document.getElementById("blocco-revolut");
             var campiIncentivo = document.getElementById("campi-incentivo");
 
@@ -259,7 +185,6 @@
             const params = new URLSearchParams(window.location.search);
             const categoria = params.get("categoria");
             const tipo = params.get("tipo");
-
             const selectCategoria = document.getElementById("categoria");
             const bloccoRevolut = document.getElementById("blocco-revolut");
             const campiIncentivo = document.getElementById("campi-incentivo");
