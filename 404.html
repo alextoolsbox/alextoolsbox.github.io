@@ -34,27 +34,21 @@
 
     <div class="container" id="main-content" style="text-align:center;max-width:700px;">
 
-        <!-- IN SINTESI -->
-        <div class="tip highlight">
+        <!-- SUGGERIMENTO DINAMICO UNICO -->
+        <div id="suggestion" class="tip highlight" style="margin-top:20px;">
             <p><strong>📌 Cosa è successo?</strong></p>
-            <p>
+            <p id="suggestion-text">
                 Hai provato ad accedere a una pagina che non esiste più o che non è mai
                 esistita. Può capitare! Qui sotto trovi i link alle aree principali del
                 sito, così puoi riprendere la navigazione.
             </p>
-        </div>
-
-        <!-- SUGGERIMENTO DINAMICO -->
-        <div id="suggestion" class="tip highlight" style="margin-top:30px; display:none;">
-            <p id="suggestion-text"></p>
             <a id="suggestion-link" class="button" href="#" style="margin-top:10px;">
                 Vai alla guida
             </a>
         </div>
 
         <!-- LINK UTILI -->
-        <h2 style="margin-top:40px;">📂 Ecco le aree principali del sito</h2>
-        <p>Scegli quella che ti interessa:</p>
+        <h2 style="margin-top:40px;">📂 Esplora le aree del sito</h2>
 
         <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
             <a class="button" href="/">
@@ -119,53 +113,53 @@
 
         // Revolut
         if (path.includes("revolut")) {
-            suggestionText = "💳 Stavi cercando qualcosa su Revolut? Ti spiego come funziona passo passo e come iniziare senza errori.";
+            suggestionText = "💳 Stavi cercando qualcosa su Revolut? Ti spiego come funziona passo passo e come iniziare senza errori. Qui sotto trovi i link alle aree principali del sito, così puoi riprendere la navigazione.";
             suggestionLink = "/revolut/";
         }
         // Microsoft Rewards
         else if (path.includes("reward") || path.includes("microsoft")) {
-            suggestionText = "🎯 Stavi cercando Microsoft Rewards? Trovi una guida completa con strategie per guadagnare punti.";
+            suggestionText = "🎯 Stavi cercando Microsoft Rewards? Trovi una guida completa con strategie per guadagnare punti. Qui sotto trovi i link alle aree principali del sito.";
             suggestionLink = "/microsoft-rewards/";
         }
         // Conti digitali
         else if (path.includes("conto") || path.includes("carta") || path.includes("banca") || path.includes("satispay") || path.includes("n26") || path.includes("hype")) {
-            suggestionText = "💳 Stavi cercando guide sui conti digitali? Dai un'occhiata alla sezione dedicata.";
+            suggestionText = "💳 Stavi cercando guide sui conti digitali? Dai un'occhiata alla sezione dedicata. Qui sotto trovi i link alle aree principali del sito.";
             suggestionLink = "/conti-digitali.html";
         }
         // Guadagni extra
         else if (path.includes("guadagn") || path.includes("bonus") || path.includes("cashback") || path.includes("passiv")) {
-            suggestionText = "💰 Stavi cercando guide sui guadagni extra? Trovi tutto nella sezione dedicata.";
+            suggestionText = "💰 Stavi cercando guide sui guadagni extra? Trovi tutto nella sezione dedicata. Qui sotto trovi i link alle aree principali del sito.";
             suggestionLink = "/guadagni-extra.html";
         }
         // Strumenti
         else if (path.includes("strument") || path.includes("calcolat") || path.includes("confront")) {
-            suggestionText = "⚙️ Stavi cercando uno strumento o un calcolatore? Per ora sono in arrivo, ma trovi altre guide utili.";
+            suggestionText = "⚙️ Stavi cercando uno strumento o un calcolatore? Per ora sono in arrivo, ma trovi altre guide utili. Qui sotto trovi i link alle aree principali del sito.";
             suggestionLink = "/";
         }
         // Supporto o contatto
         else if (path.includes("support") || path.includes("contatt") || path.includes("aiuto")) {
-            suggestionText = "📩 Vuoi contattarmi? La pagina Supporto è qui.";
+            suggestionText = "📩 Vuoi contattarmi? La pagina Supporto è qui. Qui sotto trovi anche i link alle aree principali del sito.";
             suggestionLink = "/supporto.html";
         }
         // Trasparenza o privacy
         else if (path.includes("trasparen") || path.includes("privacy") || path.includes("legal")) {
-            suggestionText = "🌿 Cerchi informazioni su trasparenza o privacy? Trovi tutto qui.";
+            suggestionText = "🌿 Cerchi informazioni su trasparenza o privacy? Trovi tutto qui. Qui sotto trovi anche i link alle aree principali del sito.";
             suggestionLink = "/trasparenza.html";
         }
         // Chi sono
         else if (path.includes("chi-sono") || path.includes("about") || path.includes("bio")) {
-            suggestionText = "👤 Vuoi sapere chi c'è dietro AlexToolsBox? Ecco la mia storia.";
+            suggestionText = "👤 Vuoi sapere chi c'è dietro AlexToolsBox? Ecco la mia storia. Qui sotto trovi anche i link alle aree principali del sito.";
             suggestionLink = "/chi-sono.html";
         }
         // Default
         else {
-            suggestionText = "💡 Non hai trovato quello che cercavi? Dalla homepage puoi accedere a tutte le guide e contenuti disponibili.";
+            suggestionText = "💡 Non hai trovato quello che cercavi? Dalla homepage puoi accedere a tutte le guide e contenuti disponibili. Qui sotto trovi i link alle aree principali del sito, così puoi riprendere la navigazione.";
             suggestionLink = "/";
         }
 
         // Mostra blocco
         document.getElementById("suggestion").style.display = "block";
-        document.getElementById("suggestion-text").innerText = suggestionText;
+        document.getElementById("suggestion-text").innerHTML = suggestionText;
         document.getElementById("suggestion-link").href = suggestionLink;
     </script>
 
