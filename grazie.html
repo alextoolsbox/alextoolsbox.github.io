@@ -2,117 +2,123 @@
 <html lang="it">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Richiesta inviata - AlexToolsBox</title>
-
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" type="image/png" href="/img/favicon.png">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiesta inviata - AlexToolsBox</title>
+    <meta name="description" content="La tua richiesta è stata inviata correttamente. Alex ti risponderà entro 24-72 ore. Scopri le guide su conti digitali e guadagni extra.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
 </head>
 
 <body>
 
-<div id="header"></div>
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
 
-<script>
-fetch("/includes/header.html")
-.then(r => r.text())
-.then(data => {
-document.getElementById("header").innerHTML = data;
-});
-</script>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Richiesta inviata ✅</h1>
+        <p class="hero-description">
+            Ho ricevuto la tua richiesta e la controllerò personalmente.<br>
+            Ti rispondo via email entro <strong>24-72 ore</strong>.
+        </p>
+    </div>
 
-<div class="container" style="text-align:center;padding:60px 20px;">
+    <div class="container" id="main-content" style="text-align:center;">
 
-<h1>Richiesta inviata ✅</h1>
+        <!-- COSA SUCCEDE ADESSO -->
+        <div class="tip highlight" style="text-align:left;">
+            <p><strong>📌 Cosa succede adesso</strong></p>
+            <p>✔ Ricevo la tua richiesta e la esamino</p>
+            <p>✔ Controllo che tutti i passaggi siano corretti</p>
+            <p>✔ Ti rispondo via email con le istruzioni o l'esito</p>
+            <p>✔ Se tutto è ok, procedo con l'invio dell'incentivo</p>
+        </div>
 
-<p style="font-size:18px;margin-top:10px;">
-Ho ricevuto la tua richiesta e la controllerò il prima possibile.
-</p>
+        <!-- CONTROLLA SPAM -->
+        <div class="tip highlight" style="margin-top:25px;text-align:left;">
+            <p><strong>📬 Controlla la posta in arrivo (e lo spam)</strong></p>
+            <p>
+                Se non vedi la mia risposta entro 72 ore, controlla la cartella
+                <strong>spam</strong> o <strong>posta indesiderata</strong>. A volte
+                le mie email finiscono lì, soprattutto con Gmail o Outlook.
+            </p>
+            <p>
+                Se proprio non trovi nulla, riscrivimi dalla pagina
+                <a href="/supporto.html">Supporto</a>.
+            </p>
+        </div>
 
-<p style="margin-top:10px;">
-👉 Ti risponderò via email entro <b>24-72 ore</b>.
-</p>
+        <!-- PER RICHIESTE INCENTIVO -->
+        <div class="tip highlight" style="margin-top:25px;text-align:left;">
+            <p><strong>📸 Se hai richiesto l'incentivo Revolut</strong></p>
+            <p>
+                Ricordati di rispondere alla mia email allegando lo
+                <strong>screenshot</strong> del completamento. Senza screenshot
+                non posso verificare la richiesta.
+            </p>
+            <div class="alex-tip">
+                <span class="alex-label">🔥 Alex's Tip</span><br>
+                <em>"Ti basta incollare l'immagine nella risposta. Se hai dubbi
+                    su come fare, scrivimi senza problemi."</em>
+            </div>
+        </div>
 
----
+        <!-- CTA: ESPLORA IL SITO -->
+        <h2 style="margin-top:40px;">📂 Esplora le guide del sito</h2>
+        <p>Mentre aspetti, perché non dai un'occhiata alle altre guide?</p>
 
-<div class="tip highlight" style="margin-top:30px;text-align:left;">
+        <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+            <a class="button" href="/">
+                🏠 Home
+            </a>
+            <a class="button" href="/conti-digitali.html">
+                💳 Conti Digitali
+            </a>
+            <a class="button" href="/guadagni-extra.html" style="background:#ff9800;">
+                💰 Guadagni Extra
+            </a>
+            <a class="button" href="/supporto.html">
+                📩 Supporto
+            </a>
+        </div>
 
-<p><strong>📸 Passaggio importante</strong></p>
+        <!-- LINK UTILI -->
+        <h2 style="margin-top:40px;">🔗 Le guide più lette</h2>
+        <ul style="text-align:left; display:inline-block;">
+            <li><a href="/revolut/">📘 Guida Revolut</a></li>
+            <li><a href="/revolut/bonus.html">🎁 Bonus Revolut 10€</a></li>
+            <li><a href="/microsoft-rewards/">📘 Guida Microsoft Rewards</a></li>
+            <li><a href="/microsoft-rewards/come-iniziare.html">🚀 Come iniziare con Rewards</a></li>
+            <li><a href="/revolut/deposito-senza-vincoli.html">💰 Deposito senza vincoli Revolut</a></li>
+            <li><a href="/microsoft-rewards/premi.html">🎁 Premi Rewards</a></li>
+        </ul>
 
-<p>
-Se stai richiedendo l’incentivo Revolut, devi inviare uno screenshot che dimostri il completamento corretto di tutti i passaggi.
-</p>
+        <div class="alex-tip" style="text-align:left; margin-top:30px;">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Se hai dubbi sulla procedura o non sai cosa fare, scrivimi ancora.
+                Preferisco ricevere dieci domande e chiarire tutto, piuttosto che
+                lasciarti con un dubbio."</em>
+        </div>
 
-<p>
-👉 Rispondi alla mail che riceverai allegando lo screenshot.
-</p>
+    </div>
 
-<p class="alex-tip">
-🔥 <span class="alex-label">Alex’s Tip:</span> Senza screenshot non è possibile verificare la richiesta.
-</p>
-
-</div>
-
----
-
-<h2 style="margin-top:40px;">Cosa succede adesso</h2>
-
-<div style="text-align:left;max-width:600px;margin:20px auto;">
-
-<p>✔ Ricevo la tua richiesta</p>
-<p>✔ Controllo che tutti i passaggi siano corretti</p>
-<p>✔ Ti rispondo via email</p>
-<p>✔ Se tutto è ok → invio incentivo</p>
-
-</div>
-
----
-
-<div class="tip" style="margin-top:30px;text-align:left;">
-
-<p>
-💣 Se la procedura non è completa o contiene errori, la richiesta non può essere approvata.
-</p>
-
-<p>
-👉 In caso di dubbi, puoi sempre scrivere nella sezione supporto.
-</p>
-
-</div>
-
----
-
-<div style="margin-top:40px;">
-
-<a href="/revolut/bonus.html" class="button">
-Torna alla guida bonus
-</a>
-
-</div>
-
-<div style="margin-top:15px;">
-
-<a href="/" style="font-size:14px;">
-Torna alla home
-</a>
-
-</div>
-
-</div>
-
-<div id="footer"></div>
-
-<script>
-fetch("/includes/footer.html")
-.then(r => r.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
-</script>
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
