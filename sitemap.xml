@@ -1,108 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- HOME -->
   <url>
     <loc>https://alextoolsbox.it/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- PAGINE BASE -->
+  <!-- PAGINE INTERMEDIE (HUB) -->
   <url>
-    <loc>https://alextoolsbox.it/chi-sono.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.6</priority>
+    <loc>https://alextoolsbox.it/conti-digitali.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/guadagni-extra.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.9</priority>
   </url>
 
+  <!-- PAGINE DI SERVIZIO -->
+  <url>
+    <loc>https://alextoolsbox.it/chi-sono.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/trasparenza.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/supporto.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://alextoolsbox.it/privacy.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <priority>0.3</priority>
   </url>
 
   <!-- ===================== -->
-  <!-- REVOLUT CLUSTER -->
+  <!-- CLUSTER REVOLUT -->
   <!-- ===================== -->
 
   <url>
     <loc>https://alextoolsbox.it/revolut/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://alextoolsbox.it/revolut/bonus.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://alextoolsbox.it/revolut/deposito-senza-vincoli.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://alextoolsbox.it/revolut/faq.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://alextoolsbox.it/revolut/piani.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://alextoolsbox.it/revolut/revpoint.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://alextoolsbox.it/revolut/sicurezza.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===================== -->
-  <!-- MICROSOFT REWARDS CLUSTER -->
-  <!-- ===================== -->
-
-  <!-- HUB -->
-  <url>
-    <loc>https://alextoolsbox.it/microsoft-rewards/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- CORE -->
-  <url>
-    <loc>https://alextoolsbox.it/microsoft-rewards/come-iniziare.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://alextoolsbox.it/revolut/bonus.html</loc>
+    <lastmod>2026-05-27</lastmod>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/deposito-senza-vincoli.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/faq.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/piani.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/revpoint.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/sicurezza.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/revolut/link.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.3</priority>
+  </url>
 
+  <!-- ===================== -->
+  <!-- CLUSTER MICROSOFT REWARDS -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/microsoft-rewards/come-iniziare.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://alextoolsbox.it/microsoft-rewards/esperienza-giornaliera.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.95</priority>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://alextoolsbox.it/microsoft-rewards/premi.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.95</priority>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.9</priority>
   </url>
-
-  <!-- SUPPORT -->
   <url>
     <loc>https://alextoolsbox.it/microsoft-rewards/faq.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.85</priority>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
