@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Microsoft Rewards: quanto guadagni in buoni regalo | AlexToolsBox</title>
+    <meta name="description" content="Calcola quanto puoi guadagnare con Microsoft Rewards in base ai minuti che dedichi ogni giorno. Stima punti mensili, valore in buoni regalo e tempo per raggiungere i premi.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Calcolatore Microsoft Rewards: quanto guadagni in buoni regalo",
+        "description": "Calcola quanto puoi guadagnare con Microsoft Rewards inserendo i minuti che dedichi ogni giorno. Stima punti, valore in euro e tempo per i premi.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-05-29",
+        "dateModified": "2026-05-29"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://alextoolsbox.it/strumenti/" },
+            { "@type": "ListItem", "position": 3, "name": "Calcolatore Rewards", "item": "https://alextoolsbox.it/strumenti/calcolatore-rewards.html" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>🧮 Calcolatore Microsoft Rewards</h1>
+        <p class="hero-description">
+            Inserisci quanti minuti al giorno vuoi dedicare e scopri quanti punti puoi
+            accumulare, quanto valgono e in quanto tempo raggiungi i premi che ti interessano.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Questo calcolatore ti dà una stima <strong>personalizzata</strong> dei tuoi
+                guadagni con Microsoft Rewards, basata sui minuti che dedichi ogni giorno.
+                Non è una cifra esatta (i punti variano in base alle attività disponibili),
+                ma è un'ottima approssimazione per capire se vale la pena iniziare.
+            </p>
+            <p>
+                Il valore è calcolato sul cambio base: <strong>7.205 punti = 5€</strong> in
+                buoni regalo. Puoi usarli per <strong>Amazon, Apple, Xbox, Deliveroo</strong>
+                e decine di altri marchi.
+            </p>
+        </div>
+
+        <!-- CALCOLATORE -->
+        <h2>Quanto puoi guadagnare?</h2>
+
+        <div class="calculator-box">
+            <label><strong>Quanti minuti al giorno vuoi dedicare?</strong></label>
+            <select id="minutiInput">
+                <option value="2">⏱ 2 minuti (solo attività base)</option>
+                <option value="5" selected>⏱ 5 minuti (attività + ricerche rapide)</option>
+                <option value="8">⏱ 8 minuti (routine completa app + PC)</option>
+                <option value="12">⏱ 12 minuti (routine completa + extra)</option>
+            </select>
+
+            <button onclick="calcola()" style="margin-top:15px;">Calcola guadagno</button>
+
+            <div id="risultato" class="result-box" style="margin-top:20px;"></div>
+        </div>
+
+        <!-- COME FUNZIONA IL CALCOLO -->
+        <h2>Come funziona il calcolo</h2>
+        <p>
+            Il calcolatore usa i dati reali della mia esperienza quotidiana con Microsoft Rewards.
+            Ecco cosa puoi fare in base al tempo che dedichi:
+        </p>
+        <ul>
+            <li><strong>⏱ 2 minuti</strong>: fai solo le attività base (set giornaliero, check-in). Ottieni circa <strong>50-60 punti</strong>. È il minimo indispensabile per non perdere la sequenza.</li>
+            <li><strong>⏱ 5 minuti</strong>: attività base + ricerche veloci da app Bing. Ottieni circa <strong>130-150 punti</strong>. Buon compromesso se hai poco tempo.</li>
+            <li><strong>⏱ 8 minuti</strong>: routine completa app + PC (set, ricerche, news). Ottieni circa <strong>200-220 punti</strong>. È la mia routine quotidiana.</li>
+            <li><strong>⏱ 12 minuti</strong>: routine completa + attività extra, bonus sequenza e quiz. Ottieni circa <strong>250+ punti</strong>. Il massimo possibile con costanza.</li>
+        </ul>
+        <p>
+            Il valore in euro è calcolato sul cambio base: <strong>7.205 punti = 5€</strong>.
+            È il valore standard per la maggior parte dei buoni regalo (Amazon, Apple, Xbox,
+            Deliveroo, Carrefour e molti altri).
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Io faccio circa 8 minuti al giorno. In un mese ho un buono da 5€. Non è
+                tanto, ma è gratis. E posso spenderlo dove voglio: Amazon, Apple, Xbox,
+                quello che mi serve in quel momento."</em>
+        </div>
+
+        <!-- DOVE USARE I PUNTI -->
+        <h2>Dove puoi spendere i punti</h2>
+        <p>
+            I punti Microsoft Rewards non sono vincolati a un solo marchio. Con 7.205 punti
+            puoi ottenere un buono da 5€ per:
+        </p>
+        <ul>
+            <li><strong>🛒 Amazon</strong> — il più versatile, lo usi per qualsiasi acquisto</li>
+            <li><strong>🍎 Apple</strong> — perfetto per app, musica o accessori</li>
+            <li><strong>🎮 Xbox</strong> — Game Pass, giochi o credito digitale</li>
+            <li><strong>🍕 Deliveroo</strong> — una pizza o una cena a casa</li>
+            <li><strong>🛍️ Carrefour, MediaWorld, Eataly</strong> — spesa ed elettronica</li>
+            <li><strong>🚌 Flixbus</strong> — viaggi low-cost</li>
+        </ul>
+        <p>
+            👉 In pratica: fai i punti con le ricerche e li spendi dove ti servono.
+            Non sei obbligato a scegliere un solo marchio.
+        </p>
+
+        <!-- CTA INTERMEDIA -->
+        <div class="tip highlight" style="text-align:center;">
+            <p><strong>🎁 Vuoi vedere tutti i premi disponibili?</strong></p>
+            <p>Ho raccolto i premi migliori, con valore in punti e consigli su quali convengono.</p>
+            <a class="button" href="/microsoft-rewards/premi.html">
+                Vedi tutti i premi
+            </a>
+        </div>
+
+        <!-- FAQ -->
+        <h2>Domande frequenti sul calcolatore</h2>
+        <div class="faq">
+            <h3>I risultati sono garantiti?</h3>
+            <p>
+                No, sono stime basate sulla mia esperienza reale. I punti giornalieri
+                possono variare in base alle attività disponibili, ai bonus del giorno
+                e al tuo livello Rewards. Ma l'ordine di grandezza è corretto.
+            </p>
+
+            <h3>7.205 punti valgono sempre 5€?</h3>
+            <p>
+                Sì, per la maggior parte dei buoni regalo (Amazon, Apple, Xbox, Deliveroo
+                e molti altri). Alcuni premi specifici possono avere un rapporto punti/euro
+                leggermente diverso. I premi Microsoft (come Game Pass) a volte sono
+                più convenienti.
+            </p>
+
+            <h3>Posso accumulare punti più velocemente?</h3>
+            <p>
+                Sì. Oltre alla routine base, puoi partecipare ai quiz bonus, completare
+                le sfide settimanali e usare il programma referral (quando disponibile
+                in Italia). Ogni piccolo extra si somma nel tempo.
+            </p>
+        </div>
+
+        <!-- CTA FINALE -->
+        <div class="tip highlight" style="text-align:center;">
+            <p><strong>🚀 Pronto a iniziare?</strong></p>
+            <p>Ora che hai un'idea di quanto puoi guadagnare, segui la guida passo passo
+                e inizia subito ad accumulare punti.</p>
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:15px;">
+                <a class="button" href="/microsoft-rewards/come-iniziare.html">
+                    🚀 Come iniziare
+                </a>
+                <a class="button" href="/microsoft-rewards/esperienza-giornaliera.html" style="background:#ff9800;">
+                    📅 La mia routine
+                </a>
+            </div>
+        </div>
+
+        <!-- LINK CORRELATI -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/microsoft-rewards/">📘 Guida Microsoft Rewards</a></li>
+            <li><a href="/microsoft-rewards/premi.html">🎁 Premi e buoni regalo</a></li>
+            <li><a href="/microsoft-rewards/faq.html">❓ FAQ Rewards</a></li>
+            <li><a href="/">🏠 Torna alla Home</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sul calcolatore</h3>
+            <p>
+                I valori sono basati sulla mia esperienza reale con Microsoft Rewards in
+                Italia, aggiornati a maggio 2026. I punti effettivi possono variare in
+                base alle attività disponibili e ai bonus del giorno.
+            </p>
+            <p>
+                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "29 maggio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <script>
+        function calcola() {
+            const minuti = parseInt(document.getElementById("minutiInput").value);
+            let puntiGiorno, descrizione;
+
+            switch(minuti) {
+                case 2:
+                    puntiGiorno = 55;
+                    descrizione = "attività base (set giornaliero, check-in)";
+                    break;
+                case 5:
+                    puntiGiorno = 140;
+                    descrizione = "attività + ricerche veloci da app";
+                    break;
+                case 8:
+                    puntiGiorno = 210;
+                    descrizione = "routine completa app + PC";
+                    break;
+                case 12:
+                    puntiGiorno = 260;
+                    descrizione = "routine completa + attività extra e bonus";
+                    break;
+                default:
+                    puntiGiorno = 0;
+                    descrizione = "";
+            }
+
+            const puntiMese = puntiGiorno * 30;
+            const puntiAnno = puntiGiorno * 365;
+
+            // Valore in euro (7.205 punti = 5€)
+            const euroMese = (puntiMese / 7205) * 5;
+            const euroAnno = (puntiAnno / 7205) * 5;
+
+            // Tempo per i premi
+            const giorniPer5Euro = Math.round(7205 / puntiGiorno);
+            const giorniPer10Euro = Math.round(14410 / puntiGiorno);
+
+            // Quanti buoni all'anno
+            const buoni5AllAnno = Math.floor(puntiAnno / 7205);
+            const buoni10AllAnno = Math.floor(puntiAnno / 14410);
+
+            document.getElementById("risultato").innerHTML = `
+                <h3>📊 La tua stima con ${minuti} minuti al giorno</h3>
+                <p style="margin-top:10px;">${descrizione}</p>
+
+                <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+                    <tr>
+                        <td style="padding:8px;"><strong>Punti al giorno</strong></td>
+                        <td style="padding:8px; text-align:right; font-weight:bold;">~${puntiGiorno} punti</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Punti al mese</strong></td>
+                        <td style="padding:8px; text-align:right;">~${puntiMese.toLocaleString("it-IT")} punti</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Punti all'anno</strong></td>
+                        <td style="padding:8px; text-align:right;">~${puntiAnno.toLocaleString("it-IT")} punti</td>
+                    </tr>
+                    <tr style="background:#f0fdf4;">
+                        <td style="padding:8px;"><strong>💰 Valore mensile</strong></td>
+                        <td style="padding:8px; text-align:right; font-weight:bold; color:#16a34a;">~${euroMese.toFixed(2)}€</td>
+                    </tr>
+                    <tr style="background:#f0fdf4;">
+                        <td style="padding:8px;"><strong>💰 Valore annuale</strong></td>
+                        <td style="padding:8px; text-align:right; font-weight:bold; color:#16a34a;">~${euroAnno.toFixed(0)}€</td>
+                    </tr>
+                </table>
+
+                <h3 style="margin-top:20px;">⏱ Tempo per raggiungere i premi</h3>
+                <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+                    <tr>
+                        <td style="padding:8px;"><strong>Buono da 5€ (7.205 punti)</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorniPer5Euro} giorni</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Buono da 10€ (14.410 punti)</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorniPer10Euro} giorni</td>
+                    </tr>
+                </table>
+
+                <h3 style="margin-top:20px;">🎁 Cosa puoi ottenere in un anno</h3>
+                <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+                    <tr>
+                        <td style="padding:8px;"><strong>Buoni da 5€</strong></td>
+                        <td style="padding:8px; text-align:right;"><strong>${buoni5AllAnno} buoni</strong> (${(buoni5AllAnno * 5).toFixed(0)}€ totali)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Buoni da 10€</strong></td>
+                        <td style="padding:8px; text-align:right;"><strong>${buoni10AllAnno} buoni</strong> (${(buoni10AllAnno * 10).toFixed(0)}€ totali)</td>
+                    </tr>
+                </table>
+
+                <p style="margin-top:15px; font-size:14px; color:#555;">
+                    ☕ Con questi punti puoi permetterti circa <strong>${(euroAnno / 1.5).toFixed(0)} caffè</strong> all'anno. O una pizza. O un libro. O un abbonamento Xbox. Tutto gratis.
+                </p>
+
+                <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:15px;">
+                    <a class="button" href="/microsoft-rewards/come-iniziare.html">
+                        🚀 Inizia subito
+                    </a>
+                    <a class="button" href="/microsoft-rewards/premi.html" style="background:#ff9800;">
+                        🎁 Vedi i premi
+                    </a>
+                </div>
+            `;
+        }
+
+        // Esegui il calcolo al caricamento
+        calcola();
+    </script>
+
+</body>
+</html>
