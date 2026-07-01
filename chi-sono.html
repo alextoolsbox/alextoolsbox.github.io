@@ -187,13 +187,17 @@
                 Se sei arrivato fin qui, significa che tieni alla trasparenza tanto quanto
                 me. Spero che le guide ti siano utili. Se hai domande, suggerimenti o vuoi
                 segnalarmi qualcosa, scrivimi dalla pagina Supporto.
-            </p>
             <p style="font-size:13px; color:#888; margin-top:10px;">
-                Ultimo aggiornamento: <span id="last-modified"></span>
-            </p>
-            <script>
-                document.getElementById("last-modified").textContent = document.lastModified;
-            </script>
+    Ultimo aggiornamento: <span id="last-modified"></span>
+</p>
+<script>
+    var d = new Date(document.lastModified);
+    if (isNaN(d.getTime())) {
+        document.getElementById("last-modified").textContent = "30 giugno 2026";
+    } else {
+        document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+    }
+</script>
         </div>
 
     </div>
