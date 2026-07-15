@@ -110,6 +110,46 @@
     <priority>0.8</priority>
   </url>
   <!-- ===================== -->
+  <!-- CLUSTER WISE -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/wise/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/bonus.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/commissioni-cambio.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/carta.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/interessi.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/sicurezza.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/wise/faq.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===================== -->
   <!-- CLUSTER MICROSOFT REWARDS -->
   <!-- ===================== -->
 
