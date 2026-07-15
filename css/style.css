@@ -294,6 +294,7 @@ margin:6px 0;
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+justify-content:start;
 gap:18px;
 margin-top:15px;
 }
