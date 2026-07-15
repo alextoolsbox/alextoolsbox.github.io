@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBAN Satispay: come funziona il conto collegato (Guida 2026)</title>
+    <meta name="description" content="Cos'è l'IBAN Satispay, come attivarlo e come funzionano i bonifici SEPA in entrata e in uscita. Sicurezza, verifica del beneficiario e ricevute, spiegati in dettaglio.">
+    <link rel="canonical" href="https://alextoolsbox.it/satispay/iban-satispay.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="IBAN Satispay: come funziona il conto collegato (Guida 2026)">
+    <meta property="og:description" content="Cos'è l'IBAN Satispay, come attivarlo e come funzionano i bonifici SEPA in entrata e in uscita.">
+    <meta property="og:url" content="https://alextoolsbox.it/satispay/iban-satispay.html">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IBAN Satispay: come funziona il conto collegato">
+    <meta name="twitter:description" content="Cos'è l'IBAN Satispay e come funzionano i bonifici SEPA in entrata e in uscita.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "A cosa serve l'IBAN Satispay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serve a ricevere e inviare bonifici SEPA direttamente dall'app Satispay, come su un conto corrente tradizionale, senza dover passare dal conto bancario collegato esterno."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "L'IBAN Satispay è sicuro per i bonifici?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Ogni bonifico in uscita passa da una verifica del beneficiario in tempo reale (Verification of the Payee): il sistema controlla che il nome inserito corrisponda all'intestatario dell'IBAN prima di confermare l'operazione, secondo la normativa europea."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso scaricare le ricevute dei bonifici Satispay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, per ogni bonifico inviato o ricevuto tramite l'IBAN Satispay è possibile scaricare una ricevuta dalla sezione Transazioni dell'app."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "IBAN Satispay: come funziona il conto collegato",
+        "description": "Guida all'IBAN Satispay: attivazione, bonifici SEPA, verifica del beneficiario e ricevute.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Conti Digitali", "item": "https://alextoolsbox.it/conti-digitali.html" },
+            { "@type": "ListItem", "position": 3, "name": "Satispay", "item": "https://alextoolsbox.it/satispay/" },
+            { "@type": "ListItem", "position": 4, "name": "IBAN Satispay", "item": "https://alextoolsbox.it/satispay/iban-satispay.html" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>IBAN Satispay: il conto collegato spiegato bene</h1>
+        <p class="hero-description">
+            Satispay ha un proprio IBAN per ricevere e inviare bonifici SEPA direttamente dall'app. Ti spiego
+            come funziona, quanto è sicuro e cosa cambia rispetto al conto collegato esterno.
+        </p>
+        <a class="button" href="/satispay/link.html">
+            Scarica Satispay (gratis)
+        </a>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                L'IBAN Satispay ti permette di ricevere bonifici come su un conto corrente tradizionale e di
+                inviarne di tuoi, tutto dall'app. Ogni bonifico in uscita è protetto dalla <strong>verifica del
+                beneficiario in tempo reale</strong> (controllo che il nome corrisponda all'intestatario
+                dell'IBAN), in linea con la normativa europea sui pagamenti.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2>Cos'è l'IBAN Satispay</h2>
+        <p>
+            Oltre al classico conto collegato (la carta o il conto corrente che colleghi per far partire i
+            pagamenti P2P e in negozio), Satispay offre un proprio <strong>IBAN</strong>. Puoi usarlo per farti
+            accreditare bonifici da chiunque, anche da chi non ha l'app, esattamente come faresti con l'IBAN di
+            una banca tradizionale.
+        </p>
+        <p>
+            Attivarlo richiede pochi minuti dall'app: una volta attivo, puoi condividere il tuo IBAN Satispay per
+            ricevere pagamenti ricorrenti, bonifici da terzi o semplicemente per centralizzare i movimenti in
+            un'unica app.
+        </p>
+
+        <!-- SICUREZZA VOP -->
+        <h2 id="sicurezza-bonifici">Sicurezza dei bonifici: la verifica del beneficiario</h2>
+        <p>
+            Una delle cause più comuni di errori o truffe nei bonifici è inviare denaro all'IBAN sbagliato.
+            Satispay applica la normativa europea sulla <strong>Verifica del Beneficiario</strong> (Verification
+            of the Payee): prima di confermare un bonifico in uscita, il sistema controlla che il nome inserito
+            corrisponda davvero all'intestatario dell'IBAN di destinazione. In caso di discrepanza, ricevi un
+            avviso prima di procedere.
+        </p>
+        <p>
+            A questo si aggiungono le <strong>notifiche push</strong> per ogni bonifico in entrata o in uscita, e
+            la possibilità di scaricare la <strong>ricevuta</strong> di ogni operazione dalla sezione Transazioni
+            dell'app, utile per qualsiasi verifica successiva.
+        </p>
+
+        <div class="features">
+            <div class="card">
+                🔎
+                <p><b>Verifica beneficiario</b></p>
+                <p>Controllo del nome prima di confermare il bonifico.</p>
+            </div>
+            <div class="card">
+                🔔
+                <p><b>Notifiche push</b></p>
+                <p>Avviso immediato per ogni bonifico in entrata o uscita.</p>
+            </div>
+            <div class="card">
+                🧾
+                <p><b>Ricevute scaricabili</b></p>
+                <p>Per ogni operazione, direttamente dall'app.</p>
+            </div>
+        </div>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Uso l'IBAN Satispay soprattutto per centralizzare piccoli bonifici ricorrenti: mi arriva la
+                notifica push all'istante e non devo aprire l'app della banca per controllare."</em>
+        </div>
+
+        <!-- CONTO COLLEGATO VS IBAN -->
+        <h2>IBAN Satispay vs conto collegato: che differenza c'è</h2>
+        <p>
+            Il <strong>conto collegato</strong> (carta o conto corrente esterno) è quello che permette a Satispay
+            di addebitare i pagamenti P2P e in negozio: funziona in background, come un bonifico automatico ogni
+            volta che paghi. L'<strong>IBAN Satispay</strong> invece è un vero e proprio recapito bancario tutto
+            tuo, utile per ricevere bonifici da chiunque, non solo per pagare.
+        </p>
+        <p>
+            <a href="/satispay/come-funziona.html">Torna alla guida generale su P2P e QR in negozio →</a>
+        </p>
+
+        <!-- ALTRE GUIDE -->
+        <h2>Altre guide Satispay</h2>
+        <ul>
+            <li><a href="/satispay/">📘 Guida introduttiva</a></li>
+            <li><a href="/satispay/come-funziona.html">📲 Come funziona: P2P e QR in negozio</a></li>
+            <li><a href="/satispay/bonus.html">🎁 Bonus 5€ con il codice invito</a></li>
+            <li><a href="/satispay/punti-satispay.html">⭐ Punti Satispay</a></li>
+            <li><a href="/satispay/sicurezza.html">🔒 Satispay è sicuro?</a></li>
+            <li><a href="/satispay/faq.html">❓ FAQ complete</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                Contenuto verificato sulla documentazione ufficiale Satispay e sulla mia esperienza diretta,
+                aggiornato a luglio 2026. <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "15 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
