@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAC Trade Republic: come funziona il piano di accumulo (2026)</title>
-    <meta name="description" content="Come funziona il piano di accumulo (PAC) su Trade Republic: importo minimo, frequenze, ETF e azioni disponibili, e quanto risparmi in commissioni rispetto a comprare manualmente ogni mese.">
+    <meta name="description" content="Come funziona il piano di accumulo (PAC) su Trade Republic: importo minimo, frequenze, ETF e azioni disponibili, con un simulatore di accumulo per stimare quanto potresti versare e accumulare nel tempo.">
     <link rel="canonical" href="https://alextoolsbox.it/trade-republic/pac.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="AlexToolsBox">
     <meta property="og:locale" content="it_IT">
     <meta property="og:title" content="PAC Trade Republic: come funziona il piano di accumulo (2026)">
-    <meta property="og:description" content="Importo minimo, frequenze, ETF disponibili e calcolatore del risparmio in commissioni rispetto agli acquisti manuali.">
+    <meta property="og:description" content="Importo minimo, frequenze, ETF disponibili e simulatore di accumulo per stimare quanto potresti versare nel tempo.">
     <meta property="og:url" content="https://alextoolsbox.it/trade-republic/pac.html">
     <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PAC Trade Republic: come funziona il piano di accumulo">
-    <meta name="twitter:description" content="Importo minimo, frequenze, ETF disponibili e calcolatore del risparmio in commissioni.">
+    <meta name="twitter:description" content="Importo minimo, frequenze, ETF disponibili e simulatore di accumulo PAC.">
     <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <!-- Plausible Analytics -->
     <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
@@ -64,7 +64,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "PAC Trade Republic: come funziona il piano di accumulo",
-        "description": "Guida al piano di accumulo (PAC) su Trade Republic: importo minimo, frequenze e risparmio in commissioni rispetto agli acquisti manuali.",
+        "description": "Guida al piano di accumulo (PAC) su Trade Republic: importo minimo, frequenze e simulatore di accumulo per stimare versamenti e valore nel tempo.",
         "author": { "@type": "Person", "name": "Alex" },
         "datePublished": "2026-07-16",
         "dateModified": "2026-07-16"
@@ -102,7 +102,7 @@
         <h1>PAC Trade Republic: come funziona il piano di accumulo</h1>
         <p class="hero-description">
             Piani di accumulo a esecuzione gratuita, a partire da 1€, su azioni, ETF e crypto. Ecco come
-            funzionano e quanto risparmi in commissioni rispetto a comprare manualmente ogni mese.
+            funzionano, con un simulatore per stimare quanto potresti accumulare nel tempo.
         </p>
     </div>
 
@@ -141,18 +141,23 @@
         </p>
 
         <!-- CALCOLATORE -->
-        <h2 id="calcolatore">Calcola quanto risparmi in commissioni con il PAC</h2>
+        <h2 id="calcolatore">Simula il tuo piano di accumulo</h2>
         <p>
-            Se invece di impostare un PAC comprassi lo stesso strumento manualmente ogni mese, pagheresti
-            1€ di costi di regolamento per ogni acquisto singolo. Inserisci per quanti mesi vuoi investire
-            per vedere il risparmio stimato.
+            Inserisci importo mensile, durata e un rendimento medio annuo che ritieni plausibile per
+            simulare quanto potresti accumulare con un PAC. Il rendimento non è un dato fornito da Trade
+            Republic né una previsione: lo scegli tu, ed è solo un'ipotesi di simulazione. Nessun rendimento
+            è garantito e il valore reale può essere più alto o più basso.
         </p>
 
         <div class="calculator-box">
-            <h3>Calcolatore risparmio commissioni PAC</h3>
-            <label>Per quanti mesi vuoi investire</label>
-            <input type="number" id="pacMonths" placeholder="Es. 12">
-            <button onclick="calcPac()">Calcola risparmio</button>
+            <h3>Simulatore PAC</h3>
+            <label>Importo mensile investito (€)</label>
+            <input type="number" id="pacAmount" placeholder="Es. 100">
+            <label>Durata (anni)</label>
+            <input type="number" id="pacYears" placeholder="Es. 10">
+            <label>Rendimento medio annuo ipotizzato (%)</label>
+            <input type="number" id="pacReturn" placeholder="Es. 5" step="0.1">
+            <button onclick="calcPac()">Simula accumulo</button>
             <div id="pacResult" class="result-box"></div>
         </div>
 
@@ -174,6 +179,9 @@
         </p>
         <p>
             <a href="/trade-republic/come-funziona.html">Come funziona il Saveback nel dettaglio →</a>
+        </p>
+        <p>
+            <a href="/confronti/trade-republic-vs-banca-tradizionale.html">Trade Republic vs PAC di Unicredit/Intesa Sanpaolo: confronto commissioni →</a>
         </p>
 
         <!-- FAQ -->
@@ -231,24 +239,35 @@
 
     <script>
         function calcPac() {
-            let months = parseFloat(document.getElementById("pacMonths").value);
-            if (isNaN(months) || months <= 0) {
-                document.getElementById("pacResult").innerHTML = "Inserisci un numero di mesi valido";
+            let amount = parseFloat(document.getElementById("pacAmount").value);
+            let years = parseFloat(document.getElementById("pacYears").value);
+            let annualReturn = parseFloat(document.getElementById("pacReturn").value);
+
+            if (isNaN(amount) || amount <= 0 || isNaN(years) || years <= 0 || isNaN(annualReturn)) {
+                document.getElementById("pacResult").innerHTML = "Inserisci importo, durata e rendimento validi";
                 return;
             }
-            let feePerOrder = 1; // costo ufficiale di regolamento per operazione singola
-            let manualCost = months * feePerOrder;
-            let pacCost = 0;
+
+            let months = years * 12;
+            let monthlyRate = Math.pow(1 + annualReturn / 100, 1 / 12) - 1;
+            let futureValue;
+            if (monthlyRate === 0) {
+                futureValue = amount * months;
+            } else {
+                futureValue = amount * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+            }
+            let totalInvested = amount * months;
+            let estimatedGain = futureValue - totalInvested;
+
             document.getElementById("pacResult").innerHTML = `
-                <h3>Risultato stimato</h3>
-                <p><strong>Mesi di investimento:</strong> ${months}</p>
-                <p><strong>Costo stimato con acquisti manuali mensili:</strong> ${manualCost.toFixed(2)} €</p>
-                <p><strong>Costo con PAC:</strong> ${pacCost.toFixed(2)} €</p>
-                <p style="font-weight:bold; color:#16a34a;">
-                    💰 Risparmio stimato in commissioni: ${manualCost.toFixed(2)} €
+                <h3>Risultato della simulazione</h3>
+                <p><strong>Totale versato in ${years} anni:</strong> ${totalInvested.toLocaleString('it-IT', {maximumFractionDigits:0})} €</p>
+                <p><strong>Valore stimato finale:</strong> ${futureValue.toLocaleString('it-IT', {maximumFractionDigits:0})} €</p>
+                <p style="font-weight:bold; color:${estimatedGain >= 0 ? '#16a34a' : '#dc2626'};">
+                    📈 Guadagno stimato: ${estimatedGain.toLocaleString('it-IT', {maximumFractionDigits:0})} €
                 </p>
                 <hr>
-                <p><small>Confronto tra un acquisto manuale al mese (1€ di costi di regolamento per operazione, fonte ufficiale Trade Republic) e l'esecuzione gratuita di un PAC. Non include eventuali costi impliciti dello strumento (es. TER dell'ETF), uguali in entrambi i casi.</small></p>
+                <p><small>Simulazione matematica con capitalizzazione composta mensile, basata sul rendimento annuo che hai inserito tu (non un dato Trade Republic né una previsione). Non considera tasse, eventuali costi dello strumento (es. TER dell'ETF) né oscillazioni di mercato: è solo un'ipotesi per farti un'idea di scala, non un rendimento garantito.</small></p>
             `;
         }
     </script>
