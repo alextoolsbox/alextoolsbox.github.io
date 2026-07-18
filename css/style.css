@@ -832,4 +832,7 @@ border-radius: 10px;
     }
 
     /* Riduci padding-top body su mobile */
-    body 
+    body {
+        padding-top: 80px;
+    }
+}
