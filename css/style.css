@@ -169,6 +169,10 @@ pointer-events:auto;
 
 /* SUBMENU (livello 2) */
 
+.dropdown-sub{
+position:relative;
+}
+
 .dropdown-sub > a::after{
 content:"›";
 float:right;
@@ -828,7 +832,4 @@ border-radius: 10px;
     }
 
     /* Riduci padding-top body su mobile */
-    body {
-        padding-top: 80px;
-    }
-}
+    body 
