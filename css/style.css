@@ -303,6 +303,16 @@ gap:18px;
 margin-top:15px;
 }
 
+/* Variante a 2 colonne fisse (usata quando il numero di card è pari e va evitato lo spazio vuoto dell'auto-fit) */
+.features-2col{
+grid-template-columns:1fr 1fr;
+}
+@media (max-width: 768px){
+.features-2col{
+grid-template-columns:1fr;
+}
+}
+
 .card{
 background:#f7f8fc;
 padding:18px;
