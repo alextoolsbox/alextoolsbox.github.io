@@ -303,9 +303,14 @@ gap:18px;
 margin-top:15px;
 }
 
-/* Variante a colonna singola (card impilate verticalmente, niente calcoli automatici di colonne) */
+/* Variante a 2 colonne fisse (card più strette/verticali, nessuno spazio vuoto con un numero pari di card) */
+.features-2col{
+grid-template-columns:1fr 1fr;
+}
+@media (max-width: 768px){
 .features-2col{
 grid-template-columns:1fr;
+}
 }
 
 .card{
