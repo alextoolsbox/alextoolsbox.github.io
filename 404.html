@@ -75,7 +75,7 @@
             <li><a href="/revolut/bonus.html">🎁 Bonus Revolut 10€</a></li>
             <li><a href="/microsoft-rewards/">📘 Guida Microsoft Rewards</a></li>
             <li><a href="/microsoft-rewards/come-iniziare.html">🚀 Come iniziare con Rewards</a></li>
-            <li><a href="/revolut/deposito-senza-vincoli.html">💰 Deposito senza vincoli Revolut</a></li>
+            <li><a href="/app-passive/">📡 App Passive: Honeygain, JumpTask, EarnApp</a></li>
             <li><a href="/microsoft-rewards/premi.html">🎁 Premi Rewards</a></li>
         </ul>
 
@@ -128,6 +128,11 @@
         else if (path.includes("conto") || path.includes("carta") || path.includes("banca") || path.includes("satispay") || path.includes("n26") || path.includes("hype")) {
             suggestionText = "💳 Stavi cercando guide sui conti digitali? Dai un'occhiata alla sezione dedicata. Qui sotto trovi i link alle aree principali del sito.";
             suggestionLink = "/conti-digitali.html";
+        }
+        // App Passive (Honeygain, JumpTask, EarnApp)
+        else if (path.includes("honeygain") || path.includes("jumptask") || path.includes("earnapp") || path.includes("app-passive")) {
+            suggestionText = "📡 Stavi cercando Honeygain, JumpTask o EarnApp? Trovi tutte e tre le guide nella sezione App Passive. Qui sotto trovi anche i link alle aree principali del sito.";
+            suggestionLink = "/app-passive/";
         }
         // Guadagni extra
         else if (path.includes("guadagn") || path.includes("bonus") || path.includes("cashback") || path.includes("passiv")) {
