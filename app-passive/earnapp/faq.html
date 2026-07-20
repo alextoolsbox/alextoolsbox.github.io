@@ -93,6 +93,22 @@
                     "@type": "Answer",
                     "text": "EarnApp richiede solo IP residenziali: usare VPN, proxy, macchine virtuali o Docker Linux viola il ToS e può portare alla terminazione dell'account con azzeramento del saldo."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "EarnApp rallenta la mia connessione?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nella mia esperienza no: EarnApp usa la banda che non stai già utilizzando, non ho mai notato rallentamenti su nessuno dei due dispositivi in un anno di utilizzo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso disinstallare EarnApp in qualsiasi momento?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, senza vincoli. Il saldo accumulato resta disponibile sul tuo account per il prelievo, purché tu abbia raggiunto la soglia minima."
+                }
             }
         ]
     }
@@ -212,24 +228,49 @@
             <p>
                 Bright Data (l'azienda dietro EarnApp) instrada attraverso la tua banda
                 inutilizzata richieste di raccolta dati pubblici, come prezzi di prodotti,
-                disponibilità voli o annunci online. Dichiara di non accedere a file, cronologia
-                o dati personali del dispositivo. Approfondisco tutto nella
+                disponibilità voli o annunci online, per conto di aziende clienti che pagano per
+                accedere a questi dati. In pratica, il tuo indirizzo IP diventa uno dei tanti
+                nodi attraverso cui Bright Data fa passare le sue richieste, così da sembrare
+                traffico "normale" da un utente reale invece che da un data center. EarnApp
+                dichiara di non accedere a file, cronologia o dati personali del dispositivo.
+                Approfondisco tutto, incluso un caso di sicurezza documentato nel 2026, nella
                 <a href="/app-passive/earnapp/sicurezza-rischi.html">pagina dedicata a sicurezza e rischi</a>.
             </p>
 
             <h3>Come funziona il programma referral di EarnApp?</h3>
             <p>
                 Chi si iscrive con il tuo link referral ti fa guadagnare il <strong>10% a
-                vita</strong> dei suoi guadagni, senza che venga tolto nulla a lui. Se vi
-                registrate dallo stesso IP, il guadagno referral è parziale. L'autoreferral
-                comporta la terminazione dell'account.
+                vita</strong> dei suoi guadagni, senza che venga tolto nulla a lui: è un bonus
+                che EarnApp paga di tasca propria, non una trattenuta sul guadagno della persona
+                che inviti. Se vi registrate dallo stesso IP (es. lo inviti a casa tua e si
+                iscrive dalla tua rete), il guadagno referral che ricevi è solo parziale.
+                L'autoreferral (creare un secondo account per invitare te stesso) comporta la
+                terminazione dell'account e l'azzeramento del saldo: è esplicitamente vietato
+                dai termini di servizio.
             </p>
 
             <h3>Cosa rischio se violo i termini di servizio di EarnApp?</h3>
             <p>
                 EarnApp richiede solo IP residenziali: usare VPN, proxy, macchine virtuali o
                 Docker Linux viola il ToS e può portare alla terminazione dell'account con
-                azzeramento del saldo.
+                azzeramento del saldo. È una regola che ha senso dal punto di vista di Bright
+                Data: il valore dei loro IP residenziali sta proprio nell'essere connessioni
+                domestiche reali, non simulate.
+            </p>
+
+            <h3>EarnApp rallenta la mia connessione?</h3>
+            <p>
+                Nella mia esperienza, con entrambi i dispositivi, no: EarnApp usa la banda che
+                non stai già utilizzando, non satura la connessione. Non ho mai notato buffering,
+                rallentamenti nella navigazione o problemi di alcun tipo sui dispositivi che
+                condivido, in un anno di utilizzo.
+            </p>
+
+            <h3>Posso disinstallare EarnApp in qualsiasi momento?</h3>
+            <p>
+                Sì, non c'è alcun vincolo. Puoi disinstallare il client quando vuoi; il saldo
+                accumulato resta comunque disponibile sul tuo account per il prelievo, purché tu
+                abbia raggiunto la soglia minima.
             </p>
 
         </div>
