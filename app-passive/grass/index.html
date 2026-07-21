@@ -142,6 +142,17 @@
             c'è dietro, perché il guadagno è espresso in punti e non in euro, e i rischi reali
             legati al fatto che qui, a differenza delle altre app, serve anche un wallet crypto.
         </p>
+        <p>
+            Ci ho messo un po' più di tempo a decidere se scrivere questa guida, rispetto alle
+            altre tre. Con Honeygain, JumpTask ed EarnApp il meccanismo è semplice da spiegare e
+            da verificare: condividi banda, ricevi centesimi o dollari, prelevi, fine. Con Grass
+            la storia è più lunga, perché tocca tre mondi diversi insieme — condivisione banda,
+            addestramento di modelli AI, ed economia dei token crypto — e mi sembrava scorretto
+            liquidarla con le stesse due righe che basterebbero per le altre. Ho preferito
+            prendermi il tempo di spiegare per bene ogni pezzo, anche a costo di una guida più
+            lunga del solito, perché penso che tu debba capire davvero cosa stai installando
+            prima di farlo, non solo "quanto guadagni".
+        </p>
 
         <!-- COME FUNZIONA -->
         <h2 id="come-funziona">Cos'è e come funziona Grass.io</h2>
@@ -155,13 +166,27 @@
             intelligenza artificiale.
         </p>
         <p>
+            Il meccanismo pratico, spiegato senza tecnicismi: quando un'azienda vuole costruire
+            un dataset per addestrare un modello AI, spesso ha bisogno di raccogliere grandi
+            quantità di pagine web pubbliche (prezzi, notizie, contenuti generici del web).
+            Farlo da un singolo server con un solo indirizzo IP è inefficiente: molti siti
+            bloccano o rallentano il traffico che arriva sempre dallo stesso indirizzo, perché
+            lo riconoscono come scraping automatizzato. Se invece quello stesso traffico passa
+            attraverso migliaia di dispositivi domestici diversi — il tuo PC, il mio smartphone,
+            quello di un altro utente in un'altra città — ogni richiesta sembra semplicemente
+            una persona qualunque che naviga normalmente. Grass costruisce esattamente questa
+            rete di "uscite" domestiche, e paga chi la mette a disposizione.
+        </p>
+        <p>
             Un elemento tecnico che distingue Grass dalle altre app passive di questo sito: un
             componente chiamato <strong>ZK Processor</strong> prende i log della sessione di
             raccolta dati e produce una prova crittografica (zero-knowledge) che i dati sono
             stati recuperati dall'URL dichiarato, nel momento dichiarato, senza alterazioni.
             In pratica, trasforma la raccolta dati da un processo "fidati e basta" a uno
             verificabile — un dettaglio in più rispetto al modello più semplice di
-            Honeygain/JumpTask/EarnApp.
+            Honeygain/JumpTask/EarnApp, pensato per dare alle aziende clienti una garanzia
+            tecnica che i dati acquistati non siano stati manomessi o generati artificialmente
+            lungo il percorso.
         </p>
 
         <div class="features">
@@ -187,6 +212,25 @@
             </div>
         </div>
 
+        <!-- IL CONTESTO -->
+        <h2>Il contesto: perché esistono app come Grass</h2>
+        <p>
+            Vale la pena spendere due righe sul perché, negli ultimi anni, sono nate diverse app
+            di questo tipo (Grass non è l'unica, anche se è una delle più conosciute). La corsa
+            allo sviluppo di modelli di intelligenza artificiale sempre più grandi ha creato una
+            domanda enorme di dati testuali "freschi" dal web pubblico, e allo stesso tempo i
+            siti web hanno alzato le difese contro lo scraping automatizzato tradizionale. Le
+            reti di IP residenziali distribuite — quelle su cui si basano sia Grass che, con un
+            modello diverso, Bright Data/EarnApp — sono diventate un pezzo di infrastruttura
+            richiesto sia da aziende di AI sia da aziende di web intelligence (confronto prezzi,
+            monitoraggio annunci, ricerche di mercato). Il progetto Grass ha scelto di finanziare
+            e "gamificare" questa raccolta usando gli incentivi tipici del mondo crypto (punti,
+            classifiche, futuro token) invece di un pagamento diretto in denaro come fa Bright
+            Data con EarnApp: è una scelta di business precisa, non un dettaglio secondario, ed è
+            il motivo per cui l'esperienza da utente delle due app è così diversa nonostante il
+            principio tecnico di partenza sia molto simile.
+        </p>
+
         <p>
             <a href="/app-passive/grass/guadagno-reale.html">Scopri perché con Grass non riesco ancora a dirti un guadagno chiaro in euro →</a>
         </p>
@@ -207,6 +251,16 @@
             <li>Un wallet Solana (es. Phantom, gratuito) per l'eventuale conversione futura dei punti in token</li>
             <li>Connessione internet stabile: più uptime accumuli, più punti generi</li>
         </ul>
+        <p>
+            La buona notizia è che, a differenza di EarnApp, qui non ci sono requisiti tecnici
+            rigidi sul tipo di connessione da usare (niente divieti espliciti su VPN o macchine
+            virtuali che io abbia trovato nella documentazione ufficiale, anche se resta buona
+            norma usare una connessione residenziale reale, che è comunque quella che genera più
+            valore per la rete). Il vero "requisito" da capire prima di iniziare non è tecnico,
+            è concettuale: devi essere a tuo agio con l'idea che il ritorno non sarà un numero
+            fisso in euro, ma un accumulo di punti il cui destino dipenderà da un progetto crypto
+            ancora giovane.
+        </p>
         <p>
             Se vuoi la guida passo passo per iscriverti, installare l'estensione e configurare
             il wallet correttamente:
