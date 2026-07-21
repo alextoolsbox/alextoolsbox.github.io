@@ -469,4 +469,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ===================== -->
+  <!-- NOVITÀ -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/novita/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
