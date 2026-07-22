@@ -295,6 +295,41 @@
   </url>
 
   <!-- ===================== -->
+  <!-- CLUSTER N26 -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/n26/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/n26/bonus.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/n26/come-funziona.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/n26/piani.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/n26/sicurezza.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/n26/faq.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===================== -->
   <!-- CLUSTER MICROSOFT REWARDS -->
   <!-- ===================== -->
 

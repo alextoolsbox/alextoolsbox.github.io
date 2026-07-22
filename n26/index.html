@@ -4,14 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, follow">
-    <title>N26: guida in arrivo | AlexToolsBox</title>
-    <meta name="description" content="Guida a N26 in arrivo su AlexToolsBox. Scopri come funziona il conto digitale, quanto costa e come ottenere il bonus di benvenuto.">
+    <title>N26: guida completa 2026 (conto, piani e blocco Bankitalia)</title>
+    <meta name="description" content="N26 in Italia: storico del blocco Banca d'Italia (2022-2024) e stato attuale, piani Standard/Smart/Go/Metal, bonus e sicurezza. Ho aperto il conto e lo sto testando in prima persona. Aggiornata a luglio 2026.">
+    <link rel="canonical" href="https://alextoolsbox.it/n26/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="N26: guida completa 2026 (conto, piani e blocco Bankitalia)">
+    <meta property="og:description" content="Storico del blocco Banca d'Italia e stato attuale, piani, bonus e sicurezza N26. Dati verificati sulle fonti ufficiali.">
+    <meta property="og:url" content="https://alextoolsbox.it/n26/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="N26: guida completa 2026 (conto, piani e blocco Bankitalia)">
+    <meta name="twitter:description" content="Storico del blocco Banca d'Italia, stato attuale, piani, bonus e sicurezza N26.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <!-- Plausible Analytics -->
     <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "N26 è ancora bloccata da Banca d'Italia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Il blocco ai nuovi clienti, attivo dal 28 marzo 2022 per carenze nei presidi antiriciclaggio, è stato superato: da giugno 2024 N26 ha ripreso ad accettare nuovi clienti italiani, ufficializzato il 23 ottobre 2024. Il dialogo con Banca d'Italia sul pieno adeguamento dei controlli resta aperto, ma non impedisce l'apertura né l'uso del conto oggi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso aprire un conto N26 oggi in Italia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, il processo è attivo e si completa in pochi minuti da smartphone. L'ho verificato di persona: apertura in 10 minuti, senza intoppi nella verifica d'identità."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I miei soldi su N26 sono al sicuro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I depositi sono coperti dal fondo tedesco di tutela dei depositi fino a 100.000€ per depositante, lo stesso standard di garanzia previsto dalla direttiva europea DGS per qualunque banca UE. N26 è una banca con licenza piena, vigilata da BaFin in Germania e da Banca d'Italia per l'operatività italiana."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "N26: guida completa 2026 (conto, piani e blocco Bankitalia)",
+        "description": "Guida a N26: storico del blocco Banca d'Italia, stato attuale, piani, bonus e sicurezza. Dati verificati sulle fonti ufficiali.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-07-22",
+        "dateModified": "2026-07-22"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Conti Digitali", "item": "https://alextoolsbox.it/conti-digitali.html" },
+            { "@type": "ListItem", "position": 3, "name": "N26", "item": "https://alextoolsbox.it/n26/" }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -19,7 +90,7 @@
     <div id="header"></div>
     <script>
         fetch("/includes/header.html")
-            .then(r => r.text())
+            .then(res => res.text())
             .then(data => {
                 document.getElementById("header").innerHTML = data;
                 updatePromo();
@@ -27,67 +98,274 @@
     </script>
 
     <!-- HERO -->
-    <div class="hero">
-        <h1>N26: la guida è in arrivo</h1>
+    <div class="hero" style="padding:70px 20px 50px 20px;">
+        <h1>N26: guida completa 2026</h1>
         <p class="hero-description">
-            Sto preparando una guida completa su N26: come aprire il conto, quanto costa,
-            come funziona il bonus di benvenuto e quali sono i vantaggi reali.
+            N26 è la banca che più di ogni altra, in Italia, si porta dietro un'etichetta ingombrante:
+            "quella bloccata da Banca d'Italia". È successo davvero, ed è giusto affrontarlo di petto
+            invece di far finta di niente. Ma è una storia con un inizio, una causa precisa e, soprattutto,
+            una fine. Ho aperto il conto e lo sto testando in prima persona: questa guida parte dai fatti
+            verificati sulle fonti ufficiali.
+        </p>
+        <a class="button" href="/n26/link.html">
+            Scopri N26 (sito ufficiale)
+        </a>
+        <p style="font-size:14px;opacity:0.9;margin-top:10px;">
+            Piano gratuito disponibile • IBAN italiano • Nessun blocco attivo ai nuovi clienti
         </p>
     </div>
 
     <div class="container" id="main-content">
 
-        <!-- BOX IN ARRIVO -->
+        <!-- IN SINTESI -->
         <div class="tip highlight">
-            <p><strong>🚧 Guida in arrivo</strong></p>
+            <p><strong>📌 In sintesi</strong></p>
             <p>
-                N26 è una banca digitale tedesca molto diffusa anche in Italia. Offre un
-                conto corrente con IBAN italiano, carta gratuita e bonifici istantanei.
-                Sto preparando una guida pratica per aiutarti a capire se fa al caso tuo.
-            </p>
-            <p>
-                <strong>La guida completa sarà disponibile a breve.</strong> Nel frattempo,
-                puoi esplorare le altre guide sui conti digitali.
+                N26 è una banca tedesca 100% digitale, fondata nel 2015, con licenza bancaria piena e oltre
+                8 milioni di clienti in 25 mercati. Il 28 marzo 2022 Banca d'Italia le ha vietato di aprire
+                nuovi conti in Italia per carenze nei presidi antiriciclaggio: chi aveva già un conto
+                (oltre 500.000 italiani) non è mai stato toccato. Da giugno 2024, ufficializzato a ottobre
+                2024, N26 ha ripreso ad accettare nuovi clienti italiani: il dialogo con Banca d'Italia
+                prosegue, ma l'operatività per l'utente è tornata completa. Ci sono <strong>4 piani</strong>
+                (Standard gratuito, Smart 4,90€/mese, Go 9,90€/mese, Metal 16,90€/mese), IBAN italiano e un
+                programma "Invita amici". Ho aperto il conto Standard per verificarlo di persona: apertura
+                in 10 minuti, senza intoppi.
             </p>
         </div>
 
-        <!-- COSA SAPPIAMO FINORA -->
-        <h2>Cosa sappiamo finora su N26</h2>
-        <ul>
-            <li>✅ Conto corrente digitale con <strong>IBAN italiano</strong></li>
-            <li>✅ Carta Mastercard gratuita inclusa</li>
-            <li>✅ Offre un <strong>bonus di benvenuto</strong> per chi si iscrive con un link invito</li>
-            <li>✅ Possibilità di creare <strong>sotto-conti</strong> per organizzare le spese</li>
-        </ul>
+        <!-- PERCHÉ QUESTA GUIDA -->
+        <h2>Perché questa guida (e perché è rimasta in pausa fino ad ora)</h2>
         <p>
-            Appena avrò completato i test, pubblicherò una guida passo passo, con
-            requisiti, bonus e consigli pratici.
+            Questa guida è rimasta "in arrivo" per settimane, di proposito. N26 ha uno storico reale di
+            blocco dell'onboarding in Italia per motivi antiriciclaggio, ed è il tipo di cosa che non va
+            ignorata né minimizzata solo per pubblicare un contenuto in più. Prima di scriverne ho verificato
+            lo stato attuale del blocco sulle fonti ufficiali e giornalistiche più recenti, controllato se
+            l'apertura conto fosse davvero attiva oggi sul sito N26, e aperto io stesso un conto per
+            confermarlo con mano. Solo con tutti e tre questi elementi confermati ha senso, per come lavora
+            questo sito, riprendere in mano l'argomento.
         </p>
 
-        <!-- CTA -->
-        <div class="tip highlight" style="text-align:center;">
-            <p><strong>📂 Esplora le guide già disponibili</strong></p>
-            <p>Mentre aspetti, dai un'occhiata alle guide su Revolut e altri conti digitali.</p>
-            <a class="button" href="/conti-digitali.html">
-                💳 Vai alle guide conti digitali
-            </a>
+        <!-- COS'È DAVVERO -->
+        <h2 id="cose">Cos'è N26</h2>
+        <p>
+            N26 è una banca tedesca 100% digitale, fondata nel 2015 a Berlino, con <strong>licenza bancaria
+            piena</strong> (non è un istituto di moneta elettronica come molte fintech più giovani — è una
+            banca a tutti gli effetti, sotto la vigilanza di BaFin in Germania). Oggi conta oltre 8 milioni
+            di clienti in 25 mercati europei. In Italia opera in regime di stabilimento e di libera
+            prestazione di servizi, cioè con una filiale italiana che risponde anche alle regole italiane,
+            non solo tedesche — un dettaglio non banale, perché è proprio su questo doppio binario di
+            vigilanza che si è giocata la vicenda Bankitalia.
+        </p>
+
+        <!-- STORICO BANKITALIA -->
+        <h2 id="bankitalia">Lo storico del blocco Bankitalia (2022-2024): cosa è successo davvero</h2>
+        <p>
+            Il 28 marzo 2022 Banca d'Italia ha vietato a N26 di aprire nuovi conti in Italia, dopo
+            un'ispezione condotta tra ottobre e dicembre 2021 che aveva rilevato carenze nei presidi
+            antiriciclaggio della filiale italiana. Non è stato un blocco totale: chi aveva già un conto N26
+            (oltre 500.000 italiani) non è stato toccato in alcun modo, e ha continuato a usare il conto
+            come sempre. Il provvedimento riguardava solo l'acquisizione di nuovi clienti e il lancio di
+            nuovi prodotti/servizi, incluse le funzioni di investimento in criptovalute, sospese anch'esse
+            per lo stesso periodo.
+        </p>
+        <p>
+            Nei due anni successivi N26 ha investito in modo consistente su compliance antiriciclaggio,
+            infrastrutture IT e personale dedicato: lo stesso tipo di intervento che qualunque banca vigilata
+            deve fare quando riceve un provvedimento di questo tipo. Da giugno 2024 la lista d'attesa per
+            aprire un conto è sparita dal sito, e il 23 ottobre 2024 N26 ha reso ufficiale la ripresa delle
+            attività in Italia, con la nomina di <strong>Andrea Isola</strong> come General Manager per
+            Italia ed Europa Sud-Est.
+        </p>
+        <p>
+            A oggi (luglio 2026) la riapertura viene definita da N26 stessa "parziale" — nel senso che il
+            dialogo con Banca d'Italia sulla piena messa a norma dei presidi resta aperto — ma dal punto di
+            vista dell'utente comune l'operatività è completa: si apre un conto in pochi minuti dal sito o
+            dall'app, senza lista d'attesa, con lo stesso processo di qualunque altra neobank. L'ho verificato
+            io stesso aprendo un conto: nessun ostacolo, nessuna lista d'attesa, nessun segnale che il
+            processo sia diverso da quello di una banca digitale "normale".
+        </p>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Perché te lo raccontiamo con questo livello di dettaglio invece di ignorarlo: è il tipo di
+                informazione che chi valuta N26 oggi cerca attivamente su Google, e la maggior parte dei
+                contenuti in giro o la minimizza senza spiegare cosa sia successo davvero, o la esagera
+                facendo credere che il blocco sia ancora attivo — cosa non vera a metà 2026."</em>
         </div>
 
-        <!-- LINK CORRELATI -->
-        <h2>Altre guide che potrebbero interessarti</h2>
+        <!-- I 4 PIANI -->
+        <h2 id="piani">I 4 piani N26</h2>
+        <div class="features">
+            <div class="card">
+                💳
+                <p><b>Standard</b></p>
+                <p>0€/mese. Conto con IBAN italiano, carta virtuale gratuita, fisica a 10€ una tantum.</p>
+            </div>
+            <div class="card">
+                🚀
+                <p><b>Smart</b></p>
+                <p>4,90€/mese. Aggiunge Spaces (salvadanai digitali) e assistenza clienti prioritaria.</p>
+            </div>
+            <div class="card">
+                ✈️
+                <p><b>Go</b></p>
+                <p>9,90€/mese. Prelievi e pagamenti in valuta estera senza commissioni.</p>
+            </div>
+            <div class="card">
+                ⭐
+                <p><b>Metal</b></p>
+                <p>16,90€/mese. Carta in metallo + pacchetto assicurativo Allianz completo.</p>
+            </div>
+        </div>
+        <p>
+            <a href="/n26/piani.html">Confronto completo tra i 4 piani →</a>
+        </p>
+
+        <!-- COSA OFFRE -->
+        <h2 id="funzioni">Cosa offre il conto</h2>
+        <p>
+            Conto con <strong>IBAN italiano</strong>, carta virtuale e fisica Mastercard, bonifici SEPA
+            ordinari e istantanei, integrazione con i principali wallet mobile (Apple Pay, Google Pay). Dal
+            piano Smart in su si aggiungono gli <strong>Spaces</strong>, salvadanai digitali separati dal
+            conto principale per isolare fondi su obiettivi specifici. Non c'è un sistema di pagamento P2P
+            proprietario come quello di Satispay: tra privati resta il bonifico o la condivisione dell'IBAN.
+        </p>
+        <p>
+            <a href="/n26/come-funziona.html">Scopri come funzionano apertura, app e IBAN nel dettaglio →</a>
+        </p>
+
+        <!-- COSA SERVE -->
+        <h2 id="requisiti">Cosa serve per aprire il conto</h2>
+        <p>Secondo la procedura ufficiale, per aprire N26 serve:</p>
         <ul>
-            <li><a href="/revolut/">📘 Guida Revolut</a></li>
-            <li><a href="/revolut/bonus.html">🎁 Bonus Revolut 10€</a></li>
-            <li><a href="/revolut/piani.html">📊 Confronto piani Revolut</a></li>
-            <li><a href="/">🏠 Torna alla Home</a></li>
+            <li>Avere almeno 18 anni e la residenza in Italia</li>
+            <li>Uno smartphone compatibile per completare la verifica d'identità</li>
+            <li>Un documento d'identità valido (carta d'identità o passaporto)</li>
+            <li>Il codice fiscale (tessera sanitaria)</li>
         </ul>
+
+        <!-- GUIDA PASSO PASSO -->
+        <h2>Guida passo passo per aprire N26 (con la mia esperienza reale)</h2>
+        <div class="steps">
+            <ol>
+                <li>
+                    <b>Scarica l'app e registrati</b><br>
+                    Scarica l'app N26 da App Store o Google Play e inserisci i tuoi dati anagrafici.
+                </li>
+                <li>
+                    <b>Scegli il piano</b><br>
+                    Standard, Smart, Go o Metal. Puoi passare a un piano superiore anche in un secondo
+                    momento.
+                </li>
+                <li>
+                    <b>Verifica la tua identità</b><br>
+                    Foto del documento + verifica in video/selfie, procedura standard antiriciclaggio per
+                    qualunque banca digitale.
+                </li>
+                <li>
+                    <b>Firma il contratto e attiva il conto</b><br>
+                    Firma digitale, conto attivo subito con carta virtuale. La carta fisica (se richiesta)
+                    arriva per posta.
+                </li>
+            </ol>
+        </div>
+        <div class="tip highlight">
+            <p><strong>⏱️ La mia esperienza reale</strong></p>
+            <p>
+                Ho aperto il conto N26 Standard giusto per provarlo davvero prima di scriverne: <strong>10
+                minuti dall'inizio alla fine</strong>, senza intoppi nella verifica d'identità. Il mio conto
+                principale resta Revolut, che tra tutti i conti digitali che uso è quello che mi convince di
+                più nel complesso — N26 lo tengo come conto di verifica. Non aspettarti quindi da questa
+                guida un "N26 è il migliore in assoluto": è una guida onesta su cosa offre davvero, con
+                pregi e limiti reali.
+            </p>
+        </div>
+
+        <!-- SICUREZZA -->
+        <h2 id="sicurezza">N26 è sicura?</h2>
+        <p>
+            N26 utilizza 3D Secure, autenticazione a due fattori e sblocco biometrico. I depositi sono
+            coperti dal <strong>fondo tedesco di tutela dei depositi</strong> fino a 100.000€ per
+            depositante. Vanno però considerati anche i rischi reali: recensioni miste su tempi di risposta
+            ai reclami, la possibilità (comune a tutte le banche) di chiusura conto immediata "per
+            giustificato motivo", e lo storico Bankitalia raccontato sopra, il cui dialogo con l'autorità
+            non è ancora formalmente chiuso a metà 2026.
+        </p>
+        <p>
+            <a href="/n26/sicurezza.html">Approfondisci: misure di sicurezza, rischi reali e ABF →</a>
+        </p>
+
+        <!-- BONUS -->
+        <h2 id="bonus">Bonus e programma "Invita amici"</h2>
+        <p>
+            N26 non ha un welcome bonus fisso pubblicato: la ricompensa si sblocca solo registrandosi
+            tramite un link di invito, aprendo un conto e completando il primo acquisto qualificato.
+            L'importo esatto non è comunicato pubblicamente da N26 in modo fisso: lo vede solo chi invita,
+            nella sezione "Inviti" della propria app. Ho il mio link di invito personale attivo.
+        </p>
+        <p>
+            <a href="/n26/bonus.html">Come funziona il programma Invita amici (e il mio link) →</a>
+        </p>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti su N26</h2>
+        <div class="faq">
+            <h3>N26 è ancora bloccata da Banca d'Italia?</h3>
+            <p>No. Il blocco ai nuovi clienti, attivo dal marzo 2022, è stato superato: da giugno 2024 N26
+                ha ripreso ad accettare nuovi clienti italiani, ufficializzato a ottobre 2024.</p>
+            <div class="alex-tip">
+                <span class="alex-label">🔥 Alex's Tip</span>
+                <strong>L'ho verificato io stesso aprendo un conto oggi: nessuna lista d'attesa, apertura in 10 minuti.</strong>
+            </div>
+
+            <h3>Posso aprire un conto N26 oggi in Italia?</h3>
+            <p>Sì, il processo è attivo e si completa in pochi minuti da smartphone, come per qualunque
+                altra neobank.</p>
+
+            <h3>I miei soldi su N26 sono al sicuro?</h3>
+            <p>I depositi sono coperti dal fondo tedesco di tutela dei depositi fino a 100.000€ per
+                depositante, come previsto dalla normativa europea per tutte le banche UE.</p>
+        </div>
+
+        <!-- ALTRE GUIDE -->
+        <h2>Altre guide N26</h2>
+        <ul>
+            <li><a href="/n26/come-funziona.html">⚙️ Come funziona: apertura, app e IBAN</a></li>
+            <li><a href="/n26/piani.html">💳 I 4 piani a confronto</a></li>
+            <li><a href="/n26/bonus.html">🎁 Bonus e programma Invita amici</a></li>
+            <li><a href="/n26/sicurezza.html">🔒 N26 è sicura?</a></li>
+            <li><a href="/n26/faq.html">❓ Domande frequenti</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                Questa guida è basata sui dati ufficiali pubblicati su n26.com, sui comunicati stampa relativi
+                al provvedimento e alla riapertura (fonte anche Banca d'Italia), insieme al conto che ho
+                aperto e testato in prima persona. Non riporto cifre di bonus che non riesco a verificare con
+                certezza su una fonte ufficiale: se un dato manca o è ambiguo, preferisco dirlo chiaramente
+                piuttosto che arrotondare o stimare.
+            </p>
+            <p><a href="/trasparenza.html">Leggi la pagina Trasparenza →</a></p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "22 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
 
     </div>
 
     <div id="footer"></div>
     <script>
         fetch("/includes/footer.html")
-            .then(r => r.text())
+            .then(response => response.text())
             .then(data => {
                 document.getElementById("footer").innerHTML = data;
             });
