@@ -505,6 +505,21 @@
   </url>
 
   <!-- ===================== -->
+  <!-- GUIDE PRATICHE -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/guide/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/guide/dichiarare-iban-estero/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ===================== -->
   <!-- NOVITÀ -->
   <!-- ===================== -->
 

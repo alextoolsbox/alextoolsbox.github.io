@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dichiarare un IBAN estero: quadro RW e 730 (guida 2026)</title>
+    <meta name="description" content="Quando un conto estero (Wise, Revolut, N26, Satispay, Trade Republic) va dichiarato: soglie 15.000€ e 5.000€, quadro RW/W passo-passo, IVAFE, errori comuni. Guida senza link affiliati, aggiornata a luglio 2026.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/dichiarare-iban-estero/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Dichiarare un IBAN estero: quadro RW e 730 (guida 2026)">
+    <meta property="og:description" content="Quando un conto estero va dichiarato: soglie 15.000€ e 5.000€, quadro RW/W passo-passo, IVAFE ed errori comuni. Senza link affiliati.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/dichiarare-iban-estero/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dichiarare un IBAN estero: quadro RW e 730 (guida 2026)">
+    <meta name="twitter:description" content="Soglie 15.000€ e 5.000€, quadro RW/W passo-passo, IVAFE ed errori comuni. Senza link affiliati.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Se ho meno di 5.000€ sul conto estero devo dichiarare qualcosa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dipende da due soglie indipendenti: se la giacenza media annua non supera 5.000€ non è dovuta l'IVAFE, ma se il saldo ha superato 15.000€ anche per un solo giorno nell'anno resta l'obbligo di monitoraggio nel quadro RW (o W del 730). Solo restando sotto entrambe le soglie non c'è alcun obbligo dichiarativo per il conto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Conta il saldo al 31 dicembre?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Per il monitoraggio fiscale conta il valore massimo raggiunto in qualsiasi momento dell'anno, anche per un solo giorno. Per l'IVAFE conta invece la giacenza media annua. Il saldo al 31 dicembre da solo non è il parametro corretto per nessuno dei due obblighi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Revolut o N26 con IBAN italiano vanno dichiarati nel quadro RW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il conto corrente con IBAN italiano aperto tramite la succursale italiana (N26 dal 26 marzo 2020, Revolut da fine 2024) è considerato un conto italiano e non va nel quadro RW. Attenzione però: i prodotti di investimento e le cripto-attività di Revolut restano in capo a entità estere e possono richiedere comunque la dichiarazione. In caso di dubbio verifica l'intestazione del contratto e chiedi al tuo commercialista."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I soldi su Satispay vanno dichiarati?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il saldo Satispay è detenuto presso un istituto di moneta elettronica con sede in Lussemburgo, quindi ai fini fiscali segue le stesse regole di un conto estero (come PayPal): va dichiarato solo se superi le soglie di 15.000€ di picco massimo o 5.000€ di giacenza media annua, cifre non comuni per l'uso tipico di Satispay."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ho chiuso il conto estero a metà anno: devo dichiararlo lo stesso?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, se durante il periodo di detenzione hai superato le soglie. Il quadro RW si compila per il periodo in cui hai detenuto il conto, indicando la data di chiusura, e l'IVAFE è rapportata ai giorni effettivi di detenzione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "L'Agenzia delle Entrate può sapere del mio conto estero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Dal 2017, con lo scambio automatico di informazioni CRS dell'OCSE, banche e istituti di moneta elettronica esteri comunicano ogni anno all'Agenzia delle Entrate saldi e movimenti dei conti intestati a residenti italiani. Su queste basi l'Agenzia invia lettere di compliance a chi risulta avere conti esteri non dichiarati."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa rischio se non dichiaro un conto estero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La sanzione va dal 3% al 15% del valore non dichiarato (dal 6% al 30% per i paesi black list). Se rimedi entro 90 giorni dalla scadenza, la sanzione scende a 250€ fissi. È inoltre possibile regolarizzare spontaneamente con il ravvedimento operoso, con sanzioni ridotte, finché la violazione non è già stata contestata."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso dichiarare il conto estero con il 730 o serve il Modello Redditi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dal 2024 anche chi presenta il 730 può assolvere gli obblighi di monitoraggio con il quadro W, senza dover integrare con il Modello Redditi. Gli eventuali interessi esteri vanno nel quadro M del 730 (o RM del Modello Redditi), con versamento tramite F24."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dichiarare un IBAN estero: quadro RW e 730 (guida 2026)",
+        "description": "Quando un conto estero va dichiarato: soglie 15.000€ e 5.000€, quadro RW/W passo-passo, IVAFE, i casi Wise, Revolut, N26, Satispay e Trade Republic.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23"
+    }
+    </script>
+
+    <!-- SCHEMA HOWTO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Come dichiarare un conto con IBAN estero nel quadro RW",
+        "description": "I passaggi per capire se un conto estero va dichiarato e come compilare il quadro RW (o W del 730).",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Verifica se il conto è davvero estero",
+                "text": "Controlla la sede legale dell'istituto che detiene i fondi nel contratto: è quella che conta, non solo il prefisso IBAN. Un conto aperto tramite succursale italiana (es. N26 o Revolut con IBAN IT) è un conto italiano."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Verifica le due soglie",
+                "text": "Monitoraggio: saldo massimo oltre 15.000€ anche per un solo giorno nell'anno. IVAFE: giacenza media annua oltre 5.000€ per istituto. Sono obblighi indipendenti: basta superarne uno per dover compilare il quadro."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Scegli il modello",
+                "text": "Quadro RW del Modello Redditi PF oppure, dal 2024, quadro W del Modello 730. Gli obblighi sono equivalenti."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Compila il rigo del conto",
+                "text": "Indica codice titolo di possesso (1 = proprietà), codice attività (1 = conto corrente estero), codice dello Stato estero dalla tabella ufficiale, quota di possesso, valore iniziale e valore finale (giacenza media annua o saldo di fine anno se non inferiore)."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Calcola e versa l'IVAFE se dovuta",
+                "text": "34,20€ annui per conto se la giacenza media supera 5.000€, rapportata a quota e giorni di detenzione. Se invece devi solo il monitoraggio, barra la casella dedicata al solo monitoraggio."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Dichiara gli eventuali redditi collegati",
+                "text": "Gli interessi attivi vanno nel quadro RM (o M del 730) con imposta sostitutiva del 26%; le plusvalenze da investimenti su intermediari esteri nel quadro RT. Sono obblighi separati dal quadro RW."
+            }
+        ]
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Guide Pratiche", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Dichiarare un IBAN estero", "item": "https://alextoolsbox.it/guide/dichiarare-iban-estero/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero" style="padding:70px 20px 50px 20px;">
+        <h1>Dichiarare un IBAN estero: la guida pratica 2026</h1>
+        <p class="hero-description">
+            Wise, Revolut, Satispay, N26, Trade Republic: se usi una fintech, c'è una buona probabilità
+            che tu abbia (o abbia avuto) un conto "estero" senza nemmeno pensarci. Qui trovi quando va
+            dichiarato, quando no, e come si compila il quadro RW passo-passo — con i casi concreti dei
+            servizi che uso personalmente. Nessun link affiliato in questa pagina: solo informazione.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                ⚖️ <strong>Questa non è consulenza fiscale.</strong> È una guida informativa basata su
+                fonti ufficiali, ma ogni situazione personale è diversa: prima di compilare la
+                dichiarazione, verifica sempre la tua posizione con il tuo commercialista o con un CAF.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Se sei residente fiscale in Italia e hai un conto presso una banca o un istituto di moneta
+                elettronica con sede all'estero, scattano due possibili obblighi, <strong>indipendenti tra
+                loro</strong>: il <strong>monitoraggio fiscale</strong> (quadro RW del Modello Redditi, o
+                quadro W del 730) se il saldo ha superato <strong>15.000€ anche per un solo giorno</strong>
+                nell'anno, e l'<strong>IVAFE</strong> — un'imposta fissa di <strong>34,20€</strong> — se la
+                giacenza media annua ha superato <strong>5.000€</strong>. Sotto entrambe le soglie, per il
+                conto non devi dichiarare nulla. Attenzione però al punto che quasi tutti sbagliano:
+                <strong>non conta l'IBAN, conta la sede dell'istituto</strong> — e oggi N26, Revolut e
+                Trade Republic con IBAN italiano non sono più "conti esteri", mentre Wise e Satispay sì.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2 id="cose">Cos'è il monitoraggio fiscale e perché esiste</h2>
+        <p>
+            L'Italia tassa i propri residenti fiscali sui redditi ovunque prodotti nel mondo (il principio
+            della <em>worldwide taxation</em>). Per rendere questo principio applicabile, il legislatore ha
+            introdotto con il <strong>D.L. 167/1990</strong> il cosiddetto monitoraggio fiscale: chi detiene
+            attività finanziarie all'estero — conti correnti, depositi, investimenti — deve comunicarlo
+            nella dichiarazione dei redditi, anche quando quelle attività non producono alcun reddito.
+            Non è una tassa in sé: è una comunicazione. Le imposte collegate (IVAFE sui conti, imposta
+            sostitutiva sugli interessi) sono obblighi ulteriori e separati.
+        </p>
+        <p>
+            Aprire un conto all'estero è perfettamente legale, e con le fintech è diventato normalissimo:
+            il punto è solo dichiararlo quando previsto. E se stai pensando "tanto come fanno a saperlo?",
+            la risposta è: lo sanno già. Dal 2017 è attivo il <strong>Common Reporting Standard (CRS)</strong>
+            dell'OCSE, lo scambio automatico di informazioni tra amministrazioni fiscali: banche e istituti
+            di moneta elettronica esteri trasmettono ogni anno all'Agenzia delle Entrate i saldi e i
+            movimenti dei conti intestati a residenti italiani. Su questi dati l'Agenzia ha costruito un
+            sistema di <strong>lettere di compliance</strong>: se dai dati CRS risulta un conto estero che
+            non hai dichiarato, arriva una comunicazione con invito a regolarizzare. Il vecchio "nessuno lo
+            saprà mai" non esiste più da anni.
+        </p>
+
+        <!-- QUANDO SERVE -->
+        <h2 id="quando">Quando serve dichiarare: le due soglie</h2>
+        <p>
+            Per i conti correnti e i depositi esteri le soglie sono due, e misurano cose diverse:
+        </p>
+        <ul>
+            <li>
+                <strong>Soglia di monitoraggio — 15.000€ di picco massimo.</strong> Se il saldo del conto ha
+                superato 15.000€ <em>anche per un solo giorno</em> nel corso dell'anno, scatta l'obbligo di
+                compilare il quadro RW (art. 4 del D.L. 167/1990, come modificato dalla L. 186/2014). Conta
+                il picco giornaliero massimo: non il saldo al 31 dicembre, non la media.
+            </li>
+            <li>
+                <strong>Soglia IVAFE — 5.000€ di giacenza media annua.</strong> Se la giacenza media annua
+                supera 5.000€, è dovuta l'IVAFE in misura fissa di <strong>34,20€ per conto</strong>
+                (art. 19 del D.L. 201/2011) — lo stesso importo del bollo sui conti italiani. La soglia si
+                calcola <em>per istituto</em>: due conti da 3.000€ di media presso la stessa banca estera
+                fanno 6.000€, e l'IVAFE è dovuta su entrambi.
+            </li>
+        </ul>
+        <p>
+            I due obblighi sono <strong>indipendenti</strong>. Le quattro combinazioni possibili:
+        </p>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Picco massimo nell'anno</th>
+                        <th>Giacenza media annua</th>
+                        <th>Cosa devi fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>≤ 15.000€</td>
+                        <td>≤ 5.000€</td>
+                        <td><strong>Nulla</strong>: nessun obbligo per il conto</td>
+                    </tr>
+                    <tr>
+                        <td>≤ 15.000€</td>
+                        <td>&gt; 5.000€</td>
+                        <td>Quadro RW/W <strong>solo per l'IVAFE</strong> (34,20€)</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 15.000€</td>
+                        <td>≤ 5.000€</td>
+                        <td>Quadro RW/W <strong>solo monitoraggio</strong> (casella dedicata, nessuna imposta)</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 15.000€</td>
+                        <td>&gt; 5.000€</td>
+                        <td>Quadro RW/W: <strong>monitoraggio + IVAFE</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <strong>Dove si dichiara.</strong> Storicamente serviva il quadro RW del Modello Redditi PF,
+            anche per chi faceva il 730 (con la scomodità di dover integrare). Dal 2024 il problema è
+            risolto: il Modello 730 include il <strong>quadro W</strong>, equivalente al quadro RW, e per
+            i redditi collegati il <strong>quadro M</strong>. Chi fa il 730 può quindi assolvere tutto
+            senza toccare il Modello Redditi.
+        </p>
+        <p>
+            <strong>E i redditi prodotti dal conto?</strong> Sono un obbligo separato dal monitoraggio. Gli
+            <strong>interessi attivi</strong> maturati su un conto estero vanno dichiarati nel quadro RM del
+            Modello Redditi (o quadro M del 730) e scontano l'imposta sostitutiva del <strong>26%</strong>;
+            le <strong>plusvalenze</strong> da investimenti detenuti presso intermediari esteri vanno nel
+            quadro <strong>RT</strong>. Compilare il solo quadro RW non "copre" anche i redditi: sono due
+            adempimenti distinti, e ometterne uno è una violazione autonoma.
+        </p>
+
+        <!-- COME COMPILARE -->
+        <h2 id="compilare">Come si compila il quadro RW, passo-passo</h2>
+        <p>
+            Vediamo la compilazione concreta per il caso più comune: un conto corrente estero di proprietà,
+            intestato a una sola persona. Le colonne citate sono quelle del quadro RW del Modello Redditi
+            PF 2026 (il quadro W del 730 ricalca la stessa struttura): per l'anno d'imposta successivo
+            verifica sempre le istruzioni ufficiali del modello, che l'Agenzia delle Entrate pubblica
+            insieme ai modelli dichiarativi.
+        </p>
+        <div class="steps">
+            <ol>
+                <li>
+                    <b>Verifica che il conto sia davvero "estero"</b><br>
+                    Il criterio non è il prefisso IBAN ma la <strong>sede dell'istituto che detiene i
+                    fondi</strong>, che trovi nell'intestazione del contratto. Un conto aperto tramite una
+                    succursale italiana di una banca estera (es. N26 o Revolut con IBAN IT) è un conto
+                    italiano: niente quadro RW. Trovi il dettaglio servizio per servizio più sotto.
+                </li>
+                <li>
+                    <b>Recupera i dati dall'estratto conto</b><br>
+                    Ti servono: saldo iniziale (1° gennaio o data di apertura), giacenza media annua, picco
+                    massimo raggiunto, saldo finale (31 dicembre o data di chiusura). Molte fintech
+                    forniscono la giacenza media su richiesta o da app; in mancanza, si calcola come media
+                    dei saldi (la prassi comune usa i saldi di fine mese).
+                </li>
+                <li>
+                    <b>Compila il rigo del quadro RW</b><br>
+                    Le colonne principali per un conto corrente di proprietà: <strong>colonna 1</strong> —
+                    codice titolo di possesso: <code>1</code> (proprietà); <strong>colonna 3</strong> —
+                    codice individuazione bene: <code>1</code> (conti correnti e depositi esteri);
+                    <strong>colonna 4</strong> — codice dello Stato estero dalla tabella ufficiale in
+                    appendice al modello (es. Belgio <code>009</code>, Lussemburgo <code>092</code>,
+                    Germania <code>094</code>, Lituania <code>259</code>); <strong>colonna 5</strong> —
+                    quota di possesso (100 se intestato solo a te); <strong>colonne 7 e 8</strong> — valore
+                    iniziale e valore finale (per il valore finale le istruzioni indicano la giacenza media
+                    annua; la prassi accetta il saldo al 31/12 se non inferiore).
+                </li>
+                <li>
+                    <b>Gestisci il caso "solo monitoraggio"</b><br>
+                    Se hai superato i 15.000€ di picco ma non i 5.000€ di giacenza media, l'IVAFE non è
+                    dovuta: barra la <strong>colonna 16 ("Solo monitoraggio")</strong> e il rigo si chiude
+                    senza imposte.
+                </li>
+                <li>
+                    <b>Calcola l'IVAFE se dovuta</b><br>
+                    34,20€ per conto, rapportati alla quota di possesso e ai giorni di detenzione
+                    (colonne 29-30). Un conto cointestato al 50% per tutto l'anno paga 17,10€ a testa.
+                </li>
+                <li>
+                    <b>Collega gli eventuali redditi</b><br>
+                    Nella <strong>colonna 14</strong> indichi il quadro reddituale collegato: codice
+                    <code>2</code> se il conto ha prodotto interessi dichiarati nel quadro RM, codice
+                    <code>5</code> se non ci sono redditi da dichiarare.
+                </li>
+            </ol>
+        </div>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Se il conto è cointestato, occhio alla regola meno intuitiva di tutte: ciascun
+                cointestatario indica l'<strong>intero valore</strong> del conto (non la propria metà),
+                specificando la percentuale di possesso nella colonna 5. E le soglie IVAFE si valutano
+                sulla propria quota, mentre le sanzioni per omessa dichiarazione si calcolano sull'intero
+                valore per ciascun cointestatario. È esattamente il tipo di dettaglio per cui, la prima
+                volta, i 50-100€ del commercialista sono soldi ben spesi."</em>
+        </div>
+
+        <!-- SERVIZI DEL SITO -->
+        <h2 id="servizi">Wise, Revolut, Trade Republic, Satispay, N26: quali sono davvero "esteri"?</h2>
+        <p>
+            Qui viene la parte interessante, perché la risposta è cambiata parecchio negli ultimi due anni
+            e la maggior parte dei contenuti in giro è rimasta indietro. Uso personalmente tutti e cinque
+            questi servizi, quindi il quadro che segue è anche il promemoria che uso io. La situazione a
+            luglio 2026:
+        </p>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servizio</th>
+                        <th>Dove sono i fondi</th>
+                        <th>Va nel quadro RW?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/wise/">Wise</a></td>
+                        <td>Wise Europe SA, <strong>Belgio</strong> (IBAN BE, codice Stato 009)</td>
+                        <td><strong>Sì</strong>, sopra le soglie: è un conto estero a tutti gli effetti</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/revolut/">Revolut</a></td>
+                        <td>Dipende dall'IBAN: <strong>LT</strong> = Revolut Bank UAB, Lituania (codice 259);
+                            <strong>IT</strong> = succursale italiana, operativa da fine 2024</td>
+                        <td>IBAN LT: <strong>sì</strong>, sopra le soglie. IBAN IT: <strong>no</strong> per
+                            il conto — ma investimenti e cripto restano su entità estere del gruppo, e
+                            quelli possono andare in RW comunque</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/trade-republic/">Trade Republic</a></td>
+                        <td>Dal 30 gennaio 2025 IBAN <strong>IT</strong> e ruolo di sostituto d'imposta;
+                            prima, IBAN DE (Germania, codice 094)</td>
+                        <td><strong>No</strong> per i conti IT attuali. Chi ha migrato dall'IBAN tedesco
+                            dichiara solo il periodo pre-migrazione (Trade Republic fornisce un report
+                            fiscale dedicato)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/satispay/">Satispay</a></td>
+                        <td>Istituto di moneta elettronica con sede in <strong>Lussemburgo</strong>
+                            (codice 092)</td>
+                        <td><strong>Sì</strong>, sopra le soglie — stesse regole di PayPal. Con l'uso tipico
+                            di Satispay le soglie sono difficili da raggiungere, ma la regola esiste</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/n26/">N26</a></td>
+                        <td>Conti aperti in Italia <strong>dopo il 26 marzo 2020</strong>: IBAN IT tramite
+                            succursale italiana. Conti precedenti: IBAN DE (Germania, codice 094)</td>
+                        <td><strong>No</strong> per i conti recenti (lo conferma la pagina ufficiale del
+                            supporto N26). <strong>Sì</strong> per i vecchi conti IBAN DE, sopra le soglie</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tip highlight">
+            <p><strong>🔍 La verifica in 30 secondi</strong></p>
+            <p>
+                Il mio conto N26, aperto a luglio 2026, ha IBAN che inizia per <strong>IT</strong>: conto
+                italiano, niente quadro RW. Il mio conto Wise ha IBAN <strong>BE</strong>: conto estero,
+                regole di questa guida. Guarda il prefisso del tuo IBAN e l'intestazione del contratto
+                (la trovi nei documenti contrattuali in app): in due minuti sai in quale caso ricadi.
+                Se l'IBAN è estero ma non sei sicuro della sede dell'istituto, chiedi al supporto del
+                servizio "in quale paese ha sede l'entità legale con cui ho aperto il conto" — è
+                un'informazione che sono tenuti a darti.
+            </p>
+        </div>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Confondere le due soglie.</strong> "Sono sotto i 15.000€, quindi non devo fare
+                niente": falso se la giacenza media supera i 5.000€ (IVAFE dovuta, quadro da compilare).
+                Vale anche il contrario: sotto i 5.000€ di media ma sopra i 15.000€ di picco anche per un
+                giorno solo, il monitoraggio scatta comunque.
+            </li>
+            <li>
+                <strong>Guardare solo il saldo al 31 dicembre.</strong> Il parametro del monitoraggio è il
+                picco massimo dell'anno. Un conto che a dicembre è a zero ma a marzo ha visto passare
+                20.000€ va dichiarato.
+            </li>
+            <li>
+                <strong>Dimenticare gli interessi.</strong> Il quadro RW non copre i redditi: gli interessi
+                attivi vanno nel quadro RM/M con imposta del 26%, al lordo di eventuali ritenute estere.
+                Ometterli è una violazione separata.
+            </li>
+            <li>
+                <strong>Credere che l'IBAN italiano risolva tutto.</strong> Per il conto corrente sì, ma i
+                prodotti di investimento e le cripto-attività (es. quelle di Revolut) restano in capo a
+                entità estere del gruppo e seguono le loro regole.
+            </li>
+            <li>
+                <strong>Ignorare i saldi "che non sembrano conti".</strong> PayPal, Satispay, wallet di
+                moneta elettronica: se l'istituto ha sede estera e superi le soglie, le regole sono le
+                stesse di una banca estera tradizionale.
+            </li>
+            <li>
+                <strong>Dichiarare pro-quota un conto cointestato.</strong> Si indica l'intero valore con
+                la propria percentuale di possesso, non la propria metà del saldo.
+            </li>
+        </ul>
+
+        <!-- SANZIONI -->
+        <h2 id="sanzioni">Se non dichiaro: sanzioni e rimedi</h2>
+        <p>
+            L'omessa o infedele compilazione del quadro RW è punita con una sanzione dal <strong>3% al
+            15%</strong> del valore non dichiarato (dal 6% al 30% per i paesi black list), ai sensi
+            dell'art. 5 del D.L. 167/1990. Se te ne accorgi in tempo, però, i rimedi ci sono e sono
+            ragionevoli: presentando il quadro entro <strong>90 giorni</strong> dalla scadenza la sanzione
+            è di <strong>250€ fissi</strong>, e oltre quel termine resta il <strong>ravvedimento
+            operoso</strong>, con sanzioni ridotte in funzione del tempo trascorso — finché la violazione
+            non è già stata contestata. Se hai conti esteri mai dichiarati per più anni, questo è il caso
+            da portare a un commercialista <em>prima</em> che arrivi una lettera di compliance: muoversi
+            spontaneamente costa sensibilmente meno.
+        </p>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Se ho meno di 5.000€ sul conto estero devo dichiarare qualcosa?</h3>
+            <p>Dipende dall'altra soglia: se il saldo ha superato 15.000€ anche per un solo giorno resta
+                l'obbligo di monitoraggio. Sotto entrambe le soglie, nessun obbligo per il conto.</p>
+
+            <h3>Conta il saldo al 31 dicembre?</h3>
+            <p>No: per il monitoraggio conta il picco massimo dell'anno, per l'IVAFE la giacenza media
+                annua. Il saldo di fine anno da solo non è il parametro giusto per nessuno dei due.</p>
+
+            <h3>Revolut o N26 con IBAN italiano vanno dichiarati nel quadro RW?</h3>
+            <p>Il conto corrente con IBAN IT aperto tramite succursale italiana no. Attenzione però a
+                investimenti e cripto di Revolut, che restano su entità estere del gruppo e possono
+                richiedere comunque il quadro RW.</p>
+
+            <h3>I soldi su Satispay vanno dichiarati?</h3>
+            <p>Il saldo è presso un istituto di moneta elettronica lussemburghese: valgono le stesse regole
+                dei conti esteri, ma solo sopra le soglie di 15.000€ di picco o 5.000€ di giacenza media —
+                cifre non comuni per l'uso tipico di Satispay.</p>
+
+            <h3>Ho chiuso il conto estero a metà anno: devo dichiararlo lo stesso?</h3>
+            <p>Sì, se nel periodo di detenzione hai superato le soglie: si dichiara il periodo di possesso
+                con la data di chiusura, e l'IVAFE è rapportata ai giorni effettivi.</p>
+
+            <h3>L'Agenzia delle Entrate può sapere del mio conto estero?</h3>
+            <p>Sì: con lo scambio automatico CRS, attivo dal 2017, gli istituti esteri comunicano ogni anno
+                saldi e movimenti dei conti dei residenti italiani, e l'Agenzia invia lettere di compliance
+                sulle discrepanze.</p>
+
+            <h3>Cosa rischio se non dichiaro?</h3>
+            <p>Dal 3% al 15% del valore non dichiarato (6-30% per i paesi black list); 250€ fissi se rimedi
+                entro 90 giorni; ravvedimento operoso con sanzioni ridotte finché non sei già stato
+                contestato.</p>
+
+            <h3>Posso fare tutto col 730 o serve il Modello Redditi?</h3>
+            <p>Dal 2024 il 730 include il quadro W (monitoraggio e IVAFE) e il quadro M (redditi esteri,
+                con versamento via F24): non serve più integrare con il Modello Redditi.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/wise/">🌍 Guida Wise</a></li>
+            <li><a href="/revolut/">💳 Guida Revolut</a></li>
+            <li><a href="/trade-republic/">📈 Guida Trade Republic</a></li>
+            <li><a href="/satispay/">🇮🇹 Guida Satispay</a></li>
+            <li><a href="/n26/">🏦 Guida N26</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai servizi citati portano
+                alle guide interne del sito, non a link di invito. È una scelta deliberata — sui contenuti
+                fiscali voglio zero conflitti di interesse (<a href="/trasparenza.html">leggi la pagina
+                Trasparenza</a>).
+            </p>
+            <p>
+                Fonti normative: D.L. 167/1990 (monitoraggio fiscale), L. 186/2014 (soglia 15.000€),
+                D.L. 201/2011, art. 19 (IVAFE), istruzioni ufficiali Modello 730/2026 e Modello Redditi
+                PF 2026 pubblicate su <a href="https://www.agenziaentrate.gov.it" target="_blank"
+                rel="noopener">agenziaentrate.gov.it</a> (inclusa la tabella "Elenco Paesi e Territori
+                esteri" per i codici Stato), pagina ufficiale del supporto N26 sulla dichiarazione del
+                conto. Le informazioni sui singoli servizi riflettono la situazione a luglio 2026 e
+                possono cambiare: in caso di dubbio fa fede il contratto del tuo conto. Questa guida è
+                informativa e non sostituisce una consulenza fiscale personalizzata: per la tua
+                dichiarazione rivolgiti al tuo commercialista o a un CAF.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "23 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
