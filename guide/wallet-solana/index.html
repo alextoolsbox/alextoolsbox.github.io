@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Solana: cos'è e come creare Phantom (guida 2026)</title>
+    <meta name="description" content="Cos'è un wallet crypto (custodial vs non-custodial), perché serve per Grass.io e UpRock, come creare Phantom passo-passo con le procedure ufficiali 2026, seed phrase e sicurezza. Guida senza link affiliati.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/wallet-solana/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Wallet Solana: cos'è e come creare Phantom (guida 2026)">
+    <meta property="og:description" content="Custodial vs non-custodial, creazione di Phantom passo-passo con le procedure ufficiali 2026, seed phrase e sicurezza. Senza link affiliati.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/wallet-solana/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wallet Solana: cos'è e come creare Phantom (guida 2026)">
+    <meta name="twitter:description" content="Custodial vs non-custodial, Phantom passo-passo, seed phrase e sicurezza. Senza link affiliati.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Serve subito un wallet per iniziare con Grass.io o UpRock?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Entrambe le piattaforme accumulano punti anche senza wallet collegato: il wallet Solana serve solo per l'eventuale conversione o prelievo futuro. Conviene crearlo quando hai un motivo concreto per farlo, non prima."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Phantom è gratuito?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, scaricare e usare Phantom è gratuito. Quando in futuro effettuerai transazioni sulla blockchain Solana pagherai le commissioni di rete (le cosiddette fee), che su Solana sono tipicamente frazioni di centesimo, ma la creazione e la custodia del wallet non costano nulla."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se perdo la seed phrase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Se hai creato un wallet con recovery phrase e perdi sia la frase sia i dispositivi su cui il wallet è configurato, l'accesso ai fondi è perso per sempre: Phantom non conserva una copia della frase e non può recuperarla, come dichiara la documentazione ufficiale. Per i wallet creati con account Google o Apple il recupero passa da quell'account più il PIN."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso cambiare la seed phrase del mio wallet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. La recovery phrase viene generata una sola volta alla creazione del wallet e non può essere cambiata né rigenerata. Se sospetti che qualcuno l'abbia vista, l'unica soluzione è creare un wallet nuovo e trasferirci i fondi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "La seed phrase di Phantom è di 12 o 24 parole?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I wallet creati in Phantom usano una recovery phrase di 12 parole. Phantom può comunque importare frasi da 24 parole generate da altre app, purché seguano lo standard aperto BIP-39."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso usare lo stesso wallet per Grass.io e UpRock?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì: entrambe pagano in token sulla blockchain Solana, quindi un unico wallet Solana come Phantom va bene per tutte e due. Un indirizzo Solana può ricevere qualsiasi token di quella rete."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Phantom è un wallet custodial o non-custodial?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non-custodial: le chiavi restano sotto il tuo controllo e Phantom non può accedere ai fondi né bloccarli. Vale anche per i wallet creati con account Google o Apple, che restano non-custodial secondo la documentazione ufficiale."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Meglio l'estensione browser o l'app mobile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dipende dall'uso: l'estensione è comoda per collegare il wallet a servizi web come Grass, l'app mobile per controllare il saldo ovunque. Si possono usare entrambe con lo stesso wallet. Attenzione a un dettaglio: la creazione di un wallet con recovery phrase è disponibile solo nell'estensione browser; su mobile si crea il wallet con account Google o Apple."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Wallet Solana: cos'è e come creare Phantom (guida 2026)",
+        "description": "Cos'è un wallet crypto, differenza custodial/non-custodial, perché serve per Grass.io e UpRock, creazione di Phantom passo-passo con le procedure ufficiali, seed phrase e sicurezza.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23"
+    }
+    </script>
+
+    <!-- SCHEMA HOWTO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Come creare un wallet Phantom con recovery phrase (estensione browser)",
+        "description": "I passaggi ufficiali per creare un wallet Phantom con Secret Recovery Phrase usando l'estensione browser, secondo la documentazione ufficiale aggiornata a luglio 2026.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Scarica l'estensione solo dal sito ufficiale",
+                "text": "Vai su phantom.com/download e installa l'estensione per il tuo browser. Non installarla da risultati sponsorizzati o link ricevuti via chat: le estensioni contraffatte esistono e sono il primo vettore di furto."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Avvia la creazione del wallet",
+                "text": "Clicca sull'icona dell'estensione Phantom: si apre una scheda di benvenuto. Scegli Create a New Wallet e poi Create a Recovery Phrase Wallet."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Crea la password locale",
+                "text": "Imposta una password di almeno 8 caratteri. Questa password sblocca Phantom solo nel browser in uso: non è un backup e non sostituisce la recovery phrase."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Trascrivi la recovery phrase offline",
+                "text": "Phantom mostra la frase di 12 parole. Scrivila su carta, in ordine, e conservala in un posto sicuro offline. Niente screenshot, niente file sul PC o sul cloud: è l'unico backup del wallet e Phantom non ne conserva una copia."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Conferma di averla salvata",
+                "text": "Clicca su I saved my Recovery Phrase e completa la conferma richiesta."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Scegli lo username e concludi",
+                "text": "Crea il tuo username Phantom, poi Continue e Get Started. Il wallet è pronto. Se vuoi usarlo anche sull'app mobile, importa la recovery phrase dalla schermata di benvenuto dell'app."
+            }
+        ]
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Guide Pratiche", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Wallet Solana e Phantom", "item": "https://alextoolsbox.it/guide/wallet-solana/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero" style="padding:70px 20px 50px 20px;">
+        <h1>Wallet Solana: cos'è e come creare Phantom</h1>
+        <p class="hero-description">
+            Se usi Grass.io o UpRock, prima o poi la domanda arriva: entrambe pagano in token sulla
+            blockchain Solana, e per trasformare quei token in qualcosa di concreto serve un wallet.
+            Qui trovi cos'è davvero un wallet crypto, come creare Phantom passo-passo con le procedure
+            ufficiali aggiornate, e soprattutto come non farti svuotare il portafoglio da un sito-clone.
+            Nessun link affiliato in questa pagina: solo informazione.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                👛 <strong>Questa non è consulenza finanziaria né fiscale.</strong> È una guida
+                informativa basata sulla documentazione ufficiale di Phantom (aggiornata a luglio 2026)
+                e sulla mia esperienza diretta. Le criptovalute sono strumenti volatili: qui si parla
+                solo di come custodirle in sicurezza, non di comprarle o investirci.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Un wallet crypto come <strong>Phantom</strong> (gratuito) non "contiene" i tuoi token:
+                custodisce le <strong>chiavi</strong> che dimostrano che sono tuoi. È un wallet
+                <strong>non-custodial</strong>: nessuna azienda può bloccarti i fondi, ma nessuno può
+                nemmeno recuperarli se perdi la <strong>recovery phrase</strong> (o seed phrase), le
+                12 parole generate alla creazione. Le regole d'oro: si scarica solo da
+                <strong>phantom.com</strong>, la seed phrase si scrive <strong>solo su carta</strong>
+                e non si comunica <strong>mai a nessuno</strong> — chiunque te la chieda, per qualsiasi
+                motivo, è un truffatore. Per <a href="/app-passive/grass/">Grass.io</a> e
+                <a href="/app-passive/uprock/">UpRock</a> il wallet <strong>non serve subito</strong>:
+                serve solo al momento di convertire o prelevare.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2 id="cose">Cos'è un wallet crypto (e cosa non è)</h2>
+        <p>
+            Partiamo dall'equivoco più comune: un wallet crypto non è un borsellino con dentro i soldi.
+            I token non stanno "dentro" l'app sul tuo telefono: stanno registrati sulla blockchain, un
+            registro pubblico distribuito. Quello che il wallet custodisce sono le <strong>chiavi
+            private</strong>, cioè la prova crittografica che quei token sono tuoi e che solo tu puoi
+            muoverli. Perdere il telefono non significa perdere i token: finché hai la recovery phrase,
+            puoi rigenerare le chiavi su qualsiasi altro dispositivo. Perdere la recovery phrase (e
+            tutti i dispositivi configurati), invece, sì.
+        </p>
+        <p>
+            La seconda distinzione fondamentale è tra wallet <strong>custodial</strong> e
+            <strong>non-custodial</strong>. Se tieni criptovalute su un exchange o dentro un'app come
+            Revolut, il wallet è custodial: le chiavi le custodisce l'azienda, tu hai un saldo a
+            schermo, un po' come con una banca. È comodo (password dimenticata? si recupera), ma sei
+            vincolato alle regole e alla solidità di chi custodisce. Con un wallet non-custodial come
+            Phantom, invece, <strong>tu sei l'unico custode</strong>: le chiavi esistono solo sui tuoi
+            dispositivi e sulla carta dove hai scritto la recovery phrase. Più libertà — nessuno può
+            congelarti i fondi — ma anche piena responsabilità: non esiste un "ho dimenticato la
+            password" dell'ultima istanza. Se la frase sparisce, i fondi sono irrecuperabili, e non per
+            cattiveria di qualcuno: proprio la documentazione ufficiale di Phantom dichiara che
+            l'azienda non conserva alcuna copia della tua frase e non può ripristinarla.
+        </p>
+
+        <!-- PERCHÉ SERVE -->
+        <h2 id="perche">Perché serve per Grass.io e UpRock</h2>
+        <p>
+            Delle cinque app passive recensite su questo sito, tre (<a href="/app-passive/honeygain/">Honeygain</a>,
+            <a href="/app-passive/jumptask/">JumpTask</a> e <a href="/app-passive/earnapp/">EarnApp</a>)
+            pagano in dollari via PayPal o simili, e per quelle un wallet crypto non serve.
+            <a href="/app-passive/grass/">Grass.io</a> e <a href="/app-passive/uprock/">UpRock</a>,
+            invece, pagano rispettivamente in token <strong>GRASS</strong> e <strong>UPT</strong>,
+            entrambi emessi sulla blockchain <strong>Solana</strong>. Per ricevere, custodire e poi
+            eventualmente vendere quei token serve un indirizzo Solana, cioè un wallet — e Phantom è
+            il più usato dell'ecosistema, oltre a essere quello che uso io.
+        </p>
+        <p>
+            Un punto che ho già sottolineato nelle guide dei due servizi e che ripeto volentieri:
+            <strong>il wallet non serve per iniziare</strong>. Sia Grass sia UpRock accumulano punti
+            sul tuo account anche senza wallet collegato; il wallet entra in gioco solo al momento
+            della conversione o del prelievo. Crearlo prima non fa guadagnare nulla di più, e tenerlo
+            collegato senza motivo aggiunge solo una superficie di rischio in più. La sequenza sensata
+            è: accumula, e quando hai un motivo concreto per prelevare, crea il wallet seguendo i
+            passaggi qui sotto.
+        </p>
+        <p>
+            Nota a margine: un solo wallet basta per entrambe le piattaforme. Un indirizzo Solana può
+            ricevere qualsiasi token di quella rete, quindi non servono due wallet separati per GRASS
+            e UPT (anche se separare i wallet per usi diversi resta una buona pratica di sicurezza,
+            come vedremo più avanti).
+        </p>
+
+        <!-- PHANTOM -->
+        <h2 id="phantom">Phantom: le due strade per creare il wallet</h2>
+        <p>
+            Phantom è gratuito ed esiste in due forme: <strong>estensione browser</strong> (Chrome,
+            Firefox, Edge e altri) e <strong>app mobile</strong> (iOS e Android). Io uso entrambe:
+            l'estensione sul PC, che è la più comoda da collegare a servizi web come Grass, e l'app
+            su iPhone per avere il saldo sotto controllo. Prima regola, che vale più di tutte le
+            altre messe insieme: <strong>si scarica solo da phantom.com/download</strong>, mai da
+            risultati sponsorizzati nei motori di ricerca, mai da link ricevuti via chat o social.
+            Le estensioni contraffatte che imitano Phantom esistono e servono a un unico scopo:
+            farti inserire la seed phrase per rubartela.
+        </p>
+        <p>
+            A luglio 2026 la documentazione ufficiale prevede <strong>due modalità di creazione</strong>
+            del wallet, e c'è un dettaglio che molte guide in giro non riportano perché superate:
+            la creazione classica con recovery phrase è oggi disponibile <strong>solo
+            nell'estensione browser</strong>. Sull'app mobile un wallet nuovo si crea con account
+            Google o Apple; la frase si può comunque importare o esportare in un secondo momento.
+        </p>
+
+        <h3>Opzione A — Estensione browser, wallet con recovery phrase</h3>
+        <p>
+            È il percorso classico, quello che dà il controllo più diretto. I passaggi ufficiali:
+        </p>
+        <div class="steps">
+            <ol>
+                <li>
+                    <b>Scarica l'estensione da phantom.com/download</b><br>
+                    Digita l'indirizzo a mano o usa il link dal sito ufficiale. Verifica il dominio
+                    nella barra del browser prima di installare.
+                </li>
+                <li>
+                    <b>Avvia la creazione</b><br>
+                    Clicca sull'icona dell'estensione: si apre una scheda di benvenuto. Scegli
+                    <strong>Create a New Wallet</strong>, poi <strong>Create a Recovery Phrase
+                    Wallet</strong>. Fallo in un momento di privacy: tra poco vedrai a schermo la
+                    frase segreta, e nessuno deve poterla leggere insieme a te.
+                </li>
+                <li>
+                    <b>Crea la password locale</b><br>
+                    Minimo 8 caratteri. Serve solo a sbloccare Phantom in quel browser: non è un
+                    backup del wallet e non sostituisce la recovery phrase.
+                </li>
+                <li>
+                    <b>Trascrivi la recovery phrase — su carta</b><br>
+                    Phantom mostra le 12 parole. Scrivile a mano, in ordine, su carta, e metti quel
+                    foglio in un posto sicuro. Niente screenshot, niente file di testo, niente foto,
+                    niente note sul cloud: qualsiasi copia digitale è una copia rubabile.
+                </li>
+                <li>
+                    <b>Conferma di averla salvata</b><br>
+                    Clicca <strong>I saved my Recovery Phrase</strong> e completa la conferma.
+                </li>
+                <li>
+                    <b>Scegli lo username e concludi</b><br>
+                    Crea il tuo username Phantom, poi <strong>Continue</strong> e
+                    <strong>Get Started</strong>. Il wallet è pronto. Per usarlo anche su mobile,
+                    importa la recovery phrase dalla schermata di benvenuto dell'app.
+                </li>
+            </ol>
+        </div>
+
+        <h3>Opzione B — Account Google o Apple (mobile ed estensione)</h3>
+        <p>
+            Dal 2024 Phantom permette di creare il wallet accedendo con un account Google o Apple —
+            è quello che la documentazione chiama wallet "seedless" o "email wallet". Sull'app mobile:
+            tocca <strong>Continue with Google</strong> o <strong>Continue with Apple</strong>, accedi,
+            e se richiesto imposta un <strong>PIN di 4 cifre</strong>; puoi poi attivare Face ID o
+            impronta per lo sblocco del dispositivo. Sull'estensione il percorso equivalente è
+            <strong>Create a New Wallet → Continue with Email</strong>. Il wallet resta
+            <strong>non-custodial</strong>: secondo la documentazione ufficiale nessuno — nemmeno
+            Phantom — può decifrarlo senza il tuo account e il tuo PIN, e la recovery phrase esiste
+            comunque e puoi esportarla quando vuoi dalle impostazioni.
+        </p>
+        <p>
+            Due avvertenze che vengono direttamente dalle FAQ ufficiali e che è bene sapere
+            <em>prima</em>: dopo <strong>7 tentativi di PIN sbagliati</strong> il backup criptato sul
+            dispositivo viene cancellato (recuperi il wallet solo se hai un altro dispositivo già
+            connesso o se avevi esportato la recovery phrase); e l'account Google/Apple usato alla
+            creazione <strong>non si può cambiare</strong>. Il tuo account Google o Apple diventa di
+            fatto parte delle chiavi di casa: proteggilo con una password seria e l'autenticazione a
+            due fattori.
+        </p>
+        <p>
+            <strong>Quale scegliere?</strong> Per chi parte da zero e vuole la strada più semplice,
+            l'Opzione B è onestamente più a prova di errore: niente foglio di carta da custodire
+            subito, recupero legato a un account che già usi. Per chi preferisce il controllo pieno
+            e indipendente da Google/Apple, l'Opzione A resta il percorso di riferimento. In entrambi
+            i casi il wallet è non-custodial, e in entrambi i casi la regola sulla seed phrase che
+            segue vale identica.
+        </p>
+
+        <!-- SEED PHRASE -->
+        <h2 id="seed">La seed phrase: le regole non negoziabili</h2>
+        <p>
+            La recovery phrase è una sequenza di <strong>12 parole inglesi</strong> generate alla
+            creazione del wallet secondo lo standard aperto BIP-39 (Phantom può anche importare frasi
+            da 24 parole create altrove). Da quelle 12 parole si ricostruiscono matematicamente tutte
+            le chiavi del wallet: chi le possiede, possiede i fondi. Da qui discendono le regole,
+            tutte confermate dalla documentazione ufficiale:
+        </p>
+        <ul>
+            <li>
+                <strong>Non condividerla mai con nessuno.</strong> Non esiste un solo caso legittimo
+                in cui qualcuno debba chiederti la seed phrase. Il banner in cima al sito di supporto
+                di Phantom lo dice testualmente: il supporto ufficiale non ti scriverà mai in privato
+                e non ti chiederà mai la frase. Chiunque lo faccia — "supporto" di Grass, "supporto"
+                di Phantom, un admin Telegram, un sito che promette airdrop — è un truffatore, senza
+                eccezioni.
+            </li>
+            <li>
+                <strong>Solo su carta, mai in digitale.</strong> Niente file, foto, screenshot, email
+                a te stesso, gestori di note sul cloud. Un malware che trova la frase in un file di
+                testo svuota il wallet in secondi.
+            </li>
+            <li>
+                <strong>Phantom non può recuperarla.</strong> Nessuna copia sui server: se la perdi
+                (e non hai dispositivi ancora connessi), il wallet è perso. Non è un difetto, è il
+                prezzo del non-custodial.
+            </li>
+            <li>
+                <strong>Non si può cambiare.</strong> La frase è generata una volta sola e non è
+                sostituibile. Se sospetti che qualcuno l'abbia vista, crea subito un wallet nuovo e
+                trasferisci i fondi.
+            </li>
+            <li>
+                <strong>La password e il PIN non sono la seed phrase.</strong> La password
+                dell'estensione sblocca solo quel browser; il PIN serve al recupero con account
+                Google/Apple. L'unico backup universale del wallet è la frase.
+            </li>
+        </ul>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"La mia regola pratica, che ho scritto anche nella guida Grass: la seed phrase la
+                scrivo solo su carta, mai in un file di testo, e non la fotografo nemmeno. E il
+                wallet lo collego ai servizi solo quando ho un motivo concreto per farlo: meno
+                superfici di rischio tieni aperte, meglio è."</em>
+        </div>
+
+        <!-- SITI-CLONE -->
+        <h2 id="truffe">Siti-clone e finti airdrop: come funziona la truffa tipo</h2>
+        <p>
+            Questo è il rischio numero uno, e non è teorico: nella
+            <a href="/app-passive/grass/sicurezza-rischi.html">pagina sicurezza del cluster Grass</a>
+            ho documentato l'esistenza di siti fraudolenti che imitano il progetto ufficiale, con
+            pagine di finto "voto" o "airdrop straordinario" che chiedono di collegare il wallet per
+            svuotarlo. Il copione è sempre lo stesso, e vale per qualsiasi progetto crypto o DePIN di
+            un certo successo: arriva un messaggio via Telegram, Discord, email o social che promette
+            un bonus improvviso, un airdrop "in scadenza", una "verifica del wallet" necessaria per
+            sbloccare ricompense. Il link porta a un sito che copia il design dell'originale in modo
+            quasi identico, cambiando pochi caratteri nel dominio. Lì ti viene chiesto di collegare
+            il wallet e firmare una transazione — o peggio, di inserire la seed phrase. In entrambi i
+            casi, il contenuto del wallet sparisce.
+        </p>
+        <p><strong>Le regole pratiche per non caderci:</strong></p>
+        <ul>
+            <li>Collega il wallet solo ai domini ufficiali digitati o verificati da te (per Grass: <strong>grass.io</strong> e <strong>app.grass.io</strong>; per UpRock: <strong>uprock.com</strong>) — mai da link ricevuti in chat</li>
+            <li>Controlla l'indirizzo esatto nella barra del browser prima di ogni collegamento o firma</li>
+            <li>Diffida per principio di qualsiasi urgenza: "airdrop in scadenza", "verifica entro 24 ore" sono leve psicologiche, non procedure reali</li>
+            <li>Nessun sito legittimo chiede mai la seed phrase per "collegare" il wallet: il collegamento avviene sempre tramite l'estensione o l'app, senza digitare la frase</li>
+            <li>Leggi cosa stai firmando: prima di approvare una transazione, Phantom mostra cosa autorizzi — se non lo capisci, non firmare</li>
+            <li>Se possibile, usa un profilo browser o un wallet dedicato alle app passive, separato da quello dove tieni eventuali fondi più importanti: se sbagli, limiti il danno</li>
+        </ul>
+        <p>
+            Un paradosso da tenere a mente: più un progetto diventa popolare, più attira cloni e
+            phishing. L'ondata di truffe a tema Grass è, a suo modo, un segnale della popolarità del
+            progetto — ma resta un rischio concreto da gestire con metodo, non da liquidare con
+            "tanto io me ne accorgerei".
+        </p>
+
+        <!-- HARDWARE WALLET -->
+        <h2 id="hardware">Hardware wallet: quando ha senso pensarci</h2>
+        <p>
+            Un hardware wallet è una piccola chiavetta dedicata che custodisce le chiavi private in un
+            chip isolato: le transazioni si firmano fisicamente sul dispositivo, così le chiavi non
+            toccano mai il PC o il telefono, e un malware sul computer non può rubarle. Phantom
+            supporta nativamente i dispositivi <strong>Ledger</strong>, sia dall'estensione browser
+            sia dall'app mobile: il wallet hardware si collega e si gestisce dall'interfaccia di
+            Phantom, con la sicurezza aggiuntiva della firma fisica.
+        </p>
+        <p>
+            Serve a chi inizia con Grass o UpRock? Onestamente, no: per dei punti in accumulo che
+            valgono pochi euro, un hardware wallet da 60-80€ non ha senso economico. Il momento
+            giusto per pensarci è quando nel wallet arriva un importo che ti farebbe davvero male
+            perdere — la soglia esatta è personale, ma il principio che ho scritto anche nella guida
+            Grass è: se un domani i token convertiti diventassero una cifra significativa, il posto
+            giusto dove spostarli è un wallet fisico, non un'estensione browser lasciata collegata
+            a tempo indefinito.
+        </p>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Salvare la seed phrase in digitale.</strong> Screenshot, file, note sul
+                telefono, email a se stessi: è l'errore che alimenta la maggior parte dei furti.
+                Carta, e basta.
+            </li>
+            <li>
+                <strong>Installare l'estensione dal posto sbagliato.</strong> Gli annunci
+                sponsorizzati sui motori di ricerca sono stati usati più volte per distribuire
+                estensioni contraffatte. Si parte sempre da phantom.com, digitato a mano.
+            </li>
+            <li>
+                <strong>Digitare la seed phrase su un sito.</strong> La frase si inserisce solo
+                dentro l'app o l'estensione ufficiale di Phantom, e solo quando sei tu a voler
+                ripristinare il wallet. Qualsiasi sito che la chieda è una truffa.
+            </li>
+            <li>
+                <strong>Confondere password, PIN e seed phrase.</strong> Password ed eventuale PIN
+                sono sblocchi locali o di recupero; la frase è l'unico backup vero. Proteggere la
+                password e perdere la frase non salva nulla.
+            </li>
+            <li>
+                <strong>Trascurare l'account Google/Apple del wallet seedless.</strong> Se il wallet
+                è legato a quell'account, chi entra nel tuo account email è a metà strada dai tuoi
+                fondi. Password robusta e 2FA non sono optional.
+            </li>
+            <li>
+                <strong>Creare il wallet "per prepararsi" e lasciarlo collegato ovunque.</strong>
+                Per Grass e UpRock il wallet serve solo alla conversione: crearlo in anticipo e
+                collegarlo a servizi a caso aggiunge rischio senza aggiungere un centesimo.
+            </li>
+            <li>
+                <strong>Firmare transazioni senza leggerle.</strong> L'approvazione distratta di una
+                transazione malevola è l'equivalente crypto di firmare un foglio in bianco.
+            </li>
+        </ul>
+
+        <!-- NOTA FISCALE -->
+        <h2 id="fisco">La nota fiscale (breve, ma dovuta)</h2>
+        <p>
+            I token che un giorno dovessi ricevere e custodire su un wallet come Phantom sono
+            <strong>cripto-attività</strong>, e come tali hanno una rilevanza fiscale: per i residenti
+            in Italia è previsto il monitoraggio nel <strong>quadro RW</strong> (o quadro W del 730) e,
+            dal 2023, un'imposta sul valore delle cripto-attività, oltre alla tassazione delle
+            eventuali plusvalenze al momento della vendita. Le regole sono diverse da quelle dei conti
+            esteri e sono cambiate più volte negli ultimi anni: questa guida si ferma qui di
+            proposito. Per il quadro generale sul monitoraggio fiscale (a cosa serve, come funziona
+            il quadro RW, cosa rischia chi non dichiara) ti rimando alla guida
+            <a href="/guide/dichiarare-iban-estero/">Dichiarare un IBAN estero</a>; per la tua
+            situazione specifica sulle cripto-attività, il consiglio è uno solo: parlane con il tuo
+            commercialista, portandogli lo storico delle operazioni.
+        </p>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Serve subito un wallet per iniziare con Grass.io o UpRock?</h3>
+            <p>No: entrambe accumulano punti anche senza wallet collegato. Serve solo per l'eventuale
+                conversione o prelievo futuro — crealo quando hai un motivo concreto.</p>
+
+            <h3>Phantom è gratuito?</h3>
+            <p>Sì: scaricarlo e usarlo non costa nulla. Le uniche spese future sono le commissioni di
+                rete quando fai transazioni su Solana, tipicamente frazioni di centesimo.</p>
+
+            <h3>Cosa succede se perdo la seed phrase?</h3>
+            <p>Se perdi anche i dispositivi configurati, l'accesso ai fondi è perso per sempre:
+                Phantom non conserva copie e non può recuperarla. Per i wallet creati con Google/Apple
+                il recupero passa da quell'account più il PIN.</p>
+
+            <h3>Posso cambiare la seed phrase?</h3>
+            <p>No: viene generata una volta sola e non è sostituibile. Se sospetti sia compromessa,
+                crea un wallet nuovo e trasferisci i fondi.</p>
+
+            <h3>La seed phrase è di 12 o 24 parole?</h3>
+            <p>I wallet creati in Phantom usano 12 parole. Si possono importare frasi da 24 parole
+                generate da altre app, purché standard BIP-39.</p>
+
+            <h3>Posso usare lo stesso wallet per Grass.io e UpRock?</h3>
+            <p>Sì: entrambe pagano in token Solana, e un indirizzo Solana può ricevere qualsiasi
+                token di quella rete.</p>
+
+            <h3>Phantom è custodial o non-custodial?</h3>
+            <p>Non-custodial, anche nella variante con account Google/Apple: le chiavi restano sotto
+                il tuo controllo e Phantom non può accedere ai fondi.</p>
+
+            <h3>Meglio l'estensione browser o l'app mobile?</h3>
+            <p>Si possono usare entrambe con lo stesso wallet (io faccio così: estensione sul PC, app
+                su iPhone). Ricorda solo che il wallet con recovery phrase si crea unicamente
+                dall'estensione; su mobile si crea con account Google o Apple.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/app-passive/grass/">🌱 Guida Grass.io</a></li>
+            <li><a href="/app-passive/grass/come-iniziare.html">🌱 Grass.io: come iniziare</a></li>
+            <li><a href="/app-passive/uprock/">🪨 Guida UpRock</a></li>
+            <li><a href="/app-passive/uprock/come-iniziare.html">🪨 UpRock: come iniziare</a></li>
+            <li><a href="/guide/dichiarare-iban-estero/">⚖️ Dichiarare un IBAN estero</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: Phantom non mi riconosce
+                nulla, e i link ai servizi citati portano alle guide interne del sito, non a link di
+                invito. Sui contenuti di sicurezza voglio zero conflitti di interesse
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                Fonti: documentazione ufficiale del supporto Phantom su
+                <a href="https://help.phantom.com" target="_blank" rel="noopener">help.phantom.com</a>
+                — in particolare le procedure di creazione wallet con recovery phrase e con account
+                Google/Apple, aggiornate rispettivamente al 1° e al 17 luglio 2026 — e le pagine
+                ufficiali sul supporto ai wallet hardware Ledger. Le interfacce delle app cambiano
+                spesso: se un passaggio non corrisponde, fa fede la documentazione ufficiale. Uso
+                personalmente Phantom (estensione browser e app iOS) per i motivi spiegati nei
+                cluster Grass.io e UpRock. Questa guida è informativa e non costituisce consulenza
+                finanziaria o fiscale.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "23 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
