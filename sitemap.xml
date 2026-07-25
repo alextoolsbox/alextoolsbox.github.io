@@ -559,4 +559,19 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===================== -->
+  <!-- CLASSIFICHE -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://alextoolsbox.it/classifiche/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alextoolsbox.it/classifiche/migliori-conti-canone-zero.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

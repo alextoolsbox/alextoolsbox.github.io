@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifiche 2026: i migliori servizi digitali a confronto | AlexToolsBox</title>
+    <meta name="description" content="Le classifiche di AlexToolsBox: conti, app e servizi digitali messi a confronto su un criterio preciso, con dati verificati e aggiornati periodicamente.">
+    <link rel="canonical" href="https://alextoolsbox.it/classifiche/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Classifiche 2026: i migliori servizi digitali a confronto">
+    <meta property="og:description" content="Conti, app e servizi digitali messi a confronto su un criterio preciso, con dati verificati e aggiornati periodicamente.">
+    <meta property="og:url" content="https://alextoolsbox.it/classifiche/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Classifiche 2026: i migliori servizi digitali a confronto">
+    <meta name="twitter:description" content="Conti, app e servizi digitali messi a confronto su un criterio preciso.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- BREADCRUMBLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Classifiche", "item": "https://alextoolsbox.it/classifiche/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero" style="padding:70px 20px 50px 20px;">
+        <h1>🏆 Classifiche</h1>
+        <p class="hero-description">
+            Ranking su un criterio preciso, non "il migliore in assoluto". Ogni classifica dice esattamente
+            su cosa si basa, con dati verificati e una data di aggiornamento visibile.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Diverso dai <a href="/confronti/">Confronti</a>: lì trovi il confronto diretto tra due
+                servizi, qui un ranking su 3 o più elementi, valutati su un criterio dichiarato in ogni
+                pagina (es. "solo il piano gratuito", "solo i prelievi ATM"). Ogni classifica riporta la
+                data dell'ultima verifica.
+            </p>
+        </div>
+
+        <!-- ELENCO CLASSIFICHE -->
+        <h2>Le classifiche disponibili</h2>
+        <div class="features">
+            <div class="card">
+                🏆
+                <p><b><a href="/classifiche/migliori-conti-canone-zero.html">Migliori conti a canone zero 2026</a></b></p>
+                <p>
+                    Revolut, N26, Satispay, Wise e Hype confrontati solo sul piano davvero gratuito: cosa
+                    includono senza pagare nulla extra.
+                </p>
+            </div>
+        </div>
+
+        <h2>In arrivo</h2>
+        <p>
+            La sezione è appena nata e crescerà con il sito. Le novità vengono sempre annunciate nella
+            pagina <a href="/novita/">🔔 Novità</a>.
+        </p>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni su questa sezione</h3>
+            <p>
+                Ogni classifica di AlexToolsBox segue lo stesso metodo: criterio dichiarato in apertura,
+                dati dalle fonti ufficiali e dai cluster già pubblicati su questo sito, data di
+                aggiornamento sempre visibile. Uso personalmente i servizi che confronto.
+            </p>
+            <p>
+                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "25 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
