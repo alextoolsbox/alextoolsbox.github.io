@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cos'è l'IBAN? Come leggerlo e a cosa serve (2026)</title>
+    <meta name="description" content="Cos'è l'IBAN, a cosa serve e come si legge sigla per sigla: paese, check digit, CIN, ABI, CAB. Differenza con BIC/SWIFT ed errori comuni da evitare.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/cosa-e-un-iban/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Cos'è l'IBAN? Come leggerlo e a cosa serve (2026)">
+    <meta property="og:description" content="Cos'è l'IBAN, a cosa serve e come si legge sigla per sigla. Differenza con BIC/SWIFT ed errori comuni da evitare.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/cosa-e-un-iban/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cos'è l'IBAN? Come leggerlo e a cosa serve (2026)">
+    <meta name="twitter:description" content="Cos'è l'IBAN, a cosa serve e come si legge sigla per sigla. Differenza con BIC/SWIFT.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Cos'è l'IBAN e da dove viene?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'IBAN (International Bank Account Number) è lo standard internazionale, definito dalla norma ISO 13616, che identifica in modo univoco un conto corrente in tutto il mondo. In Italia è obbligatorio dal 1° gennaio 2008 per i bonifici nazionali e SEPA, al posto delle vecchie coordinate ABI-CAB-numero di conto usate da sole."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come faccio a leggere il mio IBAN?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da sinistra: 2 lettere del paese (es. IT), 2 cifre di controllo calcolate con l'algoritmo MOD-97, e per l'Italia una lettera CIN, 5 cifre ABI (la banca), 5 cifre CAB (la filiale) e 12 caratteri per il numero di conto. Altri paesi hanno una lunghezza e una struttura del BBAN diverse, ma il principio è lo stesso."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Il mio IBAN inizia con IT: il mio conto è comunque \"estero\" ai fini fiscali?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, non necessariamente il contrario è vero: il prefisso paese dell'IBAN non decide la residenza fiscale del conto. Conta la sede legale dell'istituto che detiene i fondi. Per il quadro completo su quando un conto va dichiarato, vedi la guida dedicata."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se sbaglio anche solo una cifra dell'IBAN?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I 2 check digit calcolati con MOD-97 intercettano la stragrande maggioranza degli errori di trascrizione (cifre invertite, un carattere sbagliato), facendo rifiutare l'operazione dalla banca. Non è però una garanzia assoluta al 100%: un IBAN corretto ma sbagliato per errore umano (es. copiato da un contatto diverso) passa comunque il controllo, perché è formalmente valido. Da qui l'importanza della verifica del beneficiario."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Serve sempre il BIC/SWIFT insieme all'IBAN?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Per i bonifici SEPA in euro (36 paesi europei) vale la regola \"IBAN only\" dal 2016: la banca deriva il BIC automaticamente dall'IBAN. Il BIC/SWIFT resta necessario solo per i bonifici extra-SEPA o in valuta diversa dall'euro."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Perché IBAN di paesi diversi hanno lunghezze diverse?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perché ogni paese ha una struttura nazionale del conto (BBAN) diversa, inclusa nell'IBAN dopo il codice paese e i check digit. La lunghezza totale varia da 15 a 34 caratteri: l'Italia usa 27 caratteri, altri paesi come la Germania 22, il Regno Unito 22, il Belgio 16."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso cambiare l'IBAN di un conto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, l'IBAN è legato al conto e all'istituto che lo detiene: non si \"cambia\" a piacere. Cambia solo se cambi banca/istituto, se l'istituto migra la tua posizione su un'altra entità legale (è successo con N26, Revolut e Trade Republic negli ultimi anni) o se chiudi il conto e ne apri uno nuovo altrove."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Dove trovo l'IBAN del mio conto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nell'app o nell'area riservata del tuo conto (di solito nella sezione dati conto/dettagli), nell'estratto conto periodico, o nei documenti contrattuali di apertura. Le fintech del sito lo mostrano tutte direttamente in app, nella sezione dedicata al conto."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cos'è l'IBAN? Come leggerlo e a cosa serve",
+        "description": "Cos'è l'IBAN, lo standard ISO 13616 per i bonifici SEPA, come si legge sigla per sigla (paese, check digit, CIN, ABI, CAB), differenza con BIC/SWIFT ed errori comuni.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-07-26",
+        "dateModified": "2026-07-26"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Cos'è l'IBAN", "item": "https://alextoolsbox.it/guide/cosa-e-un-iban/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero" style="padding:70px 20px 50px 20px;">
+        <h1>Cos'è l'IBAN? La guida per leggerlo davvero</h1>
+        <p class="hero-description">
+            Lo scrivi e lo copi decine di volte, ma cosa vuol dire davvero quella sequenza di lettere
+            e numeri? Qui trovi cos'è l'IBAN, come si legge sigla per sigla, perché il prefisso paese
+            non c'entra con il fisco, e la differenza con BIC/SWIFT. Nessun link affiliato in questa
+            pagina: solo informazione.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                🔤 <strong>Questa non è consulenza bancaria né fiscale.</strong> È una guida
+                informativa sulla struttura tecnica dell'IBAN. Per capire quando un conto va
+                dichiarato al fisco, l'argomento è trattato nella guida dedicata più sotto, non qui.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                L'<strong>IBAN</strong> (International Bank Account Number) è lo standard
+                internazionale — norma <strong>ISO 13616</strong> — che identifica un conto corrente
+                in modo univoco in tutto il mondo, nato per rendere possibili i bonifici
+                <strong>SEPA</strong> tra paesi diversi con un unico formato. In Italia è composto da
+                27 caratteri: paese, 2 check digit, CIN, ABI, CAB e numero di conto. Un punto che
+                genera confusione va chiarito subito: <strong>il prefisso paese (es. IT) non decide
+                se un conto è "estero" ai fini fiscali</strong> — conta la sede legale dell'istituto,
+                non le due lettere iniziali.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2 id="cose">Cos'è un IBAN e a cosa serve</h2>
+        <p>
+            Prima dell'IBAN, ogni paese europeo aveva il proprio modo di identificare un conto
+            corrente: in Italia, ad esempio, bastavano ABI (codice della banca) e CAB (codice della
+            filiale) insieme al numero di conto. Il problema arrivava con i bonifici internazionali:
+            ogni paese aveva formati diversi, e le banche dovevano gestire decine di schemi
+            incompatibili tra loro.
+        </p>
+        <p>
+            L'<strong>IBAN</strong> risolve il problema con un unico formato standard, definito dalla
+            norma <strong>ISO 13616</strong>: un solo codice, leggibile allo stesso modo da qualsiasi
+            banca in qualsiasi paese aderente, che identifica il conto senza ambiguità. È lo strumento
+            di base su cui si regge la <strong>SEPA</strong> (Single Euro Payments Area, l'area di 36
+            paesi europei con regole comuni per i pagamenti in euro): in Italia è obbligatorio dal
+            1° gennaio 2008 per tutti i bonifici nazionali, non solo per quelli verso l'estero.
+        </p>
+
+        <!-- COME SI LEGGE -->
+        <h2 id="come-si-legge">Come si legge, sigla per sigla</h2>
+        <p>
+            Prendiamo un IBAN italiano d'esempio (non un conto reale, solo per illustrare la
+            struttura) e scomponiamolo pezzo per pezzo:
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Blocco</th>
+                        <th>Esempio</th>
+                        <th>Cosa significa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Codice paese</strong></td>
+                        <td><code>IT</code></td>
+                        <td>2 lettere, standard ISO 3166-1: identifica il paese dell'istituto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Check digit</strong></td>
+                        <td><code>60</code></td>
+                        <td>2 cifre di controllo, calcolate con l'algoritmo MOD-97: servono a
+                            verificare che l'IBAN non contenga errori di trascrizione</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CIN</strong></td>
+                        <td><code>X</code></td>
+                        <td>1 lettera, controllo di secondo livello esclusivo italiano, calcolato su
+                            ABI+CAB+conto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ABI</strong></td>
+                        <td><code>05428</code></td>
+                        <td>5 cifre: identifica la banca (Associazione Bancaria Italiana assegna il
+                            codice a ogni istituto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CAB</strong></td>
+                        <td><code>11101</code></td>
+                        <td>5 cifre: identifica la filiale/sportello di appoggio del conto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Numero di conto</strong></td>
+                        <td><code>000000123456</code></td>
+                        <td>12 caratteri: il numero di conto corrente vero e proprio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align:center; font-size:20px; letter-spacing:2px; font-family:monospace; margin:20px 0;">
+            <strong>IT60</strong> X <strong>05428</strong> <strong>11101</strong> 000000123456
+        </p>
+        <p>
+            Per l'Italia il totale è sempre <strong>27 caratteri</strong>. Non tutti i paesi usano
+            questo schema: ogni paese ha la propria struttura nazionale (il cosiddetto <strong>BBAN</strong>,
+            Basic Bank Account Number, che segue codice paese e check digit), e la lunghezza
+            complessiva dell'IBAN varia da 15 a 34 caratteri a seconda del paese — la Germania usa 22
+            caratteri, il Regno Unito 22, il Belgio appena 16. Il principio, però, è identico ovunque:
+            codice paese, check digit, e poi la struttura nazionale del conto.
+        </p>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Non serve imparare a memoria cosa sono ABI e CAB per usare l'IBAN tutti i giorni.
+                L'unica sigla che vale la pena ricordare è il check digit: è quello che fa scattare
+                l'errore \"IBAN non valido\" se copi male anche un solo carattere."</em>
+        </div>
+
+        <!-- PREFISSO PAESE NON È FISCO -->
+        <h2 id="prefisso-fisco">Il prefisso paese non dice se un conto è "estero" ai fini fiscali</h2>
+        <p>
+            Qui nasce la confusione più comune, ed è la ragione per cui questa guida e quella
+            fiscale sono due contenuti separati. Vedere un IBAN che inizia con <code>LT</code>,
+            <code>BE</code> o <code>LU</code> invece di <code>IT</code> fa pensare subito "questo è
+            un conto estero, devo dichiararlo". Non è così semplice: quello che conta per il fisco
+            italiano non è il prefisso dell'IBAN, ma <strong>la sede legale dell'istituto</strong>
+            che detiene i fondi, indicata nel contratto di apertura del conto.
+        </p>
+        <p>
+            Un istituto estero può emettere un IBAN italiano tramite una succursale operativa in
+            Italia (è successo con diversi conti negli ultimi anni), e viceversa alcuni prodotti
+            possono restare su entità estere del gruppo anche quando il conto principale ha IBAN IT.
+            Questa guida si occupa solo di leggere l'IBAN: per capire quando un conto va davvero
+            dichiarato (soglie, quadro RW, sanzioni) la guida di riferimento è
+            <a href="/guide/dichiarare-iban-estero/">Dichiarare un IBAN estero</a>, che approfondisce
+            proprio questo punto in dettaglio.
+        </p>
+
+        <!-- CHE IBAN HANNO I SERVIZI DEL SITO -->
+        <h2 id="servizi">Che IBAN hanno davvero i servizi di questo sito</h2>
+        <p>
+            Non per dire se vanno dichiarati (per quello c'è la guida fiscale), ma solo per vedere
+            in pratica cosa significa tutto questo: uso personalmente tutti e sei questi conti, ed
+            ecco che aspetto ha davvero il loro IBAN a luglio 2026.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Servizio</th>
+                        <th>Prefisso IBAN</th>
+                        <th>Istituto/sede</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/n26/">N26</a></td>
+                        <td><code>IT</code> (conti aperti dopo il 26/3/2020)</td>
+                        <td>Succursale italiana; conti più vecchi hanno ancora IBAN <code>DE</code>
+                            (Germania)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/revolut/">Revolut</a></td>
+                        <td><code>IT</code> o <code>LT</code></td>
+                        <td><code>IT</code> = succursale italiana (da fine 2024); <code>LT</code> =
+                            Revolut Bank UAB, Lituania</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/trade-republic/">Trade Republic</a></td>
+                        <td><code>IT</code> (dal 30/1/2025)</td>
+                        <td>Succursale italiana; IBAN precedenti erano <code>DE</code> (Germania)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/hype/">Hype</a></td>
+                        <td><code>IT</code></td>
+                        <td>Banca Sella, licenza bancaria italiana fin dall'inizio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/wise/">Wise</a></td>
+                        <td><code>BE</code></td>
+                        <td>Wise Europe SA, sede in Belgio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/satispay/">Satispay</a></td>
+                        <td><code>LU</code></td>
+                        <td>Satispay Europe S.A., istituto di moneta elettronica in Lussemburgo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Il quadro cambia rispetto a qualche anno fa: quattro dei sei servizi hanno oggi un IBAN
+            italiano, non perché "italianizzati" nella sostanza, ma perché operano tramite succursali
+            o entità con licenza italiana. Restano con IBAN estero solo Wise e Satispay. Per il
+            dettaglio dei singoli casi ai fini del quadro RW, vedi
+            <a href="/guide/dichiarare-iban-estero/">Dichiarare un IBAN estero</a>.
+        </p>
+
+        <!-- IBAN VS BIC -->
+        <h2 id="bic-swift">IBAN vs BIC/SWIFT: cosa sono e quando serve l'uno o l'altro</h2>
+        <p>
+            L'IBAN identifica il <strong>conto</strong> del beneficiario, fino al numero di conto
+            specifico. Il <strong>BIC</strong> (Bank Identifier Code, spesso chiamato anche
+            <strong>SWIFT</strong>, dal nome del network internazionale che assegna questi codici)
+            identifica invece la <strong>banca</strong>, non il singolo conto: BIC e SWIFT, nella
+            pratica, sono la stessa cosa.
+        </p>
+        <ul>
+            <li>
+                <strong>Bonifici SEPA in euro (36 paesi europei):</strong> il BIC non serve più dal
+                2016 — regola <strong>"IBAN only"</strong>. La banca ricava automaticamente il BIC
+                dall'IBAN che inserisci.
+            </li>
+            <li>
+                <strong>Bonifici extra-SEPA o in valuta diversa dall'euro</strong> (es. verso Stati
+                Uniti, Regno Unito fuori SEPA, Cina, Australia): il BIC/SWIFT resta un dato
+                obbligatorio per instradare correttamente il bonifico sulla rete internazionale.
+            </li>
+        </ul>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>IBAN copiato o digitato male.</strong> I check digit MOD-97 intercettano la
+                gran parte degli errori di trascrizione, ma non tutti: un IBAN corretto ma
+                appartenente al conto sbagliato (es. copiato da un contatto diverso da quello a cui
+                vuoi davvero inviare) supera comunque il controllo, perché è formalmente valido.
+            </li>
+            <li>
+                <strong>Confondere bonifico SEPA ed extra-SEPA.</strong> Inviare un bonifico verso un
+                paese extra-SEPA senza indicare il BIC/SWIFT richiesto genera ritardi o rifiuti
+                dell'operazione.
+            </li>
+            <li>
+                <strong>Non verificare il beneficiario prima di inviare.</strong> Dal 9 ottobre 2025,
+                per effetto del Regolamento UE 2024/886 sui pagamenti istantanei, banche e istituti
+                di pagamento devono offrire la <strong>Verifica del Beneficiario</strong> (Verification
+                of Payee): un controllo automatico che confronta il nome inserito con l'intestatario
+                reale dell'IBAN prima di autorizzare il bonifico. È un livello di sicurezza in più
+                contro le truffe da fattura alterata, ma la responsabilità finale di controllare
+                l'esito resta di chi invia il bonifico.
+            </li>
+        </ul>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Se ricevi un IBAN nuovo da un fornitore o da chi dice di doverti restituire dei soldi
+                (soprattutto se arriva per email o messaggio, non di persona), verifica il beneficiario
+                con una chiamata diretta prima di inviare, non solo affidandoti al controllo automatico
+                della banca. Su come funziona nel dettaglio, ho scritto anche una guida sulla
+                <a href="/satispay/iban-satispay.html">verifica del beneficiario su Satispay</a>."</em>
+        </div>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Cos'è l'IBAN e da dove viene?</h3>
+            <p>Lo standard internazionale (ISO 13616) che identifica un conto in tutto il mondo, in
+                Italia obbligatorio dal 1° gennaio 2008 per i bonifici nazionali e SEPA, al posto
+                delle vecchie coordinate ABI-CAB-numero di conto usate da sole.</p>
+
+            <h3>Come faccio a leggere il mio IBAN?</h3>
+            <p>Da sinistra: paese (2 lettere), check digit MOD-97 (2 cifre), e per l'Italia CIN (1
+                lettera), ABI (5 cifre, la banca), CAB (5 cifre, la filiale) e numero di conto (12
+                caratteri). Altri paesi hanno un BBAN diverso, ma lo stesso principio.</p>
+
+            <h3>Il mio IBAN inizia con IT: il mio conto è comunque "estero" ai fini fiscali?</h3>
+            <p>No: il prefisso non decide nulla da solo. Conta la sede legale dell'istituto che
+                detiene i fondi. Per il quadro completo vedi la guida "Dichiarare un IBAN estero".</p>
+
+            <h3>Cosa succede se sbaglio anche solo una cifra dell'IBAN?</h3>
+            <p>Il check digit intercetta la maggior parte degli errori di trascrizione, ma non un
+                IBAN corretto appartenente al conto sbagliato. Da qui l'importanza della verifica del
+                beneficiario prima di inviare.</p>
+
+            <h3>Serve sempre il BIC/SWIFT insieme all'IBAN?</h3>
+            <p>No: per i bonifici SEPA in euro vale la regola "IBAN only" dal 2016. Il BIC/SWIFT
+                serve solo per bonifici extra-SEPA o in valuta diversa dall'euro.</p>
+
+            <h3>Perché IBAN di paesi diversi hanno lunghezze diverse?</h3>
+            <p>Perché ogni paese ha una struttura nazionale del conto (BBAN) diversa. La lunghezza
+                totale va da 15 a 34 caratteri: l'Italia usa 27, la Germania e il Regno Unito 22, il
+                Belgio 16.</p>
+
+            <h3>Posso cambiare l'IBAN di un conto?</h3>
+            <p>No, non a piacere: cambia solo se cambi istituto, se l'istituto migra la tua posizione
+                su un'altra entità legale, o se chiudi il conto e ne apri uno nuovo.</p>
+
+            <h3>Dove trovo l'IBAN del mio conto?</h3>
+            <p>Nell'app o area riservata del conto, nell'estratto conto periodico o nei documenti
+                contrattuali di apertura.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/guide/dichiarare-iban-estero/">⚖️ Dichiarare un IBAN estero</a></li>
+            <li><a href="/satispay/iban-satispay.html">💙 IBAN Satispay: come funziona il conto collegato</a></li>
+            <li><a href="/n26/">🏦 Guida N26</a></li>
+            <li><a href="/revolut/">💳 Guida Revolut</a></li>
+            <li><a href="/wise/">🌍 Guida Wise</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai servizi citati
+                portano alle guide interne del sito, non a link di invito. È una scelta deliberata —
+                sui contenuti tecnici/informativi voglio zero conflitti di interesse
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                Fonti: norma <strong>ISO 13616</strong> (struttura dell'IBAN), regole
+                <strong>EPC/SEPA</strong> sul bonifico SEPA credit transfer e sulla regola "IBAN
+                only" dal 2016, <strong>Regolamento UE 2024/886</strong> sui pagamenti istantanei
+                (obbligo di Verifica del Beneficiario dal 9 ottobre 2025). Le informazioni sui
+                prefissi IBAN dei singoli servizi riflettono la situazione a luglio 2026 e possono
+                cambiare: in caso di dubbio fa fede il contratto del tuo conto. Questa guida è
+                informativa e non sostituisce una consulenza fiscale o bancaria personalizzata.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "26 luglio 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
