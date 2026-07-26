@@ -41,7 +41,7 @@ box-shadow:0 2px 8px rgba(0,0,0,0.08);
 padding:6px 0;
 
 }.nav-container{
-max-width:1100px;
+max-width:1300px;
 margin:auto;
 display:flex;
 align-items:center;
@@ -74,8 +74,9 @@ color:#111;
 .nav-links{
 display:flex;
 align-items:center;
-gap:25px;
+gap:18px;
 margin-left:auto;
+flex-wrap:nowrap;
 }
 
 .nav-links a{
@@ -85,6 +86,7 @@ font-weight:500;
 display:inline-block;
 position:relative;
 transition:0.2s;
+white-space:nowrap;
 }
 
 /* linea hover sotto il menu */
