@@ -222,6 +222,14 @@ background:#f4f6fb;
 color:#635bff;
 }
 
+/* ACCORDION MOBILE (checkbox nascosto + freccia): invisibili su desktop, dove il dropdown resta a hover */
+.acc-toggle{
+display:none;
+}
+.acc-chevron{
+display:none;
+}
+
 /* HERO */
 
 .hero{
@@ -784,7 +792,7 @@ border-radius: 10px;
         border-bottom: 1px solid #f0f0f0;
     }
 
-    /* Dropdown sempre visibili su mobile */
+    /* Dropdown chiusi di default su mobile: si aprono a fisarmonica al tocco */
     .dropdown-menu,
     .dropdown-submenu {
         position: static;
@@ -797,8 +805,15 @@ border-radius: 10px;
         padding: 0 0 0 15px;
         min-width: auto;
         background: transparent;
-        display: block;
+        display: none;
         max-height: none;
+        flex: 0 0 100%;
+    }
+
+    /* Apre il dropdown/submenu quando la checkbox nascosta è selezionata (tap sulla freccia) */
+    .acc-toggle:checked ~ .dropdown-menu,
+    .acc-toggle:checked ~ .dropdown-submenu {
+        display: block;
     }
 
     .dropdown-menu a,
@@ -808,19 +823,47 @@ border-radius: 10px;
         border-bottom: 1px solid #f8f8f8;
     }
 
-    /* Rimuove frecce e stili desktop */
+    /* Rimuove frecce desktop */
     .dropdown > a::after,
     .dropdown-sub > a::after {
         content: "";
         margin: 0;
     }
 
-    /* Dropdown e submenu sempre aperti */
-    .dropdown:hover .dropdown-menu,
-    .dropdown-sub:hover .dropdown-submenu {
-        opacity: 1;
-        transform: none;
-        pointer-events: auto;
+    /* Riga voce di menu + freccia a fisarmonica sulla stessa linea, il sottomenu va a capo sotto */
+    .dropdown,
+    .dropdown-sub {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .dropdown > a,
+    .dropdown-sub > a {
+        flex: 1 1 auto;
+        width: auto;
+    }
+
+    /* Freccia a fisarmonica: tap target dedicato, non naviga, apre/chiude il sottomenu */
+    .acc-chevron {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 44px;
+        height: 44px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #888;
+    }
+
+    .acc-chevron::after {
+        content: "▾";
+        transition: transform 0.2s ease;
+        display: inline-block;
+    }
+
+    .acc-toggle:checked ~ .acc-chevron::after {
+        transform: rotate(180deg);
     }
 
     /* Footer: colonne in pila */
