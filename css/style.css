@@ -830,18 +830,24 @@ border-radius: 10px;
         margin: 0;
     }
 
-    /* Riga voce di menu + freccia a fisarmonica sulla stessa linea, il sottomenu va a capo sotto */
+    /* Riga voce di menu + freccia a fisarmonica sulla stessa linea, il sottomenu va a capo sotto.
+       width:100% esplicita perché .nav-links usa align-items:flex-start (i figli non si stirano
+       da soli): senza, la riga si restringe al testo e non c'è spazio per la freccia. */
     .dropdown,
     .dropdown-sub {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .dropdown > a,
     .dropdown-sub > a {
         flex: 1 1 auto;
         width: auto;
+        min-width: 0;
+        border-bottom: none;
     }
 
     /* Freccia a fisarmonica: tap target dedicato, non naviga, apre/chiude il sottomenu */
@@ -852,18 +858,33 @@ border-radius: 10px;
         flex: 0 0 44px;
         height: 44px;
         cursor: pointer;
-        font-size: 14px;
-        color: #888;
+        font-size: 18px;
+        color: #635bff;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        margin: 4px 0;
     }
 
     .acc-chevron::after {
         content: "▾";
         transition: transform 0.2s ease;
         display: inline-block;
+        line-height: 1;
     }
 
     .acc-toggle:checked ~ .acc-chevron::after {
         transform: rotate(180deg);
+    }
+
+    /* Bordo separatore spostato sulla riga intera (testo+freccia), non solo sul link */
+    .dropdown,
+    .dropdown-sub {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu,
+    .dropdown-submenu {
+        border-bottom: none;
     }
 
     /* Footer: colonne in pila */
