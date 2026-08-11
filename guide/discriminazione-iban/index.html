@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discriminazione IBAN: cosa fare se rifiutano il tuo IBAN estero | AlexToolsBox</title>
+    <meta name="description" content="Rifiutare un IBAN estero è illegale: art. 9 del regolamento SEPA, sanzioni fino a 5 milioni di euro. La procedura passo-passo e il modello di lettera.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/discriminazione-iban/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Discriminazione IBAN: cosa fare se rifiutano il tuo IBAN estero">
+    <meta property="og:description" content="È illegale rifiutare un IBAN SEPA perché straniero. Ecco la norma, le sanzioni e la procedura per farti accettare l'IBAN.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/discriminazione-iban/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discriminazione IBAN: cosa fare se ti rifiutano l'IBAN estero">
+    <meta name="twitter:description" content="È illegale. Ecco la norma, le sanzioni e come farti accettare l'IBAN.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Discriminazione IBAN: cosa fare se rifiutano il tuo IBAN estero",
+        "description": "Rifiutare un IBAN SEPA perché straniero viola l'art. 9 del Regolamento UE 260/2012. Norma, sanzioni e procedura pratica per far valere il tuo diritto.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+    }
+    </script>
+
+    <!-- SCHEMA FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Il datore di lavoro può rifiutare il mio IBAN estero per lo stipendio?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. L'articolo 9 del Regolamento UE 260/2012 vieta di rifiutare un IBAN solo perché appartiene a un altro Paese dell'area SEPA. Il rifiuto è una violazione sanzionabile dall'AGCM."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali sanzioni rischia chi rifiuta un IBAN estero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da 5.000 a 5.000.000 di euro, ai sensi dell'art. 27 comma 9 del Codice del Consumo richiamato dal D.Lgs. 135/2015. L'AGCM ha già sanzionato Agos Ducato per 800.000 euro."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "A chi devo segnalare un rifiuto di IBAN estero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All'AGCM tramite il modulo per le segnalazioni dei consumatori. Se la controparte è una banca o un istituto di pagamento, puoi rivolgerti anche alla Banca d'Italia e, dopo il reclamo, all'Arbitro Bancario Finanziario."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali conti hanno ancora un IBAN estero nel 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "N26 assegna IBAN tedeschi e Wise IBAN belgi. Revolut ha introdotto gli IBAN italiani: i nuovi conti li ricevono direttamente, chi ha ancora un IBAN lituano può migrare gratuitamente dall'app."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Discriminazione IBAN: cosa fare se rifiutano il tuo IBAN estero</h1>
+        <p class="hero-description">
+            "Mi dispiace, il nostro sistema non accetta IBAN stranieri." Se te lo sei sentito dire da
+            un datore di lavoro, una finanziaria o un fornitore di energia, sappi che stanno violando
+            una norma europea. E che l'Antitrust ha già multato chi lo fa. Qui trovi la norma esatta,
+            cosa rischia chi ti dice di no e la procedura per farti accettare l'IBAN, lettera inclusa.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Rifiutare un IBAN solo perché è di un altro Paese SEPA è <strong>illegale</strong>:
+                lo vieta l'<strong>articolo 9 del Regolamento (UE) n. 260/2012</strong>. In Italia
+                la sanzione va da <strong>5.000 a 5.000.000 di euro</strong> e la applica l'AGCM,
+                che ha già multato <strong>Agos Ducato per 800.000 €</strong>.
+            </p>
+            <p>
+                Nella pratica quasi nessun rifiuto è una scelta aziendale: è un modulo vecchio o un
+                operatore che non conosce la norma. <strong>Nella grande maggioranza dei casi basta
+                chiedere il rifiuto per iscritto citando l'articolo 9</strong> perché il problema si
+                risolva da solo. Se non basta, più sotto trovi il modello di lettera e le tre autorità
+                a cui rivolgerti.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2>Cos'è la discriminazione IBAN</h2>
+        <p>
+            Si chiama <em>IBAN discrimination</em> e succede ogni volta che qualcuno pretende che il tuo
+            conto sia aperto in Italia per poterti pagare o addebitare qualcosa. Le forme più comuni:
+        </p>
+        <ul>
+            <li>il modulo online accetta solo IBAN che cominciano per <code>IT</code>;</li>
+            <li>l'ufficio paghe ti dice che "il gestionale non lo prende";</li>
+            <li>la finanziaria rifiuta la domiciliazione della rata su un IBAN estero;</li>
+            <li>il fornitore di luce o gas non ti attiva l'addebito diretto.</li>
+        </ul>
+        <p>
+            La norma è netta. L'<strong>articolo 9 del Regolamento (UE) n. 260/2012</strong> — il
+            cosiddetto regolamento SEPA — stabilisce che chi riceve un bonifico o incassa tramite
+            addebito diretto <strong>non può specificare in quale Stato membro debba trovarsi il conto
+            del pagatore</strong>, purché quel conto sia raggiungibile tramite il circuito SEPA.
+        </p>
+        <p>
+            Tradotto: un IBAN tedesco, belga, lituano o irlandese vale esattamente quanto uno italiano.
+            Non è una cortesia che ti fanno, è un obbligo di legge.
+        </p>
+
+        <!-- SANZIONI -->
+        <h2>Cosa rischia chi ti dice di no</h2>
+        <p>
+            In Italia la norma europea ha una catena sanzionatoria precisa. Il <strong>D.Lgs. 18 agosto
+            2015 n. 135</strong>, che attua l'articolo 11 del regolamento, richiama all'articolo 3
+            comma 3 il regime sanzionatorio dell'<strong>articolo 27 comma 9 del Codice del
+            Consumo</strong>.
+        </p>
+        <table class="plans-table">
+            <tr>
+                <th>Cosa</th>
+                <th>Dettaglio</th>
+            </tr>
+            <tr>
+                <td><strong>Norma violata</strong></td>
+                <td>Art. 9, Regolamento (UE) n. 260/2012</td>
+            </tr>
+            <tr>
+                <td><strong>Sanzione</strong></td>
+                <td>Da <strong>5.000 a 5.000.000 di euro</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Chi la applica</strong></td>
+                <td>AGCM (Autorità Garante della Concorrenza e del Mercato)</td>
+            </tr>
+            <tr>
+                <td><strong>Caso reale</strong></td>
+                <td>Agos Ducato sanzionata per <strong>800.000 €</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Se è una banca</strong></td>
+                <td>Può intervenire anche la Banca d'Italia</td>
+            </tr>
+        </table>
+        <p>
+            L'Antitrust ha aperto istruttorie su questo tema sia verso operatori telefonici sia verso
+            società finanziarie. Il caso Agos Ducato è quello con l'importo più alto e più recente:
+            serve a far capire che non è una norma decorativa.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Nella stragrande maggioranza dei casi chi ti dice di no non sta applicando una politica
+                aziendale: sta leggendo un messaggio d'errore di un gestionale scritto dieci anni fa.
+                Per questo la mossa giusta non è arrabbiarsi allo sportello, ma spostare la richiesta
+                per iscritto. Un'email che cita l'articolo 9 finisce sulla scrivania di qualcuno che
+                sa cosa sia il regolamento SEPA — e lì il problema si risolve."</em>
+        </div>
+
+        <!-- PROCEDURA -->
+        <h2>Cosa fare, passo per passo</h2>
+        <p>
+            Non serve un avvocato. Serve mettere per iscritto, nell'ordine giusto.
+        </p>
+        <ol>
+            <li>
+                <strong>Chiedi il rifiuto per iscritto.</strong> Email o PEC, con richiesta di
+                motivazione. È il passaggio che risolve quasi tutto: davanti a una richiesta scritta,
+                molte aziende scoprono improvvisamente che l'IBAN estero si può inserire.
+            </li>
+            <li>
+                <strong>Cita la norma.</strong> Usa il modello qui sotto. Nominare l'articolo 9 e il
+                D.Lgs. 135/2015 sposta la conversazione dall'ufficio sbagliato a quello giusto.
+            </li>
+            <li>
+                <strong>Se è una banca o una finanziaria: reclamo formale</strong> all'ufficio reclami.
+                Se non risolvono nei termini previsti, puoi rivolgerti all'<strong>Arbitro Bancario
+                Finanziario (ABF)</strong>.
+            </li>
+            <li>
+                <strong>Segnala all'AGCM.</strong> È l'autorità che ha effettivamente sanzionato questi
+                casi. La segnalazione si fa dal sito dell'Autorità, nella sezione dedicata ai
+                consumatori, ed è gratuita.
+            </li>
+            <li>
+                <strong>Se la controparte è una banca o un istituto di pagamento</strong>, puoi
+                inviare un esposto anche alla <strong>Banca d'Italia</strong>.
+            </li>
+        </ol>
+
+        <!-- MODELLO LETTERA -->
+        <h2>Il modello di lettera da inviare</h2>
+        <p>
+            Copialo, sostituisci le parti tra parentesi quadre e mandalo via email o PEC. Tieni copia
+            di tutto: se poi devi segnalare, la corrispondenza è la tua prova.
+        </p>
+        <div class="tip">
+            <p style="font-family: ui-monospace, 'Courier New', monospace; font-size: 14px; line-height: 1.7;">
+                <strong>Oggetto:</strong> Richiesta di accettazione IBAN SEPA — art. 9 Reg. (UE) 260/2012<br><br>
+
+                Spett.le [Azienda],<br><br>
+
+                con la presente contesto formalmente il rifiuto di accettare l'IBAN
+                [IT00X0000000000000000000000], rilasciato da [nome istituto], per
+                [l'accredito dello stipendio / la domiciliazione delle rate / l'addebito diretto].<br><br>
+
+                L'articolo 9 del Regolamento (UE) n. 260/2012 stabilisce che il beneficiario che accetta
+                un bonifico o riceve fondi mediante addebito diretto da un pagatore titolare di un conto
+                di pagamento situato nell'Unione non può specificare lo Stato membro nel quale tale conto
+                deve essere situato, purché il conto sia raggiungibile.<br><br>
+
+                Il conto indicato è pienamente raggiungibile tramite il circuito SEPA.<br><br>
+
+                Chiedo pertanto che l'IBAN venga accettato e vi invito a comunicarmi per iscritto
+                l'esito entro 15 giorni dal ricevimento della presente. In assenza di riscontro
+                procederò con segnalazione all'Autorità Garante della Concorrenza e del Mercato,
+                competente ai sensi del D.Lgs. 18 agosto 2015 n. 135 ad applicare le sanzioni previste
+                dall'articolo 27, comma 9, del Codice del Consumo.<br><br>
+
+                Distinti saluti,<br>
+                [Nome Cognome] — [data]
+            </p>
+        </div>
+
+        <!-- CHI HA IBAN ESTERO -->
+        <h2>Chi ha ancora un IBAN estero nel 2026</h2>
+        <p>
+            Utile saperlo per capire se il problema ti riguarda:
+        </p>
+        <table class="plans-table">
+            <tr>
+                <th>Servizio</th>
+                <th>Paese IBAN</th>
+                <th>Situazione</th>
+            </tr>
+            <tr>
+                <td><strong>Revolut</strong></td>
+                <td>🇮🇹 IT</td>
+                <td>I nuovi conti ricevono un IBAN italiano. Chi ha ancora un vecchio IBAN lituano può
+                    migrare dall'app, gratis e senza scadenze</td>
+            </tr>
+            <tr>
+                <td><strong>N26</strong></td>
+                <td>🇩🇪 DE</td>
+                <td>Solo IBAN tedesco, nessuna opzione italiana</td>
+            </tr>
+            <tr>
+                <td><strong>Wise</strong></td>
+                <td>🇧🇪 BE</td>
+                <td>IBAN belga (Wise Europe SA, istituto di moneta elettronica autorizzato dalla Banca
+                    Nazionale del Belgio)</td>
+            </tr>
+            <tr>
+                <td><strong>Hype, Satispay</strong></td>
+                <td>🇮🇹 IT</td>
+                <td>IBAN italiano, il problema non si pone</td>
+            </tr>
+        </table>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Io su Revolut ho l'IBAN italiano fin dall'apertura del conto, quindi il problema non
+                l'ho mai vissuto in prima persona. Ma è utile sapere che il passaggio all'IBAN italiano
+                non è automatico per tutti: se hai un conto più vecchio con IBAN lituano, la migrazione
+                la devi fare tu dall'app. Prima di farla, però, segnati tutti gli addebiti automatici
+                che hai collegato: è lì che si creano i disallineamenti, non nel passaggio in sé."</em>
+        </div>
+
+        <!-- DOVE CAPITA -->
+        <h2>Dove capita più spesso</h2>
+        <p>
+            Per esperienza raccolta e per i casi arrivati all'Antitrust, questi sono i fronti caldi:
+        </p>
+        <ul>
+            <li><strong>Finanziarie, prestiti e leasing.</strong> È la categoria dove il rifiuto è più
+                frequente ed è anche quella dove l'AGCM è intervenuta con le sanzioni più pesanti.</li>
+            <li><strong>Utenze e operatori telefonici.</strong> Storicamente i primi a finire sotto
+                istruttoria per i moduli di addebito diretto.</li>
+            <li><strong>Pubblica Amministrazione.</strong> Formalmente l'IBAN SEPA va accettato, ma
+                alcuni portali e moduli cartacei si impuntano. Qui hai ragione, ma perdi settimane.</li>
+            <li><strong>Ufficio paghe di aziende piccole.</strong> Quasi sempre è ignoranza della norma,
+                non malafede: si risolve con l'email giusta.</li>
+        </ul>
+
+        <!-- FISCO -->
+        <h2>E il lato fiscale?</h2>
+        <p>
+            È un discorso separato e va tenuto separato: un conto estero può comportare obblighi di
+            <strong>monitoraggio fiscale</strong> (quadro RW) e l'imposta <strong>IVAFE</strong>, con
+            due soglie diverse calcolate in modo diverso. Non c'entra nulla con il diritto ad avere
+            l'IBAN accettato, ma è il costo reale di tenere un conto estero.
+        </p>
+        <p>
+            Ho scritto una guida dedicata, senza link affiliati:
+            <a href="/guide/dichiarare-iban-estero/">come dichiarare un conto con IBAN estero</a>.
+        </p>
+
+        <!-- FAQ -->
+        <h2>Domande frequenti</h2>
+        <div class="faq">
+            <h3>Il datore di lavoro può rifiutare il mio IBAN estero per lo stipendio?</h3>
+            <p>
+                No. L'articolo 9 del Regolamento UE 260/2012 vieta di rifiutare un IBAN solo perché
+                appartiene a un altro Paese dell'area SEPA. Il rifiuto è una violazione sanzionabile
+                dall'AGCM, indipendentemente dalle dimensioni dell'azienda.
+            </p>
+
+            <h3>Quali sanzioni rischia chi rifiuta un IBAN estero?</h3>
+            <p>
+                Da 5.000 a 5.000.000 di euro, ai sensi dell'articolo 27 comma 9 del Codice del Consumo
+                richiamato dal D.Lgs. 135/2015. L'AGCM ha sanzionato Agos Ducato per 800.000 euro.
+            </p>
+
+            <h3>A chi devo segnalare un rifiuto?</h3>
+            <p>
+                All'AGCM, tramite il modulo per le segnalazioni dei consumatori sul sito dell'Autorità.
+                Se la controparte è una banca o un istituto di pagamento, puoi rivolgerti anche alla
+                Banca d'Italia e, dopo aver presentato reclamo, all'Arbitro Bancario Finanziario.
+            </p>
+
+            <h3>Devo per forza mandare una PEC?</h3>
+            <p>
+                No, un'email normale va benissimo e nella maggior parte dei casi basta. La PEC serve
+                se vuoi una prova legale della data di invio, utile solo se prevedi di arrivare a una
+                segnalazione formale.
+            </p>
+
+            <h3>Quali conti hanno ancora un IBAN estero?</h3>
+            <p>
+                N26 assegna IBAN tedeschi e Wise IBAN belgi. Revolut ha introdotto gli IBAN italiani:
+                i nuovi conti li ricevono direttamente, chi ha ancora un IBAN lituano può migrare
+                gratuitamente dall'app.
+            </p>
+
+            <h3>Un IBAN estero è meno sicuro?</h3>
+            <p>
+                No, il Paese dell'IBAN non c'entra con la sicurezza. Quello che conta è la natura
+                dell'intermediario: una banca ha la garanzia sui depositi fino a 100.000 €, un istituto
+                di moneta elettronica come Wise usa il safeguarding, che è una tutela diversa.
+            </p>
+        </div>
+
+        <!-- LINK CORRELATI -->
+        <ul>
+            <li><a href="/guide/dichiarare-iban-estero/">🧾 Dichiarare un IBAN estero: quadro RW e IVAFE</a></li>
+            <li><a href="/guide/cosa-e-un-iban/">📘 Cos'è un IBAN e come si legge</a></li>
+            <li><a href="/guide/fondo-tutela-depositi/">🛡️ Il Fondo di tutela dei depositi</a></li>
+            <li><a href="/confronti/wise-vs-revolut.html">🆚 Wise vs Revolut</a></li>
+            <li><a href="/confronti/n26-vs-revolut.html">🆚 N26 vs Revolut</a></li>
+            <li><a href="/confronti/migliori-conti-digitali.html">📊 I migliori conti digitali</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni su questa guida</h3>
+            <p>
+                I riferimenti normativi provengono dal Regolamento (UE) n. 260/2012, dal D.Lgs. 18
+                agosto 2015 n. 135 e dai provvedimenti dell'AGCM in materia di discriminazione IBAN,
+                verificati ad agosto 2026. Le informazioni sugli IBAN dei singoli operatori sono
+                verificate sulle rispettive fonti ufficiali.
+            </p>
+            <p>
+                Uso Revolut come conto principale da anni e Wise per il cambio valuta: è da lì che
+                nasce l'interesse per questo tema. Il modello di lettera è redatto sulla base del testo
+                normativo, ma non sostituisce il parere di un legale.
+            </p>
+            <p>
+                <strong>Questa pagina non contiene link affiliati.</strong> È una scelta deliberata:
+                su una guida che spiega come far valere un tuo diritto non voglio nulla da vendere
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+            <script>
+                var d = new Date(document.lastModified);
+                if (isNaN(d.getTime())) {
+                    document.getElementById("last-modified").textContent = "11 agosto 2026";
+                } else {
+                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
