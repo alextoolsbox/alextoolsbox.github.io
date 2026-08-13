@@ -49,7 +49,7 @@
                 "name": "Quanto rende il deposito senza vincoli Revolut?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Il rendimento dipende dal piano: Standard e Plus offrono il 2% annuo lordo sui primi 3.000€ e l'1% oltre. Premium arriva al 2%, Metal al 2,25%, Ultra al 2,5%. Gli interessi sono calcolati giornalmente e tassati al 26%."
+                    "text": "Ogni piano ha due scaglioni. Standard e Plus: 2% annuo lordo fino a 3.000€, 1% oltre. Premium: 2% fino a 6.000€, 1,25% oltre. Metal: 2,25% fino a 100.000€, 2% oltre. Ultra: 2,5% fino a 100.000€, 2% oltre. Gli interessi sono calcolati giornalmente e tassati al 26%. Considerando il canone, i soli piani che hanno senso per il deposito sono Standard sotto i 23.000€ e Metal sopra."
                 }
             },
             {
@@ -57,7 +57,7 @@
                 "name": "Quanto capitale serve per guadagnare 1€ al giorno con Revolut?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Con il piano Standard (2% fino a 3.000€, 1% oltre) servono circa 49.000€ per ottenere 1€ netto al giorno. Con Premium circa 24.600€, con Metal circa 21.900€, con Ultra circa 19.700€. Sono stime nette dopo le tasse e includendo il costo del piano."
+                    "text": "Con il piano Standard servono circa 46.300€ per ottenere 1€ netto al giorno. Con Metal circa 33.400€, con Premium circa 48.800€, con Plus circa 52.800€, con Ultra circa 55.400€. Sono stime nette dopo il 26% di tasse e includendo il costo del piano con fatturazione mensile. Metal è l'unico piano a pagamento che riduce davvero il capitale necessario."
                 }
             },
             {
@@ -116,9 +116,11 @@
             <p><strong>📌 In sintesi</strong></p>
             <p>
                 Il deposito senza vincoli Revolut ti paga interessi ogni giorno sul denaro che
-                tieni nel conto, <strong>senza bloccare i soldi</strong>. Il tasso dipende dal
-                piano: <strong>Standard e Plus danno il 2% annuo lordo sui primi 3.000€ e l'1%
-                oltre</strong>. Premium arriva al 2%, Metal al 2,25%, Ultra al 2,5%. Gli
+                tieni nel conto, <strong>senza bloccare i soldi</strong>. Ogni piano ha
+                <strong>due scaglioni</strong>, non un tasso unico: <strong>Standard e Plus danno il
+                2% annuo lordo sui primi 3.000€ e l'1% oltre</strong>. Premium il 2% fino a 6.000€ e
+                l'1,25% oltre, Metal il 2,25% fino a 100.000€ e il 2% oltre, Ultra il 2,5% fino a
+                100.000€ e il 2% oltre. Gli
                 interessi sono tassati al 26%. Qui sotto puoi calcolare il rendimento netto
                 reale e scoprire qual è il piano migliore per te.
             </p>
@@ -155,9 +157,9 @@
         </p>
         <ul>
             <li><strong>Standard / Plus</strong>: <strong>2% annuo lordo sui primi 3.000€</strong>, 1% sulla parte eccedente</li>
-            <li><strong>Premium</strong>: fino a circa 2% annuo</li>
-            <li><strong>Metal</strong>: fino a circa 2,25% annuo</li>
-            <li><strong>Ultra</strong>: fino a circa 2,5% annuo</li>
+            <li><strong>Premium</strong>: 2% fino a 6.000€, <strong>1,25%</strong> sulla parte eccedente</li>
+            <li><strong>Metal</strong>: 2,25% fino a 100.000€, 2% sulla parte eccedente</li>
+            <li><strong>Ultra</strong>: 2,5% fino a 100.000€, 2% sulla parte eccedente</li>
         </ul>
         <p>
             Gli interessi vengono calcolati giornalmente e accreditati automaticamente sul
@@ -212,10 +214,11 @@
 
             <label>Piano Revolut</label>
             <select id="plan">
-                <option value="standard" data-monthly="0" data-yearly="0">Standard / Plus (2% fino a 3.000€, 1% oltre)</option>
-                <option value="2" data-monthly="9.99" data-yearly="100">Premium (2%)</option>
-                <option value="2.25" data-monthly="15.99" data-yearly="155">Metal (2,25%)</option>
-                <option value="2.5" data-monthly="45" data-yearly="540">Ultra (2,5%)</option>
+                <option value="standard" data-monthly="0" data-yearly="0">Standard (2% fino a 3.000€, 1% oltre)</option>
+                <option value="plus" data-monthly="3.99" data-yearly="40">Plus (2% fino a 3.000€, 1% oltre)</option>
+                <option value="premium" data-monthly="9.99" data-yearly="100">Premium (2% fino a 6.000€, 1,25% oltre)</option>
+                <option value="metal" data-monthly="15.99" data-yearly="155">Metal (2,25% fino a 100.000€, 2% oltre)</option>
+                <option value="ultra" data-monthly="55" data-yearly="540">Ultra (2,5% fino a 100.000€, 2% oltre)</option>
             </select>
 
             <div class="option-row">
@@ -239,6 +242,14 @@
             <div id="result" class="result-box"></div>
         </div>
 
+        <p style="font-size:14px;color:#888;">
+            Il calcolatore considera il tasso a scaglioni, la ritenuta del 26% e il canone del piano.
+            <strong>Non include l'imposta di bollo</strong> (34,20€ l'anno, dovuta se la giacenza media
+            supera i 5.000€): pesa su tutti i piani allo stesso modo, quindi non cambia quale conviene, ma
+            cambia quanto incassi. Il calcolo completo, anche contro Trade Republic e Wise, è in
+            <a href="/confronti/interessi-sulla-liquidita.html">Interessi sulla liquidità</a>.
+        </p>
+
         <div class="tip highlight">
             <p><strong>👉 Vuoi iniziare?</strong> Apri un conto Revolut gratuito e attiva il
                 rendimento direttamente dall'app.</p>
@@ -259,15 +270,19 @@
             di tasse) e il costo dei piani:
         </p>
         <ul>
-            <li><strong>Standard / Plus</strong>: circa 49.000€ (2% fino a 3.000€, 1% oltre, nessun costo)</li>
-            <li><strong>Premium</strong>: circa 24.600€ (considerando ~100€ annui di costo)</li>
-            <li><strong>Metal</strong>: circa 21.900€ (considerando ~155€ annui di costo)</li>
-            <li><strong>Ultra</strong>: circa 19.700€ (considerando ~540€ annui di costo)</li>
+            <li><strong>Standard</strong>: circa <strong>46.300€</strong> (nessun costo)</li>
+            <li><strong>Metal</strong>: circa <strong>33.400€</strong> (191,88€ annui di canone)</li>
+            <li><strong>Premium</strong>: circa 48.800€ (119,88€ annui) — <em>peggio di Standard</em></li>
+            <li><strong>Plus</strong>: circa 52.800€ (47,88€ annui) — <em>peggio di Standard</em></li>
+            <li><strong>Ultra</strong>: circa 55.400€ (660€ annui) — <em>il peggiore di tutti</em></li>
         </ul>
         <p>
-            Come puoi vedere, includendo il costo dei piani la situazione cambia completamente:
-            il rendimento più alto non sempre significa maggiore guadagno reale. Per capitali
-            medio-bassi, Standard e Plus sono spesso i più convenienti.
+            Includendo il costo del piano la classifica si ribalta: <strong>il tasso più alto non
+            significa il guadagno più alto</strong>. Metal è l'unico piano a pagamento che riduce
+            davvero il capitale necessario, perché è l'unico il cui tasso resta pieno fino a
+            100.000€. Plus non cambia nulla rispetto a Standard (stessi identici scaglioni, canone in
+            più), Premium crolla all'1,25% appena superi i 6.000€, e Ultra costa 660€ l'anno per uno
+            0,25% in più di Metal: non li recupera mai.
         </p>
         <p>
             Per questo motivo il modo migliore per capire quale piano conviene davvero è
@@ -291,7 +306,7 @@
             </tr>
             <tr>
                 <td><strong>Deposito Revolut</strong></td>
-                <td>1-2,5% netto</td>
+                <td>1-2,5% lordo secondo piano e scaglione</td>
                 <td>Nessuno</td>
                 <td>Immediata, 24/7</td>
                 <td>Chi vuole semplicità e zero sbattimenti</td>
@@ -349,9 +364,11 @@
 
         <div class="alex-tip">
             <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Io tengo la liquidità che so di non dover toccare subito su Metal (2,25%),
-                ma per chi ha meno di 5.000€ il piano Standard è una bomba: 2% fino a 3.000€
-                senza costi. Praticamente regalato."</em>
+            <em>"Io tengo la liquidità che so di non dover toccare subito su Metal, ma solo perché
+                il capitale lo giustifica: sotto i 23.000€ il canone si mangia tutto il vantaggio e
+                Standard vince. Rifacendo i conti con gli scaglioni veri mi sono accorto che per il
+                solo deposito esistono due piani, non cinque: Standard e Metal. Plus, Premium e Ultra
+                non sono la scelta migliore a nessun capitale."</em>
         </div>
 
         <!-- FAQ -->
@@ -445,19 +462,23 @@
                 return;
             }
 
-            // Calcolo rendimento lordo in base al piano
-            let yearlyGross;
-            if (planValue === "standard") {
-                // Standard/Plus: 2% fino a 3000€, 1% oltre
-                if (amount <= 3000) {
-                    yearlyGross = amount * 0.02;
-                } else {
-                    yearlyGross = (3000 * 0.02) + ((amount - 3000) * 0.01);
-                }
-            } else {
-                let rate = parseFloat(planValue);
-                yearlyGross = (amount * rate) / 100;
+            // Ogni piano ha DUE scaglioni: tasso pieno fino a una soglia, tasso ridotto oltre.
+            // Verificato sul Foglio Informativo ufficiale Revolut (agosto 2026).
+            const PLANS = [
+                { key: "standard", name: "Standard",  soglia: 3000,   rate1: 0.0200, rate2: 0.0100, monthly: 0,     yearly: 0   },
+                { key: "plus",     name: "Plus",      soglia: 3000,   rate1: 0.0200, rate2: 0.0100, monthly: 3.99,  yearly: 40  },
+                { key: "premium",  name: "Premium",   soglia: 6000,   rate1: 0.0200, rate2: 0.0125, monthly: 9.99,  yearly: 100 },
+                { key: "metal",    name: "Metal",     soglia: 100000, rate1: 0.0225, rate2: 0.0200, monthly: 15.99, yearly: 155 },
+                { key: "ultra",    name: "Ultra",     soglia: 100000, rate1: 0.0250, rate2: 0.0200, monthly: 55,    yearly: 540 }
+            ];
+
+            function grossFor(plan, capital) {
+                return plan.rate1 * Math.min(capital, plan.soglia)
+                     + plan.rate2 * Math.max(0, capital - plan.soglia);
             }
+
+            let selected = PLANS.find(p => p.key === planValue) || PLANS[0];
+            let yearlyGross = grossFor(selected, amount);
 
             let yearlyNet = yearlyGross * (1 - 0.26);
             let cost = 0;
@@ -470,29 +491,11 @@
             let monthly = finalYearly / 12;
             let daily = finalYearly / 365;
 
-            // Trova il piano migliore
-            let plans = [
-                { name: "Standard / Plus", type: "standard", monthly: 0, yearly: 0 },
-                { name: "Premium", type: "fixed", rate: 2, monthly: 9.99, yearly: 100 },
-                { name: "Metal", type: "fixed", rate: 2.25, monthly: 15.99, yearly: 155 },
-                { name: "Ultra", type: "fixed", rate: 2.5, monthly: 45, yearly: 540 }
-            ];
-
             let bestPlan = "";
             let bestValue = -Infinity;
 
-            plans.forEach(p => {
-                let gross;
-                if (p.type === "standard") {
-                    if (amount <= 3000) {
-                        gross = amount * 0.02;
-                    } else {
-                        gross = (3000 * 0.02) + ((amount - 3000) * 0.01);
-                    }
-                } else {
-                    gross = (amount * p.rate) / 100;
-                }
-                let net = gross * (1 - 0.26);
+            PLANS.forEach(p => {
+                let net = grossFor(p, amount) * (1 - 0.26);
                 let planCost = includeCost
                     ? (billing === "monthly" ? p.monthly * 12 : p.yearly)
                     : 0;
