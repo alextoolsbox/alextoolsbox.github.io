@@ -1130,9 +1130,10 @@ border-radius: 10px;
 .cluster-nav-inner{
     max-width:1300px;
     margin:auto;
-    padding:10px 20px;
+    padding:14px 20px;
     display:flex;
     align-items:center;
+    justify-content:center;
     gap:8px;
     overflow-x:auto;
     scrollbar-width:none;
@@ -1173,7 +1174,8 @@ border-radius: 10px;
 
 @media (max-width: 768px){
     .cluster-nav-inner{
-        padding:8px 14px;
+        padding:10px 14px;
+        justify-content:flex-start; /* centrato su desktop, ma se le pillole non ci stanno tutte va scrollato: meglio partire da sinistra che tagliarle su entrambi i lati */
     }
     .cluster-nav-label{
         display:none; /* su mobile lo spazio è poco: le pillole bastano da sole */

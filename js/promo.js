@@ -167,7 +167,16 @@ function initClusterNav(){
       const bar = document.createElement('div');
       bar.className = 'cluster-nav';
       bar.innerHTML = `<div class="cluster-nav-inner"><span class="cluster-nav-label">${match.name}</span>${links}</div>`;
-      headerHost.insertAdjacentElement('afterend', bar);
+
+      // sotto la hero della pagina, non subito sotto la navbar — ogni pagina reale
+      // ha una .hero (verificato su tutte le sezioni del sito); se per qualche
+      // pagina mancasse, fallback subito sotto l'header come prima
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        hero.insertAdjacentElement('afterend', bar);
+      } else {
+        headerHost.insertAdjacentElement('afterend', bar);
+      }
     })
     .catch(err => console.error('Sotto-navigazione non disponibile:', err));
 }
