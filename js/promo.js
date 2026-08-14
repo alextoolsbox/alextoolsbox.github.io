@@ -46,7 +46,12 @@ function updatePromo(){
 function syncHeaderHeight(){
   const header = document.querySelector('.site-header');
   if (!header) return;
-  document.body.style.paddingTop = header.offsetHeight + 'px';
+  const h = header.offsetHeight;
+  document.body.style.paddingTop = h + 'px';
+  // stessa misura riusata dalla pillola-bar di cluster (.cluster-nav) per restare
+  // agganciata subito sotto l'header quando è "sticky" — un solo punto di verità
+  // per l'altezza dell'header, invece di ricalcolarla in due posti diversi
+  document.documentElement.style.setProperty('--header-h', h + 'px');
 }
 
 let headerResizeTimer;

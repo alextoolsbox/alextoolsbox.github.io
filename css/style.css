@@ -380,11 +380,27 @@ display:none;
 
 /* HERO */
 
+/* Altezza uniforme su tutte le pagine (richiesta esplicita di Alex, 14 ago):
+   senza min-height ogni hero ha un'altezza diversa in base al contenuto
+   (solo testo vs testo+CTA vs testo+logo+CTA), e navigando tra le pagine
+   di uno stesso cluster (pillole sotto la hero) il layout "sfarfalla" a
+   ogni click. 580px/700px coprono la stragrande maggioranza delle 111
+   pagine reali del sito (misurato: max 559px desktop / 680px mobile tra
+   le pagine di cluster) — le pochissime pagine più ricche di contenuto
+   (es. hub /app-passive/) restano naturalmente più alte, min-height è un
+   minimo, non un tetto. display:flex centra il contenuto verticalmente
+   così lo spazio extra non sembra un buco vuoto in fondo. */
 .hero{
 background:var(--bg-dark);
 color:white;
 text-align:center;
 padding:60px 20px 40px;
+box-sizing:border-box;
+min-height:580px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
 .hero h1{
@@ -1082,6 +1098,12 @@ border-radius: 10px;
         font-size: 16px;
     }
 
+    /* Altezza uniforme su mobile: più alta che su desktop perché su schermi stretti
+       titoli/CTA vanno più facilmente a capo (vedi nota sopra .hero) */
+    .hero {
+        min-height: 700px;
+    }
+
     /* Pulsanti hero in pila */
     .hero div {
         flex-direction: column;
@@ -1126,6 +1148,15 @@ border-radius: 10px;
 .cluster-nav{
     background:#fff;
     border-bottom:1px solid #ececec;
+    /* sempre visibile durante lo scroll: resta agganciata subito sotto l'header
+       fisso (la cui altezza reale, var(--header-h), viene misurata e aggiornata
+       da syncHeaderHeight() in promo.js — stesso meccanismo del padding-top del
+       body, così i due restano sempre coerenti). z-index sotto l'header (1000)
+       ma sopra il contenuto della pagina, che scorre normalmente sotto di lei. */
+    position:sticky;
+    top:var(--header-h, 116px);
+    z-index:900;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
 }
 .cluster-nav-inner{
     max-width:1300px;
@@ -1173,6 +1204,9 @@ border-radius: 10px;
 }
 
 @media (max-width: 768px){
+    .cluster-nav{
+        top:var(--header-h, 154px); /* fallback più alto: su mobile l'header va spesso su 2 righe */
+    }
     .cluster-nav-inner{
         padding:10px 14px;
         justify-content:flex-start; /* centrato su desktop, ma se le pillole non ci stanno tutte va scrollato: meglio partire da sinistra che tagliarle su entrambi i lati */
