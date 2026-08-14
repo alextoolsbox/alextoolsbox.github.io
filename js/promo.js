@@ -178,6 +178,11 @@ function initClusterNav(){
       // pagina mancasse, fallback subito sotto l'header come prima
       const hero = document.querySelector('.hero');
       if (hero) {
+        // altezza minima uniforme SOLO qui: solo le pagine con pillole soffrono
+        // di sfarfallio navigando da una all'altra, le altre 38 pagine del sito
+        // (confronti, classifiche, guide...) restano compatte sul loro contenuto
+        // reale (vedi .hero.hero-cluster in style.css)
+        hero.classList.add('hero-cluster');
         hero.insertAdjacentElement('afterend', bar);
       } else {
         headerHost.insertAdjacentElement('afterend', bar);
