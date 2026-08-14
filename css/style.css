@@ -1,4 +1,19 @@
 /* ============================================
+   NUOVA PALETTE (ristrutturazione grafica, variante B scura)
+   evoluzione desaturata del viola esistente + hero scura istituzionale
+   ============================================ */
+:root{
+  --accent: #4338ca;
+  --accent-light: #4f46e5;
+  --accent-soft: #eef0ff;
+  --accent-ring: rgba(67,56,202,0.14);
+  --ink: #14151a;
+  --ink-soft: #52565f;
+  --bg-page: #faf9f7;
+  --bg-dark: #14151a;
+}
+
+/* ============================================
    ALEXTOOLSBOX - CSS COMPLETO (con modifiche)
    ============================================ */
 
@@ -7,9 +22,10 @@
 body{
 font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 margin:0;
-background:#f4f6fb;
+background:var(--bg-page);
 line-height:1.7;
 padding-top:100px;
+color:var(--ink);
 }
 
 /* HEADER */
@@ -45,8 +61,8 @@ max-width:1300px;
 margin:auto;
 display:flex;
 align-items:center;
-justify-content:space-between;
 padding:15px 20px;
+gap:28px;
 }
 
 /* LOGO */
@@ -58,6 +74,7 @@ gap:10px;
 text-decoration:none;
 color:#111;
 font-weight:600;
+flex:0 0 auto;
 }
 
 .nav-logo img{
@@ -74,8 +91,7 @@ color:#111;
 .nav-links{
 display:flex;
 align-items:center;
-gap:18px;
-margin-left:auto;
+gap:16px;
 flex-wrap:nowrap;
 }
 
@@ -98,7 +114,7 @@ left:0;
 bottom:-4px;
 width:0%;
 height:2px;
-background:#635bff;
+background:var(--accent);
 transition:0.3s;
 }
 
@@ -107,7 +123,7 @@ width:100%;
 }
 
 .nav-links a:hover{
-color:#635bff;
+color:var(--accent);
 }
 
 /* freccia dropdown */
@@ -158,7 +174,7 @@ color:#333;
 
 .dropdown-menu a:hover{
 background:#f4f6fb;
-color:#635bff;
+color:var(--accent);
 }
 
 /* apertura dropdown */
@@ -167,6 +183,138 @@ color:#635bff;
 opacity:1;
 transform:translateY(0);
 pointer-events:auto;
+}
+
+/* MEGA-MENU (usato da "Confronta": Confronti + Classifiche in 2 colonne) */
+
+.dropdown-menu.mega{
+display:flex;
+min-width:520px;
+padding:14px 0;
+gap:0;
+}
+
+.dropdown-menu.mega .mega-col{
+flex:1;
+padding:0 8px;
+}
+
+.dropdown-menu.mega .mega-col + .mega-col{
+border-left:1px solid #eee;
+}
+
+.dropdown-menu.mega .mega-title{
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:0.5px;
+color:#999;
+font-weight:700;
+padding:4px 15px 8px;
+}
+
+.dropdown-footer-link{
+border-top:1px solid #eee;
+margin-top:6px;
+padding-top:10px !important;
+font-weight:600;
+color:var(--accent) !important;
+}
+
+/* RICERCA — sempre visibile, tutta a destra della navbar */
+
+.nav-search-inline{
+position:relative;
+width:230px;
+flex:0 0 auto;
+margin-left:auto;
+}
+
+.search-field{
+display:flex;
+align-items:center;
+gap:8px;
+background:#f4f6fb;
+border:1px solid #e5e7f0;
+border-radius:8px;
+padding:0 12px;
+height:38px;
+transition:0.15s;
+}
+
+.search-field .search-icon{
+font-size:14px;
+opacity:0.6;
+flex-shrink:0;
+}
+
+.search-field input{
+border:none;
+background:transparent;
+outline:none;
+font-size:14px;
+width:100%;
+color:#222;
+height:100%;
+}
+
+.search-field input::placeholder{
+color:#999;
+}
+
+.nav-search-inline:focus-within .search-field{
+border-color:var(--accent);
+background:#fff;
+box-shadow:0 0 0 3px var(--accent-ring);
+}
+
+.search-results{
+position:absolute;
+top:calc(100% + 8px);
+right:0;
+width:340px;
+max-height:380px;
+overflow-y:auto;
+background:white;
+border:1px solid #eee;
+border-radius:10px;
+box-shadow:0 12px 28px rgba(0,0,0,0.14);
+padding:8px;
+display:none;
+z-index:1001;
+}
+
+.search-results.open{
+display:block;
+}
+
+.search-results a{
+display:block;
+padding:9px 8px;
+border-radius:6px;
+text-decoration:none;
+color:#222;
+font-size:14px;
+}
+
+.search-results a:hover{
+background:#f4f6fb;
+}
+
+.search-results .res-cat{
+display:inline-block;
+font-size:11px;
+font-weight:700;
+color:var(--accent);
+background:var(--accent-soft);
+border-radius:5px;
+padding:1px 6px;
+margin-right:6px;
+}
+
+.search-empty{
+font-size:13px;
+color:#888;
+padding:10px 8px;
 }
 
 /* SUBMENU (livello 2) */
@@ -219,7 +367,7 @@ color:#333;
 
 .dropdown-submenu a:hover{
 background:#f4f6fb;
-color:#635bff;
+color:var(--accent);
 }
 
 /* ACCORDION MOBILE (checkbox nascosto + freccia): invisibili su desktop, dove il dropdown resta a hover */
@@ -233,7 +381,7 @@ display:none;
 /* HERO */
 
 .hero{
-background:linear-gradient(135deg,#635bff,#8a7fff);
+background:var(--bg-dark);
 color:white;
 text-align:center;
 padding:60px 20px 40px;
@@ -352,7 +500,7 @@ line-height: 1.5;
 /* TIP POTENZIATO */
 .tip.highlight {
 background: linear-gradient(90deg, #eef2ff, #ffffff);
-border-left: 4px solid #635bff;
+border-left: 4px solid var(--accent);
 padding: 16px 18px;
 border-radius: 10px;
 margin: 25px 0;
@@ -458,7 +606,7 @@ transition:0.2s;
 }
 
 .footer a:hover{
-color:#635bff;
+color:var(--accent);
 }
 
 .footer-bottom{
@@ -820,6 +968,23 @@ border-radius: 10px;
         display: block;
     }
 
+    /* Il mega-menu "Confronta" ha display:flex da desktop con specificità più alta
+       di ".dropdown-menu{display:none}" qui sopra: senza queste due regole resterebbe
+       sempre visibile in 2 colonne anche a menu chiuso, tagliato sullo schermo stretto. */
+    .dropdown-menu.mega {
+        display: none;
+    }
+    .acc-toggle:checked ~ .dropdown-menu.mega {
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown-menu.mega .mega-col + .mega-col {
+        border-left: none;
+        border-top: 1px solid #eee;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
     .dropdown-menu a,
     .dropdown-submenu a {
         padding: 10px 0;
@@ -863,7 +1028,7 @@ border-radius: 10px;
         height: 44px;
         cursor: pointer;
         font-size: 18px;
-        color: #635bff;
+        color: var(--accent);
         border: 1px solid #eee;
         border-radius: 6px;
         margin: 4px 0;
@@ -926,5 +1091,31 @@ border-radius: 10px;
     /* Riduci padding-top body su mobile */
     body {
         padding-top: 80px;
+    }
+
+    /* Ricerca sempre visibile anche su mobile: riga logo — ricerca — hamburger,
+       il menu completo si apre sotto tramite l'hamburger come prima */
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .nav-search-inline {
+        order: 2;
+        flex: 1 1 auto;
+        width: auto;
+        margin-left: 0;
+    }
+    .menu-icon {
+        order: 3;
+    }
+    .nav-links {
+        order: 4;
+    }
+    .search-results {
+        position: fixed;
+        top: 66px;
+        left: 10px;
+        right: 10px;
+        width: auto;
     }
 }

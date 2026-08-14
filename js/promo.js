@@ -28,4 +28,72 @@ function updatePromo(){
     el.innerText = promoText;
   });
 
+  initSiteSearch();
+
+}
+
+/* ============================================
+   RICERCA — inizializzata qui perché updatePromo() viene già chiamata
+   da ogni pagina subito dopo l'iniezione di includes/header.html
+   (uno script <script> dentro header.html non verrebbe eseguito,
+   perché iniettato via innerHTML: per questo la logica vive qui).
+   ============================================ */
+let siteSearchReady = false;
+
+function initSiteSearch(){
+  if (siteSearchReady) return; // evita doppie inizializzazioni se updatePromo() viene richiamata più volte
+  const input = document.getElementById('siteSearchInput');
+  const results = document.getElementById('siteSearchResults');
+  const wrap = document.querySelector('.nav-search-inline');
+  if (!input || !results || !wrap) return; // header non ancora nel DOM
+  siteSearchReady = true;
+
+  // Fuse.js servito localmente (js/fuse.min.js), niente dipendenza da CDN esterni:
+  // un file in meno che può rallentare o fallire il caricamento della ricerca
+  loadScriptOnce('/js/fuse.min.js')
+    .then(() => fetch('/search-index.json').then(r => r.json()))
+    .then(data => {
+      const fuse = new Fuse(data, { keys: ['title', 'category'], threshold: 0.35, ignoreLocation: true });
+
+      function render(list){
+        if (!list.length){
+          results.innerHTML = '<div class="search-empty">Nessun risultato</div>';
+          return;
+        }
+        results.innerHTML = list.slice(0, 10).map(r => {
+          const item = r.item || r;
+          return `<a href="${item.url}"><span class="res-cat">${item.category}</span>${item.title}</a>`;
+        }).join('');
+      }
+
+      input.addEventListener('focus', () => {
+        results.classList.add('open');
+        render(input.value.trim() ? fuse.search(input.value.trim()) : data.slice(0, 10));
+      });
+
+      input.addEventListener('input', () => {
+        const q = input.value.trim();
+        render(q ? fuse.search(q) : data.slice(0, 10));
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!wrap.contains(e.target)) results.classList.remove('open');
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape'){ results.classList.remove('open'); input.blur(); }
+      });
+    })
+    .catch(err => console.error('Ricerca sito non disponibile:', err));
+}
+
+function loadScriptOnce(src){
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) { resolve(); return; }
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
 }
