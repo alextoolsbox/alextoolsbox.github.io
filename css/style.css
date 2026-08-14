@@ -1119,3 +1119,67 @@ border-radius: 10px;
         width: auto;
     }
 }
+
+/* ============================================
+   SOTTO-NAVIGAZIONE DI CLUSTER (pillole sotto la navbar)
+   ============================================ */
+.cluster-nav{
+    background:#fff;
+    border-bottom:1px solid #ececec;
+}
+.cluster-nav-inner{
+    max-width:1300px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+.cluster-nav-inner::-webkit-scrollbar{
+    display:none;
+}
+.cluster-nav-label{
+    flex:0 0 auto;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    margin-right:2px;
+    padding-right:10px;
+    border-right:1px solid #e5e5e5;
+}
+.cluster-nav a{
+    flex:0 0 auto;
+    padding:6px 14px;
+    border-radius:20px;
+    background:#f4f4f6;
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:13.5px;
+    white-space:nowrap;
+    transition:background .15s, color .15s;
+}
+.cluster-nav a:hover{
+    background:var(--accent-soft);
+    color:var(--accent);
+}
+.cluster-nav a.active{
+    background:var(--accent);
+    color:#fff;
+    font-weight:600;
+}
+
+@media (max-width: 768px){
+    .cluster-nav-inner{
+        padding:8px 14px;
+    }
+    .cluster-nav-label{
+        display:none; /* su mobile lo spazio è poco: le pillole bastano da sole */
+    }
+    .cluster-nav a{
+        padding:6px 12px;
+        font-size:13px;
+    }
+}

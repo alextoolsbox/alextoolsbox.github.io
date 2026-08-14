@@ -29,8 +29,32 @@ function updatePromo(){
   });
 
   initSiteSearch();
+  initClusterNav();
+  syncHeaderHeight();
 
 }
+
+/* ============================================
+   ALTEZZA HEADER DINAMICA — l'header è fixed e la sua altezza reale
+   varia (promo bar, ricerca che va a capo su mobile, larghezza schermo):
+   un padding-top fisso in CSS può disallinearsi e nascondere l'inizio
+   della pagina sotto l'header. Qui si misura l'header vero e si imposta
+   il padding-top del body di conseguenza, così resta sempre corretto.
+   I valori in CSS restano solo come fallback per il primo istante di
+   caricamento, prima che questo script giri.
+   ============================================ */
+function syncHeaderHeight(){
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  document.body.style.paddingTop = header.offsetHeight + 'px';
+}
+
+let headerResizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(headerResizeTimer);
+  headerResizeTimer = setTimeout(syncHeaderHeight, 150);
+});
+window.addEventListener('load', syncHeaderHeight); // ricalcola dopo caricamento loghi/font
 
 /* ============================================
    RICERCA — inizializzata qui perché updatePromo() viene già chiamata
@@ -96,4 +120,54 @@ function loadScriptOnce(src){
     s.onerror = reject;
     document.head.appendChild(s);
   });
+}
+
+/* ============================================
+   SOTTO-NAVIGAZIONE DI CLUSTER — quando l'utente è dentro una pagina
+   di un gruppo (es. /revolut/bonus.html), mostra una riga di pillole
+   con le altre pagine collegate a quel brand/servizio, evidenziando
+   quella corrente. Iniettata via JS (stesso motivo della ricerca:
+   niente <script> dentro header.html), zero modifiche alle pagine.
+   Manifest in /cluster-nav.json, da aggiornare quando si aggiungono
+   pagine a un cluster esistente o se ne crea uno nuovo.
+   ============================================ */
+let clusterNavReady = false;
+
+function normClusterPath(p){
+  return p.replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+}
+
+function initClusterNav(){
+  if (clusterNavReady) return;
+  const headerHost = document.getElementById('header');
+  if (!headerHost) return; // header non ancora nel DOM
+  clusterNavReady = true;
+
+  fetch('/cluster-nav.json')
+    .then(r => r.json())
+    .then(manifest => {
+      const path = window.location.pathname;
+      let match = null, matchLen = -1;
+
+      Object.values(manifest).forEach(cluster => {
+        if (path.startsWith(cluster.prefix) && cluster.prefix.length > matchLen) {
+          match = cluster;
+          matchLen = cluster.prefix.length;
+        }
+      });
+
+      if (!match || match.pages.length < 2) return; // nessun cluster o cluster con una sola pagina: niente da mostrare
+
+      const here = normClusterPath(path);
+      const links = match.pages.map(p => {
+        const isActive = normClusterPath(p.url) === here;
+        return `<a href="${p.url}"${isActive ? ' class="active" aria-current="page"' : ''}>${p.label}</a>`;
+      }).join('');
+
+      const bar = document.createElement('div');
+      bar.className = 'cluster-nav';
+      bar.innerHTML = `<div class="cluster-nav-inner"><span class="cluster-nav-label">${match.name}</span>${links}</div>`;
+      headerHost.insertAdjacentElement('afterend', bar);
+    })
+    .catch(err => console.error('Sotto-navigazione non disponibile:', err));
 }
