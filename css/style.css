@@ -380,23 +380,25 @@ display:none;
 
 /* HERO */
 
-/* Altezza uniforme su tutte le pagine (richiesta esplicita di Alex, 14 ago):
-   senza min-height ogni hero ha un'altezza diversa in base al contenuto
-   (solo testo vs testo+CTA vs testo+logo+CTA), e navigando tra le pagine
-   di uno stesso cluster (pillole sotto la hero) il layout "sfarfalla" a
-   ogni click. 580px/700px coprono la stragrande maggioranza delle 111
-   pagine reali del sito (misurato: max 559px desktop / 680px mobile tra
-   le pagine di cluster) — le pochissime pagine più ricche di contenuto
-   (es. hub /app-passive/) restano naturalmente più alte, min-height è un
-   minimo, non un tetto. display:flex centra il contenuto verticalmente
-   così lo spazio extra non sembra un buco vuoto in fondo. */
+/* Altezza uniforme su tutte le pagine (richiesta esplicita di Alex, 14 ago,
+   valore rivisto lo stesso giorno perché 580/700 era troppo alto su schermi
+   FullHD): senza min-height ogni hero ha un'altezza diversa in base al
+   contenuto, e navigando tra le pagine di uno stesso cluster (pillole sotto
+   la hero) il layout "sfarfalla" a ogni click. 480px copre l'85% delle 73
+   pagine di cluster reali (mediana reale 370px); le pagine hub/indice più
+   ricche di contenuto (poche per cluster, es. /wise/, /satispay/) restano
+   naturalmente più alte fino a un massimo di 559px — min-height è un
+   minimo, non un tetto, quindi per quelle il salto residuo è di max ~80px,
+   non i ~190px che si avrebbero con un valore ancora più basso.
+   display:flex centra il contenuto verticalmente così lo spazio extra non
+   sembra un buco vuoto in fondo. */
 .hero{
 background:var(--bg-dark);
 color:white;
 text-align:center;
 padding:60px 20px 40px;
 box-sizing:border-box;
-min-height:580px;
+min-height:480px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -1099,9 +1101,12 @@ border-radius: 10px;
     }
 
     /* Altezza uniforme su mobile: più alta che su desktop perché su schermi stretti
-       titoli/CTA vanno più facilmente a capo (vedi nota sopra .hero) */
+       titoli/CTA vanno più facilmente a capo (vedi nota sopra .hero). Rivista da
+       700 a 620: copre comunque l'80% delle pagine di cluster reali (mediana 477px),
+       le poche pagine hub/indice più alte (max reale 680px) restano naturalmente
+       più alte con un salto residuo di max ~60px. */
     .hero {
-        min-height: 700px;
+        min-height: 620px;
     }
 
     /* Pulsanti hero in pila */
