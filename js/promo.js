@@ -214,3 +214,50 @@ function initLastModified(){
 }
 
 initLastModified();
+
+/* ============================================
+   DATI VERIFICATI — fonte unica di verità per i numeri che si ripetono
+   su più pagine (tassi, soglie, bonus, fondo garanzia) e che cambiano
+   nel tempo, invece di scriverli a mano in ogni file (vedi la review
+   che ha trovato il tasso Trade Republic e il fondo di garanzia
+   100.000€ duplicati manualmente in decine di pagine). Stesso pattern
+   di cluster-nav.json + initClusterNav(): manifest JSON come fonte di
+   verità, letto via fetch() e iniettato nel DOM. Se un dato cambia, si
+   aggiorna SOLO in dati-verificati.json, non pagina per pagina.
+   Uso in pagina:
+     <span data-fact="trade-republic-tasso-nuovi-clienti"></span>
+       → sostituito col campo "valore" del fatto
+     <span class="verify-badge" data-fact="trade-republic-tasso-nuovi-clienti"></span>
+       → riga "🔄 Ultima verifica: DATA — fonte" (tipo "ufficiale") o
+         "🔄 Aggiornato: DATA — Dato personale di Alex (fonte)" (tipo "esperienza")
+   ============================================ */
+let verifiedDataReady = false;
+
+function initVerifiedData(){
+  if (verifiedDataReady) return;
+  const valueEls = document.querySelectorAll('[data-fact]:not(.verify-badge)');
+  const badgeEls = document.querySelectorAll('.verify-badge[data-fact]');
+  if (!valueEls.length && !badgeEls.length) return;
+  verifiedDataReady = true;
+
+  fetch('/dati-verificati.json')
+    .then(r => r.json())
+    .then(data => {
+      valueEls.forEach(el => {
+        const fact = data[el.dataset.fact];
+        if (fact) el.textContent = fact.valore;
+        else console.warn('Fatto non trovato in dati-verificati.json:', el.dataset.fact);
+      });
+      badgeEls.forEach(el => {
+        const fact = data[el.dataset.fact];
+        if (!fact) { console.warn('Fatto non trovato in dati-verificati.json:', el.dataset.fact); return; }
+        const dataIt = new Date(fact.verificato).toLocaleDateString('it-IT');
+        el.innerHTML = fact.tipo === 'esperienza'
+          ? `🔄 Aggiornato: ${dataIt} — Dato personale di Alex${fact.fonte ? ' (' + fact.fonte + ')' : ''}`
+          : `🔄 Ultima verifica: ${dataIt}${fact.fonte ? ' — ' + fact.fonte : ''}`;
+      });
+    })
+    .catch(err => console.error('Dati verificati non disponibili:', err));
+}
+
+initVerifiedData();

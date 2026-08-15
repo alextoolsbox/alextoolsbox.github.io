@@ -1,0 +1,98 @@
+{
+  "trade-republic-tasso-nuovi-clienti": {
+    "valore": "3%",
+    "tipo": "ufficiale",
+    "fonte": "Pagina tariffe ufficiale Trade Republic (traderepublic.com/it-it/interesse)",
+    "verificato": "2026-07-16"
+  },
+  "trade-republic-soglia-tasso": {
+    "valore": "50.000€",
+    "tipo": "ufficiale",
+    "fonte": "Pagina tariffe ufficiale Trade Republic",
+    "verificato": "2026-07-16"
+  },
+  "fondo-garanzia-depositi": {
+    "valore": "100.000€",
+    "tipo": "ufficiale",
+    "fonte": "Direttiva UE sui sistemi di garanzia dei depositi (armonizzata a 100.000€ per depositante e per banca; lo schema specifico dipende dal paese della banca partner)",
+    "verificato": "2026-07-16"
+  },
+  "wise-bonus-invitato": {
+    "valore": "500€",
+    "tipo": "ufficiale",
+    "fonte": "App Wise, programma inviti",
+    "verificato": "2026-07-15"
+  },
+  "wise-bonus-invitante": {
+    "valore": "20€",
+    "tipo": "ufficiale",
+    "fonte": "App Wise, programma inviti",
+    "verificato": "2026-07-15"
+  },
+  "wise-interesse-liquidita": {
+    "valore": "2,02%",
+    "tipo": "ufficiale",
+    "fonte": "App/sito Wise (dato già al netto della commissione di gestione dello 0,26%)",
+    "verificato": "2026-08-05"
+  },
+  "satispay-bonus-invitante": {
+    "valore": "30€",
+    "tipo": "esperienza",
+    "fonte": "App Satispay, verifica personale di Alex (importo base regolamento 5€, promozioni più ricche variabili — controlla sempre l'importo mostrato in app)",
+    "verificato": "2026-07-15"
+  },
+  "revolut-ultra-canone-mensile": {
+    "valore": "55€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "revolut-ultra-canone-annuale": {
+    "valore": "540€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "revolut-ultra-tasso": {
+    "valore": "2,5%",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut (fino a 100.000€, 2% oltre)",
+    "verificato": "2026-08-13"
+  },
+  "revolut-metal-canone-mensile": {
+    "valore": "15,99€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "revolut-metal-canone-annuale": {
+    "valore": "155€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "revolut-metal-tasso": {
+    "valore": "2,25%",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut (fino a 100.000€, 2% oltre)",
+    "verificato": "2026-08-13"
+  },
+  "revolut-standard-tasso": {
+    "valore": "2%",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "revolut-standard-soglia": {
+    "valore": "3.000€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo ufficiale Revolut",
+    "verificato": "2026-08-13"
+  },
+  "wise-bonus-soglia-condizione": {
+    "valore": "250€",
+    "tipo": "ufficiale",
+    "fonte": "App Wise, programma inviti (soglia di pagamenti/trasferimenti per sbloccare il bonus di chi invita)",
+    "verificato": "2026-07-15"
+  }
+}
