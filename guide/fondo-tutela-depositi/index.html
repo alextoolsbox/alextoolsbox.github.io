@@ -555,14 +555,6 @@
             <p style="font-size:13px; color:#888; margin-top:10px;">
                 Ultimo aggiornamento: <span id="last-modified"></span>
             </p>
-            <script>
-                var d = new Date(document.lastModified);
-                if (isNaN(d.getTime())) {
-                    document.getElementById("last-modified").textContent = "31 luglio 2026";
-                } else {
-                    document.getElementById("last-modified").textContent = d.toLocaleDateString("it-IT");
-                }
-            </script>
         </div>
 
     </div>

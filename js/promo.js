@@ -190,3 +190,27 @@ function initClusterNav(){
     })
     .catch(err => console.error('Sotto-navigazione non disponibile:', err));
 }
+
+/* ============================================
+   ULTIMO AGGIORNAMENTO — prima era uno <script> duplicato in ogni
+   pagina (103 pagine), con testo di fallback diverso e spesso vecchio
+   in ognuna, e in oltre metà dei casi (60/103) senza nemmeno la
+   formattazione italiana (mostrava la stringa grezza del browser tipo
+   "Thu Aug 14 2026..."). Ora ogni pagina ha solo
+   <span id="last-modified"></span>, questa funzione unica la popola.
+   document.lastModified riflette quando è stato toccato il FILE, non
+   quando il dato è stato riverificato: resta un limite noto (da
+   risolvere con dati-verificati.json, prossimo step), ma almeno oggi
+   è coerente su tutto il sito invece che sbagliato in modi diversi
+   pagina per pagina.
+   ============================================ */
+const LAST_MODIFIED_FALLBACK = "15 agosto 2026"; // unico punto da cambiare, se mai serve
+
+function initLastModified(){
+  const el = document.getElementById("last-modified");
+  if (!el) return;
+  const d = new Date(document.lastModified);
+  el.textContent = isNaN(d.getTime()) ? LAST_MODIFIED_FALLBACK : d.toLocaleDateString("it-IT");
+}
+
+initLastModified();
