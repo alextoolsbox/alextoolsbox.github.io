@@ -94,5 +94,29 @@
     "tipo": "ufficiale",
     "fonte": "App Wise, programma inviti (soglia di pagamenti/trasferimenti per sbloccare il bonus di chi invita)",
     "verificato": "2026-07-15"
+  },
+  "earnapp-guadagno-mensile": {
+    "valore": "8$/mese",
+    "tipo": "esperienza",
+    "fonte": "Dashboard EarnApp di Alex (configurazione a due dispositivi)",
+    "verificato": "2026-07-20"
+  },
+  "honeygain-guadagno-giornaliero": {
+    "valore": "10 centesimi al giorno",
+    "tipo": "esperienza",
+    "fonte": "Dashboard Honeygain di Alex (un dispositivo sempre online)",
+    "verificato": "2026-07-18"
+  },
+  "uprock-saldo-upt": {
+    "valore": "1.242,23 UPT",
+    "tipo": "esperienza",
+    "fonte": "Wallet UpRock di Alex, screenshot verificabile (PC + smartphone Android, 1-3 mesi di utilizzo)",
+    "verificato": "2026-07-21"
+  },
+  "uprock-saldo-controvalore": {
+    "valore": "5,33$",
+    "tipo": "esperienza",
+    "fonte": "Wallet UpRock di Alex al cambio $UPT del momento (valore variabile col prezzo di mercato)",
+    "verificato": "2026-07-21"
   }
 }
