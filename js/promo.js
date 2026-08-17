@@ -261,3 +261,43 @@ function initVerifiedData(){
 }
 
 initVerifiedData();
+
+/* ============================================
+   LIGHTBOX IMMAGINI — le pagine di guide/tutorial hanno spesso
+   screenshot con testo piccolo (tabelle, dashboard) che alla dimensione
+   naturale di .image-box (max 500px) sono illeggibili, specie su
+   mobile. Click sull'immagine apre un overlay a schermo pieno con la
+   versione ingrandita. Un solo overlay riusato per tutte le immagini
+   della pagina, creato al primo giro. Le immagini sono già nell'HTML
+   statico (non iniettate come l'header), quindi si inizializza subito
+   come initLastModified/initVerifiedData, non dentro updatePromo().
+   ============================================ */
+function initImageLightbox(){
+  const images = document.querySelectorAll('.image-box img');
+  if (!images.length) return;
+
+  let overlay = document.querySelector('.lightbox-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<span class="lightbox-close" aria-label="Chiudi">&times;</span><img alt="">';
+    document.body.appendChild(overlay);
+
+    const closeLightbox = () => overlay.classList.remove('open');
+    overlay.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
+
+  const overlayImg = overlay.querySelector('img');
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add('open');
+    });
+  });
+}
+
+initImageLightbox();

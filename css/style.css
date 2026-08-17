@@ -861,6 +861,7 @@ border-radius: 10px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
+  cursor: zoom-in;
 }
 
 .image-caption {
@@ -871,6 +872,51 @@ border-radius: 10px;
 
 .image-box img:hover {
   transform: scale(1.02);
+}
+
+/* LIGHTBOX — click su uno screenshot (.image-box img) lo apre a schermo
+   pieno: molti screenshot (tabelle, dashboard) hanno testo illeggibile
+   alla dimensione naturale di 500px, specie su mobile. Un solo overlay
+   riusato per tutte le immagini della pagina (vedi initImageLightbox in
+   promo.js). */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay.open {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
