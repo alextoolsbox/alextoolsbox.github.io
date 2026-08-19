@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cos'è un ETF? Guida completa: come funziona e tasse (2026)</title>
+    <meta name="description" content="Cos'è un ETF, replica fisica o sintetica, TER e tracking difference, accumulo o distribuzione, tassazione in Italia spiegata bene. Guida senza link affiliati.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/cosa-e-un-etf/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Cos'è un ETF? Guida completa: come funziona e tasse (2026)">
+    <meta property="og:description" content="Come funziona un ETF, replica fisica o sintetica, TER e tracking difference, accumulo o distribuzione, tassazione in Italia. Senza link affiliati.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/cosa-e-un-etf/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cos'è un ETF? Guida completa: come funziona e tasse (2026)">
+    <meta name="twitter:description" content="Replica fisica o sintetica, TER e tracking difference, accumulo o distribuzione, tassazione in Italia spiegata bene.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Cos'è un ETF in poche parole?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un ETF (Exchange Traded Fund) è un fondo che replica passivamente un indice (es. l'S&P 500 o l'MSCI World) e si compra e vende in borsa esattamente come un'azione, con quotazione continua durante l'orario di mercato. A differenza di un fondo comune attivo, non c'è un gestore che sceglie i titoli: l'ETF si limita a seguire l'indice, con costi molto più bassi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Meglio un ETF a replica fisica o sintetica?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Per un investitore che parte da zero, la replica fisica è generalmente la scelta più semplice da capire: l'ETF possiede davvero i titoli sottostanti. La replica sintetica (basata su swap con una controparte) può avere un tracking error più basso e alcuni vantaggi fiscali su certi mercati, ma introduce un rischio di controparte in più, per quanto limitato dalla normativa UCITS al 10% del patrimonio. Nessuna delle due è \"sbagliata\": è un fattore in più da conoscere, non un motivo per scartare un ETF a priori."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Il TER è il costo reale di un ETF?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, è solo il punto di partenza. Il TER (Total Expense Ratio) è il costo di gestione dichiarato, ma il costo che senti davvero sul rendimento è la tracking difference: lo scarto reale tra la performance dell'ETF e quella dell'indice che replica, che include il TER più altri fattori (costi di ribilanciamento, differenziali sugli swap, ma anche eventuali ricavi da prestito titoli che possono ridurlo). Un ETF con TER basso ma tracking difference alta, nel tempo, può costare più di uno con TER leggermente più alto ma tracking difference minima."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Meglio un ETF ad accumulo o a distribuzione?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dipende dall'obiettivo. Un ETF ad accumulo (Acc) reinveste automaticamente i dividendi incassati dai titoli sottostanti, senza generare una tassazione annuale su quei proventi: rimandi l'imposta al momento della vendita, sfruttando meglio l'interesse composto. Un ETF a distribuzione (Dist) paga i dividendi periodicamente sul conto, tassati al 26% ogni volta che li incassi: utile se cerchi un flusso di cassa regolare, meno efficiente fiscalmente se l'obiettivo è far crescere il capitale nel tempo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Perché conta se un ETF è armonizzato (UCITS) o no?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perché cambia radicalmente la tassazione in Italia. Un ETF armonizzato UCITS è tassato al 26% con imposta sostitutiva, in regime amministrato se il tuo intermediario è italiano (senza obblighi dichiarativi aggiuntivi). Un ETF non armonizzato (extra-UE, non UCITS) finisce invece nel reddito complessivo IRPEF a tassazione progressiva marginale, che può arrivare al 43% più addizionali: molto più caro per la maggior parte degli investitori. La quasi totalità degli ETF quotati sulle borse europee e accessibili dai broker retail italiani è armonizzata, ma vale sempre la pena controllarlo prima di comprare."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Le plusvalenze e le minusvalenze di un ETF si compensano tra loro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, ed è uno degli aspetti fiscali più fraintesi. Le plusvalenze da ETF armonizzati (sia da vendita che i dividendi incassati) sono classificate come redditi di capitale, tassate al 26% e non compensabili con nessuna minusvalenza pregressa. Le minusvalenze da ETF, invece, sono classificate come redditi diversi: puoi usarle solo per compensare altre plusvalenze da redditi diversi (es. la vendita di azioni singole), entro i quattro anni successivi, non per abbattere le imposte su un guadagno futuro dello stesso o di un altro ETF."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Un ETF può fallire e far perdere tutti i soldi investiti?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il valore delle quote può scendere per il rischio di mercato normale, come per qualsiasi investimento. Ma un ETF è un OICR (Organismo di Investimento Collettivo del Risparmio): il suo patrimonio è legalmente separato da quello della società che lo gestisce (l'emittente). Se l'emittente fallisse, il patrimonio dell'ETF resterebbe protetto e andrebbe comunque agli investitori: è una differenza sostanziale rispetto a strumenti come gli ETC o i certificati, che sono titoli di debito dell'emittente e comportano un vero rischio di controparte in caso di fallimento."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cos'è un ETF? Guida completa: come funziona e tasse",
+        "description": "Cos'è un ETF, replica fisica o sintetica, TER e tracking difference, accumulo o distribuzione, armonizzati vs non armonizzati, e la tassazione in Italia spiegata a fondo.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-08-19",
+        "dateModified": "2026-08-19"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Cos'è un ETF", "item": "https://alextoolsbox.it/guide/cosa-e-un-etf/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Cos'è un ETF (Exchange Traded Fund)?</h1>
+        <p class="hero-description">
+            "ETF" è ovunque quando si parla di investimenti, ma spesso viene spiegato male o troppo in
+            fretta. Qui trovi come funziona davvero: replica fisica o sintetica, perché il TER da solo
+            non basta, accumulo o distribuzione, e soprattutto la tassazione italiana spiegata con
+            precisione, incluso il punto più frainteso di tutti — perché guadagni e perdite di un ETF
+            spesso non si compensano tra loro. Nessun link affiliato in questa pagina.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                📈 <strong>Questa non è consulenza finanziaria.</strong> È una guida informativa sui
+                meccanismi generali degli ETF: non è un consiglio a investire, né un'indicazione su
+                quale ETF scegliere. Ogni situazione personale è diversa: valuta i tuoi obiettivi, il
+                tuo orizzonte temporale e la tua tolleranza al rischio, se serve con l'aiuto di un
+                consulente finanziario indipendente.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Un <strong>ETF (Exchange Traded Fund)</strong> è un fondo che replica passivamente un
+                indice — un paniere di azioni, obbligazioni o altri asset — e si scambia in borsa come
+                un'azione, con un prezzo che si aggiorna in tempo reale durante l'orario di mercato. Le
+                differenze che contano davvero quando ne scegli uno sono quattro: <strong>come replica</strong>
+                l'indice (fisica o sintetica), <strong>quanto costa davvero</strong> (TER più tracking
+                difference, non solo il TER), se <strong>reinveste o distribuisce</strong> i dividendi
+                (accumulo o distribuzione), e se è <strong>armonizzato UCITS</strong> — perché in Italia
+                questo cambia la tassazione in modo drastico. Il capitale investito non è garantito e può
+                scendere come per qualsiasi strumento di mercato, ma il patrimonio del fondo è
+                legalmente separato da quello della società che lo gestisce.
+            </p>
+        </div>
+
+        <!-- COS'È E COME FUNZIONA -->
+        <h2 id="cose">Cos'è un ETF e come funziona il meccanismo</h2>
+        <p>
+            Un ETF è un <strong>fondo a gestione passiva</strong>: invece di avere un gestore che sceglie
+            quali titoli comprare o vendere cercando di battere il mercato, l'ETF si limita a
+            <strong>replicare un indice di riferimento</strong> — per esempio l'S&amp;P 500 (le 500
+            maggiori società quotate USA), l'MSCI World (oltre 1.500 azioni di paesi sviluppati) o un
+            indice obbligazionario. Comprando una singola quota di ETF ottieni quindi un'esposizione
+            frazionata e diversificata su decine, centinaia o migliaia di titoli in un colpo solo,
+            invece di doverli comprare uno per uno.
+        </p>
+        <p>
+            La differenza pratica rispetto a un fondo comune "normale" è nella <strong>quotazione</strong>.
+            Un fondo comune si sottoscrive e si rimborsa a un unico prezzo calcolato a fine giornata (il
+            NAV, valore patrimoniale netto). Un ETF, invece, è <strong>quotato in borsa</strong> come
+            un'azione: lo compri e lo vendi durante l'orario di mercato, a un prezzo che si muove in
+            tempo reale in base a domanda e offerta. Dietro le quinte, il prezzo di mercato resta
+            ancorato al valore reale dell'indice grazie a operatori specializzati (gli
+            <strong>Authorized Participant</strong>) che possono creare o distruggere quote dell'ETF in
+            blocco scambiandole con i titoli sottostanti, arbitraggiando qualunque scostamento troppo
+            ampio tra prezzo di mercato e valore reale del paniere.
+        </p>
+
+        <!-- REPLICA FISICA VS SINTETICA -->
+        <h2 id="replica">Replica fisica o sintetica: come l'ETF insegue l'indice</h2>
+        <p>
+            Non tutti gli ETF replicano l'indice nello stesso modo. Ci sono due famiglie:
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Come funziona</th>
+                        <th>Rischio principale in più</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Replica fisica completa</strong></td>
+                        <td>L'ETF compra davvero tutti (o quasi tutti) i titoli dell'indice, nelle
+                            stesse proporzioni</td>
+                        <td>Nessuno strutturale in più: possiede fisicamente i titoli</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Replica fisica a campionamento</strong></td>
+                        <td>Quando replicare tutti i titoli non è pratico (indici molto ampi o poco
+                            liquidi), l'ETF ne detiene un sottoinsieme scelto per avvicinarsi al profilo
+                            rischio/rendimento dell'indice intero</td>
+                        <td>Tracking error leggermente più alto per via dell'approssimazione</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Replica sintetica</strong></td>
+                        <td>L'ETF non possiede i titoli dell'indice: stipula un contratto swap con una
+                            controparte (spesso una banca d'investimento), che si impegna a versargli il
+                            rendimento esatto dell'indice in cambio di una commissione</td>
+                        <td>Rischio di controparte: se chi ha emesso lo swap non onora l'impegno, il
+                            recupero può essere solo parziale</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Il rischio di controparte della replica sintetica non è "a briglia sciolta": la normativa
+            europea <strong>UCITS</strong> impone che lo scostamento tra il valore netto dell'ETF e il
+            valore del paniere di garanzia depositato non possa superare il <strong>10% del patrimonio</strong>
+            — superata questa soglia, lo swap viene ricalibrato ("resettato") con l'aggiunta di
+            collaterale. Non è un rischio pari a zero, ma è un rischio regolamentato e limitato, non
+            paragonabile a un'esposizione scoperta. Per chi comincia, però, la replica fisica resta più
+            semplice da capire e spiegare a sé stessi: possiedi davvero (indirettamente) i titoli
+            sottostanti.
+        </p>
+
+        <!-- TER E TRACKING DIFFERENCE -->
+        <h2 id="costi">TER e tracking difference: il costo dichiarato non è il costo reale</h2>
+        <p>
+            Il <strong>TER (Total Expense Ratio)</strong> è il costo di gestione annuo dichiarato
+            dall'ETF — quello che trovi scritto in ogni scheda prodotto, tipicamente tra lo 0,05% e lo
+            0,50% l'anno per gli ETF più diffusi. È trasparente e viene dedotto automaticamente dal
+            valore del fondo, giorno per giorno: non lo paghi mai come addebito separato.
+        </p>
+        <p>
+            Il problema è che il TER <strong>non è l'unico costo</strong> che riduce il rendimento
+            rispetto all'indice puro. La misura che conta davvero è la <strong>tracking difference</strong>:
+            lo scarto reale, misurato a consuntivo, tra la performance effettiva dell'ETF e quella
+            dell'indice che dovrebbe replicare. La tracking difference incorpora il TER ma anche altri
+            fattori — costi di ribilanciamento del paniere, differenziali sui contratti swap per la
+            replica sintetica — e può in parte essere ridotta da ricavi accessori come il prestito titoli.
+            Un ETF con TER dello 0,20% potrebbe avere una tracking difference annua dello 0,50%: significa
+            che, nella pratica, sta "costando" più di quanto il solo TER lasci intuire. Su un orizzonte
+            di 20-25 anni, anche un divario apparentemente piccolo (0,2-0,3% l'anno) si traduce in una
+            differenza di rendimento cumulato tutt'altro che trascurabile per via dell'interesse composto.
+        </p>
+        <p>
+            In pratica: il TER è un buon primo filtro rapido per scartare gli ETF più cari, ma prima di
+            scegliere tra due ETF sullo stesso indice vale la pena confrontare anche la tracking
+            difference storica (visibile su piattaforme come justETF o nella documentazione KIID/KID
+            dell'emittente), non fermarsi al numero pubblicizzato sulla scheda prodotto.
+        </p>
+
+        <!-- ACCUMULO VS DISTRIBUZIONE -->
+        <h2 id="acc-dist">Accumulo o distribuzione: cosa succede ai dividendi</h2>
+        <p>
+            I titoli dentro un ETF (azioni, obbligazioni) generano dividendi o cedole periodiche. Ogni
+            ETF sceglie una delle due politiche:
+        </p>
+        <ul>
+            <li>
+                <strong>Accumulo (Acc):</strong> i dividendi incassati vengono automaticamente reinvestiti
+                dentro il fondo, aumentando il valore della quota, senza che tu li veda mai in contanti.
+                Non generi una tassazione ricorrente su questi proventi: l'imposta si applica solo quando
+                vendi le quote, sull'intera plusvalenza maturata. Il vantaggio è fiscale e di comodità:
+                sfrutti meglio l'interesse composto perché quei soldi restano investiti invece di uscire
+                (al netto di tasse) per poi dover essere reinvestiti a mano.
+            </li>
+            <li>
+                <strong>Distribuzione (Dist):</strong> i dividendi vengono accreditati periodicamente
+                (trimestrale, semestrale o annuale a seconda dell'ETF) sul conto dell'intermediario,
+                tassati al 26% ogni volta che li incassi. Ha senso se cerchi un flusso di cassa regolare
+                — per esempio in una fase di vita in cui vuoi un'integrazione di reddito — ma è meno
+                efficiente fiscalmente se l'obiettivo è semplicemente far crescere il capitale nel tempo,
+                perché paghi le tasse prima e su un capitale via via minore reinvestito.
+            </li>
+        </ul>
+
+        <!-- ARMONIZZATI UCITS -->
+        <h2 id="ucits">ETF armonizzati (UCITS) e non armonizzati: la differenza che conta di più</h2>
+        <p>
+            "Armonizzato" (o UCITS, <em>Undertakings for Collective Investment in Transferable
+            Securities</em>) significa che l'ETF rispetta un insieme di regole europee su
+            diversificazione, trasparenza e tutela dell'investitore. La stragrande maggioranza degli ETF
+            quotati sulle principali borse europee (Borsa Italiana, Xetra, Euronext) e accessibili dai
+            broker retail italiani è armonizzata — ma è una casella da controllare sempre prima di
+            comprare, perché la differenza fiscale in Italia tra i due casi è enorme (vedi la sezione
+            sulla tassazione più sotto).
+        </p>
+        <p>
+            Un dettaglio meno noto ma concreto: la <strong>domiciliazione</strong> dell'ETF (il paese in
+            cui il fondo è legalmente registrato — tipicamente Irlanda o Lussemburgo per gli ETF europei)
+            influenza il rendimento netto per via dei trattati fiscali internazionali. Un ETF che investe
+            in azioni USA e domiciliato in <strong>Irlanda</strong> beneficia del trattato contro le
+            doppie imposizioni tra Irlanda e Stati Uniti, che riduce la ritenuta alla fonte sui dividendi
+            USA dal 30% al <strong>15%</strong>. Un ETF equivalente domiciliato in
+            <strong>Lussemburgo</strong> non ha lo stesso trattato e subisce la ritenuta piena del 30%.
+            Per questo la grande maggioranza degli ETF azionari globali o USA quotati in Europa è
+            domiciliata in Irlanda: su un indice come l'MSCI World, dove gli Stati Uniti pesano circa il
+            65-70%, la differenza di ritenuta si traduce in un rendimento netto misurabile nel tempo.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Quando guardo la scheda di un ETF prima di deciderlo, l'ordine in cui controllo le
+                cose è sempre lo stesso: prima se è armonizzato UCITS (altrimenti chiudo la scheda),
+                poi la tracking difference storica (non solo il TER), poi accumulo o distribuzione in
+                base a cosa mi serve, e solo alla fine — a parità di tutto il resto — la
+                domiciliazione. Fare l'ordine inverso, partire dal nome o dalla popolarità dell'ETF, è
+                il modo più comune per ritrovarsi con qualcosa che non hai capito fino in fondo."</em>
+        </div>
+
+        <!-- ETF VS FONDI ATTIVI -->
+        <h2 id="etf-vs-attivi">ETF vs fondi comuni a gestione attiva</h2>
+        <p>
+            La differenza principale è nei costi e nell'obiettivo. Un fondo attivo ha un gestore che
+            cerca di battere il mercato scegliendo attivamente cosa comprare e vendere, con un costo di
+            gestione tipicamente tra l'1% e il 2,5% l'anno (TER), a volte con commissioni di ingresso o
+            di performance aggiuntive. Un ETF si limita a seguire un indice, con un TER quasi sempre
+            sotto lo 0,50% e spesso sotto lo 0,20% per gli indici più diffusi.
+        </p>
+        <p>
+            Il punto centrale, confermato da decenni di studi comparativi (es. gli SPIVA Report di S&amp;P
+            Dow Jones Indices), è che la <strong>maggioranza dei fondi attivi, al netto dei costi, non
+            batte in modo consistente l'indice di riferimento nel lungo periodo</strong>. Non significa
+            che nessun fondo attivo valga il costo — esistono gestori che sovraperformano per anni — ma
+            identificarli <em>in anticipo</em> e con costanza è statisticamente difficile anche per gli
+            investitori professionali. Per questo motivo gli ETF sono diventati lo strumento di base per
+            chi vuole un'esposizione diversificata a basso costo, senza scommettere sulla capacità di un
+            gestore di indovinare i titoli giusti.
+        </p>
+
+        <!-- RISCHI -->
+        <h2 id="rischi">I rischi reali di un ETF</h2>
+        <ul>
+            <li>
+                <strong>Rischio di mercato.</strong> Il rischio principale e più ovvio: se l'indice
+                sottostante scende, l'ETF scende insieme, senza eccezioni. Un ETF non elimina il rischio
+                di mercato, lo distribuisce solo su più titoli.
+            </li>
+            <li>
+                <strong>Rischio di cambio.</strong> Se l'ETF investe in titoli denominati in una valuta
+                diversa dall'euro (es. dollaro USA) e non è "hedged" (a cambio coperto), il tuo
+                rendimento in euro dipende anche dal movimento del cambio, in un senso o nell'altro. Le
+                versioni hedged eliminano questo effetto ma hanno un TER leggermente più alto per coprire
+                il costo della copertura.
+            </li>
+            <li>
+                <strong>Rischio di controparte.</strong> Presente solo per gli ETF a replica sintetica,
+                limitato per normativa UCITS al 10% del patrimonio (vedi sopra). Per la replica fisica è
+                sostanzialmente assente.
+            </li>
+            <li>
+                <strong>Rischio di liquidità.</strong> Su ETF molto piccoli o con volumi di scambio bassi,
+                lo spread tra prezzo di acquisto e vendita può essere più ampio, rendendo più caro entrare
+                e uscire rapidamente. Gli ETF sui grandi indici globali con masse gestite elevate non
+                soffrono praticamente di questo problema.
+            </li>
+            <li>
+                <strong>Non è un rischio emittente in senso di fallimento.</strong> Un ETF è un OICR
+                (Organismo di Investimento Collettivo del Risparmio): il suo patrimonio è legalmente
+                <strong>separato</strong> da quello della società che lo gestisce. Se l'emittente
+                fallisse, il patrimonio del fondo resterebbe protetto e andrebbe comunque agli investitori
+                — a differenza di strumenti come gli ETC (Exchange Traded Commodities) o i certificati, che
+                sono titoli di debito dell'emittente e comportano un vero rischio di controparte in caso
+                di insolvenza.
+            </li>
+        </ul>
+
+        <!-- TASSAZIONE -->
+        <h2 id="fisco">La tassazione degli ETF in Italia (il punto più frainteso)</h2>
+        <p>
+            Questa è la parte in cui vale la pena rallentare, perché è anche la più fraintesa. In Italia
+            gli ETF non seguono le stesse regole fiscali delle azioni singole, e la differenza cambia
+            concretamente quanto ti resta in tasca.
+        </p>
+        <p>
+            Per un <strong>ETF armonizzato UCITS</strong>, sia la <strong>plusvalenza</strong> realizzata
+            vendendo le quote sia i <strong>dividendi</strong> incassati (per gli ETF a distribuzione) sono
+            classificati come <strong>redditi di capitale</strong> (art. 44 del TUIR), tassati con
+            un'imposta sostitutiva del <strong>26%</strong> (12,5% per la quota investita in titoli di
+            Stato white list). Il punto che sorprende quasi tutti: <strong>i redditi di capitale non sono
+            compensabili con minusvalenze pregresse</strong>. Le minusvalenze da ETF, invece, sono
+            classificate come <strong>redditi diversi</strong> (art. 67 del TUIR) — una categoria fiscale
+            diversa — e possono compensare solo altre plusvalenze da redditi diversi (es. la vendita in
+            guadagno di azioni singole), entro i quattro anni successivi.
+        </p>
+        <p>
+            Il risultato pratico di questa asimmetria: se un anno perdi su un ETF e l'anno dopo guadagni
+            su un altro ETF (o sullo stesso), <strong>non puoi usare quella perdita per abbattere
+            l'imposta sul guadagno</strong>, perché appartengono a due categorie fiscali diverse che non
+            si parlano tra loro. Puoi invece usarla per compensare un guadagno da azioni. È il cosiddetto
+            "paradosso dello zainetto fiscale" degli ETF, ed è il motivo per cui conviene sempre pensare
+            alla componente fiscale prima di costruire un portafoglio misto tra ETF e titoli singoli, non
+            dopo.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Voce</th>
+                        <th>Categoria fiscale</th>
+                        <th>Compensabile con minusvalenze?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plusvalenza da vendita ETF armonizzato</td>
+                        <td>Reddito di capitale</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Dividendi ETF armonizzato a distribuzione</td>
+                        <td>Reddito di capitale</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Minusvalenza da vendita ETF armonizzato</td>
+                        <td>Reddito diverso</td>
+                        <td>Sì, ma solo con altri redditi diversi (es. azioni), entro 4 anni</td>
+                    </tr>
+                    <tr>
+                        <td>Plusvalenze/dividendi ETF <strong>non</strong> armonizzato</td>
+                        <td>Reddito complessivo IRPEF</td>
+                        <td>Tassazione progressiva marginale (fino al 43% + addizionali), non 26%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Se il tuo intermediario opera in <strong>regime amministrato</strong> con sostituto d'imposta
+            italiano (è il caso della maggior parte dei broker e conti usati su questo sito), l'imposta sui
+            redditi di capitale viene di norma trattenuta automaticamente, senza obblighi dichiarativi
+            aggiuntivi per te. In <strong>regime dichiarativo</strong> te ne occupi tu, riportando il tutto
+            nel quadro RT del Modello Redditi. Questa guida si ferma volutamente qui: per il quadro
+            generale sul monitoraggio fiscale delle attività finanziarie all'estero (quando si dichiarano
+            conti e investimenti, soglie, sanzioni) rimando alla guida
+            <a href="/guide/dichiarare-iban-estero/">Dichiarare un IBAN estero</a>; per la tua situazione
+            specifica, in particolare se hai un portafoglio misto tra ETF e azioni, il consiglio resta uno
+            solo: parlane con il tuo commercialista prima di operare, non a consuntivo.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"La prima volta che ho letto della non compensabilità tra plusvalenze e minusvalenze
+                degli ETF ho dovuto rileggerla due volte per essere sicuro di aver capito bene — sembra
+                controintuitivo rispetto a come funzionano le azioni. Non è un dettaglio da tecnici: se
+                stai costruendo un portafoglio con sia ETF sia azioni singole, cambia l'ordine con cui
+                ha senso vendere in perdita per motivi fiscali. Meglio saperlo prima di operare che
+                scoprirlo a consuntivo con il commercialista."</em>
+        </div>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Guardare solo il TER e ignorare la tracking difference.</strong> Due ETF sullo
+                stesso indice con TER simile possono avere un costo reale diverso nel tempo: la tracking
+                difference storica è il numero che conta davvero, non quello pubblicizzato sulla scheda.
+            </li>
+            <li>
+                <strong>Non controllare se l'ETF è armonizzato prima di comprare.</strong> La differenza
+                fiscale tra un ETF UCITS e uno non armonizzato è enorme (26% flat contro tassazione IRPEF
+                marginale): è la prima cosa da verificare, non un dettaglio secondario.
+            </li>
+            <li>
+                <strong>Dare per scontato che le perdite ETF compensino i guadagni ETF.</strong> Come
+                visto sopra, non è così: la pianificazione fiscale su un portafoglio misto ETF/azioni
+                richiede di conoscere questa asimmetria in anticipo.
+            </li>
+            <li>
+                <strong>Scegliere un ETF a distribuzione per far crescere il capitale nel lungo periodo.</strong>
+                Se l'obiettivo è l'accumulo di lungo termine, un ETF ad accumulo è quasi sempre più
+                efficiente fiscalmente: tassare i dividendi ogni anno, quando l'obiettivo non è un flusso
+                di cassa immediato, riduce l'effetto dell'interesse composto.
+            </li>
+            <li>
+                <strong>Comprare un ETF solo perché ha performato bene di recente.</strong> La
+                performance passata di un indice non garantisce nulla sul futuro: la scelta dovrebbe
+                partire dall'esposizione che cerchi (quale mercato, quale livello di rischio), non dal
+                grafico degli ultimi 12 mesi.
+            </li>
+        </ul>
+
+        <!-- DOVE FARLO IN PRATICA -->
+        <h2 id="pratica">Dove farlo in pratica</h2>
+        <p>
+            Fin qui la teoria, valida indipendentemente dalla piattaforma che usi. Per la pratica, il
+            servizio che uso personalmente per comprare ETF è <strong>Trade Republic</strong>, conto reale
+            aperto il 16 luglio 2026: catalogo di migliaia di ETF (in gran parte UCITS), acquisto anche
+            frazionato da 1€ tramite piano di accumulo, esecuzione senza commissioni di negoziazione sui
+            piani di accumulo (resta il costo di gestione dell'ETF stesso, il TER, che va sempre
+            all'emittente e mai a Trade Republic). Se vuoi capire come funziona un versamento periodico
+            su un ETF nel concreto, ho scritto una guida dedicata al meccanismo generale del piano di
+            accumulo: <a href="/guide/cosa-e-un-pac/">Cos'è un PAC</a>, e una guida specifica su come
+            impostarlo su Trade Republic: <a href="/trade-republic/pac.html">PAC su Trade Republic</a>.
+        </p>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Cos'è un ETF in poche parole?</h3>
+            <p>Un fondo che replica passivamente un indice (es. S&amp;P 500 o MSCI World) e si compra e
+                vende in borsa come un'azione, con quotazione in tempo reale. Nessun gestore sceglie i
+                titoli: l'ETF segue l'indice, con costi molto più bassi di un fondo attivo.</p>
+
+            <h3>Meglio un ETF a replica fisica o sintetica?</h3>
+            <p>Per chi parte da zero, la replica fisica è più semplice da capire: l'ETF possiede davvero
+                i titoli. La replica sintetica può avere un tracking error più basso ma introduce un
+                rischio di controparte, limitato dalla normativa UCITS al 10% del patrimonio.</p>
+
+            <h3>Il TER è il costo reale di un ETF?</h3>
+            <p>No, è solo il punto di partenza. La tracking difference — lo scarto reale tra la
+                performance dell'ETF e quella dell'indice — è la misura che racconta il costo vero,
+                perché include il TER più altri fattori come i costi di ribilanciamento.</p>
+
+            <h3>Meglio un ETF ad accumulo o a distribuzione?</h3>
+            <p>Dipende dall'obiettivo: l'accumulo reinveste i dividendi e rimanda la tassazione alla
+                vendita, più efficiente per far crescere il capitale nel tempo. La distribuzione paga i
+                dividendi periodicamente, tassati al 26% ogni volta, utile se cerchi un flusso di cassa.</p>
+
+            <h3>Perché conta se un ETF è armonizzato (UCITS) o no?</h3>
+            <p>Perché cambia la tassazione in modo drastico: un ETF armonizzato è tassato al 26% flat in
+                regime amministrato, uno non armonizzato finisce nel reddito IRPEF a tassazione
+                progressiva marginale, fino al 43% più addizionali.</p>
+
+            <h3>Le plusvalenze e le minusvalenze di un ETF si compensano tra loro?</h3>
+            <p>No: le plusvalenze e i dividendi ETF sono redditi di capitale (non compensabili), mentre
+                le minusvalenze sono redditi diversi, utilizzabili solo per compensare altre plusvalenze
+                da redditi diversi (es. azioni), entro 4 anni.</p>
+
+            <h3>Un ETF può fallire e far perdere tutti i soldi investiti?</h3>
+            <p>Il valore può scendere per rischio di mercato normale, ma il patrimonio dell'ETF è
+                legalmente separato da quello dell'emittente: se questo fallisse, il patrimonio del
+                fondo resterebbe protetto, a differenza di ETC o certificati.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/guide/cosa-e-un-pac/">📈 Cos'è un PAC</a></li>
+            <li><a href="/trade-republic/pac.html">🔁 PAC su Trade Republic: come funziona + simulatore</a></li>
+            <li><a href="/trade-republic/">📊 Guida Trade Republic</a></li>
+            <li><a href="/guide/dichiarare-iban-estero/">⚖️ Dichiarare un IBAN estero</a></li>
+            <li><a href="/guide/fondo-tutela-depositi/">🏦 Fondo di tutela dei depositi</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai servizi citati
+                portano a guide interne del sito o a pagine informative, non a link di invito. È una
+                scelta deliberata — sui contenuti educativi/finanziari voglio zero conflitti di interesse
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                I concetti fiscali descritti (classificazione tra redditi di capitale e redditi diversi,
+                aliquota del 26%, regole di compensazione) sono principi generali della normativa
+                italiana vigente al momento della pubblicazione, non legati a un singolo intermediario.
+                In caso di dubbio fa fede sempre la normativa aggiornata e la tua situazione personale:
+                rivolgiti al tuo commercialista. Questa guida è informativa e non costituisce consulenza
+                finanziaria o fiscale personalizzata.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
