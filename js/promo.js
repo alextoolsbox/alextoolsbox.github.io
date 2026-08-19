@@ -155,11 +155,25 @@ function initClusterNav(){
       let match = null, matchLen = -1;
 
       Object.values(manifest).forEach(cluster => {
-        if (path.startsWith(cluster.prefix) && cluster.prefix.length > matchLen) {
+        if (cluster.prefix && path.startsWith(cluster.prefix) && cluster.prefix.length > matchLen) {
           match = cluster;
           matchLen = cluster.prefix.length;
         }
       });
+
+      // Fallback per cluster senza prefix (es. macro-aree di /guide/, che
+      // condividono tutte lo stesso percorso base e non si distinguono per
+      // prefisso): matching per URL esatta nell'elenco pagine del cluster.
+      // Scatta solo se il passaggio sopra non ha trovato nulla, quindi non
+      // tocca in alcun modo i cluster con prefix esistenti.
+      if (!match) {
+        const hereFallback = normClusterPath(path);
+        Object.values(manifest).forEach(cluster => {
+          if (!cluster.prefix && cluster.pages.some(p => normClusterPath(p.url) === hereFallback)) {
+            match = cluster;
+          }
+        });
+      }
 
       if (!match || match.pages.length < 2) return; // nessun cluster o cluster con una sola pagina: niente da mostrare
 
