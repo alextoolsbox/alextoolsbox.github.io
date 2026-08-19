@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicurezza digitale e antifrode: come proteggersi (2026)</title>
+    <meta name="description" content="Phishing, smishing, vishing, SIM swap e clonazione carta: come riconoscerli, cosa fa la SCA per proteggerti e quando hai diritto al rimborso per legge.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/sicurezza-digitale-antifrode/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Sicurezza digitale e antifrode: come proteggersi (2026)">
+    <meta property="og:description" content="Phishing, smishing, vishing, SIM swap e clonazione carta: come riconoscerli e quando hai diritto al rimborso per legge.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/sicurezza-digitale-antifrode/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sicurezza digitale e antifrode: come proteggersi (2026)">
+    <meta name="twitter:description" content="Phishing, vishing, SIM swap e clonazione carta: come riconoscerli e quando hai diritto al rimborso.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js" defer></script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Sicurezza digitale e antifrode: come proteggersi",
+        "description": "Phishing, smishing, vishing, SIM swap e clonazione carta: come riconoscerli, cosa fa l'autenticazione forte (SCA) per proteggerti, e quando hai diritto al rimborso secondo la normativa PSD2.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-08-19",
+        "dateModified": "2026-08-19"
+    }
+    </script>
+
+    <!-- SCHEMA FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "La banca mi rimborsa sempre se sono vittima di phishing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non automaticamente, ma la legge è dalla tua parte: il D.Lgs. 11/2010 (che attua la normativa europea sui pagamenti) impone alla banca di rimborsare le operazioni non autorizzate, a meno che non dimostri che hai agito con dolo o colpa grave. L'onere della prova è della banca, non tuo. La giurisprudenza dell'Arbitro Bancario Finanziario tende a non considerare colpa grave l'essere caduti in un phishing sofisticato, ma ogni caso viene valutato nel merito."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo ho per contestare un'operazione non autorizzata?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Al massimo 13 mesi dalla data di addebito, ma conviene muoversi molto prima: più tempo passa, più diventa difficile recuperare il denaro nella pratica (bonifici già prelevati dal beneficiario) e più la banca può sostenere che il ritardo nella segnalazione sia stato negligente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cos'è l'autenticazione forte (SCA) e perché me la chiedono sempre più spesso?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "È l'obbligo, previsto dalla PSD2, di verificare l'identità con almeno due fattori indipendenti tra tre categorie: qualcosa che sai (PIN, password), qualcosa che hai (smartphone, token) e qualcosa che sei (impronta, volto). Serve proprio perché una password rubata da sola non basti più a un truffatore per operare sul conto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa cambia con PSD3? È già in vigore?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, non ancora. A luglio 2026 il trilogo europeo su PSD3 e sul nuovo regolamento PSR è concluso e i testi di compromesso sono stati pubblicati, ma mancano l'approvazione formale di Parlamento e Consiglio UE e la pubblicazione in Gazzetta Ufficiale europea, a cui seguiranno termini di recepimento fino a 21-27 mesi. Oggi vige ancora la PSD2. Tra le novità in arrivo: SCA estesa a tutto il rapporto con la banca, non solo al checkout, e la verifica del nome del beneficiario (Verification of Payee) sui bonifici."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa devo fare nelle prime ore se scopro un pagamento che non ho fatto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Blocca subito carta e conto dall'app o dal numero verde della banca, cambia la password dell'home banking, poi entro 24 ore presenta denuncia online sul portale della Polizia Postale (commissariatodips.it) o in una caserma dei Carabinieri. Con la denuncia in mano, contatta la banca per il disconoscimento formale dell'operazione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come mi difendo dallo skimming se pago sempre con il contactless?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il contactless riduce molto il rischio, perché la carta non entra mai fisicamente nel lettore e i dati del chip sono molto più difficili da copiare della banda magnetica. Resta comunque prudente controllare che bancomat e POS non abbiano parti aggiunte o sospette e coprire il codice PIN quando lo digiti, per i casi in cui il contactless non è disponibile."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa fare se sospetto un SIM swap?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Se il telefono perde improvvisamente segnale per ore senza un motivo tecnico noto, contatta subito il tuo operatore telefonico per verificare se è stata richiesta una sostituzione SIM e, in parallelo, la banca per mettere sotto controllo il conto. Dal 2022 l'AGCOM impone verifiche d'identità più rigide per il cambio SIM, ma la prevenzione migliore resta accorgersene subito."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Sicurezza digitale e antifrode", "item": "https://alextoolsbox.it/guide/sicurezza-digitale-antifrode/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Sicurezza digitale e antifrode: come proteggersi</h1>
+        <p class="hero-description">
+            Un SMS che sembra della tua banca, una telefonata che ti mette fretta, un POS manomesso
+            al bar: le truffe che svuotano un conto oggi passano quasi sempre da lì, non da un hacker
+            che buca i sistemi della banca. Qui trovi come riconoscerle, cosa fa già la legge per
+            proteggerti e cosa fare nelle prime ore se ti succede. Nessun link affiliato in questa
+            pagina: solo informazione.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                🔒 <strong>Questa non è consulenza legale né di sicurezza informatica
+                professionale.</strong> È una guida informativa sui rischi più comuni e sui diritti
+                previsti dalla normativa vigente (D.Lgs. 11/2010, PSD2). Per la propria situazione
+                specifica vale sempre il contratto del conto e, nei casi più gravi, il parere di un
+                legale.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Le truffe che oggi svuotano un conto sono quasi sempre <strong>phishing, smishing o
+                vishing</strong>: non bucano i sistemi della banca, convincono te a consegnare un
+                codice. L'<strong>autenticazione forte (SCA)</strong>, obbligatoria per legge dalla
+                PSD2, protegge proprio da questo — motivo per cui i truffatori più sofisticati non
+                cercano più solo la password, ma cercano di farsi dare anche il secondo fattore
+                (OTP, approvazione push). Se cadi comunque in una truffa, la legge ti tutela: la
+                banca deve rimborsarti le operazioni non autorizzate salvo che dimostri una tua
+                <strong>colpa grave</strong> — l'onere della prova è suo, non tuo. Hai <strong>13
+                mesi</strong> per contestare, ma conviene muoversi nelle prime ore.
+            </p>
+        </div>
+
+        <!-- LE TRUFFE PIÙ COMUNI -->
+        <h2 id="truffe-comuni">Le truffe più comuni oggi (non serve essere hacker)</h2>
+        <p>
+            Nella grande maggioranza dei casi reali, chi ruba da un conto digitale non sfrutta una
+            falla tecnica della banca: sfrutta te. Le tecniche cambiano nome ma la logica di fondo è
+            sempre la stessa — crearti urgenza o fiducia per farti fare qualcosa che altrimenti non
+            faresti mai.
+        </p>
+        <ul>
+            <li>
+                <strong>Phishing (email).</strong> Un'email che imita grafica, logo e tono della tua
+                banca, con un link a una pagina di login clonata quasi identica a quella vera. Basta
+                inserire le credenziali lì per consegnarle al truffatore.
+            </li>
+            <li>
+                <strong>Smishing (SMS).</strong> La versione via SMS, spesso più insidiosa: con lo
+                spoofing del mittente, il messaggio truffa può apparire nello stesso thread degli SMS
+                veri della tua banca ("rilevata anomalia sul tuo conto, verifica qui"), rendendolo
+                molto più credibile a colpo d'occhio.
+            </li>
+            <li>
+                <strong>Vishing (telefonata).</strong> Un finto operatore bancario chiama — spesso con
+                un numero contraffatto (spoofing) che sembra quello ufficiale — segnalando un
+                "bonifico sospetto" e chiedendo di leggere il codice OTP arrivato via SMS "per
+                bloccare l'operazione". In realtà quel codice serve al truffatore per autorizzarla.
+                Una variante fa seguire una seconda chiamata da un finto numero delle forze
+                dell'ordine, per aumentare la pressione.
+            </li>
+            <li>
+                <strong>SIM swap.</strong> Il truffatore, con dati personali già in mano, richiede al
+                tuo operatore telefonico un duplicato della tua SIM. Se riesce, riceve lui i codici
+                OTP via SMS mentre il tuo telefono resta senza segnale — ed è spesso proprio quel
+                dettaglio, il segnale che sparisce senza motivo, il primo campanello d'allarme.
+            </li>
+            <li>
+                <strong>Skimming e clonazione carta.</strong> Dispositivi fisici applicati su
+                bancomat o POS manomessi copiano i dati della banda magnetica, a volte insieme a una
+                microcamera nascosta per il PIN. Colpisce soprattutto le carte ancora lette a banda
+                magnetica; il chip EMV e i pagamenti contactless sono molto più difficili da clonare
+                in questo modo.
+            </li>
+        </ul>
+        <p>
+            Un fenomeno più recente e meno diffuso, ma in crescita, è il <strong>quishing</strong>:
+            QR code truffaldini (su un parchimetro, un volantino, persino incollati sopra un QR
+            legittimo) che portano alla stessa logica del phishing, solo con un codice al posto del
+            link.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"La regola che uso con tutti e sei i conti di questo sito è una sola: nessuna banca
+                vera ti chiederà mai il codice OTP al telefono, in chat o via email. Se qualcuno te lo
+                chiede, quella richiesta è già la risposta — riattacca e, se hai dubbi, richiama tu il
+                numero ufficiale scritto sull'app o sul sito, mai quello lasciato da chi ti ha
+                contattato."</em>
+        </div>
+
+        <!-- SCA -->
+        <h2 id="sca">Autenticazione forte (SCA): cosa fa già per proteggerti</h2>
+        <p>
+            Se ultimamente ogni pagamento online o accesso all'home banking ti chiede una conferma in
+            più (impronta, riconoscimento facciale, un codice push sull'app), non è un fastidio
+            aggiunto a caso: è la <strong>Strong Customer Authentication (SCA)</strong>, obbligo
+            previsto dalla <strong>PSD2</strong> (direttiva 2015/2366/UE) e recepito in Italia con il
+            <strong>D.Lgs. 218/2017</strong>, che ha modificato il precedente D.Lgs. 11/2010.
+        </p>
+        <p>
+            La regola è semplice: per autorizzare un'operazione servono almeno <strong>due fattori
+            indipendenti</strong>, scelti tra tre categorie diverse — qualcosa che <strong>sai</strong>
+            (PIN, password), qualcosa che <strong>hai</strong> (smartphone con l'app, un token fisico)
+            e qualcosa che <strong>sei</strong> (impronta digitale, volto). Una password rubata da
+            sola, quindi, non basta più a un truffatore per operare sul tuo conto: gli serve anche il
+            secondo fattore.
+        </p>
+        <p>
+            Questo è anche il motivo per cui le truffe più sofisticate di oggi non cercano più solo la
+            password: cercano di convincerti a fornire o approvare tu stesso il secondo fattore — il
+            codice OTP letto al telefono, o la notifica push che ti arriva sull'app e che ti chiedono
+            di "confermare per verificare" o "per annullare" un'operazione che in realtà stanno
+            autorizzando loro in quel momento.
+        </p>
+
+        <!-- PSD3 -->
+        <h2 id="psd3">Novità in arrivo: PSD3 e PSR (non ancora in vigore)</h2>
+        <p>
+            L'Unione Europea sta rivedendo l'intero impianto normativo con una nuova direttiva
+            (<strong>PSD3</strong>) e un nuovo regolamento (<strong>PSR</strong>, Payment Services
+            Regulation). Ad agosto 2026 il percorso legislativo è in fase avanzata ma non concluso: il
+            trilogo tra Parlamento, Consiglio e Commissione UE si è chiuso il 26 novembre 2025 e i
+            testi di compromesso sono stati pubblicati il 22 aprile 2026, ma mancano ancora
+            l'approvazione formale definitiva e la pubblicazione in Gazzetta Ufficiale dell'UE. Da lì
+            decorreranno termini differenziati per l'entrata in vigore delle diverse norme (in parte
+            21 giorni, per la maggioranza circa 21 mesi, per alcune previsioni specifiche fino a 27
+            mesi) prima del recepimento nazionale.
+        </p>
+        <p>
+            <strong>Oggi, quindi, resta in vigore la PSD2</strong>: tutto quanto scritto in questa
+            guida su diritti e rimborsi si basa sulla normativa attuale, non su quella futura. Tra le
+            novità principali già delineate nei testi di compromesso: la SCA non sarà più richiesta
+            solo al momento del pagamento ma coprirà l'intero rapporto con l'istituto (accesso al
+            conto online, cambio credenziali, autorizzazione di nuovi dispositivi); la responsabilità
+            nella prevenzione delle frodi passa da un modello centrato sul singolo prestatore di
+            servizi a uno "di ecosistema", che coinvolge anche il lato del beneficiario del pagamento;
+            ed è prevista una maggiore attenzione alla <strong>verifica del beneficiario</strong>
+            (Verification of Payee), il controllo che il nome del destinatario di un bonifico
+            corrisponda davvero all'IBAN indicato — utile contro le truffe che dirottano un bonifico
+            legittimo su un IBAN sbagliato.
+        </p>
+
+        <!-- CLONAZIONE CARTA -->
+        <h2 id="clonazione-carta">Clonazione carta: come succede e come proteggersi</h2>
+        <p>
+            Lo <strong>skimming</strong> è la tecnica più comune: un piccolo dispositivo applicato
+            sopra o dentro la fessura di un bancomat o di un POS manomesso legge e copia i dati della
+            banda magnetica quando inserisci la carta, spesso accompagnato da una microcamera nascosta
+            o da una tastiera fittizia sovrapposta per catturare il PIN.
+        </p>
+        <p>
+            È una tecnica che colpisce soprattutto le carte lette tramite <strong>banda
+            magnetica</strong>: i dati del <strong>chip EMV</strong> sono molto più difficili da
+            copiare, e con i pagamenti <strong>contactless</strong> la carta non entra mai fisicamente
+            nel lettore, riducendo ulteriormente il rischio di questo tipo specifico di clonazione
+            fisica.
+        </p>
+        <ul>
+            <li>Prima di usare un bancomat, guarda se ci sono parti che sembrano aggiunte, storte o
+                manomesse intorno alla fessura o alla tastiera; in caso di dubbio, non usarlo e
+                segnalalo alla banca o all'esercizio.</li>
+            <li>Copri sempre la tastiera con l'altra mano quando digiti il PIN, anche se non vedi
+                nulla di sospetto.</li>
+            <li>Preferisci il contactless quando possibile: il dato della carta non passa fisicamente
+                nel lettore.</li>
+            <li>Attiva le notifiche istantanee per ogni movimento, se il tuo conto le offre: è il modo
+                più veloce per accorgersi di un addebito sospetto prima che se ne accumulino altri.</li>
+            <li>Se il tuo conto offre carte virtuali o numeri temporanei per gli acquisti online,
+                usali sui siti che non conosci bene: un dato copiato lì non è collegato alla carta
+                fisica che usi tutti i giorni.</li>
+        </ul>
+
+        <!-- COSA FARE SE SEI VITTIMA -->
+        <h2 id="cosa-fare">Se sei vittima: cosa fare nelle prime ore</h2>
+        <p>
+            Il tempo conta, sia per limitare il danno pratico sia perché muoversi subito rafforza la
+            tua posizione se poi serve contestare l'operazione con la banca.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Quando</th>
+                        <th>Cosa fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Subito (0-2 ore)</strong></td>
+                        <td>Blocca carta e conto dall'app o dal numero verde della banca. Cambia
+                            subito la password dell'home banking. Fai screenshot di SMS, email o
+                            chiamate sospette come prova.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entro 24 ore</strong></td>
+                        <td>Presenta denuncia: online sul portale della Polizia Postale
+                            (commissariatodips.it) oppure di persona in una caserma dei Carabinieri o
+                            un ufficio della Polizia di Stato. Conserva il numero di protocollo, ti
+                            servirà per la banca.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entro 48 ore</strong></td>
+                        <td>Avvia il disconoscimento formale dell'operazione con la banca. Per un
+                            bonifico non ancora accreditato al beneficiario, chiedi se può attivare
+                            una procedura di richiamo (SEPA recall): non è garantita, ma va tentata
+                            subito. Cambia anche la password della tua email e attiva la verifica in
+                            due passaggi ovunque, dato che spesso è il primo account compromesso.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- RIMBORSO -->
+        <h2 id="rimborso">Hai diritto al rimborso? Cosa dice la legge</h2>
+        <p>
+            Qui sta la parte meno conosciuta, ed è quella che vale la pena leggere fino in fondo prima
+            di rassegnarsi a un danno che la legge non ti chiede di sopportare da solo.
+        </p>
+        <p>
+            Il <strong>D.Lgs. 11/2010</strong> (che recepisce la normativa europea sui servizi di
+            pagamento, aggiornato dal D.Lgs. 218/2017 per la PSD2) stabilisce che, per un'operazione di
+            pagamento <strong>non autorizzata</strong>, il prestatore di servizi — la tua banca o il
+            tuo istituto di pagamento — deve <strong>rimborsarti immediatamente</strong>, riportando
+            il conto allo stato in cui si sarebbe trovato se l'operazione fraudolenta non fosse mai
+            avvenuta.
+        </p>
+        <p>
+            Il punto chiave è questo: per rifiutare il rimborso, <strong>è la banca a dover
+            dimostrare</strong> che hai agito con dolo (consapevolmente) o con <strong>colpa
+            grave</strong> — non basta un errore, serve una condotta oggettivamente irragionevole.
+            L'onere della prova non è tuo. La giurisprudenza dell'<strong>Arbitro Bancario
+            Finanziario</strong> tende a non considerare colpa grave l'essere caduti in un attacco di
+            phishing costruito con cura (una pagina di login clonata in modo quasi indistinguibile
+            dall'originale, ad esempio): ogni caso, però, viene valutato nel merito, e non è un
+            rimborso automatico garantito a prescindere.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Passaggio</th>
+                        <th>Dettaglio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Termine per contestare</strong></td>
+                        <td>Massimo 13 mesi dalla data di addebito dell'operazione non autorizzata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chi deve provare cosa</strong></td>
+                        <td>La banca deve dimostrare autenticazione regolare e, se rifiuta il
+                            rimborso, il tuo dolo o la tua colpa grave</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primo passo</strong></td>
+                        <td>Reclamo scritto alla banca, che deve rispondere entro un termine definito
+                            per legge per i reclami sui servizi di pagamento</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Se la banca rigetta o non risponde</strong></td>
+                        <td>Ricorso all'Arbitro Bancario Finanziario (ABF), entro 12 mesi dal reclamo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cos'è l'ABF</strong></td>
+                        <td>Organismo di risoluzione stragiudiziale istituito dalla Banca d'Italia,
+                            gestisce controversie fino a 200.000€, con un contributo di 20€ (di norma
+                            restituito se il ricorso viene accolto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tempi di decisione ABF</strong></td>
+                        <td>Indicativamente entro 90-120 giorni dalla presentazione del ricorso</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Non serve un avvocato per il primo passo. Il reclamo scritto alla banca lo può fare
+                chiunque, ed è gratis. Il punto è farlo bene: descrivi i fatti in ordine cronologico,
+                allega la denuncia e ogni screenshot che hai, e chiedi esplicitamente il rimborso
+                citando il D.Lgs. 11/2010. Solo se la banca rigetta ha senso valutare l'ABF o un
+                legale, non prima."</em>
+        </div>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Pensare che il rimborso sia automatico e garantito sempre.</strong> Non lo è:
+                dipende dalla valutazione, caso per caso, della colpa grave — ma l'onere di
+                dimostrarla è della banca, non tuo.
+            </li>
+            <li>
+                <strong>Condividere l'OTP "solo per verificare" o "per bloccare l'operazione".</strong>
+                È lo schema più comune del vishing: nessuna banca vera ha mai bisogno del tuo codice
+                per bloccare qualcosa.
+            </li>
+            <li>
+                <strong>Aspettare prima di contestare o denunciare.</strong> Sia per il recupero
+                pratico (un bonifico può essere già stato prelevato) sia perché il termine dei 13 mesi
+                comunque corre.
+            </li>
+            <li>
+                <strong>Sottovalutare un telefono che perde segnale senza motivo.</strong> Può essere
+                il primo segnale di un SIM swap in corso, non solo un problema di rete.
+            </li>
+            <li>
+                <strong>Riusare lo stesso PIN o la stessa password su più servizi.</strong> Un dato
+                rubato altrove diventa la chiave per provare ad accedere anche al conto.
+            </li>
+        </ul>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>La banca mi rimborsa sempre se sono vittima di phishing?</h3>
+            <p>Non automaticamente, ma la legge è dalla tua parte: il D.Lgs. 11/2010 impone alla
+                banca di rimborsare le operazioni non autorizzate, a meno che non dimostri dolo o
+                colpa grave da parte tua. L'onere della prova è della banca. L'ABF tende a non
+                considerare colpa grave l'essere caduti in un phishing sofisticato, ma ogni caso è
+                valutato nel merito.</p>
+
+            <h3>Quanto tempo ho per contestare un'operazione non autorizzata?</h3>
+            <p>Al massimo 13 mesi dalla data di addebito, ma conviene muoversi molto prima: più tempo
+                passa, più è difficile recuperare il denaro nella pratica.</p>
+
+            <h3>Cos'è l'autenticazione forte (SCA) e perché me la chiedono sempre più spesso?</h3>
+            <p>È l'obbligo, previsto dalla PSD2, di verificare l'identità con almeno due fattori
+                indipendenti tra tre categorie: qualcosa che sai, qualcosa che hai, qualcosa che sei.
+                Serve perché una password rubata da sola non basti più a un truffatore.</p>
+
+            <h3>Cosa cambia con PSD3? È già in vigore?</h3>
+            <p>No, non ancora: il trilogo europeo si è chiuso e i testi di compromesso sono stati
+                pubblicati nel 2026, ma mancano approvazione formale e pubblicazione in Gazzetta UE,
+                a cui seguiranno termini di recepimento fino a 21-27 mesi. Oggi vige ancora la PSD2.</p>
+
+            <h3>Cosa devo fare nelle prime ore se scopro un pagamento che non ho fatto?</h3>
+            <p>Blocca subito carta e conto, cambia la password dell'home banking, poi entro 24 ore
+                presenta denuncia online su commissariatodips.it o dai Carabinieri. Con la denuncia in
+                mano, contatta la banca per il disconoscimento formale.</p>
+
+            <h3>Come mi difendo dallo skimming se pago sempre con il contactless?</h3>
+            <p>Il contactless riduce molto il rischio, perché la carta non entra mai fisicamente nel
+                lettore. Resta comunque prudente controllare bancomat e POS sospetti e coprire il PIN
+                quando lo digiti.</p>
+
+            <h3>Cosa fare se sospetto un SIM swap?</h3>
+            <p>Se il telefono perde segnale per ore senza motivo, contatta subito l'operatore
+                telefonico e in parallelo la banca. Dal 2022 l'AGCOM impone verifiche più rigide per
+                il cambio SIM, ma accorgersene subito resta la difesa migliore.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/guide/fondo-tutela-depositi/">🏦 Fondo di tutela dei depositi</a></li>
+            <li><a href="/guide/discriminazione-iban/">🚫 Discriminazione IBAN</a></li>
+            <li><a href="/revolut/sicurezza.html">🔒 Sicurezza Revolut</a></li>
+            <li><a href="/wise/sicurezza.html">🌍 Sicurezza Wise</a></li>
+            <li><a href="/satispay/sicurezza.html">💙 Sicurezza Satispay</a></li>
+            <li><a href="/trade-republic/sicurezza.html">📈 Sicurezza Trade Republic</a></li>
+            <li><a href="/hype/sicurezza.html">🏧 Sicurezza Hype</a></li>
+            <li><a href="/n26/sicurezza.html">🇩🇪 Sicurezza N26</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai servizi citati
+                portano alle guide interne del sito, non a link di invito. È una scelta deliberata —
+                sui contenuti di tutela voglio zero conflitti di interesse
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                Fonti: D.Lgs. 11/2010 e D.Lgs. 218/2017 (recepimento PSD2, direttiva 2015/2366/UE),
+                testi di compromesso PSD3/PSR post-trilogo (2025-2026), documentazione ufficiale del
+                Garante per la protezione dei dati personali sul vishing, provvedimenti AGCOM sul SIM
+                swap, informazioni sulle procedure dell'Arbitro Bancario Finanziario istituito dalla
+                Banca d'Italia. Le informazioni riflettono la situazione ad agosto 2026 e possono
+                cambiare, specialmente con l'entrata in vigore di PSD3/PSR: in caso di dubbio fa fede
+                il contratto del proprio conto. Questa guida è informativa e non sostituisce una
+                consulenza legale personalizzata.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
