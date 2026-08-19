@@ -1267,7 +1267,10 @@ border-radius: 10px;
         justify-content:flex-start; /* centrato su desktop, ma se le pillole non ci stanno tutte va scrollato: meglio partire da sinistra che tagliarle su entrambi i lati */
     }
     .cluster-nav-label{
-        display:none; /* su mobile lo spazio è poco: le pillole bastano da sole */
+        display:none; /* su mobile lo spazio è poco: le pillole bastano da sole (il nome del brand è già nell'H1 della pagina) */
+    }
+    .cluster-nav-guide .cluster-nav-label{
+        display:inline; /* eccezione per i cluster di macro-area (guide): qui l'H1 è il titolo della singola guida, non il nome della macro-area — senza l'etichetta su mobile si perde l'unico indizio di categoria */
     }
     .cluster-nav a{
         padding:6px 12px;

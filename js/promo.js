@@ -184,7 +184,12 @@ function initClusterNav(){
       }).join('');
 
       const bar = document.createElement('div');
-      bar.className = 'cluster-nav';
+      // cluster-nav-guide: distingue i cluster di macro-area (senza prefix, es.
+      // le guide) da quelli di brand — serve solo in CSS per mostrare l'etichetta
+      // anche su mobile: per le guide è l'unico indizio della macro-area (l'H1
+      // è il titolo della guida, non il nome del cluster, a differenza delle
+      // pagine brand dove il nome è già nell'H1).
+      bar.className = 'cluster-nav' + (!match.prefix ? ' cluster-nav-guide' : '');
       bar.innerHTML = `<div class="cluster-nav-inner"><span class="cluster-nav-label">${match.name}</span>${links}</div>`;
 
       // sotto la hero della pagina, non subito sotto la navbar — ogni pagina reale
