@@ -190,7 +190,13 @@ function initClusterNav(){
       // è il titolo della guida, non il nome del cluster, a differenza delle
       // pagine brand dove il nome è già nell'H1).
       bar.className = 'cluster-nav' + (!match.prefix ? ' cluster-nav-guide' : '');
-      bar.innerHTML = `<div class="cluster-nav-inner"><span class="cluster-nav-label">${match.name}</span>${links}</div>`;
+      // se il cluster ha un anchor (macro-aree di /guide/), l'etichetta diventa un link
+      // cliccabile che riporta alla sezione specifica dell'hub /guide/#anchor; i cluster
+      // brand (senza anchor) restano con la semplice etichetta non cliccabile di prima.
+      const labelHtml = match.anchor
+        ? `<a href="/guide/#${match.anchor}" class="cluster-nav-label">${match.name}</a>`
+        : `<span class="cluster-nav-label">${match.name}</span>`;
+      bar.innerHTML = `<div class="cluster-nav-inner">${labelHtml}${links}</div>`;
 
       // sotto la hero della pagina, non subito sotto la navbar — ogni pagina reale
       // ha una .hero (verificato su tutte le sezioni del sito); se per qualche

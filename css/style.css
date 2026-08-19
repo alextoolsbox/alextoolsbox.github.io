@@ -1237,6 +1237,19 @@ border-radius: 10px;
     padding-right:10px;
     border-right:1px solid #e5e5e5;
 }
+/* quando l'etichetta è un link (macro-aree di /guide/, vedi promo.js), neutralizza lo
+   stile a pillola di ".cluster-nav a" (più specifico) e aggiunge un hover che segnala
+   la cliccabilità, senza toccare le pillole brand che restano span non cliccabili. */
+.cluster-nav-inner a.cluster-nav-label{
+    background:none;
+    padding:0 10px 0 0;
+    border-radius:0;
+}
+.cluster-nav-inner a.cluster-nav-label:hover{
+    background:none;
+    color:var(--accent);
+    text-decoration:underline;
+}
 .cluster-nav a{
     flex:0 0 auto;
     padding:6px 14px;
