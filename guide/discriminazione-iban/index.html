@@ -88,6 +88,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("header").innerHTML = data;
+                updatePromo();
             });
     </script>
 
