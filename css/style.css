@@ -1397,3 +1397,72 @@ border-radius: 10px;
     background:#fafafa;
     border-left:4px solid var(--cmp-x);
 }
+
+/* ============================================
+   CONFRONTI - SCREENSHOT REALI (galleria a "cornice telefono")
+   riutilizzabile su qualunque pagina /confronti/: un gruppo per brand,
+   striscia orizzontale scorrevole, cornice scura uguale per tutti i brand
+   (non serve --cmp-x qui: la cornice simula il bordo del telefono, non
+   il colore del brand, così funziona identica ovunque senza configurazione)
+   ============================================ */
+.cmp-screens{
+    margin:30px 0;
+}
+.cmp-screens-group{
+    margin-bottom:24px;
+}
+.cmp-screens-group:last-child{
+    margin-bottom:0;
+}
+.cmp-screens-group h3{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin:0 0 14px;
+    font-size:16px;
+}
+.cmp-screens-group h3 .cmp-dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    flex:0 0 auto;
+    background:var(--cmp-x);
+}
+.cmp-screens-row{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    padding:4px 4px 12px;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+}
+.cmp-screen{
+    flex:0 0 auto;
+    width:150px;
+    scroll-snap-align:start;
+}
+.cmp-screen-frame{
+    border-radius:20px;
+    overflow:hidden;
+    border:3px solid var(--ink);
+    box-shadow:0 4px 14px rgba(0,0,0,0.14);
+    background:#000;
+    line-height:0;
+}
+.cmp-screen-frame img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+.cmp-screen-caption{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:8px;
+    line-height:1.35;
+}
+@media (max-width:680px){
+    .cmp-screen{
+        width:132px;
+    }
+}
