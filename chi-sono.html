@@ -24,16 +24,19 @@
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/js/promo.js" defer></script>
 
-    <!-- SCHEMA PERSON -->
+    <!-- SCHEMA PROFILEPAGE / PERSON -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alex",
-        "jobTitle": "Consulente IT e fondatore di AlexToolsBox",
+        "@type": "ProfilePage",
+        "name": "Chi sono – Alex, il fondatore di AlexToolsBox",
         "url": "https://alextoolsbox.it/chi-sono.html",
-        "description": "Consulente IT con la passione per la tecnologia, la finanza digitale e le app che offrono vantaggi reali agli utenti. Fondatore di AlexToolsBox.",
-        "knowsAbout": ["Conti digitali", "Guadagni extra", "Fintech", "Strumenti digitali"]
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Alex",
+            "description": "Alex è il nome editoriale del fondatore e autore di AlexToolsBox. Di professione è consulente IT; scrive, verifica e aggiorna personalmente le guide del sito su conti digitali, guadagni extra e strumenti fintech.",
+            "knowsAbout": ["Conti digitali", "Guadagni extra", "Fintech", "Strumenti digitali"]
+        }
     }
     </script>
 
@@ -78,14 +81,24 @@
             <p><strong>📌 In sintesi</strong></p>
             <p>
                 Sono un <strong>consulente IT</strong> con la passione per la tecnologia e
-                la finanza digitale. Ogni servizio di cui scrivo l'ho aperto, usato e messo
-                alla prova con i miei soldi prima di pubblicarne una guida.
+                la finanza digitale. Ogni servizio di cui scrivo l'ho aperto o attivato e
+                usato personalmente — quando prevede un deposito o un pagamento, nella guida
+                indico quali operazioni ho realmente fatto.
                 AlexToolsBox è il mio modo di restituire: guide pratiche, basate su esperienza
                 reale, per aiutarti a usare al meglio <strong>conti digitali</strong>,
                 <strong>programmi fedeltà</strong> e altri strumenti utili nella vita di
                 tutti i giorni.
             </p>
         </div>
+
+        <!-- IDENTITÀ EDITORIALE -->
+        <h2>Perché firmo come "Alex"</h2>
+        <p>
+            Alex è il nome editoriale con cui firmo questo progetto — una scelta intenzionale,
+            non una mancanza da colmare. Ho preferito tenere AlexToolsBox separato dalla mia
+            attività professionale, senza per questo rinunciare alla responsabilità su quello
+            che pubblico: ogni guida è scritta, verificata e aggiornata direttamente da me.
+        </p>
 
         <!-- CHI SONO -->
         <h2>Chi sono (davvero)</h2>
@@ -97,8 +110,10 @@
         </p>
         <p>
             Ho iniziato per curiosità: aprire un conto digitale, provare un programma
-            fedeltà, testare un'app di cashback. Poi è diventata un'abitudine. E infine
-            una competenza.
+            fedeltà, testare un'app di cashback. Con il tempo ho imparato a confrontare le
+            condizioni economiche reali dei servizi, verificare costi, bonus e commissioni
+            sulle fonti ufficiali, e a confrontare quello che viene pubblicizzato con quello
+            che succede davvero usandoli.
         </p>
         <p>
             Oggi uso un conto digitale come conto principale, accumulo punti con un
@@ -106,13 +121,6 @@
             strumenti che funzionano davvero. Quelli che non mi convincono, li abbandono.
             Quelli che uso, li condivido qui.
         </p>
-
-        <div class="alex-tip">
-            <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Non sono un esperto di finanza e non vendo corsi. Sono uno che ha provato
-                le cose, ha sbagliato qualche volta, e ora racconta cosa funziona. Tutto
-                qui."</em>
-        </div>
 
         <!-- PERCHÉ QUESTO SITO -->
         <h2>Perché ho creato AlexToolsBox</h2>
@@ -133,31 +141,94 @@
 
         <!-- COME SCRIVO LE GUIDE -->
         <h2>Come sono scritte le guide</h2>
-        <p>Ogni guida su AlexToolsBox segue tre regole:</p>
+        <p>Ogni guida su AlexToolsBox segue quattro regole:</p>
         <ul>
             <li><strong>✅ Esperienza reale:</strong> parlo solo di servizi che ho provato personalmente. Se non l'ho testato, non ne scrivo.</li>
             <li><strong>✅ Onestà anche quando delude:</strong> non seleziono solo i servizi che funzionano bene. Se qualcosa non regge alla prova, lo scrivo chiaramente invece di ignorarlo.</li>
             <li><strong>✅ Linguaggio semplice:</strong> spiego i passaggi in modo diretto, senza tecnicismi inutili. Se qualcosa si può fare in 5 minuti, non ti faccio perdere tempo.</li>
-            <li><strong>✅ Numeri veri:</strong> ti dico esattamente quanto guadagno, quanto spendo, quanto tempo ci metto, con dati reali e datati — <a href="/app-passive/uprock/guadagno-reale.html">un esempio qui</a>. Niente stime gonfiate.</li>
+            <li><strong>✅ Numeri verificabili:</strong> quando indico una cifra — un guadagno, un costo, un tempo — cerco di specificare il periodo del test e le condizioni considerate, perché tariffe, tassi e promozioni possono cambiare — <a href="/app-passive/uprock/guadagno-reale.html">un esempio qui</a>.</li>
         </ul>
         <p>
             L'obiettivo è aiutarti a usare questi servizi in modo consapevole e a ottenere
             il massimo senza perdere tempo in cose inutili.
         </p>
 
-        <!-- COSA FACCIO ORA -->
-        <h2>Cosa sto usando adesso</h2>
-        <p>Se sei curioso, ecco cosa uso oggi nella mia vita digitale:</p>
+        <!-- COME VERIFICO -->
+        <h2>Come verifico le informazioni</h2>
+        <p>Prima di pubblicare una guida, quando applicabile:</p>
         <ul>
-            <li><strong>💳 Un conto digitale</strong> come conto principale, con deposito senza vincoli e cashback automatico</li>
-            <li><strong>🔍 Un programma fedeltà</strong> che mi dà punti ogni giorno per le ricerche e le attività online</li>
-            <li><strong>🎮 Abbonamenti digitali</strong> che si pagano da soli con i punti accumulati</li>
-            <li><strong>💻 PC Windows</strong> per lavoro e per tenere tutto sotto controllo</li>
+            <li>apro e uso personalmente il servizio, provando le funzioni di cui parlo nella guida;</li>
+            <li>controllo il sito ufficiale e la documentazione disponibile;</li>
+            <li>consulto, quando presenti, fogli informativi e documenti tariffari;</li>
+            <li>confronto le informazioni ufficiali con quello che osservo nell'app durante l'utilizzo;</li>
+            <li>indico il periodo del test quando il dato può cambiare nel tempo;</li>
+            <li>distinguo chiaramente cosa deriva dalla mia esperienza diretta e cosa da una fonte ufficiale;</li>
+            <li>per gli aspetti fiscali, normativi o finanziari più delicati, collego le fonti ufficiali direttamente nella guida;</li>
+            <li>se ricevo una segnalazione fondata, verifico e correggo.</li>
         </ul>
         <p>
-            Niente di esotico: strumenti che chiunque può usare, senza spendere una fortuna.
-            Se ti interessa approfondire, trovi tutto nelle guide del sito.
+            Non è un protocollo identico per ogni servizio: la profondità del controllo varia
+            in base a cosa tratta la guida.
         </p>
+
+        <!-- COSA FACCIO ORA -->
+        <h2>Cosa uso regolarmente</h2>
+        <p>Per darti un'idea concreta, ecco cosa uso oggi con continuità:</p>
+        <ul>
+            <li><strong>💳 Revolut</strong>, come conto digitale principale</li>
+            <li><strong>🔍 Microsoft Rewards</strong>, per accumulare punti con le attività quotidiane</li>
+            <li><strong>📱 Alcune app di guadagno passivo</strong> (le trovi tutte nella sezione dedicata), più che altro per capire davvero come funzionano</li>
+        </ul>
+        <p>
+            Gli altri servizi che trovi recensiti sul sito li ho aperti e provati a fondo, ma
+            non li uso più con continuità nella mia vita di tutti i giorni — non perché siano
+            scadenti, semplicemente perché per il mio uso quotidiano preferisco quelli sopra.
+        </p>
+
+        <!-- LIMITI -->
+        <h2>I miei limiti</h2>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Non sono un consulente finanziario né un commercialista, e non vendo corsi.
+                Quello che condivido è ciò che ho provato in prima persona — con i suoi limiti —
+                indicando dati, condizioni e fonti quando l'argomento lo richiede. Ho anche
+                sbagliato qualche volta lungo il percorso, ed è anche da lì che ho imparato
+                cosa guardare."</em>
+        </div>
+
+        <!-- TRASPARENZA -->
+        <h2>Trasparenza</h2>
+        <p>
+            Alcuni link presenti nel sito sono link di invito o link affiliati. Significa
+            che se ti registri a un servizio usando uno di quei link, io potrei ricevere
+            una piccola commissione, <strong>senza costi aggiuntivi per te</strong>.
+        </p>
+        <p>
+            Consiglio solo strumenti che uso o che ho usato — e quando un servizio non mi
+            convince, non lo ignoro: lo scrivo chiaramente, con gli stessi criteri che uso
+            per le recensioni positive. Un eventuale link affiliato non cambia il giudizio
+            sui limiti di un servizio: la valutazione viene prima, il link dopo. La fiducia
+            di chi legge vale più di qualsiasi commissione.
+        </p>
+        <p>
+            <a href="/trasparenza.html">Leggi la pagina Trasparenza completa →</a>
+        </p>
+
+        <!-- CORREZIONI -->
+        <h2>Errori e aggiornamenti</h2>
+        <p>
+            I dati su tassi, bonus e commissioni cambiano spesso, e ogni tanto qualcosa può
+            sfuggire. Se trovi un'informazione sbagliata o non più aggiornata, scrivimi dalla
+            <a href="/supporto.html">pagina Supporto</a>: verifico la segnalazione e, se
+            confermata, aggiorno la pagina.
+        </p>
+
+        <!-- LINK -->
+        <h2>Dove puoi trovarmi</h2>
+        <ul>
+            <li><a href="/supporto.html">📬 Pagina Supporto (scrivimi qui)</a></li>
+            <li><a href="/">🏠 Torna alla Home</a></li>
+        </ul>
 
         <!-- SOSTIENI IL PROGETTO -->
         <div class="tip highlight" style="text-align:center;">
@@ -183,38 +254,6 @@
                 </a>
             </div>
         </div>
-
-        <!-- TRASPARENZA -->
-        <h2>Trasparenza</h2>
-        <p>
-            Alcuni link presenti nel sito sono link di invito o link affiliati. Significa
-            che se ti registri a un servizio usando uno di quei link, io potrei ricevere
-            una piccola commissione, <strong>senza costi aggiuntivi per te</strong>.
-        </p>
-        <p>
-            Consiglio solo strumenti che uso o che ho usato — e quando un servizio non mi
-            convince, non lo ignoro: lo scrivo chiaramente, con gli stessi criteri che uso
-            per le recensioni positive. La fiducia di chi legge vale più di qualsiasi
-            commissione.
-        </p>
-        <p>
-            <a href="/trasparenza.html">Leggi la pagina Trasparenza completa →</a>
-        </p>
-
-        <!-- CORREZIONI -->
-        <h2>Errori e aggiornamenti</h2>
-        <p>
-            I dati su tassi, bonus e commissioni cambiano spesso, e ogni tanto qualcosa può
-            sfuggire. Se trovi un'informazione sbagliata o non più aggiornata, scrivimi dalla
-            <a href="/supporto.html">pagina Supporto</a>: verifico e correggo appena possibile.
-        </p>
-
-        <!-- LINK -->
-        <h2>Dove puoi trovarmi</h2>
-        <ul>
-            <li><a href="/supporto.html">📬 Pagina Supporto (scrivimi qui)</a></li>
-            <li><a href="/">🏠 Torna alla Home</a></li>
-        </ul>
 
         <!-- TRUST -->
         <div class="trust">
