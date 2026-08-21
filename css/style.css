@@ -1431,6 +1431,11 @@ border-radius: 10px;
 }
 .cmp-screens-row{
     display:flex;
+    /* centra la riga quando le schermate ci stanno tutte; il keyword "safe"
+       fa tornare l'allineamento a sinistra se la riga eccede la larghezza,
+       così su mobile lo scroll orizzontale non taglia la prima immagine */
+    justify-content:center;
+    justify-content:safe center;
     gap:16px;
     overflow-x:auto;
     padding:4px 4px 12px;
@@ -1531,6 +1536,7 @@ border-radius: 10px;
 .cmp-screens-pair .cmp-screen-caption.cmp-pair-a{grid-area:cap-a;}
 .cmp-screens-pair .cmp-screen-caption.cmp-pair-b{grid-area:cap-b;}
 .cmp-screens-extra-label{
+    text-align:center;
     font-size:12.5px;
     font-weight:700;
     text-transform:uppercase;
