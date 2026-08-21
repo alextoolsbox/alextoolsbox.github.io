@@ -118,5 +118,29 @@
     "tipo": "esperienza",
     "fonte": "Wallet UpRock di Alex al cambio $UPT del momento (valore variabile col prezzo di mercato)",
     "verificato": "2026-07-21"
+  },
+  "risultati-revolut-mese": {
+    "valore": "~50€",
+    "tipo": "esperienza",
+    "fonte": "Interessi/rendimento sul conto Revolut di Alex, unico conto digitale usato attivamente come principale",
+    "verificato": "2026-08-21"
+  },
+  "risultati-microsoft-rewards-mese": {
+    "valore": "~5-10€",
+    "tipo": "esperienza",
+    "fonte": "Punti Microsoft Rewards di Alex convertiti in buoni, calcolati su un singolo account (un account per persona, come previsto dai termini di servizio Microsoft)",
+    "verificato": "2026-08-21"
+  },
+  "risultati-app-passive-mese": {
+    "valore": "~20$ (~18€)",
+    "tipo": "esperienza",
+    "fonte": "Somma dei guadagni mensili di Alex su EarnApp, Honeygain, Grass, JumpTask e UpRock",
+    "verificato": "2026-08-21"
+  },
+  "risultati-totale-mese": {
+    "valore": "~75-80€",
+    "tipo": "esperienza",
+    "fonte": "Somma di Revolut, Microsoft Rewards e app passive indicate nella pagina I miei risultati, dato indicativo aggiornato periodicamente",
+    "verificato": "2026-08-21"
   }
 }
