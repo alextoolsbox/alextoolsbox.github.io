@@ -293,12 +293,14 @@ initVerifiedData();
    naturale di .image-box (max 500px) sono illeggibili, specie su
    mobile. Click sull'immagine apre un overlay a schermo pieno con la
    versione ingrandita. Un solo overlay riusato per tutte le immagini
-   della pagina, creato al primo giro. Le immagini sono già nell'HTML
-   statico (non iniettate come l'header), quindi si inizializza subito
-   come initLastModified/initVerifiedData, non dentro updatePromo().
+   della pagina, creato al primo giro. Copre anche gli screenshot reali
+   nelle pagine /confronti/ (.cmp-screen-frame img), stessa esigenza.
+   Le immagini sono già nell'HTML statico (non iniettate come l'header),
+   quindi si inizializza subito come initLastModified/initVerifiedData,
+   non dentro updatePromo().
    ============================================ */
 function initImageLightbox(){
-  const images = document.querySelectorAll('.image-box img');
+  const images = document.querySelectorAll('.image-box img, .cmp-screen-frame img');
   if (!images.length) return;
 
   let overlay = document.querySelector('.lightbox-overlay');
