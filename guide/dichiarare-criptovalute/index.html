@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come dichiarare le criptovalute: quadro RW e RT (2026)</title>
+    <meta name="description" content="Quadro RW (o W nel 730) per il monitoraggio, quadro RT (o T) per le plusvalenze: obblighi, aliquote, esempio pratico e sanzioni per le crypto.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/dichiarare-criptovalute/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Come dichiarare le criptovalute: quadro RW e RT (2026)">
+    <meta property="og:description" content="Quadro RW (o W nel 730) per il monitoraggio, quadro RT (o T) per le plusvalenze: obblighi, aliquote, esempio pratico e sanzioni per le crypto.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/dichiarare-criptovalute/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Come dichiarare le criptovalute: quadro RW e RT (2026)">
+    <meta name="twitter:description" content="Quadro RW/W per il monitoraggio, quadro RT/T per le plusvalenze: obblighi, aliquote ed esempio pratico per le crypto.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css?v=5b3fdcd4">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js?v=f0912127" defer></script>
+
+    <!-- SCHEMA FAQ GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Devo dichiarare le criptovalute anche se non ho venduto nulla e non ho guadagnato?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Il monitoraggio fiscale (quadro RW nel Modello Redditi PF, quadro W nel 730) è un obbligo separato dalla tassazione delle plusvalenze: va compilato ogni anno in cui detieni cripto-attività, indipendentemente dal fatto che tu abbia venduto o guadagnato qualcosa. Fa eccezione solo chi detiene le cripto tramite un intermediario italiano registrato all'OAM che applica già in automatico l'imposta di bollo sostitutiva."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Che differenza c'è tra quadro RW e quadro RT per le criptovalute?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sono due obblighi diversi. Il quadro RW serve al monitoraggio fiscale: dichiara quanto possiedi al 31 dicembre, a prescindere da guadagni o perdite, ed è la base per calcolare l'imposta sul valore delle cripto-attività (0,2% annuo). Il quadro RT, sezione V-A, serve invece a dichiarare le plusvalenze realizzate durante l'anno (cioè quando converti, scambi o spendi le cripto), su cui si paga l'imposta sostitutiva del 26% o 33% a seconda dell'anno."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Nel 730 si chiamano ancora RW e RT?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Dal 2023 il 730 usa nomi diversi per lo stesso obbligo: il quadro W ha sostituito il quadro RW per il monitoraggio, e il quadro T copre le plusvalenze al posto del quadro RT. Il quadro RW e il quadro RT restano invece i nomi corretti solo nel Modello Redditi Persone Fisiche, usato tipicamente da chi non può presentare il 730 (partite IVA, redditi non compatibili col 730)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Serve dichiarare anche le criptovalute su un wallet personale, non su un exchange?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. La localizzazione o il tipo di wallet non cambia l'obbligo: vale per exchange italiani, exchange esteri, hardware wallet, cold wallet e wallet software come Phantom. L'unica esenzione dal compilare RW/W è avere le cripto presso un intermediario italiano registrato all'OAM che applica già l'imposta di bollo in automatico — non il tipo di wallet in sé."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qual è l'aliquota sulle plusvalenze crypto: 26% o 33%?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dipende dall'anno in cui hai realizzato la plusvalenza, non dall'anno in cui la dichiari. Le plusvalenze realizzate nel 2025 (dichiarate nel 2026) restano al 26%. Dal 1° gennaio 2026, l'aliquota generale sale al 33%: quelle plusvalenze si dichiareranno nel 2027. Fa eccezione permanente lo scambio con stablecoin in euro conformi al MiCA, che restano al 26%. La franchigia di esenzione di 2.000€ è stata eliminata dal 2025: ogni plusvalenza, anche minima, è imponibile."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se non ho tenuto traccia del prezzo a cui ho comprato le mie criptovalute?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Senza documentazione del costo di acquisto, il costo si considera pari a zero: l'intero corrispettivo della vendita diventa plusvalenza imponibile, invece della sola differenza tra vendita e acquisto. È uno degli errori più costosi in assoluto: conservare sempre gli estratti conto dell'exchange o le transazioni on-chain con data e controvalore in euro al momento dell'acquisto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali sono le sanzioni se non dichiaro le criptovalute?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Per l'omesso monitoraggio (RW/W): dal 3% al 15% dell'importo non dichiarato se le cripto sono presso un intermediario italiano, dal 6% al 30% se su exchange estero o wallet non registrato. Per le plusvalenze non dichiarate: dichiarazione infedele 90-180% dell'imposta evasa, dichiarazione omessa 120-240% (minimo 250€), più interessi. Il ravvedimento operoso permette di regolarizzare spontaneamente prima di un controllo, con sanzioni ridotte fino a un decimo."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Come dichiarare le criptovalute: quadro RW e RT",
+        "description": "Il monitoraggio fiscale (RW o W nel 730) e le plusvalenze (RT o T nel 730) delle cripto-attività: chi deve compilarli, quando, l'imposta dello 0,2% annuo, l'aliquota 26-33% su base dell'anno di realizzo, un esempio pratico e le sanzioni.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-08-22",
+        "dateModified": "2026-08-22"
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Come dichiarare le criptovalute", "item": "https://alextoolsbox.it/guide/dichiarare-criptovalute/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Come dichiarare le criptovalute: quadro RW e RT</h1>
+        <p class="hero-description">
+            Non basta sapere che si paga il 26% o il 33%: c'è un secondo obbligo, separato e spesso
+            ignorato, che scatta anche se non hai guadagnato un euro. Come funzionano davvero i due
+            quadri, con un esempio pratico. Nessun link affiliato in questa pagina: solo
+            informazione.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                🧾 <strong>Questa non è consulenza fiscale.</strong> È una guida informativa su come
+                funzionano gli obblighi dichiarativi sulle cripto-attività in Italia, basata su fonti
+                ufficiali e professionali. Per la propria situazione specifica, soprattutto se hai
+                operazioni complesse (DeFi, staking, NFT), vale sempre il parere di un
+                commercialista.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Con le criptovalute ci sono <strong>due obblighi separati</strong>, spesso confusi tra
+                loro: il <strong>monitoraggio fiscale</strong> (quadro RW nel Modello Redditi, quadro
+                W nel 730), dovuto ogni anno anche <strong>senza plusvalenze</strong> solo per il
+                fatto di detenere cripto; e la <strong>tassazione delle plusvalenze</strong> (quadro
+                RT o T), dovuta solo quando converti, scambi o spendi le cripto. Aliquota 26% sulle
+                plusvalenze realizzate nel 2025, 33% dal 2026. Sul valore detenuto si paga anche
+                un'imposta annua dello 0,2%. La localizzazione del wallet non conta: vale per exchange
+                italiani, esteri e wallet personali come Phantom.
+            </p>
+        </div>
+
+        <!-- DUE OBBLIGHI -->
+        <h2 id="due-obblighi">Due obblighi diversi, spesso confusi tra loro</h2>
+        <p>
+            L'errore più comune parte da qui: pensare che "dichiarare le crypto" sia un'unica cosa.
+            In realtà sono <strong>due obblighi indipendenti</strong>, con regole e scadenze
+            proprie.
+        </p>
+        <p>
+            Il primo è il <strong>monitoraggio fiscale</strong>: dichiara quanto possiedi al 31
+            dicembre, indipendentemente dal fatto che tu abbia venduto, guadagnato o perso qualcosa.
+            Serve anche solo per detenere cripto su un wallet, senza aver mai fatto un'operazione. Il
+            secondo è la <strong>tassazione delle plusvalenze</strong>: si attiva solo quando c'è
+            un'operazione imponibile durante l'anno (vendita, scambio, spesa) che genera un guadagno o
+            una perdita reale.
+        </p>
+        <p>
+            Puoi dover compilare uno, l'altro, entrambi o nessuno dei due, a seconda della tua
+            situazione — vediamoli separatamente.
+        </p>
+
+        <!-- 730 VS MODELLO REDDITI -->
+        <h2 id="730-vs-redditi">730 o Modello Redditi PF: i nomi cambiano, l'obbligo no</h2>
+        <p>
+            Una fonte di confusione reale, soprattutto cercando online: i quadri hanno <strong>nomi
+            diversi</strong> a seconda del modello dichiarativo usato, anche se l'obbligo sostanziale
+            è lo stesso.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Modello Redditi PF</th>
+                        <th>730</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Chi lo usa tipicamente</strong></td>
+                        <td>Partite IVA, autonomi, chi ha redditi non compatibili col 730</td>
+                        <td>Lavoratori dipendenti e pensionati</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monitoraggio fiscale</strong></td>
+                        <td>Quadro RW</td>
+                        <td>Quadro W (sostituisce RW dal 2023)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plusvalenze</strong></td>
+                        <td>Quadro RT, sezione V-A</td>
+                        <td>Quadro T</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            In questa guida uso la dicitura "RW/W" e "RT/T" proprio per questo: il contenuto da
+            compilare è lo stesso (valore iniziale, valore finale, quota di possesso, giorni di
+            detenzione), cambia solo l'etichetta del quadro a seconda del modello.
+        </p>
+
+        <!-- QUADRO RW/W -->
+        <h2 id="monitoraggio">Quadro RW/W: il monitoraggio che serve anche senza guadagni</h2>
+        <p>
+            Va compilato ogni anno in cui detieni cripto-attività al 31 dicembre, <strong>a
+            prescindere</strong> da vendite o guadagni. La <strong>localizzazione del wallet non
+            conta</strong>: l'obbligo vale allo stesso modo per un exchange italiano, un exchange
+            estero, un hardware wallet, un cold wallet o un wallet software come
+            <a href="/guide/wallet-solana/">Phantom</a>. È lo stesso principio già visto per l'IBAN
+            estero nella guida <a href="/guide/dichiarare-iban-estero/">dichiarare un IBAN
+            estero</a>, applicato qui alle cripto-attività.
+        </p>
+        <p>
+            C'è una sola vera eccezione: chi detiene le cripto tramite un <strong>intermediario
+            italiano registrato all'OAM</strong> (Organismo Agenti e Mediatori) che applica già in
+            automatico l'imposta di bollo sostitutiva non deve compilare il quadro RW/W — se ne
+            occupa direttamente l'intermediario. Per tutti gli altri casi (la maggior parte degli
+            exchange internazionali e i wallet non custodial) la compilazione resta a carico del
+            contribuente.
+        </p>
+        <p>
+            Sul valore dichiarato si paga anche un'<strong>imposta sul valore delle cripto-attività
+            (IVCA)</strong> dello <strong>0,2% annuo</strong> — l'equivalente, per le crypto,
+            dell'imposta di bollo che si paga su altri strumenti finanziari. Il valore si calcola al
+            31 dicembre, seguendo una gerarchia ufficiale di fonti: prima il prezzo sulla piattaforma
+            dove hai acquistato, poi quello di una piattaforma simile, infine siti specializzati se le
+            prime due non sono disponibili.
+        </p>
+
+        <!-- QUADRO RT/T -->
+        <h2 id="plusvalenze">Quadro RT/T: quando e come si tassano le plusvalenze</h2>
+        <p>
+            A differenza del monitoraggio, questo quadro si attiva solo se durante l'anno hai fatto
+            un'<strong>operazione imponibile</strong>. Non tutte le operazioni lo sono:
+        </p>
+        <ul>
+            <li>
+                <strong>Imponibili:</strong> convertire cripto in euro (o altra valuta FIAT), scambiare
+                una criptovaluta con un'altra diversa (es. Bitcoin contro Ethereum), comprare beni o
+                servizi pagando in cripto, e i proventi da staking (tassati al lordo, senza
+                deduzioni).
+            </li>
+            <li>
+                <strong>Neutre (non imponibili):</strong> scambiare cripto "omogenee" tra loro (stesso
+                tipo), convertire euro in una stablecoin in euro conforme al MiCA e viceversa, il
+                rimborso di una stablecoin al suo valore nominale.
+            </li>
+        </ul>
+        <p>
+            Sull'aliquota, il punto che genera più confusione è temporale, non di percentuale: conta
+            l'<strong>anno in cui realizzi la plusvalenza</strong>, non l'anno in cui la dichiari. Le
+            plusvalenze realizzate nel <strong>2025</strong> restano tassate al <strong>26%</strong> e
+            si dichiarano nel 2026. Dal <strong>1° gennaio 2026</strong> l'aliquota generale sale al
+            <strong>33%</strong>: quelle plusvalenze si dichiareranno solo nel 2027, con la prossima
+            dichiarazione dei redditi. Fa eccezione permanente lo scambio con
+            <a href="/guide/cosa-sono-le-stablecoin/">stablecoin in euro conformi al MiCA</a> (es.
+            EURC), che restano al 26% indipendentemente dall'anno. Un altro cambiamento dal 2025: la
+            vecchia <strong>franchigia di esenzione di 2.000€</strong> non esiste più — oggi ogni
+            plusvalenza, anche minima, è imponibile.
+        </p>
+        <p>
+            Per calcolare il costo di ciò che vendi, si usa il metodo <strong>LIFO</strong> (Last In,
+            First Out): si considerano cedute per prime le cripto-attività acquistate più di recente,
+            non quelle possedute da più tempo. Le minusvalenze si possono riportare per i
+            <strong>4 anni successivi</strong>, ma solo dentro il comparto cripto: non si compensano
+            con le plusvalenze da altri strumenti (azioni, ETF), stesso principio dello "zainetto
+            fiscale" già visto nella guida sulla
+            <a href="/guide/tassazione-plusvalenze-investimenti/">tassazione delle plusvalenze da
+            investimenti</a>, ma applicato a un compartimento separato.
+        </p>
+
+        <!-- ESEMPIO PRATICO -->
+        <h2 id="esempio">Un esempio pratico</h2>
+        <p>
+            Hai comprato 0,1 BTC nel 2024 per 4.000€. Nel 2025 lo vendi per 6.000€. La plusvalenza è
+            <strong>2.000€</strong> (6.000€ − 4.000€), tassata al 26% (aliquota in vigore per le
+            plusvalenze realizzate nel 2025): l'imposta dovuta è <strong>520€</strong>. Questa
+            operazione va dichiarata nel quadro RT (o T nel 730) della dichiarazione del 2026.
+        </p>
+        <p>
+            Separatamente, se al 31 dicembre 2025 possiedi ancora altre cripto-attività (anche solo
+            0,05 BTC rimasti su un wallet), quel valore va comunque dichiarato nel quadro RW (o W),
+            con l'imposta dello 0,2% calcolata sul controvalore in euro a quella data — a prescindere
+            dal fatto che tu abbia venduto qualcosa durante l'anno.
+        </p>
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Il dettaglio che costa più caro se lo sbagli: senza la prova di quanto hai pagato
+                all'acquisto, il costo si considera zero e paghi le tasse sull'intero valore di
+                vendita, non sulla differenza. Tieni sempre gli estratti conto dell'exchange o le
+                transazioni on-chain con data e controvalore in euro al momento dell'acquisto — è
+                l'unica cosa che ti salva in caso di controllo."</em>
+        </div>
+
+        <!-- AFFRANCAMENTO -->
+        <h2 id="affrancamento">L'affrancamento 2025: un'opzione ormai chiusa</h2>
+        <p>
+            Chi aveva plusvalenze latenti accumulate prima del 2025 ha potuto scegliere un
+            <strong>affrancamento straordinario</strong>: rivalutare il valore delle proprie
+            cripto-attività al 1° gennaio 2025, pagando un'imposta sostitutiva ridotta del
+            <strong>18%</strong> su quel valore, in un'unica soluzione o in tre rate annuali. La
+            finestra per aderire si è chiusa il <strong>30 novembre 2025</strong>: oggi non è più
+            un'opzione disponibile, ma spiega perché in alcune conversazioni online se ne parla ancora
+            come di qualcosa di attuale — non lo è più.
+        </p>
+
+        <!-- SANZIONI -->
+        <h2 id="sanzioni">Cosa rischi se non dichiari</h2>
+        <p>
+            Le sanzioni sono diverse a seconda di quale dei due obblighi salti.
+        </p>
+        <p>
+            Per il <strong>monitoraggio omesso</strong> (RW/W): dal <strong>3% al 15%</strong>
+            dell'importo non dichiarato se le cripto sono presso un intermediario italiano, che sale
+            al <strong>6-30%</strong> se sono su un exchange estero o un wallet non registrato in
+            Italia — un motivo in più per non dare per scontato che un wallet personale "non
+            conti".
+        </p>
+        <p>
+            Per le <strong>plusvalenze non dichiarate</strong> (RT/T): la dichiarazione infedele
+            costa dal <strong>90% al 180%</strong> dell'imposta evasa; quella omessa dal
+            <strong>120% al 240%</strong>, con un minimo di 250€ — a cui si aggiungono gli interessi
+            legali sul ritardo.
+        </p>
+        <p>
+            In entrambi i casi, prima di un controllo dell'Agenzia delle Entrate resta disponibile il
+            <strong>ravvedimento operoso</strong>: permette di regolarizzare la propria posizione
+            spontaneamente, con sanzioni ridotte fino a un decimo di quelle piene, presentando una
+            dichiarazione integrativa e versando quanto dovuto con il modello F24.
+        </p>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Pensare che senza plusvalenze non ci sia nulla da dichiarare.</strong> Il
+                monitoraggio (RW/W) è dovuto comunque, solo per detenere cripto al 31 dicembre.
+            </li>
+            <li>
+                <strong>Credere che un wallet personale non custodial sfugga all'obbligo.</strong> La
+                localizzazione e il tipo di wallet non contano: conta solo se l'intermediario è OAM
+                italiano con bollo automatico.
+            </li>
+            <li>
+                <strong>Applicare il 33% a plusvalenze già realizzate nel 2025.</strong> Conta l'anno
+                di realizzo, non l'anno in cui compili la dichiarazione: 2025 resta al 26%.
+            </li>
+            <li>
+                <strong>Non conservare la prova del prezzo di acquisto.</strong> Senza documentazione
+                il costo si considera zero: paghi le tasse sull'intero controvalore di vendita.
+            </li>
+            <li>
+                <strong>Pensare di poter ancora aderire all'affrancamento al 18%.</strong> La finestra
+                si è chiusa il 30 novembre 2025.
+            </li>
+        </ul>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Devo dichiarare le criptovalute anche se non ho venduto nulla e non ho guadagnato?</h3>
+            <p>Sì, il monitoraggio fiscale (RW/W) è dovuto ogni anno in cui detieni cripto, a
+                prescindere da vendite o guadagni, salvo l'eccezione dell'intermediario OAM italiano
+                con bollo automatico.</p>
+
+            <h3>Che differenza c'è tra quadro RW e quadro RT per le criptovalute?</h3>
+            <p>RW è il monitoraggio (quanto possiedi al 31/12, sempre dovuto); RT è la tassazione
+                delle plusvalenze realizzate durante l'anno (dovuto solo se hai fatto operazioni
+                imponibili).</p>
+
+            <h3>Nel 730 si chiamano ancora RW e RT?</h3>
+            <p>No: dal 2023 il 730 usa il quadro W al posto di RW e il quadro T al posto di RT, con lo
+                stesso contenuto sostanziale.</p>
+
+            <h3>Serve dichiarare anche le criptovalute su un wallet personale, non su un exchange?</h3>
+            <p>Sì, la localizzazione o il tipo di wallet non cambia l'obbligo: vale per exchange
+                italiani, esteri e wallet personali come Phantom.</p>
+
+            <h3>Qual è l'aliquota sulle plusvalenze crypto: 26% o 33%?</h3>
+            <p>Dipende dall'anno di realizzo: 26% per le plusvalenze del 2025, 33% dal 2026 in poi.
+                Le stablecoin in euro MiCA restano sempre al 26%.</p>
+
+            <h3>Cosa succede se non ho tenuto traccia del prezzo a cui ho comprato le mie criptovalute?</h3>
+            <p>Il costo si considera pari a zero: paghi le tasse sull'intero corrispettivo di vendita,
+                non sulla sola differenza.</p>
+
+            <h3>Quali sono le sanzioni se non dichiaro le criptovalute?</h3>
+            <p>3-15% (o 6-30% se estero) per il monitoraggio omesso; 90-180% (infedele) o 120-240%
+                (omessa, minimo 250€) dell'imposta evasa per le plusvalenze. Il ravvedimento operoso
+                riduce le sanzioni se regolarizzi prima di un controllo.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/guide/tassazione-plusvalenze-investimenti/">🧾 Tassazione plusvalenze investimenti (26%)</a></li>
+            <li><a href="/guide/cosa-sono-le-stablecoin/">🪙 Cosa sono le stablecoin</a></li>
+            <li><a href="/guide/wallet-solana/">👛 Wallet Solana e Phantom</a></li>
+            <li><a href="/guide/dichiarare-iban-estero/">⚖️ Dichiarare un IBAN estero</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai contenuti citati
+                portano alle guide interne del sito, non a link di invito. È una scelta deliberata —
+                sui contenuti tecnici/informativi voglio zero conflitti di interesse
+                (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                Fonti: art. 67, comma 1, lett. c-sexies del TUIR, Legge di Bilancio 2026 (aliquota
+                33% dal 2026, eliminazione franchigia 2.000€ dal 2025), normativa sull'affrancamento
+                straordinario 2025 (scadenza 30 novembre 2025), approfondimenti tecnici professionali
+                su compilazione quadro RW/W e RT/T, valorizzazione delle cripto-attività e sanzioni
+                per omessa/infedele dichiarazione. Le informazioni riflettono la situazione ad agosto
+                2026 e possono cambiare — in particolare su normativa fiscale in evoluzione: in caso
+                di dubbio, o per operazioni complesse (DeFi, staking, NFT), verifica sempre con un
+                commercialista o sul sito dell'Agenzia delle Entrate. Questa guida è informativa e non
+                sostituisce una consulenza fiscale personalizzata.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

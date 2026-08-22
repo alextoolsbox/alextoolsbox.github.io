@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargeback: cos'è e come funziona (guida 2026)</title>
+    <meta name="description" content="Chargeback: cos'è, in cosa si differenzia dal rimborso frode PSD2, tempi (120-540 giorni), procedura passo-passo e come funziona sui 6 conti del sito.">
+    <link rel="canonical" href="https://alextoolsbox.it/guide/chargeback/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AlexToolsBox">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Chargeback: cos'è e come funziona (guida 2026)">
+    <meta property="og:description" content="Chargeback: cos'è, differenza col rimborso frode PSD2, tempi e procedura passo-passo, e come funziona sui 6 conti del sito.">
+    <meta property="og:url" content="https://alextoolsbox.it/guide/chargeback/">
+    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chargeback: cos'è e come funziona (guida 2026)">
+    <meta name="twitter:description" content="Chargeback: cos'è, differenza col rimborso frode PSD2, tempi e procedura passo-passo.">
+    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+    <!-- Plausible Analytics -->
+    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css?v=5b3fdcd4">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/js/promo.js?v=f0912127" defer></script>
+
+    <!-- SCHEMA ARTICLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Chargeback: cos'è e come funziona",
+        "description": "Chargeback: cos'è, in cosa si differenzia dal rimborso frode PSD2, tempi (120-540 giorni), procedura passo-passo e come funziona sui 6 conti del sito.",
+        "author": { "@type": "Person", "name": "Alex" },
+        "datePublished": "2026-08-22",
+        "dateModified": "2026-08-22"
+    }
+    </script>
+
+    <!-- SCHEMA FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Chargeback e rimborso per frode (PSD2) sono la stessa cosa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, sono due strumenti diversi. Il rimborso previsto dal D.Lgs. 11/2010 (PSD2) copre le operazioni MAI autorizzate da te, cioè la frode vera e propria: la banca deve rimborsarti salvo dimostri tua colpa grave. Il chargeback riguarda invece un pagamento che HAI autorizzato tu, ma che contesti per altri motivi — merce mai arrivata, non conforme, addebito duplicato, servizio cancellato e non rimborsato. Non è previsto da una legge italiana o europea: è una procedura contrattuale interna ai circuiti Visa e Mastercard."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo ho per aprire un chargeback?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Di norma 120 giorni dalla data della transazione (o dalla data di consegna prevista, se il prodotto/servizio non è mai arrivato). Per i casi di merce o servizio mai ricevuto il termine può arrivare fino a un tetto massimo di 540 giorni dalla transazione originale, secondo le regole Visa e Mastercard. Conviene comunque muoversi il prima possibile: più passa il tempo, più è difficile ricostruire la vicenda."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Devo prima contattare il venditore prima di aprire un chargeback?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In quasi tutti i casi sì, ed è spesso un requisito esplicito, non solo un consiglio: Wise, ad esempio, richiede di aver già provato a risolvere il problema col venditore prima di aprire una contestazione commerciale. Tienilo comunque documentato (email, chat, screenshot): è la prima prova che ti verrà chiesta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Il chargeback funziona anche con Satispay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non nello stesso modo. Satispay non è un circuito di carte come Visa o Mastercard: è un istituto di moneta elettronica con un sistema di pagamento proprietario. Per i pagamenti P2P e con QR code in negozio non si applica il chargeback bancario classico, ma la procedura di rimborso/contestazione interna di Satispay. Il chargeback tradizionale si applica solo se hai collegato una carta Visa o Mastercard tramite l'app."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se il venditore si oppone alla mia richiesta di chargeback?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il venditore può presentare le proprie prove alla propria banca (acquirer), che le inoltra alla tua banca (issuer). A quel punto la tua banca valuta entrambe le versioni e decide se confermare lo storno o restituire l'addebito. Nei casi più controversi la procedura può richiedere diverse settimane."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Il diritto di recesso e il chargeback sono la stessa cosa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Il diritto di recesso (art. 52 del Codice del Consumo) è un diritto di ripensamento che hai verso il venditore per gli acquisti a distanza: 14 giorni, senza bisogno di motivare la scelta, non coinvolge la banca. Il chargeback è invece una contestazione che apri con la tua banca quando qualcosa non ha funzionato nell'acquisto. Se hai esercitato correttamente il recesso e il venditore non ti rimborsa nei tempi previsti, quello può diventare a sua volta un motivo per aprire un chargeback."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali documenti servono per aprire un chargeback?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tipicamente: la prova d'acquisto o la ricevuta, le comunicazioni scambiate col venditore (email, chat, ticket di assistenza), la prova che il problema esiste davvero (tracking di una spedizione mai arrivata, foto di un prodotto difettoso, conferma di cancellazione di un servizio) ed eventualmente l'estratto conto con l'addebito contestato."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- BREADCRUMBLIST SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://alextoolsbox.it/guide/" },
+            { "@type": "ListItem", "position": 3, "name": "Chargeback", "item": "https://alextoolsbox.it/guide/chargeback/" }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch("/includes/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                updatePromo();
+            });
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Chargeback: cos'è e come funziona</h1>
+        <p class="hero-description">
+            Un pacco mai arrivato, un abbonamento che continua ad addebitarti dopo la disdetta, un
+            negoziante che sparisce dopo aver incassato: se hai autorizzato tu il pagamento ma
+            qualcosa è andato storto dopo, lo strumento giusto non è la denuncia per frode — è il
+            chargeback. Cos'è davvero, come si differenzia dal rimborso per frode, quanto tempo hai
+            e come funziona sui 6 conti di questo sito.
+        </p>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <!-- DISCLAIMER -->
+        <div class="tip">
+            <p>
+                💳 <strong>Questa non è consulenza legale.</strong> Il chargeback è una procedura
+                contrattuale dei circuiti di pagamento (Visa, Mastercard), non una legge italiana o
+                europea: tempistiche e regole esatte possono variare secondo il contratto della tua
+                carta e le condizioni del singolo circuito. In caso di dubbio, verifica sempre con
+                l'assistenza del tuo conto.
+            </p>
+        </div>
+
+        <!-- IN SINTESI -->
+        <div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Il <strong>chargeback</strong> è la procedura con cui la tua banca ti restituisce i
+                soldi di un pagamento con carta che <strong>hai autorizzato tu</strong>, ma che
+                contesti perché la merce non è arrivata, non è conforme, è stata addebitata due
+                volte o il venditore non risponde più. È diverso dal <strong>rimborso per frode</strong>
+                (D.Lgs. 11/2010, PSD2), che riguarda invece i pagamenti mai autorizzati — per quello
+                vedi la guida <a href="/guide/sicurezza-digitale-antifrode/#rimborso">Sicurezza
+                digitale e antifrode</a>. Hai in genere <strong>120 giorni</strong> per aprire un
+                chargeback (fino a 540 se la merce non arriva mai), e nella maggior parte dei casi
+                devi prima aver provato a risolvere il problema direttamente col venditore.
+            </p>
+        </div>
+
+        <!-- COS'È -->
+        <h2 id="cos-e">Cos'è il chargeback (e perché non è una legge)</h2>
+        <p>
+            Il chargeback è una procedura interna ai circuiti di pagamento internazionali —
+            <strong>Visa</strong> e <strong>Mastercard</strong> soprattutto — che regola lo storno di
+            un pagamento tra la banca che ha emesso la tua carta (l'<strong>issuer</strong>, cioè il
+            tuo conto) e la banca convenzionata del negoziante (l'<strong>acquirer</strong>). Non è
+            previsto da una legge italiana o europea come il rimborso per frode: è una regola
+            contrattuale a cui aderiscono le banche e gli istituti di pagamento che emettono carte su
+            quei circuiti.
+        </p>
+        <p>
+            In italiano viene chiamato anche <strong>storno</strong> o <strong>contestazione</strong>.
+            Attenzione a non confonderlo col termine <strong>disconoscimento</strong>, che nella
+            guida sulla sicurezza digitale usiamo per il caso diverso di un'operazione che non hai mai
+            autorizzato (vedi sezione successiva): sono parole che a volte le banche stesse usano in
+            modo intercambiabile nell'app, ma indicano due situazioni di partenza diverse.
+        </p>
+
+        <!-- DIFFERENZA RIMBORSO PSD2 -->
+        <h2 id="differenza-rimborso">Chargeback vs rimborso frode (PSD2): la differenza che conta</h2>
+        <p>
+            È la distinzione più importante di questa guida, perché determina quale strada percorrere.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Rimborso frode (PSD2)</th>
+                        <th>Chargeback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hai autorizzato tu il pagamento?</strong></td>
+                        <td>No — è una frode, non l'hai mai fatto tu</td>
+                        <td>Sì — il pagamento è tuo, il problema è dopo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Base giuridica</strong></td>
+                        <td>D.Lgs. 11/2010 (PSD2), legge</td>
+                        <td>Regole contrattuali Visa/Mastercard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Esempio tipico</strong></td>
+                        <td>Qualcuno ha usato la tua carta clonata o rubata</td>
+                        <td>Hai comprato online e il pacco non è mai arrivato</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chi deve provare cosa</strong></td>
+                        <td>La banca deve provare la tua colpa grave per rifiutare</td>
+                        <td>Tu presenti le prove del problema, il venditore può controbattere</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Termine</strong></td>
+                        <td>13 mesi dall'addebito</td>
+                        <td>Di norma 120 giorni (fino a 540 in alcuni casi)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Per il rimborso frode, la guida di riferimento resta
+            <a href="/guide/sicurezza-digitale-antifrode/#rimborso">Sicurezza digitale e
+            antifrode</a>. Questa guida copre invece il secondo caso: hai pagato tu, volontariamente,
+            ma qualcosa dopo non ha funzionato.
+        </p>
+
+        <div class="alex-tip">
+            <span class="alex-label">💡 Alex's Tip</span><br>
+            <em>"Il test rapido che uso io: se non riconosco affatto il pagamento, è una frode, vado
+                sulla guida sicurezza. Se il pagamento lo riconosco ma il venditore mi ha fregato in
+                qualche modo, è chargeback. Confondere le due cose fa perdere tempo: la banca ti
+                indirizzerà comunque alla procedura giusta, ma partire dalla richiesta sbagliata
+                rallenta tutto."</em>
+        </div>
+
+        <!-- MOTIVI -->
+        <h2 id="motivi">Quando puoi aprire un chargeback: i motivi più comuni</h2>
+        <ul>
+            <li>
+                <strong>Merce o servizio mai arrivato.</strong> Hai pagato, il venditore non ha
+                consegnato entro i termini promessi (o entro un termine ragionevole, se non era
+                specificato).
+            </li>
+            <li>
+                <strong>Merce non conforme o difettosa.</strong> Quello che hai ricevuto non
+                corrisponde alla descrizione, oppure è arrivato danneggiato o non funzionante, e il
+                venditore non lo sostituisce né rimborsa.
+            </li>
+            <li>
+                <strong>Addebito duplicato o importo sbagliato.</strong> Sei stato addebitato due
+                volte per lo stesso acquisto, o per una cifra diversa da quella concordata.
+            </li>
+            <li>
+                <strong>Abbonamento cancellato ma ancora addebitato.</strong> Hai disdetto un
+                servizio ricorrente (streaming, palestra, software) ma continuano ad addebitarti.
+            </li>
+            <li>
+                <strong>Venditore irraggiungibile o fallito.</strong> Il negozio online sparisce, non
+                risponde più, o chiude, e non hai altro modo per farti rimborsare.
+            </li>
+        </ul>
+        <p>
+            Se sospetti invece che qualcuno abbia usato la tua carta senza il tuo consenso, non è
+            questo l'elenco che ti riguarda: torna alla guida sulla
+            <a href="/guide/sicurezza-digitale-antifrode/">sicurezza digitale</a> per il rimborso
+            frode.
+        </p>
+
+        <!-- TEMPISTICHE -->
+        <h2 id="tempistiche">Quanto tempo hai</h2>
+        <p>
+            Il termine standard sui circuiti Visa e Mastercard è di <strong>120 giorni</strong> dalla
+            data della transazione. Per i casi in cui la merce o il servizio non arrivano proprio, il
+            termine decorre invece dalla <strong>data di consegna prevista</strong> (se il venditore
+            non l'ha indicata, alcune banche applicano un termine più corto, ad esempio 30 giorni dal
+            pagamento), fino a un tetto massimo di <strong>540 giorni</strong> dalla transazione
+            originale. Sono le regole generali dei circuiti: la tua banca può applicare condizioni
+            leggermente diverse nel dettaglio, verificale sempre nell'app o nel contratto.
+        </p>
+        <p>
+            In pratica: prima apri la contestazione, meglio è. Aspettare non ti fa perdere solo tempo
+            utile sul termine massimo, ma rende anche più difficile ricostruire una vicenda con prove
+            solide.
+        </p>
+
+        <!-- PROCEDURA -->
+        <h2 id="procedura">Come funziona in pratica: la procedura passo-passo</h2>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Passo</th>
+                        <th>Cosa fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Contatta il venditore</strong></td>
+                        <td>Nella maggior parte dei casi è un passaggio richiesto, non solo
+                            consigliato — alcune fintech (es. Wise) lo rendono un requisito esplicito
+                            prima di aprire una contestazione commerciale. Tieni traccia scritta di
+                            ogni scambio.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Raccogli le prove</strong></td>
+                        <td>Ricevuta o conferma d'ordine, comunicazioni con il venditore, prova del
+                            problema (tracking mai aggiornato, foto del prodotto difettoso, conferma
+                            di disdetta di un abbonamento), estratto conto con l'addebito.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Apri la contestazione con la tua banca</strong></td>
+                        <td>Si fa dall'app o dal servizio clienti del tuo conto, mai direttamente con
+                            Visa o Mastercard: sono la tua banca (issuer) e quella del venditore
+                            (acquirer) a gestire la procedura tra loro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. La banca valuta e inoltra</strong></td>
+                        <td>Se la richiesta è fondata, la tua banca la inoltra al circuito e alla
+                            banca del venditore, che può accettare o opporsi presentando le proprie
+                            prove.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Esito</strong></td>
+                        <td>Se non ci sono opposizioni l'iter è più rapido; nei casi controversi può
+                            richiedere diverse settimane prima di un esito definitivo.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- RECESSO -->
+        <h2 id="recesso">Chargeback e diritto di recesso: non sono la stessa cosa</h2>
+        <p>
+            Il <strong>diritto di recesso</strong> (art. 52 del Codice del Consumo, D.Lgs. 206/2005)
+            è un diritto diverso: puoi ripensarci su un acquisto a distanza entro
+            <strong>14 giorni</strong> (30 in alcuni casi) <strong>senza dover motivare la
+            scelta</strong>. Si esercita direttamente verso il venditore, non coinvolge la banca, e
+            non è una "contestazione" — è un diritto contrattuale che hai a prescindere da qualsiasi
+            problema con l'acquisto.
+        </p>
+        <p>
+            I due strumenti si possono collegare: se eserciti correttamente il recesso e il venditore
+            non ti rimborsa entro i termini di legge, <strong>quello diventa a sua volta un motivo
+            valido per aprire un chargeback</strong> — a quel punto il problema non è più solo "voglio
+            ripensarci", ma "il venditore non ha rispettato un obbligo di rimborso che aveva".
+        </p>
+
+        <!-- I 6 CONTI -->
+        <h2 id="conti">Chargeback sui 6 conti di questo sito</h2>
+        <p>
+            Non tutti i conti di questo sito funzionano allo stesso modo: dipende dal circuito della
+            carta, e un caso — Satispay — è strutturalmente diverso dagli altri cinque.
+        </p>
+        <div style="overflow-x:auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Conto</th>
+                        <th>Circuito carta</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/revolut/">Revolut</a></td>
+                        <td>Visa e Mastercard (dipende dal piano/paese)</td>
+                        <td>Contestazione avviabile direttamente dall'app</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/wise/">Wise</a></td>
+                        <td>Mastercard</td>
+                        <td>Per le dispute commerciali richiede esplicitamente di aver già contattato
+                            il venditore prima di aprire la contestazione</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/trade-republic/">Trade Republic</a></td>
+                        <td>Visa</td>
+                        <td>Carta di debito con circuito Visa</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/hype/">Hype</a></td>
+                        <td>Mastercard (via Banca Sella)</td>
+                        <td>Distingue esplicitamente frode, errore di addebito, merce resa e merce non
+                            ricevuta come categorie di contestazione diverse</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/n26/">N26</a></td>
+                        <td>Mastercard</td>
+                        <td>Contestazione via app; N26 chiede di segnalare entro un termine interno
+                            più stretto di quello massimo del circuito, verificalo in app</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/satispay/">Satispay</a></td>
+                        <td>Nessuno — è un IMEL, non un circuito carte</td>
+                        <td><strong>Il chargeback classico non si applica</strong> ai pagamenti P2P e
+                            con QR code: seguono le procedure di rimborso/contestazione interne di
+                            Satispay. Il chargeback Visa/Mastercard si applica solo se colleghi una
+                            carta di quei circuiti tramite l'app.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Le condizioni esatte (termini interni, modalità di apertura della contestazione) possono
+            cambiare nel tempo: verificale sempre nell'app o nelle pagine di assistenza ufficiali del
+            tuo conto prima di agire.
+        </p>
+
+        <!-- ERRORI COMUNI -->
+        <h2 id="errori">Gli errori più comuni</h2>
+        <ul>
+            <li>
+                <strong>Aprire un chargeback per una frode vera.</strong> Se non hai autorizzato tu il
+                pagamento, la strada giusta è il rimborso PSD2, non il chargeback: le tutele e i
+                termini sono diversi (13 mesi contro 120-540 giorni).
+            </li>
+            <li>
+                <strong>Non contattare prima il venditore.</strong> In molti casi è un requisito, non
+                un'opzione — saltarlo può far rifiutare la richiesta prima ancora di valutarla nel
+                merito.
+            </li>
+            <li>
+                <strong>Aspettare troppo prima di agire.</strong> I termini corrono dalla transazione
+                o dalla consegna prevista, non da quando decidi di occupartene.
+            </li>
+            <li>
+                <strong>Dare per scontato che Satispay funzioni come una carta.</strong> Per i
+                pagamenti P2P e QR non c'è un circuito Visa/Mastercard dietro: la contestazione segue
+                una procedura interna diversa.
+            </li>
+            <li>
+                <strong>Non conservare le prove.</strong> Email, ricevute, screenshot delle
+                comunicazioni: senza documentazione, anche una richiesta fondata rischia di non essere
+                accolta.
+            </li>
+        </ul>
+
+        <!-- FAQ -->
+        <h2 id="faq">Domande frequenti</h2>
+        <div class="faq">
+            <h3>Chargeback e rimborso per frode (PSD2) sono la stessa cosa?</h3>
+            <p>No. Il rimborso PSD2 copre le operazioni mai autorizzate da te (frode). Il chargeback
+                riguarda un pagamento che hai autorizzato tu, ma che contesti per altri motivi. Non è
+                previsto da una legge, ma da regole contrattuali dei circuiti Visa e Mastercard.</p>
+
+            <h3>Quanto tempo ho per aprire un chargeback?</h3>
+            <p>Di norma 120 giorni dalla transazione (o dalla consegna prevista, se il prodotto non è
+                mai arrivato), fino a un tetto massimo di 540 giorni per i casi di merce o servizio
+                mai ricevuto.</p>
+
+            <h3>Devo prima contattare il venditore prima di aprire un chargeback?</h3>
+            <p>In quasi tutti i casi sì, ed è spesso un requisito esplicito — Wise, ad esempio, lo
+                richiede per le dispute commerciali. Tieni traccia di ogni comunicazione.</p>
+
+            <h3>Il chargeback funziona anche con Satispay?</h3>
+            <p>Non nello stesso modo: Satispay è un IMEL, non un circuito carte. Per i pagamenti P2P e
+                QR si seguono le procedure di rimborso interne di Satispay, non il chargeback
+                bancario classico.</p>
+
+            <h3>Cosa succede se il venditore si oppone alla mia richiesta di chargeback?</h3>
+            <p>Il venditore presenta le proprie prove alla sua banca, che le inoltra alla tua. La tua
+                banca valuta entrambe le versioni prima di confermare o respingere lo storno.</p>
+
+            <h3>Il diritto di recesso e il chargeback sono la stessa cosa?</h3>
+            <p>No: il recesso (14 giorni, art. 52 Codice del Consumo) è un diritto di ripensamento
+                verso il venditore, senza bisogno di motivazione. Il chargeback è una contestazione
+                con la banca per un problema concreto con l'acquisto.</p>
+
+            <h3>Quali documenti servono per aprire un chargeback?</h3>
+            <p>Prova d'acquisto, comunicazioni col venditore, prova del problema (tracking, foto,
+                conferma di disdetta) ed estratto conto con l'addebito contestato.</p>
+        </div>
+
+        <!-- GUIDE CORRELATE -->
+        <h2>Guide correlate</h2>
+        <ul>
+            <li><a href="/guide/sicurezza-digitale-antifrode/">🔒 Sicurezza digitale e antifrode (rimborso frode)</a></li>
+            <li><a href="/guide/fondo-tutela-depositi/">🏦 Fondo di tutela dei depositi</a></li>
+            <li><a href="/revolut/sicurezza.html">🔒 Sicurezza Revolut</a></li>
+            <li><a href="/wise/sicurezza.html">🌍 Sicurezza Wise</a></li>
+            <li><a href="/satispay/sicurezza.html">💙 Sicurezza Satispay</a></li>
+        </ul>
+
+        <!-- TRUST -->
+        <div class="trust">
+            <h3>Informazioni sulla guida</h3>
+            <p>
+                <strong>Questa pagina non contiene link affiliati</strong>: i link ai servizi citati
+                portano alle guide interne del sito, non a link di invito. Stessa scelta fatta per la
+                guida sulla sicurezza digitale — sui contenuti di tutela voglio zero conflitti di
+                interesse (<a href="/trasparenza.html">leggi la pagina Trasparenza</a>).
+            </p>
+            <p>
+                Fonti: regole generali dei circuiti Visa e Mastercard sul chargeback (procedura
+                contrattuale, non normativa), pagine ufficiali di assistenza di N26, Wise, Revolut e
+                HYPE sulla gestione delle contestazioni, art. 52 del Codice del Consumo (D.Lgs.
+                206/2005) sul diritto di recesso, documentazione Banca d'Italia sulla distinzione tra
+                operazioni non autorizzate (D.Lgs. 11/2010) e altre contestazioni di pagamento. Le
+                condizioni esatte possono variare da banca a banca e nel tempo: in caso di dubbio fa
+                fede il contratto del proprio conto. Questa guida è informativa e non sostituisce una
+                consulenza legale personalizzata.
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:10px;">
+                Ultimo aggiornamento: <span id="last-modified"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
