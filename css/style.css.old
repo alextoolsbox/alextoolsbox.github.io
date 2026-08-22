@@ -164,30 +164,10 @@ z-index:999;
 /* link dentro dropdown */
 
 .dropdown-menu a{
-display:flex;
-align-items:center;
-gap:8px;
+display:block;
 padding:10px 15px;
 margin:0;
 color:#333;
-}
-
-/* ICONE SVG DI NAVIGAZIONE (sostituiscono le emoji nel menu, 22 agosto 2026) */
-.nav-ico{
-width:16px;
-height:16px;
-stroke:currentColor;
-stroke-width:1.8;
-fill:none;
-stroke-linecap:round;
-stroke-linejoin:round;
-flex-shrink:0;
-}
-
-.nav-links a.nav-ico-link{
-display:inline-flex;
-align-items:center;
-gap:6px;
 }
 
 /* hover dropdown */
@@ -262,8 +242,7 @@ transition:0.15s;
 }
 
 .search-field .search-icon{
-display:inline-flex;
-align-items:center;
+font-size:14px;
 opacity:0.6;
 flex-shrink:0;
 }
@@ -474,7 +453,7 @@ margin:30px auto;
 background:white;
 padding:50px 40px;
 border-radius:12px;
-box-shadow:0 4px 16px rgba(0,0,0,0.06);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 h2{
@@ -707,7 +686,7 @@ transition:transform 0.2s ease, box-shadow 0.2s ease;
 
 .card:hover{
 transform:translateY(-3px);
-box-shadow:0 4px 12px rgba(0,0,0,0.06);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
 /* TABLE */

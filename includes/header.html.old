@@ -1,0 +1,148 @@
+<!-- ========== HEADER COMPLETO (con hamburger menu, skip-link e ricerca) ========== -->
+
+<!-- Skip-link (accessibilità) -->
+<a href="#main-content" class="skip-link">Vai al contenuto</a>
+
+<div class="site-header">
+
+    <!-- PROMO BAR -->
+    <div id="promo-bar" onclick="window.location.href='/revolut/link.html'" style="cursor:pointer;">
+        <span class="promo-text"></span>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="nav-container">
+
+            <a href="/" class="nav-logo">
+                <img src="/img/logo-atb.svg" alt="AlexToolsBox">
+                <span>AlexToolsBox</span>
+            </a>
+
+            <!-- Hamburger menu (mobile) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav-links">
+
+                <a href="/">Home</a>
+
+                <!-- CONTI (appiattito: solo i 6 brand, niente flyout a 2 livelli) -->
+                <div class="dropdown">
+                    <a href="/conti-digitali.html">Conti</a>
+                    <input type="checkbox" id="acc-top-1" class="acc-toggle"><label for="acc-top-1" class="acc-chevron" aria-hidden="true"></label>
+
+                    <div class="dropdown-menu">
+                        <a href="/revolut/">Revolut</a>
+                        <a href="/wise/">Wise</a>
+                        <a href="/satispay/">Satispay</a>
+                        <a href="/trade-republic/">Trade Republic</a>
+                        <a href="/hype/">Hype</a>
+                        <a href="/n26/">N26</a>
+                        <a href="/conti-digitali.html" class="dropdown-footer-link">Vedi tutti i conti →</a>
+                    </div>
+                </div>
+
+                <!-- GUADAGNI EXTRA (appiattito) -->
+                <div class="dropdown">
+                    <a href="/guadagni-extra.html">Guadagni Extra</a>
+                    <input type="checkbox" id="acc-top-2" class="acc-toggle"><label for="acc-top-2" class="acc-chevron" aria-hidden="true"></label>
+
+                    <div class="dropdown-menu">
+                        <a href="/microsoft-rewards/">Microsoft Rewards</a>
+                        <a href="/app-passive/honeygain/">Honeygain</a>
+                        <a href="/app-passive/jumptask/">JumpTask</a>
+                        <a href="/app-passive/earnapp/">EarnApp</a>
+                        <a href="/app-passive/grass/">Grass.io</a>
+                        <a href="/app-passive/uprock/">UpRock</a>
+                        <a href="/guadagni-extra.html" class="dropdown-footer-link">Vedi tutte le opzioni →</a>
+                    </div>
+                </div>
+
+                <!-- CONFRONTA (Confronti + Classifiche uniti in un mega-menu a 2 colonne) -->
+                <div class="dropdown">
+                    <a href="/confronti/">Confronta</a>
+                    <input type="checkbox" id="acc-top-3" class="acc-toggle"><label for="acc-top-3" class="acc-chevron" aria-hidden="true"></label>
+
+                    <div class="dropdown-menu mega">
+                        <div class="mega-col">
+                            <div class="mega-title">Confronti (1 vs 1)</div>
+                            <a href="/confronti/migliori-conti-digitali.html">🏆 Miglior conto digitale 2026</a>
+                            <a href="/confronti/satispay-vs-trade-republic.html">📲 Satispay vs Trade Republic</a>
+                            <a href="/confronti/trade-republic-vs-revolut.html">💹 Trade Republic vs Revolut</a>
+                            <a href="/confronti/wise-vs-revolut.html">🌍 Wise vs Revolut</a>
+                            <a href="/confronti/interessi-sulla-liquidita.html">💰 Interessi sulla liquidità</a>
+                            <a href="/confronti/trade-republic-vs-wise.html">💹 Trade Republic vs Wise</a>
+                            <a href="/confronti/" class="dropdown-footer-link">Tutti i confronti →</a>
+                        </div>
+                        <div class="mega-col">
+                            <div class="mega-title">Classifiche (top 3+)</div>
+                            <a href="/classifiche/migliori-conti-canone-zero.html">💳 Conti a canone zero</a>
+                            <a href="/classifiche/migliori-conti-prelievi-atm-estero.html">🏧 Prelievi ATM gratis</a>
+                            <a href="/classifiche/migliori-app-guadagno-extra.html">📱 App di guadagno extra</a>
+                            <a href="/classifiche/migliori-conti-cashback.html">💰 Conti con cashback</a>
+                            <a href="/classifiche/migliori-bonus-benvenuto.html">🎁 Bonus di benvenuto</a>
+                            <a href="/classifiche/" class="dropdown-footer-link">Tutte le classifiche →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GUIDE PRATICHE (appiattito: primi 5 curati, link alla hub per il resto) -->
+                <div class="dropdown">
+                    <a href="/guide/">📚 Approfondimenti</a>
+                    <input type="checkbox" id="acc-top-4" class="acc-toggle"><label for="acc-top-4" class="acc-chevron" aria-hidden="true"></label>
+
+                    <div class="dropdown-menu">
+                        <a href="/guide/come-aprire-un-conto-digitale/">📋 Come aprire un conto digitale</a>
+                        <a href="/guide/cosa-e-un-iban/">🔤 Cos'è l'IBAN</a>
+                        <a href="/guide/fondo-tutela-depositi/">🏦 Fondo di tutela dei depositi</a>
+                        <a href="/guide/cosa-e-un-etf/">📊 Cos'è un ETF</a>
+                        <a href="/guide/cosa-e-un-pac/">📈 Cos'è un PAC</a>
+                        <a href="/guide/" class="dropdown-footer-link">Tutte le guide →</a>
+                    </div>
+                </div>
+
+                <!-- STRUMENTI (invariato) -->
+                <div class="dropdown">
+                    <a href="/strumenti/index.html">Strumenti</a>
+                    <input type="checkbox" id="acc-top-5" class="acc-toggle"><label for="acc-top-5" class="acc-chevron" aria-hidden="true"></label>
+
+                    <div class="dropdown-menu">
+                    <a href="/strumenti/calcolatore-rewards.html">🧮 Calcolatore Rewards</a>
+                    <a href="/revolut/deposito-senza-vincoli.html#calcolatore">💰 Calcolatore deposito Revolut</a>
+                    <a href="/revolut/revpoint.html#calcolatore">⭐ Calcolatore RevPoints</a>
+                    <a href="/wise/commissioni-cambio.html#calcolatore">💱 Calcolatore prelievi ATM Wise</a>
+                    <a href="/trade-republic/pac.html#calcolatore">📈 Simulatore PAC Trade Republic</a>
+                    </div>
+                </div>
+
+                <!-- NOVITÀ -->
+                <a href="/novita/">🔔 Novità</a>
+
+                <!-- CHI SONO -->
+                <a href="/chi-sono.html">Chi sono</a>
+
+                <!-- SUPPORTO -->
+                <a href="/supporto.html">Supporto</a>
+
+            </div>
+
+            <!-- RICERCA (nuova: sempre visibile, tutta a destra, fuori da .nav-links così non si nasconde nell'hamburger su mobile) -->
+            <div class="nav-search-inline">
+                <div class="search-field">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                    <input type="text" id="siteSearchInput" placeholder="Cerca una pagina..." autocomplete="off" aria-label="Cerca nel sito">
+                </div>
+                <div class="search-results" id="siteSearchResults"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
