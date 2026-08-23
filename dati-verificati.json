@@ -44,50 +44,98 @@
   "revolut-ultra-canone-mensile": {
     "valore": "55€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento, revolut.com/it-IT/legal/italy-information-sheet/ (versione 07/05/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-ultra-canone-annuale": {
     "valore": "540€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-ultra-tasso": {
     "valore": "2,5%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut (fino a 100.000€, 2% oltre)",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 100.000€, 2% oltre; versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-metal-canone-mensile": {
     "valore": "15,99€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-metal-canone-annuale": {
     "valore": "155€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-metal-tasso": {
     "valore": "2,25%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut (fino a 100.000€, 2% oltre)",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 100.000€, 2% oltre; versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-standard-tasso": {
     "valore": "2%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
   },
   "revolut-standard-soglia": {
     "valore": "3.000€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo ufficiale Revolut",
-    "verificato": "2026-08-13"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-premium-tasso": {
+    "valore": "2%",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 6.000€, 1,25% oltre; versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-premium-soglia": {
+    "valore": "6.000€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-premium-canone-mensile": {
+    "valore": "9,99€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-premium-canone-annuale": {
+    "valore": "100€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-plus-tasso": {
+    "valore": "2%",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 3.000€, 1% oltre — stessi scaglioni di Standard; versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-plus-canone-mensile": {
+    "valore": "3,99€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-plus-canone-annuale": {
+    "valore": "40€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
+    "verificato": "2026-08-22"
+  },
+  "revolut-deposito-tetto-massimo": {
+    "valore": "5.000.000€",
+    "tipo": "ufficiale",
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli, tetto massimo depositabile per depositante (versione aggiornata 20/08/2026)",
+    "verificato": "2026-08-22"
   },
   "wise-bonus-soglia-condizione": {
     "valore": "250€",
