@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcolatore Microsoft Rewards: buoni regalo | AlexToolsBox</title>
-    <meta name="description" content="Calcola quanto puoi guadagnare con Microsoft Rewards in base ai minuti dedicati ogni giorno: punti mensili, valore in buoni regalo e tempo per i premi.">
+    <title>Calcolatore Microsoft Rewards: quanto guadagni per livello | AlexToolsBox</title>
+    <meta name="description" content="Calcola quanto puoi guadagnare con Microsoft Rewards in base al tuo livello (Membro, Argento, Oro): punti al giorno, bonus mensili, valore in buoni regalo e tempo per i premi. Sistema 2026, solo smartphone.">
     <link rel="canonical" href="https://alextoolsbox.it/strumenti/calcolatore-rewards.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AlexToolsBox">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="Calcolatore Microsoft Rewards: buoni regalo | AlexToolsBox">
-    <meta property="og:description" content="Calcola quanto puoi guadagnare con Microsoft Rewards in base ai minuti dedicati ogni giorno: punti mensili, valore in buoni regalo e tempo per i premi.">
+    <meta property="og:title" content="Calcolatore Microsoft Rewards: quanto guadagni per livello | AlexToolsBox">
+    <meta property="og:description" content="Calcola quanto puoi guadagnare con Microsoft Rewards in base al tuo livello (Membro, Argento, Oro): punti al giorno, bonus mensili, valore in buoni regalo e tempo per i premi. Sistema 2026, solo smartphone.">
     <meta property="og:url" content="https://alextoolsbox.it/strumenti/calcolatore-rewards.html">
     <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Calcolatore Microsoft Rewards: quanto guadagni in buoni regalo">
-    <meta name="twitter:description" content="Stima punti mensili, valore in buoni regalo e tempo per raggiungere i premi Rewards.">
+    <meta name="twitter:title" content="Calcolatore Microsoft Rewards: quanto guadagni per livello">
+    <meta name="twitter:description" content="Stima punti, bonus mensili, valore in buoni regalo e tempo per i premi in base al tuo livello Rewards (Membro, Argento, Oro).">
     <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <!-- Plausible Analytics -->
     <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
@@ -29,11 +29,11 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Calcolatore Microsoft Rewards: quanto guadagni in buoni regalo",
-        "description": "Calcola quanto puoi guadagnare con Microsoft Rewards inserendo i minuti che dedichi ogni giorno. Stima punti, valore in euro e tempo per i premi.",
+        "headline": "Calcolatore Microsoft Rewards: quanto guadagni per livello",
+        "description": "Calcola quanto puoi guadagnare con Microsoft Rewards scegliendo il tuo livello (Membro, Argento, Oro). Stima punti, bonus mensili, valore in euro e tempo per i premi, aggiornata al sistema 2026 solo smartphone.",
         "author": { "@type": "Person", "name": "Alex" },
         "datePublished": "2026-05-29",
-        "dateModified": "2026-05-29"
+        "dateModified": "2026-08-25"
     }
     </script>
 
@@ -67,8 +67,9 @@
     <div class="hero">
         <h1>🧮 Calcolatore Microsoft Rewards</h1>
         <p class="hero-description">
-            Inserisci quanti minuti al giorno vuoi dedicare e scopri quanti punti puoi
-            accumulare, quanto valgono e in quanto tempo raggiungi i premi che ti interessano.
+            Scegli il tuo livello Rewards — Membro, Argento o Oro — e scopri quanti punti
+            puoi accumulare ogni mese, quanto valgono in buoni regalo e in quanto tempo
+            raggiungi i premi che ti interessano.
         </p>
     </div>
 
@@ -78,10 +79,13 @@
         <div class="tip highlight">
             <p><strong>📌 In sintesi</strong></p>
             <p>
-                Questo calcolatore ti dà una stima <strong>personalizzata</strong> dei tuoi
-                guadagni con Microsoft Rewards, basata sui minuti che dedichi ogni giorno.
-                Non è una cifra esatta (i punti variano in base alle attività disponibili),
-                ma è un'ottima approssimazione per capire se vale la pena iniziare.
+                Dal <strong>1° luglio 2026</strong> Microsoft Rewards in Italia funziona con il
+                sistema a livelli <strong>Membro, Argento e Oro</strong>: le ricerche da PC non
+                danno più punti, tutto si fa da smartphone. Questo calcolatore ti dà una stima
+                <strong>per livello</strong>: più sali, più aumentano sia il tetto giornaliero
+                delle ricerche sia i bonus mensili automatici. I numeri per il livello
+                <strong>Oro sono quelli reali</strong>, testati sul mio account; Membro e Argento
+                sono stime proporzionali, perché io uso Rewards da livello Oro.
             </p>
             <p>
                 Il valore è calcolato sul cambio base: <strong>7.205 punti = 5€</strong> in
@@ -94,12 +98,11 @@
         <h2>Quanto puoi guadagnare?</h2>
 
         <div class="calculator-box">
-            <label><strong>Quanti minuti al giorno vuoi dedicare?</strong></label>
-            <select id="minutiInput">
-                <option value="2">⏱ 2 minuti (solo attività base)</option>
-                <option value="5" selected>⏱ 5 minuti (attività + ricerche rapide)</option>
-                <option value="8">⏱ 8 minuti (routine completa app + PC)</option>
-                <option value="12">⏱ 12 minuti (routine completa + extra)</option>
+            <label><strong>Qual è (o sarà) il tuo livello Microsoft Rewards?</strong></label>
+            <select id="livelloInput">
+                <option value="membro">🔹 Membro — livello base, nessun requisito</option>
+                <option value="argento">🔸 Argento — richiede circa 500 punti/mese</option>
+                <option value="oro" selected>🥇 Oro — richiede circa 750 punti/mese + 2 attività di avanzamento (il mio livello)</option>
             </select>
 
             <button onclick="calcola()" style="margin-top:15px;">Calcola guadagno</button>
@@ -110,15 +113,22 @@
         <!-- COME FUNZIONA IL CALCOLO -->
         <h2>Come funziona il calcolo</h2>
         <p>
-            Il calcolatore usa i dati reali della mia esperienza quotidiana con Microsoft Rewards.
-            Ecco cosa puoi fare in base al tempo che dedichi:
+            Il calcolatore usa i dati reali della mia esperienza con Microsoft Rewards,
+            aggiornati al sistema a livelli in vigore dal 1° luglio 2026. Ecco cosa cambia
+            in base al livello:
         </p>
         <ul>
-            <li><strong>⏱ 2 minuti</strong>: fai solo le attività base (set giornaliero, check-in). Ottieni circa <strong>50-60 punti</strong>. È il minimo indispensabile per non perdere la sequenza.</li>
-            <li><strong>⏱ 5 minuti</strong>: attività base + ricerche veloci da app Bing. Ottieni circa <strong>130-150 punti</strong>. Buon compromesso se hai poco tempo.</li>
-            <li><strong>⏱ 8 minuti</strong>: routine completa app + PC (set, ricerche, news). Ottieni circa <strong>200-220 punti</strong>. È la mia routine quotidiana.</li>
-            <li><strong>⏱ 12 minuti</strong>: routine completa + attività extra, bonus sequenza e quiz. Ottieni circa <strong>250+ punti</strong>. Il massimo possibile con costanza.</li>
+            <li><strong>🔹 Membro</strong>: livello base, nessun requisito. Ricerche fino a <strong>15 punti/giorno</strong>, bonus mensili automatici più bassi (60 punti di livello, 30 per motore predefinito, fino a 300 di Bing Star Bonus). È una stima proporzionale, io non sono a questo livello.</li>
+            <li><strong>🔸 Argento</strong>: si sblocca con circa 500 punti guadagnati in un mese. Ricerche fino a <strong>30 punti/giorno</strong>, bonus mensili più alti (180 + 90 + fino a 900 di Bing Star Bonus). Anche questa è una stima proporzionale.</li>
+            <li><strong>🥇 Oro</strong>: si sblocca con circa 750 punti in un mese più 2 "attività di avanzamento livello". Ricerche fino a <strong>60 punti/giorno</strong>, bonus mensili più alti di tutti (420 + 210 + fino a 2.100 di Bing Star Bonus). È il livello su cui sono io: in media faccio circa <strong>140 punti al giorno</strong> da attività quotidiana (ricerche, daily set, check-in), e tra questi e i bonus mensili automatici arrivo a circa <strong>5€ al mese</strong> in buoni regalo — questi numeri sono <strong>testati realmente</strong>, non solo calcolati.</li>
         </ul>
+        <p>
+            Per Membro e Argento, il calcolatore stima punti e tempi <strong>in proporzione</strong>
+            ai miei dati reali da livello Oro, sulla base del tetto ricerche e dei bonus mensili
+            di ciascun livello (compreso il Bing Star Bonus al tetto massimo). Sono stime, non
+            numeri testati personalmente: i bonus a serie e il Bing Star Bonus variano parecchio
+            giorno per giorno, quindi il risultato reale può differire.
+        </p>
         <p>
             Il valore in euro è calcolato sul cambio base: <strong>7.205 punti = 5€</strong>.
             È il valore standard per la maggior parte dei buoni regalo (Amazon, Apple, Xbox,
@@ -127,16 +137,17 @@
 
         <div class="alex-tip">
             <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Io faccio circa 8 minuti al giorno. In un mese ho un buono da 5€. Non è
-                tanto, ma è gratis. E posso spenderlo dove voglio: Amazon, Apple, Xbox,
-                quello che mi serve in quel momento."</em>
+            <em>"Oggi la vera differenza non è più quanto tempo ci dedichi — sono sempre
+                2-3 minuti al giorno, da smartphone. È il livello che cambia il guadagno:
+                più sali, più crescono i bonus mensili automatici. Io sono Oro e faccio circa
+                5€ al mese, quasi senza pensarci."</em>
         </div>
 
         <!-- DOVE USARE I PUNTI -->
         <h2>Dove puoi spendere i punti</h2>
         <p>
-            I punti Microsoft Rewards non sono vincolati a un solo marchio. Con 7.205 punti
-            puoi ottenere un buono da 5€ per:
+            I punti Microsoft Rewards non sono vincolati a un solo marchio, indipendentemente
+            dal tuo livello. Con 7.205 punti puoi ottenere un buono da 5€ per:
         </p>
         <ul>
             <li><strong>🛒 Amazon</strong> — il più versatile, lo usi per qualsiasi acquisto</li>
@@ -147,7 +158,7 @@
             <li><strong>🚌 Flixbus</strong> — viaggi low-cost</li>
         </ul>
         <p>
-            👉 In pratica: fai i punti con le ricerche e li spendi dove ti servono.
+            👉 In pratica: fai i punti da smartphone e li spendi dove ti servono.
             Non sei obbligato a scegliere un solo marchio.
         </p>
 
@@ -165,24 +176,28 @@
         <div class="faq">
             <h3>I risultati sono garantiti?</h3>
             <p>
-                No, sono stime basate sulla mia esperienza reale. I punti giornalieri
-                possono variare in base alle attività disponibili, ai bonus del giorno
-                e al tuo livello Rewards. Ma l'ordine di grandezza è corretto.
+                No, sono stime. I numeri per il livello Oro sono basati sulla mia esperienza
+                reale; quelli per Membro e Argento sono stime proporzionali, non testate
+                personalmente. I punti giornalieri variano molto in base ai bonus a serie di
+                7 giorni, al Bing Star Bonus (molto variabile) e alle attività disponibili quel
+                giorno. Ma l'ordine di grandezza è corretto.
             </p>
 
             <h3>7.205 punti valgono sempre 5€?</h3>
             <p>
                 Sì, per la maggior parte dei buoni regalo (Amazon, Apple, Xbox, Deliveroo
-                e molti altri). Alcuni premi specifici possono avere un rapporto punti/euro
-                leggermente diverso. I premi Microsoft (come Game Pass) a volte sono
-                più convenienti.
+                e molti altri), indipendentemente dal tuo livello Rewards. Alcuni premi specifici
+                possono avere un rapporto punti/euro leggermente diverso. I premi Microsoft
+                (come Game Pass) a volte sono più convenienti.
             </p>
 
-            <h3>Posso accumulare punti più velocemente?</h3>
+            <h3>Conviene salire di livello?</h3>
             <p>
-                Sì. Oltre alla routine base, puoi partecipare ai quiz bonus, completare
-                le sfide settimanali e usare il programma referral (quando disponibile
-                in Italia). Ogni piccolo extra si somma nel tempo.
+                Sì, è la leva più importante nel sistema attuale. Il tetto giornaliero delle
+                ricerche cresce (15 → 30 → 60 punti), ma soprattutto crescono i bonus mensili
+                automatici: passando da Membro a Oro il bonus di livello passa da 60 a 420 punti
+                al mese, quello per il motore predefinito da 30 a 210, e il Bing Star Bonus
+                arriva fino a 2.100 punti al mese contro i 300 di Membro.
             </p>
         </div>
 
@@ -215,8 +230,11 @@
             <h3>Informazioni sul calcolatore</h3>
             <p>
                 I valori sono basati sulla mia esperienza reale con Microsoft Rewards in
-                Italia, aggiornati a maggio 2026. I punti effettivi possono variare in
-                base alle attività disponibili e ai bonus del giorno.
+                Italia (livello Oro), aggiornati ad agosto 2026 al sistema a livelli
+                Membro/Argento/Oro in vigore dal 1° luglio 2026. I dati per Membro e Argento
+                sono stime proporzionali, non testate personalmente. I punti effettivi possono
+                variare in base alle attività disponibili, ai bonus del giorno e al Bing Star
+                Bonus.
             </p>
             <p>
                 <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
@@ -238,63 +256,79 @@
     </script>
 
     <script>
-        function calcola() {
-            const minuti = parseInt(document.getElementById("minutiInput").value);
-            let puntiGiorno, descrizione;
-
-            switch(minuti) {
-                case 2:
-                    puntiGiorno = 55;
-                    descrizione = "attività base (set giornaliero, check-in)";
-                    break;
-                case 5:
-                    puntiGiorno = 140;
-                    descrizione = "attività + ricerche veloci da app";
-                    break;
-                case 8:
-                    puntiGiorno = 210;
-                    descrizione = "routine completa app + PC";
-                    break;
-                case 12:
-                    puntiGiorno = 260;
-                    descrizione = "routine completa + attività extra e bonus";
-                    break;
-                default:
-                    puntiGiorno = 0;
-                    descrizione = "";
+        // Dati per livello: tetto ricerche/giorno, bonus mensili automatici, punti medi
+        // da attività quotidiana (dati reali per Oro, stime proporzionali per gli altri).
+        const LIVELLI = {
+            membro: {
+                nome: "Membro", emoji: "🔹",
+                requisito: "Nessuno (livello base)",
+                ricerche: 15, bonusLivello: 60, bonusMotore: 30, bingStarMax: 300,
+                puntiGiorno: 95, testato: false
+            },
+            argento: {
+                nome: "Argento", emoji: "🔸",
+                requisito: "circa 500 punti guadagnati in un mese",
+                ricerche: 30, bonusLivello: 180, bonusMotore: 90, bingStarMax: 900,
+                puntiGiorno: 110, testato: false
+            },
+            oro: {
+                nome: "Oro", emoji: "🥇",
+                requisito: "circa 750 punti/mese + 2 attività di avanzamento livello",
+                ricerche: 60, bonusLivello: 420, bonusMotore: 210, bingStarMax: 2100,
+                puntiGiorno: 140, testato: true
             }
+        };
 
-            const puntiMese = puntiGiorno * 30;
-            const puntiAnno = puntiGiorno * 365;
+        // Dati reali testati sul mio account (livello Oro): non calcolati linearmente
+        // dai punti sopra, perché i bonus a serie e il Bing Star Bonus non sono lineari
+        // giorno per giorno (vedi la pagina Premi per il dettaglio).
+        const ORO_REALE = { euroMese: 5, giorni5: 30, giorni10: 60, giorniGamePass: 50, giorniDeliveroo: 60 };
 
-            // Valore in euro (7.205 punti = 5€)
-            const euroMese = (puntiMese / 7205) * 5;
-            const euroAnno = (puntiAnno / 7205) * 5;
+        function puntiMeseTotaleStimati(d) {
+            return (d.puntiGiorno * 30) + d.bonusLivello + d.bonusMotore + d.bingStarMax;
+        }
 
-            // Tempo per i premi
-            const giorniPer5Euro = Math.round(7205 / puntiGiorno);
-            const giorniPer10Euro = Math.round(14410 / puntiGiorno);
+        function calcola() {
+            const key = document.getElementById("livelloInput").value;
+            const d = LIVELLI[key];
+            const oro = LIVELLI.oro;
 
-            // Quanti buoni all'anno
-            const buoni5AllAnno = Math.floor(puntiAnno / 7205);
-            const buoni10AllAnno = Math.floor(puntiAnno / 14410);
+            const puntiMeseAttivita = d.puntiGiorno * 30;
+            const bonusMensile = d.bonusLivello + d.bonusMotore + d.bingStarMax;
+            const puntiMeseTotale = puntiMeseAttivita + bonusMensile;
+
+            // Rapporto rispetto al livello Oro (=1 per Oro), usato per stimare tempi
+            // e valore in euro degli altri livelli a partire dai dati reali di Oro.
+            const ratio = puntiMeseTotale / puntiMeseTotaleStimati(oro);
+
+            const euroMese = ORO_REALE.euroMese * ratio;
+            const euroAnno = euroMese * 12;
+            const giorni5 = Math.round(ORO_REALE.giorni5 / ratio);
+            const giorni10 = Math.round(ORO_REALE.giorni10 / ratio);
+            const giorniGamePass = Math.round(ORO_REALE.giorniGamePass / ratio);
+            const giorniDeliveroo = Math.round(ORO_REALE.giorniDeliveroo / ratio);
+
+            const noteTestato = d.testato
+                ? `📊 Numeri <strong>testati realmente</strong> sul mio account (livello Oro).`
+                : `📐 Numeri <strong>stimati per proporzione</strong> rispetto ai miei dati reali da livello Oro — non testati personalmente su questo livello.`;
 
             document.getElementById("risultato").innerHTML = `
-                <h3>📊 La tua stima con ${minuti} minuti al giorno</h3>
-                <p style="margin-top:10px;">${descrizione}</p>
+                <h3>${d.emoji} La tua stima con livello ${d.nome}</h3>
+                <p style="margin-top:10px;">Requisito: ${d.requisito}</p>
+                <p style="margin-top:5px; font-size:14px; color:#555;">${noteTestato}</p>
 
                 <table style="width:100%; border-collapse:collapse; margin-top:15px;">
                     <tr>
-                        <td style="padding:8px;"><strong>Punti al giorno</strong></td>
-                        <td style="padding:8px; text-align:right; font-weight:bold;">~${puntiGiorno} punti</td>
+                        <td style="padding:8px;"><strong>Tetto ricerche al giorno</strong></td>
+                        <td style="padding:8px; text-align:right; font-weight:bold;">${d.ricerche} punti</td>
                     </tr>
                     <tr>
-                        <td style="padding:8px;"><strong>Punti al mese</strong></td>
-                        <td style="padding:8px; text-align:right;">~${puntiMese.toLocaleString("it-IT")} punti</td>
+                        <td style="padding:8px;"><strong>Punti da attività quotidiana</strong></td>
+                        <td style="padding:8px; text-align:right;">~${d.puntiGiorno}/giorno (~${puntiMeseAttivita.toLocaleString("it-IT")}/mese)</td>
                     </tr>
                     <tr>
-                        <td style="padding:8px;"><strong>Punti all'anno</strong></td>
-                        <td style="padding:8px; text-align:right;">~${puntiAnno.toLocaleString("it-IT")} punti</td>
+                        <td style="padding:8px;"><strong>Bonus mensili automatici</strong></td>
+                        <td style="padding:8px; text-align:right;">livello ${d.bonusLivello} + motore ${d.bonusMotore} + Bing Star fino a ${d.bingStarMax.toLocaleString("it-IT")}</td>
                     </tr>
                     <tr style="background:#f0fdf4;">
                         <td style="padding:8px;"><strong>💰 Valore mensile</strong></td>
@@ -306,32 +340,48 @@
                     </tr>
                 </table>
 
-                <h3 style="margin-top:20px;">⏱ Tempo per raggiungere i premi</h3>
+                <h3 style="margin-top:20px;">⏱ Tempo stimato per raggiungere i premi</h3>
                 <table style="width:100%; border-collapse:collapse; margin-top:10px;">
                     <tr>
-                        <td style="padding:8px;"><strong>Buono da 5€ (7.205 punti)</strong></td>
-                        <td style="padding:8px; text-align:right;">~${giorniPer5Euro} giorni</td>
+                        <td style="padding:8px;"><strong>Buono Amazon 5€ (7.205 punti)</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorni5} giorni</td>
                     </tr>
                     <tr>
-                        <td style="padding:8px;"><strong>Buono da 10€ (14.410 punti)</strong></td>
-                        <td style="padding:8px; text-align:right;">~${giorniPer10Euro} giorni</td>
+                        <td style="padding:8px;"><strong>Buono Amazon 10€ (14.410 punti)</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorni10} giorni</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Xbox Game Pass Ultimate (1 mese)</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorniGamePass} giorni</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>Buono Deliveroo 10€</strong></td>
+                        <td style="padding:8px; text-align:right;">~${giorniDeliveroo} giorni</td>
                     </tr>
                 </table>
 
-                <h3 style="margin-top:20px;">🎁 Cosa puoi ottenere in un anno</h3>
+                <h3 style="margin-top:20px;">🎁 Cosa puoi ottenere nel tempo</h3>
                 <table style="width:100%; border-collapse:collapse; margin-top:10px;">
                     <tr>
-                        <td style="padding:8px;"><strong>Buoni da 5€</strong></td>
-                        <td style="padding:8px; text-align:right;"><strong>${buoni5AllAnno} buoni</strong> (${(buoni5AllAnno * 5).toFixed(0)}€ totali)</td>
+                        <td style="padding:8px;"><strong>1 mese</strong></td>
+                        <td style="padding:8px; text-align:right;">~${euroMese.toFixed(2)}€</td>
                     </tr>
                     <tr>
-                        <td style="padding:8px;"><strong>Buoni da 10€</strong></td>
-                        <td style="padding:8px; text-align:right;"><strong>${buoni10AllAnno} buoni</strong> (${(buoni10AllAnno * 10).toFixed(0)}€ totali)</td>
+                        <td style="padding:8px;"><strong>3 mesi</strong></td>
+                        <td style="padding:8px; text-align:right;">~${(euroMese * 3).toFixed(0)}€</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;"><strong>6 mesi</strong></td>
+                        <td style="padding:8px; text-align:right;">~${(euroMese * 6).toFixed(0)}€</td>
+                    </tr>
+                    <tr style="background:#f0fdf4;">
+                        <td style="padding:8px;"><strong>1 anno</strong></td>
+                        <td style="padding:8px; text-align:right;"><strong>~${euroAnno.toFixed(0)}€</strong></td>
                     </tr>
                 </table>
 
                 <p style="margin-top:15px; font-size:14px; color:#555;">
-                    ☕ Con questi punti puoi permetterti circa <strong>${(euroAnno / 1.5).toFixed(0)} caffè</strong> all'anno. O una pizza. O un libro. O un abbonamento Xbox. Tutto gratis.
+                    ☕ Con questi punti puoi permetterti circa <strong>${Math.round(euroAnno / 1.5)} caffè</strong> all'anno. O una pizza. O un libro. O un abbonamento Xbox. Tutto gratis.
                 </p>
 
                 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:15px;">
