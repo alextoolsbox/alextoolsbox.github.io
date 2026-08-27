@@ -1,259 +1,186 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N26 è sicura? Bankitalia, fondo tedesco e rischi (2026)</title>
-    <meta name="description" content="N26 è sicura? Misure di sicurezza (3D Secure, 2FA), fondo tedesco di tutela depositi, storico del blocco Banca d'Italia e rischi reali: chiusura conto, tempi reclami, ABF. Guida basata su fonti ufficiali.">
-    <link rel="canonical" href="https://alextoolsbox.it/n26/sicurezza.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="AlexToolsBox">
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="N26 è sicura? Storico Bankitalia, fondo tedesco e rischi reali">
-    <meta property="og:description" content="Misure di sicurezza, fondo tutela depositi, storico Bankitalia e rischi reali di N26.">
-    <meta property="og:url" content="https://alextoolsbox.it/n26/sicurezza.html">
-    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="N26 è sicura? Storico Bankitalia e rischi reali">
-    <meta name="twitter:description" content="Misure di sicurezza, fondo tutela depositi e rischi reali di N26.">
-    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <!-- Plausible Analytics -->
-    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=84a36c72">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <script src="/js/promo.js?v=f0912127" defer></script>
-
-    <!-- SCHEMA FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Cosa protegge i miei soldi su N26?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "I depositi sono coperti dal fondo tedesco di tutela dei depositi fino a 100.000€ per depositante, lo stesso standard di garanzia previsto dalla direttiva europea DGS per qualunque banca UE. N26 è una banca con licenza bancaria piena, non un istituto di moneta elettronica."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "N26 può chiudermi il conto senza preavviso?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "In caso di \"giustificato motivo\" sì, con effetto immediato: è una clausola standard nel settore bancario per bloccare rapidamente rapporti sospetti. Nella maggior parte dei casi normali si applica invece un preavviso di 2 mesi."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Il blocco Bankitalia del 2022 è rilevante per la sicurezza di oggi?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Era legato a carenze nei controlli antiriciclaggio della filiale italiana, non a un problema di solidità patrimoniale della banca. Il dialogo con Banca d'Italia non è ancora formalmente chiuso a metà 2026, ma non impedisce oggi l'apertura né l'uso del conto."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- SCHEMA ARTICLE -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "N26 è sicura? Storico Bankitalia, fondo tedesco e rischi reali",
-        "description": "Misure di sicurezza, fondo tutela depositi, storico del blocco Bankitalia e rischi reali di N26.",
-        "author": { "@type": "Person", "name": "Alex" },
-        "datePublished": "2026-07-22",
-        "dateModified": "2026-08-22"
-    }
-    </script>
-
-    <!-- BREADCRUMBLIST -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
-            { "@type": "ListItem", "position": 2, "name": "Conti Digitali", "item": "https://alextoolsbox.it/conti-digitali.html" },
-            { "@type": "ListItem", "position": 3, "name": "N26", "item": "https://alextoolsbox.it/n26/" },
-            { "@type": "ListItem", "position": 4, "name": "Sicurezza", "item": "https://alextoolsbox.it/n26/sicurezza.html" }
-        ]
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N26 è sicura? Banca d'Italia, depositi e rischi (2026)</title>
+  <meta name="description" content="N26 è una banca? Licenza, vigilanza, garanzia depositi fino a 100.000 €, provvedimento Banca d'Italia, frodi, conto bloccato e reclami.">
+  <link rel="canonical" href="https://alextoolsbox.it/n26/sicurezza.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AlexToolsBox">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="N26 è sicura? Banca d'Italia, depositi e rischi reali">
+  <meta property="og:description" content="Licenza, autorità, garanzia dei depositi, cronologia Banca d'Italia e sicurezza pratica del conto N26.">
+  <meta property="og:url" content="https://alextoolsbox.it/n26/sicurezza.html">
+  <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="N26 è sicura? Banca d'Italia e garanzia depositi">
+  <meta name="twitter:description" content="Cosa protegge i tuoi soldi, cosa non è coperto e cosa sappiamo sul provvedimento italiano.">
+  <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+  <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/style.css?v=84a36c72">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <script src="/js/promo.js?v=f0912127" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"N26 è sicura? Banca d'Italia, garanzia depositi e rischi reali","description":"Licenza, vigilanza, garanzia dei depositi, provvedimento Banca d'Italia e sicurezza pratica di N26.","author":{"@type":"Person","name":"Alex"},"publisher":{"@type":"Organization","name":"AlexToolsBox"},"datePublished":"2026-07-22","dateModified":"2026-08-27","mainEntityOfPage":"https://alextoolsbox.it/n26/sicurezza.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"N26 è una banca?","acceptedAnswer":{"@type":"Answer","text":"Sì. N26 Bank SE è un ente creditizio tedesco. In Italia opera tramite N26 Bank SE, Succursale Italiana."}},
+    {"@type":"Question","name":"N26 è affidabile?","acceptedAnswer":{"@type":"Answer","text":"È una banca regolamentata, con garanzia legale sui depositi idonei e controlli tecnici concreti. Questo non elimina i rischi di frode, blocco operativo, reclamo o investimento: conta valutare il prodotto specifico, non solo il marchio."}},
+    {"@type":"Question","name":"Cosa succede se N26 fallisce?","acceptedAnswer":{"@type":"Answer","text":"Dopo l'accertamento del caso di indennizzo da parte di BaFin, l'EdB rimborsa i depositi coperti entro il limite applicabile, normalmente entro sette giorni lavorativi. Importi oltre il limite e prodotti non coperti seguono regole diverse."}},
+    {"@type":"Question","name":"Gli Spaces moltiplicano i 100.000 €?","acceptedAnswer":{"@type":"Answer","text":"No. Gli Spaces personali sono suddivisioni interne del saldo: i depositi coperti presso la stessa banca si sommano, non si moltiplicano."}},
+    {"@type":"Question","name":"N26 è ancora bloccata da Banca d'Italia?","acceptedAnswer":{"@type":"Answer","text":"Puoi aprire il conto oggi: questo è lo stato pratico. L'ultima comunicazione ufficiale pubblica parlava però di una ripresa parziale da fine giugno 2024, con restrizioni ancora esistenti — non risulta una pubblicazione che dichiari la revoca formale totale."}},
+    {"@type":"Question","name":"N26 può chiudermi il conto subito?","acceptedAnswer":{"@type":"Answer","text":"Può farlo nei casi previsti dal contratto e dalla legge, incluso il giustificato motivo. Negli altri casi si applica normalmente il preavviso contrattuale di due mesi."}},
+    {"@type":"Question","name":"Posso rivolgermi all'ABF?","acceptedAnswer":{"@type":"Answer","text":"Sì, per le controversie ammissibili sull'operatività italiana, dopo aver presentato reclamo. Il contributo è di 20 €, rimborsato in caso di accoglimento anche parziale."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://alextoolsbox.it/"},{"@type":"ListItem","position":2,"name":"Conti Digitali","item":"https://alextoolsbox.it/conti-digitali.html"},{"@type":"ListItem","position":3,"name":"N26","item":"https://alextoolsbox.it/n26/"},{"@type":"ListItem","position":4,"name":"Sicurezza","item":"https://alextoolsbox.it/n26/sicurezza.html"}]}
+  </script>
 </head>
-
 <body>
+<div id="header"></div>
+<script>fetch("/includes/header.html").then(res => res.text()).then(data => { document.getElementById("header").innerHTML = data; updatePromo(); });</script>
+<div class="hero">
+  <h1>N26 è sicura? Come sono protetti davvero i tuoi soldi</h1>
+  <p class="hero-description">N26 è una banca tedesca a tutti gli effetti: per i clienti italiani il rapporto passa dalla succursale di Milano. Ti spiego licenza, vigilanza, garanzia sui depositi, sicurezza dell'app e lo storico del provvedimento di Banca d'Italia — senza confondere quello che puoi fare oggi con una revoca formale che non risulta pubblicata da nessuna parte.</p>
+</div>
+<div class="container" id="main-content">
+  <div class="tip highlight">
+    <p><strong>📌 In sintesi</strong></p>
+    <p><strong>Sì, N26 è una banca.</strong> Per i conti italiani aperti dal 26 marzo 2020 il rapporto è gestito da <strong>N26 Bank SE, Succursale Italiana</strong>. I depositi idonei sono protetti dal sistema legale tedesco <strong>EdB</strong> fino a <span data-fact="fondo-garanzia-depositi">100.000 €</span> per depositante e per banca — ma questo limite non copre criptovalute, azioni, ETF o le normali perdite di investimento. Sul provvedimento di Banca d'Italia: oggi puoi aprire e usare il conto senza problemi, ma l'ultima comunicazione ufficiale pubblica parla di una <strong>ripresa parziale</strong> da fine giugno 2024, con restrizioni ancora da rimuovere. Non è la stessa cosa di una revoca totale, che a oggi non risulta pubblicata da nessuna fonte ufficiale.</p>
+  </div>
 
-    <div id="header"></div>
-    <script>
-        fetch("/includes/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                updatePromo();
-            });
-    </script>
+  <h2>N26 è una banca?</h2>
+  <p>Sì. La denominazione legale attuale è <strong>N26 Bank SE</strong>, società europea con sede in <strong>Voltairestraße 8, 10179 Berlino</strong>, iscritta al registro commerciale di Berlino-Charlottenburg con numero <strong>HRB 271697 B</strong>. "Licenza bancaria piena" è una scorciatoia comprensibile, ma la definizione più precisa è che N26 Bank SE è un <strong>ente creditizio autorizzato in Germania</strong>, con BaFin come autorità di vigilanza responsabile.</p>
+  <p>Nel Meccanismo di vigilanza unico è la BCE a sovrintendere l'intero sistema. Per le banche meno significative, però, i controlli quotidiani spettano all'autorità nazionale competente, sotto la supervisione della BCE — motivo per cui non è corretto dire che N26 sia "vigilata direttamente dalla BCE" senza guardare alla classificazione aggiornata dell'ente nell'elenco ufficiale. BaFin e Deutsche Bundesbank collaborano nella vigilanza bancaria tedesca, con ruoli distinti.</p>
 
-    <div class="hero">
-        <h1>N26 è sicura?</h1>
-        <p class="hero-description">
-            Misure di sicurezza in campo, cosa protegge davvero i tuoi depositi, e i rischi reali — inclusa
-            un'analisi onesta dello storico Bankitalia. Solo dati verificati sulle fonti ufficiali.
-        </p>
-    </div>
+  <h2>Chi serve i clienti italiani</h2>
+  <p>Per i conti aperti dal <strong>26 marzo 2020</strong>, N26 pubblica i documenti contrattuali sotto <strong>N26 Bank SE, Succursale Italiana</strong>. La succursale ha sede in <strong>Via Filippo Sassetti 32, 20124 Milano</strong>, codice fiscale e partita IVA <strong>10429450967</strong>, iscrizione all'Albo delle banche n. <strong>8084</strong> e codice ABI <strong>03646</strong>.</p>
+  <p>I residenti italiani che aprono oggi il conto ricevono normalmente un <strong>IBAN italiano</strong>. I vecchi rapporti aperti prima del 26 marzo 2020 possono continuare a ricadere nei documenti dell'entità tedesca e avere un diverso trattamento amministrativo e fiscale. Controlla sempre il contratto e il certificato di titolarità presenti nella tua app.</p>
 
-    <div class="container" id="main-content">
+  <h2>Licenza e autorità di vigilanza</h2>
+  <ul>
+    <li><strong>BaFin:</strong> autorità di vigilanza tedesca responsabile e autorità che adotta i provvedimenti sull'istituto.</li>
+    <li><strong>Deutsche Bundesbank:</strong> partecipa alla vigilanza operativa e all'analisi prudenziale nel sistema tedesco. Non è il fondo di garanzia.</li>
+    <li><strong>BCE:</strong> assicura la vigilanza bancaria europea nel Meccanismo di vigilanza unico; il grado di intervento diretto dipende dalla classificazione dell'ente.</li>
+    <li><strong>Banca d'Italia:</strong> autorità del Paese ospitante per la succursale italiana. Mantiene le competenze previste dal diritto UE e italiano — tra cui antiriciclaggio, trasparenza, condotta e tutela della clientela — per l'operatività italiana. È l'autorità che ha adottato le misure del 28 marzo 2022.</li>
+  </ul>
+  <div class="tip"><p>⚠️ <strong>Aggiornamento prudenziale:</strong> il 15 dicembre 2025 BaFin ha reso pubblico un nuovo pacchetto di misure verso N26 Bank SE per carenze nell'organizzazione aziendale, in particolare su gestione dei rischi e dei reclami e sull'organizzazione del credito. Ha indicato un commissario speciale, requisiti patrimoniali aggiuntivi e limitazioni sul nuovo business ipotecario nei Paesi Bassi. È una cosa distinta dal provvedimento italiano del 2022, e non va confusa con un segnale di insolvenza.</p></div>
 
-        <!-- IN SINTESI -->
-        <div class="tip highlight">
-            <p><strong>📌 In sintesi</strong></p>
-            <p>
-                N26 usa 3D Secure, <a href="/guide/sicurezza-digitale-antifrode/#sca">autenticazione a due fattori</a> e sblocco biometrico. I depositi sono
-                coperti dal <strong>fondo tedesco di tutela dei depositi</strong> fino a <span data-fact="fondo-garanzia-depositi">100.000€</span> per
-                depositante. Sul fronte rischi: recensioni miste su tempi di risposta ai reclami, possibilità
-                di chiusura conto immediata per "giustificato motivo" (clausola comune a tutte le banche), e
-                lo storico del blocco Bankitalia 2022-2024, il cui dialogo con l'autorità non è ancora
-                formalmente chiuso a metà 2026.
-            </p>
-        </div>
+  <h2>Protezione dei depositi fino a 100.000 €</h2>
+  <p>N26 Bank SE aderisce allo schema legale tedesco <strong>Entschädigungseinrichtung deutscher Banken, EdB</strong>. La copertura ordinaria è di <strong>100.000 € per depositante e per banca</strong>, non per conto e non per singolo Space. Se hai più saldi presso N26 Bank SE, vengono aggregati ai fini del limite.</p>
+  <ul>
+    <li><strong>Conto individuale:</strong> fino a 100.000 € complessivi presso N26 Bank SE.</li>
+    <li><strong>Conto cointestato vero:</strong> la quota di ciascun cointestatario è trattata separatamente, salvo diversa attribuzione documentata. Uno Spazio condiviso non va descritto automaticamente come conto cointestato.</li>
+    <li><strong>Saldi temporaneamente elevati:</strong> in Germania possono arrivare fino a <strong>500.000 €</strong> per specifici eventi di vita, con condizioni, prova documentale e finestra temporale di sei mesi.</li>
+    <li><strong>Rimborso:</strong> dopo che BaFin accerta il caso di indennizzo, EdB indica come regola generale il pagamento entro <strong>sette giorni lavorativi</strong>. Possono servire dati o istruzioni per il pagamento.</li>
+  </ul>
 
-        <!-- MISURE DI SICUREZZA -->
-        <h2 id="misure">Le misure di sicurezza in campo</h2>
-        <p>
-            N26 utilizza <strong>3D Secure</strong> per ogni pagamento online con carta (conferma diretta in
-            app, nessun pagamento passa senza autorizzazione esplicita dell'utente), <strong>autenticazione
-            a due fattori</strong> per l'accesso e le operazioni sensibili, e opzioni di sblocco
-            <strong>biometrico</strong> (impronta/Face ID) per l'app. I depositi sono coperti dal fondo
-            tedesco di tutela dei depositi fino a <strong><span data-fact="fondo-garanzia-depositi">100.000€</span> per depositante</strong>, lo stesso
-            standard di garanzia previsto dalla direttiva europea DGS per qualunque banca UE. Il
-            dettaglio di cosa copre esattamente questo fondo (e cosa no) è nella guida
-            <a href="/guide/fondo-tutela-depositi/">Fondo di tutela dei depositi</a>.
-        </p>
-        <p>
-            Ho aperto il mio conto N26 reale il 22 luglio 2026 e, con l'abitudine ormai presa dopo gli altri
-            conti di questo sito, sono andato a controllare la sezione legale in app prima ancora di
-            completare il primo bonifico: il riferimento al fondo tedesco di tutela dei depositi c'è, chiaro,
-            non serve cercarlo altrove.
-        </p>
-        <p>
-            Nell'uso pratico ho testato l'accredito, un bonifico in uscita e una ricarica Apple Pay — tutto
-            filato liscio. Su alcune funzioni più avanzate, però, l'app mi ha chiesto di passare a un piano
-            premium per proseguire: un limite reale del conto Standard che vale la pena sapere prima di
-            aprirlo, non solo un dettaglio di sicurezza. Lo stesso limite vale per gli
-            <a href="/guide/conto-cointestato/#n26">Spazi Condivisi</a>, l'alternativa N26 al conto
-            cointestato: con il piano Standard si può solo partecipare, non crearne.
-        </p>
-        <p>
-            N26 pubblica inoltre guide ufficiali molto dettagliate contro le truffe più comuni rivolte ai
-            suoi utenti: phishing via email/SMS, vishing (truffe telefoniche), quishing (QR code fraudolenti)
-            e il rischio di app di "sicurezza" fasulle scaricate fuori dagli store ufficiali — un segnale,
-            insieme, che il tema non è teorico: N26 è un bersaglio frequente di questo tipo di truffe
-            proprio per il volume di utenti.
-        </p>
-        <div class="alex-tip">
-            <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Nessun tentativo di phishing o truffa a nome N26 ricevuto finora, e il processo di verifica
-                identità in apertura è filato liscio, senza le lungaggini o le richieste ambigue che a volte
-                si leggono online a proposito di altre app bancarie — coerente con l'apertura in 10 minuti
-                di cui parlo nella pagina 'come funziona'."</em>
-        </div>
+  <h2>Prodotti coperti e non coperti</h2>
+  <div style="overflow-x:auto;"><table class="table"><thead><tr><th>Prodotto</th><th>Entità o natura</th><th>Protezione</th></tr></thead><tbody>
+    <tr><td>Saldo del conto N26</td><td>Deposito presso N26 Bank SE</td><td>EdB, fino a 100.000 € aggregati per depositante e banca</td></tr>
+    <tr><td>Spaces personali</td><td>Suddivisioni del saldo, salvo termini specifici diversi</td><td>Non moltiplicano il limite: rientrano nell'aggregato dei depositi idonei</td></tr>
+    <tr><td>Spazi condivisi</td><td>Funzione di gestione condivisa, non necessariamente conto cointestato</td><td>Verifica titolarità nel contratto; non presumere una copertura separata</td></tr>
+    <tr><td>Prodotto di risparmio remunerato</td><td>Se giuridicamente è un deposito presso N26 Bank SE</td><td>Rientra nel totale di 100.000 €; verifica il foglio informativo corrente</td></tr>
+    <tr><td>Azioni, ETF o fondi</td><td>Strumenti finanziari, eventualmente tramite partner/custode</td><td>Non coperti dalla garanzia depositi; gli strumenti restano separati secondo il regime applicabile</td></tr>
+    <tr><td>Criptovalute</td><td>Cripto-attività, non depositi</td><td>Nessuna copertura EdB e rischio di perdita di valore</td></tr>
+  </tbody></table></div>
+  <p>L'eventuale indennizzo degli investitori è diverso dalla garanzia dei depositi. L'EdB può coprire il 90% di alcune passività da operazioni in titoli fino a 20.000 €, ma non copre la perdita di mercato e non trasforma azioni, fondi o cripto in depositi. L'app può mostrare prodotti diversi forniti da soggetti diversi: prima di investire controlla sempre il contratto del prodotto specifico.</p>
 
-        <!-- RISCHI REALI -->
-        <h2 id="rischi">I rischi reali (non solo il marketing)</h2>
-        <p>
-            Va detto con la stessa onestà usata per gli altri cluster di questo sito:
-        </p>
-        <p>
-            <strong>Chiusura conto senza preavviso lungo.</strong> Il contratto N26 prevede normalmente un
-            preavviso di 2 mesi per la chiusura del rapporto da parte della banca, ma questo preavviso non
-            si applica se sussiste un "giustificato motivo": in quel caso la chiusura è immediata. È una
-            clausola comune a tutte le banche vigilate (serve a bloccare rapidamente conti sospetti), ma
-            nella pratica alcuni utenti segnalano online blocchi temporanei (anche di alcuni giorni) senza
-            spiegazioni immediate, in attesa di verifiche interne.
-        </p>
-        <p>
-            <strong>Tempi di risposta ai reclami non sempre rapidi.</strong> Le recensioni pubbliche su N26
-            sono miste: accanto a feedback molto positivi su assistenza e usabilità quotidiana, emergono
-            anche segnalazioni di reclami rimasti senza risposta per mesi. Se un reclamo scritto a
-            reclami@n26.com non viene risposto nei tempi previsti (15 giorni lavorativi per reclami sui
-            pagamenti, 60 giorni per gli altri) o la risposta non è soddisfacente, la strada successiva è il
-            ricorso all'<strong>Arbitro Bancario Finanziario (ABF)</strong>, organismo pubblico di
-            risoluzione controversie per il settore bancario italiano, gratuito per il cliente.
-        </p>
-        <p>
-            <strong>Lo storico Bankitalia.</strong> Ne parliamo per esteso nella guida principale: il blocco
-            2022-2024 era legato a carenze nei controlli antiriciclaggio della filiale italiana, non a un
-            problema di solidità patrimoniale della banca, che resta vigilata come qualunque altra banca UE.
-            Il dialogo con Banca d'Italia, per stessa ammissione di N26, non è ancora formalmente chiuso a
-            metà 2026: un punto da tenere presente, anche se non impedisce oggi l'apertura né l'uso del
-            conto.
-        </p>
-        <p>
-            <a href="/n26/">Leggi lo storico completo del blocco Bankitalia nella guida principale →</a>
-        </p>
+  <h2>Provvedimento Banca d'Italia: cronologia completa</h2>
+  <ol>
+    <li><strong>25 ottobre-17 dicembre 2021:</strong> Banca d'Italia svolge verifiche ispettive sulla succursale italiana.</li>
+    <li><strong>28 marzo 2022:</strong> adotta il provvedimento; il comunicato viene pubblicato il 29 marzo.</li>
+    <li><strong>Misure:</strong> divieto di instaurare rapporti continuativi con nuova clientela o compiere operazioni, anche occasionali, con clientela non già censita; divieto di offrire nuovi prodotti e servizi ai clienti esistenti, con i cryptoasset indicati come esempio.</li>
+    <li><strong>Motivo dichiarato:</strong> significative carenze nel rispetto della normativa antiriciclaggio. Banca d'Italia si riserva di verificare il pieno superamento delle anomalie anche per rivedere il provvedimento.</li>
+    <li><strong>Clienti esistenti:</strong> non furono espulsi in blocco e i rapporti esistenti potevano continuare, ma non è corretto dire che "non furono mai toccati": il divieto su nuovi prodotti e servizi li riguardava direttamente, e restavano possibili controlli individuali.</li>
+    <li><strong>28 maggio 2024:</strong> N26 comunica la rimozione dal 1° giugno del limite di crescita imposto da BaFin a livello di gruppo, precisando che quella decisione <strong>non aveva impatto diretto</strong> sulle restrizioni italiane.</li>
+    <li><strong>Fine giugno 2024:</strong> secondo la successiva comunicazione di N26, riprende in modo <strong>parziale</strong> l'acquisizione di nuovi clienti in Italia a seguito di una decisione di Banca d'Italia.</li>
+    <li><strong>23 ottobre 2024:</strong> N26 rende pubblica la ripresa parziale e dichiara che avrebbe continuato a lavorare per dimostrare la piena efficacia dell'antiriciclaggio e arrivare alla rimozione totale delle restrizioni ancora esistenti.</li>
+    <li><strong>26 agosto 2026:</strong> l'apertura del conto è commercialmente disponibile per tutti. Non risulta però nessuna comunicazione successiva, di Banca d'Italia o di N26, che dichiari la <strong>revoca formale totale</strong> del provvedimento italiano: lo stato pratico e quello formale restano quindi due cose distinte.</li>
+  </ol>
+  <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"Se leggi che il blocco è finito, chiediti sempre quale blocco: il limite BaFin sul gruppo, le misure italiane, oppure la sola possibilità pratica di aprire il conto. Sono tre cose diverse."</em></div>
 
-        <div class="tip highlight">
-            <p><strong>👉 Vuoi verificare tu stesso?</strong> Consulta la pagina Sicurezza ufficiale di N26
-                prima di aprire il conto.</p>
-            <a class="button" href="/n26/link.html" style="margin-top:10px;">
-                Vai al sito ufficiale N26
-            </a>
-        </div>
+  <h2>Sicurezza della carta e dell'app</h2>
+  <ul>
+    <li><strong>Smartphone associato:</strong> il conto può essere associato a un solo smartphone alla volta.</li>
+    <li><strong>Autenticazione e biometria:</strong> accesso con credenziali e, sui dispositivi compatibili, volto o impronta. La biometria protegge l'accesso locale, ma non elimina phishing o malware.</li>
+    <li><strong>PIN di conferma:</strong> richiesto per operazioni sensibili, inclusi bonifici e associazione o disassociazione del telefono.</li>
+    <li><strong>3D Secure:</strong> aggiunge autenticazione ai pagamenti online quando richiesta. Non è corretto promettere che ogni pagamento online richieda sempre un'approvazione manuale.</li>
+    <li><strong>Controlli carta:</strong> blocco e sblocco, limiti, pagamenti online, estero e prelievi gestibili dall'app.</li>
+    <li><strong>Notifiche push:</strong> aiutano a riconoscere rapidamente operazioni in entrata e uscita.</li>
+  </ul>
 
-        <!-- FAQ -->
-        <h2>Domande frequenti</h2>
-        <div class="faq">
-            <h3>Cosa protegge i miei soldi su N26?</h3>
-            <p>Il fondo tedesco di tutela dei depositi, fino a <span data-fact="fondo-garanzia-depositi">100.000€</span> per depositante, come previsto dalla
-                normativa europea per tutte le banche UE.</p>
+  <h2>Phishing, SIM swap e falsi operatori</h2>
+  <ul>
+    <li>Non comunicare password, PIN, CVV o codici di associazione a chi ti contatta.</li>
+    <li>Non installare app fuori da App Store o Google Play e non concedere accesso remoto al telefono.</li>
+    <li>N26 dichiara che una chiamata legittima viene prima programmata nella sezione <strong>Messaggi da N26</strong> dell'app.</li>
+    <li>Se qualcuno ti chiede un bonifico verso un "conto sicuro", interrompi la conversazione.</li>
+    <li>Se la SIM perde improvvisamente rete, contatta subito l'operatore: potrebbe essere SIM swap. Blocca la SIM e avvisa N26 tramite un canale ufficiale.</li>
+  </ul>
 
-            <h3>N26 può chiudermi il conto senza preavviso?</h3>
-            <p>In caso di "giustificato motivo" sì, con effetto immediato — clausola standard nel settore
-                bancario. Nella maggior parte dei casi normali si applica un preavviso di 2 mesi.</p>
+  <h2>Pagamento non riconosciuto, carta clonata e chargeback</h2>
+  <ol>
+    <li>Blocca subito la carta nell'app e controlla wallet, abbonamenti e dispositivi collegati.</li>
+    <li>Apri la transazione e usa la procedura di contestazione indicata da N26.</li>
+    <li>Se la carta è compromessa, chiedi la sostituzione. Conserva notifiche, email, ricevute e screenshot.</li>
+    <li>Per un acquisto autorizzato ma non consegnato, contatta prima l'esercente. Il chargeback segue le regole del circuito, richiede prove e non garantisce automaticamente il rimborso.</li>
+  </ol>
 
-            <h3>Il blocco Bankitalia del 2022 è ancora rilevante?</h3>
-            <p>Era legato a carenze nei controlli antiriciclaggio, non alla solidità della banca. Il dialogo
-                con l'autorità non è ancora formalmente chiuso a metà 2026, ma non impedisce l'uso del
-                conto oggi.</p>
-        </div>
+  <h2>Bonifico fraudolento</h2>
+  <p>Se non hai autorizzato il bonifico, segnalalo immediatamente come operazione non riconosciuta. Se invece lo hai autorizzato perché ingannato da un truffatore, chiedi subito a N26 un tentativo di richiamo o recupero e presenta denuncia: il recupero non è garantito e la velocità è essenziale. Non aspettare l'esito della denuncia per avvisare la banca.</p>
 
-        <!-- ALTRE GUIDE -->
-        <h2>Altre guide N26</h2>
-        <ul>
-            <li><a href="/n26/">📘 Guida introduttiva</a></li>
-            <li><a href="/n26/come-funziona.html">⚙️ Come funziona: apertura, app e IBAN</a></li>
-            <li><a href="/n26/piani.html">💳 I 4 piani a confronto</a></li>
-            <li><a href="/n26/bonus.html">🎁 Bonus e programma Invita amici</a></li>
-            <li><a href="/n26/faq.html">❓ FAQ complete</a></li>
-            <li><a href="/guide/sicurezza-digitale-antifrode/">🛡️ Sicurezza digitale e antifrode: come proteggerti</a></li>
-        </ul>
+  <h2>Telefono perso o rubato</h2>
+  <ol>
+    <li>Blocca la SIM con il gestore e attiva la modalità smarrito o la cancellazione remota.</li>
+    <li>Accedi, se possibile, alla WebApp o contatta N26 da un canale ufficiale per mettere in sicurezza conto e carte.</li>
+    <li>Blocca le carte, riduci i limiti e verifica le operazioni recenti.</li>
+    <li>Cambia la password dell'email collegata e le altre credenziali riutilizzate.</li>
+    <li>Quando hai un nuovo telefono, segui la procedura ufficiale di riassociazione e verifica dell'identità.</li>
+  </ol>
+  <div class="alex-tip"><span class="alex-label">🔥 Alex's Tip</span><br><em>"Salva fuori dal telefono il link al supporto ufficiale, il numero della SIM e una copia del certificato di titolarità. Quando perdi il telefono, avere già questi dati fa la differenza."</em></div>
 
-        <div class="trust">
-            <h3>Vuoi provare N26?</h3>
-            <p>Consulta il sito ufficiale e i documenti di sicurezza prima di aprire il conto.</p>
-            <a class="button" href="/n26/link.html">Vai al sito ufficiale N26</a>
-            <p style="margin-top:15px;font-size:14px;color:#888;">
-                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
-            </p>
-            <p style="font-size:13px; color:#888; margin-top:10px;">
-                Ultimo aggiornamento: <span id="last-modified"></span>
-            </p>
-        </div>
+  <h2>Conto limitato o chiuso</h2>
+  <p>N26 può limitare funzioni o chiederti documenti per controlli KYC, antiriciclaggio, sanzioni, sicurezza e origine dei fondi. Una verifica non dimostra che tu abbia commesso un illecito. Possono essere richiesti documento d'identità, prova dell'indirizzo, buste paga, dichiarazioni fiscali, estratti conto, fatture, contratti o spiegazioni sul rapporto con mittente e destinatario.</p>
+  <p>Invia materiale leggibile e completo soltanto tramite canali ufficiali. Evita versioni contraddittorie e prepara una cronologia con importi, date e controparti. Durante controlli antiriciclaggio la banca potrebbe non poterti spiegare subito tutti i dettagli.</p>
+  <p>Le condizioni prevedono normalmente un <strong>preavviso ordinario di due mesi</strong> per il recesso della banca dal contratto quadro, ma consentono una cessazione immediata quando ricorrono i presupposti contrattuali e di legge, incluso un <strong>giustificato motivo</strong>. La chiusura immediata non riguarda soltanto i conti sospetti: le fattispecie possono essere più ampie, e vanno sempre lette nelle condizioni contrattuali vigenti.</p>
 
-    </div>
+  <h2>Assistenza, reclamo e controversie</h2>
+  <ol>
+    <li><strong>Assistenza:</strong> usa la chat nell'app o il Centro assistenza e conserva trascrizioni e ticket.</li>
+    <li><strong>Reclamo scritto:</strong> invialo ai recapiti indicati nel documento reclami attuale. N26 pubblica una procedura gratuita e i termini applicabili.</li>
+    <li><strong>Tempi:</strong> in genere 15 giorni lavorativi per servizi di pagamento, con possibile proroga nei casi previsti, e 60 giorni per altri reclami bancari. Verifica sempre il documento corrente.</li>
+    <li><strong>ABF:</strong> per le controversie relative alla succursale italiana puoi ricorrere all'Arbitro Bancario Finanziario dopo il reclamo, se la materia e l'importo rientrano nella sua competenza. Il ricorso non è "gratuito": è previsto un contributo di 20 €, rimborsato se il ricorso viene accolto anche solo in parte.</li>
+    <li><strong>Germania:</strong> l'Impressum segnala, secondo la materia, gli organismi di conciliazione presso Deutsche Bundesbank o BaFin. Non vanno presentati come sostituti automatici dell'ABF per ogni controversia italiana.</li>
+  </ol>
 
-    <div id="footer"></div>
-    <script>
-        fetch("/includes/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
+  <h2>La mia esperienza con N26</h2>
+  <p>Ho aperto il mio conto N26 reale il 22 luglio 2026. Nell'uso pratico ho testato accredito, bonifico in uscita e ricarica Apple Pay senza problemi. Ho anche verificato nell'app il richiamo al sistema tedesco di tutela dei depositi. Questa è la mia esperienza personale su un conto e in un periodo limitato: <strong>non dimostra</strong> come verrebbero gestiti un blocco, una frode, un reclamo complesso o un'insolvenza. Per questi punti mi baso sui documenti ufficiali citati sopra.</p>
+  <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"L'app mi è sembrata semplice e le operazioni di prova sono andate bene. Ma usabilità e solidità giuridica non sono la stessa cosa: per capire dove sono i tuoi soldi guarda entità, contratto e tipo di prodotto."</em></div>
 
+  <h2>Domande frequenti sulla sicurezza di N26</h2>
+  <div class="faq">
+    <details class="faq-item"><summary>N26 è una banca?</summary><div class="faq-a"><p>Sì. N26 Bank SE è un ente creditizio tedesco. In Italia opera tramite N26 Bank SE, Succursale Italiana.</p></div></details>
+    <details class="faq-item"><summary>N26 è affidabile?</summary><div class="faq-a"><p>È una banca regolamentata con garanzia legale sui depositi idonei e controlli tecnici concreti. Questo non elimina rischi di frode, blocco operativo, reclamo o investimento. Valuta il prodotto e non solo il marchio.</p></div></details>
+    <details class="faq-item"><summary>Cosa succede se N26 fallisce?</summary><div class="faq-a"><p>Dopo l'accertamento del caso di indennizzo da parte di BaFin, EdB rimborsa i depositi coperti entro il limite applicabile, normalmente entro sette giorni lavorativi. Importi oltre il limite e prodotti non coperti seguono regole diverse.</p></div></details>
+    <details class="faq-item"><summary>Gli Spaces moltiplicano i 100.000 €?</summary><div class="faq-a"><p>No. Gli Spaces personali sono suddivisioni interne e i saldi coperti presso la stessa banca si sommano.</p></div></details>
+    <details class="faq-item"><summary>N26 è ancora bloccata da Banca d'Italia?</summary><div class="faq-a"><p>Puoi aprire il conto oggi, ma questo è lo stato pratico. L'ultima comunicazione ufficiale pubblica parlava di ripresa parziale da fine giugno 2024 e di restrizioni ancora esistenti. Non risulta una pubblicazione che provi la revoca formale totale.</p></div></details>
+    <details class="faq-item"><summary>N26 può chiudermi il conto subito?</summary><div class="faq-a"><p>Può farlo nei casi previsti dal contratto e dalla legge, incluso il giustificato motivo. Negli altri casi si applica normalmente il preavviso contrattuale.</p></div></details>
+    <details class="faq-item"><summary>Posso rivolgermi all'ABF?</summary><div class="faq-a"><p>Sì, per controversie ammissibili relative all'operatività italiana, dopo aver presentato reclamo. Il contributo è di 20 € e viene rimborsato in caso di accoglimento anche parziale.</p></div></details>
+  </div>
+
+  <p><small><strong>Ultima verifica editoriale:</strong> 26/08/2026. Controllo formale consigliato ogni 90 giorni e subito dopo nuove comunicazioni di N26, Banca d'Italia, BaFin, BCE o EdB.</small></p>
+
+  <h2>Altre guide N26</h2>
+  <ul>
+    <li><a href="/n26/">📘 Guida introduttiva</a></li><li><a href="/n26/come-funziona.html">⚙️ Come funziona: apertura, app e IBAN</a></li><li><a href="/n26/piani.html">💳 I piani a confronto</a></li><li><a href="/n26/faq.html">❓ FAQ complete</a></li><li><a href="/guide/fondo-tutela-depositi/">🏦 Fondo di tutela dei depositi</a></li><li><a href="/guide/sicurezza-digitale-antifrode/">🛡️ Sicurezza digitale e antifrode</a></li><li><a href="/guide/chargeback/">↩️ Chargeback</a></li><li><a href="/guide/conto-cointestato/#n26">👥 Conto cointestato e Spazi condivisi</a></li>
+  </ul>
+  <div class="trust"><h3>Vuoi valutare N26?</h3><p>Apri prima i documenti legali applicabili al tuo conto e verifica entità, condizioni, garanzia dei depositi e canali di reclamo.</p><a class="button" href="/n26/link.html">Vai al sito ufficiale N26</a><p style="margin-top:15px;font-size:14px;color:#888;"><a href="/trasparenza.html">Leggi la pagina Trasparenza →</a></p><p style="font-size:13px;color:#888;margin-top:10px;">Ultimo aggiornamento: <span id="last-modified"></span></p></div>
+</div>
+<div id="footer"></div>
+<script>fetch("/includes/footer.html").then(response => response.text()).then(data => { document.getElementById("footer").innerHTML = data; });</script>
 </body>
 </html>
