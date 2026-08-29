@@ -1,226 +1,162 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBAN Satispay: come funziona il conto collegato (Guida 2026)</title>
-    <meta name="description" content="Cos'è l'IBAN Satispay, come attivarlo e come funzionano i bonifici SEPA in entrata e in uscita. Sicurezza, verifica del beneficiario e ricevute, spiegati in dettaglio.">
-    <link rel="canonical" href="https://alextoolsbox.it/satispay/iban-satispay.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="AlexToolsBox">
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="IBAN Satispay: come funziona il conto collegato (Guida 2026)">
-    <meta property="og:description" content="Cos'è l'IBAN Satispay, come attivarlo e come funzionano i bonifici SEPA in entrata e in uscita.">
-    <meta property="og:url" content="https://alextoolsbox.it/satispay/iban-satispay.html">
-    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IBAN Satispay: come funziona il conto collegato">
-    <meta name="twitter:description" content="Cos'è l'IBAN Satispay e come funzionano i bonifici SEPA in entrata e in uscita.">
-    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <!-- Plausible Analytics -->
-    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=84a36c72">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <script src="/js/promo.js?v=f0912127" defer></script>
-
-    <!-- SCHEMA FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "A cosa serve l'IBAN Satispay?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Serve a ricevere e inviare bonifici SEPA direttamente dall'app Satispay, come su un conto corrente tradizionale, senza dover passare dal conto bancario collegato esterno."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "L'IBAN Satispay è sicuro per i bonifici?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sì. Ogni bonifico in uscita passa da una verifica del beneficiario in tempo reale (Verification of the Payee): il sistema controlla che il nome inserito corrisponda all'intestatario dell'IBAN prima di confermare l'operazione, secondo la normativa europea."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Posso scaricare le ricevute dei bonifici Satispay?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sì, per ogni bonifico inviato o ricevuto tramite l'IBAN Satispay è possibile scaricare una ricevuta dalla sezione Transazioni dell'app."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- SCHEMA ARTICLE -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "IBAN Satispay: come funziona il conto collegato",
-        "description": "Guida all'IBAN Satispay: attivazione, bonifici SEPA, verifica del beneficiario e ricevute.",
-        "author": { "@type": "Person", "name": "Alex" },
-        "datePublished": "2026-07-15",
-        "dateModified": "2026-07-15"
-    }
-    </script>
-
-    <!-- BREADCRUMBLIST -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
-            { "@type": "ListItem", "position": 2, "name": "Conti Digitali", "item": "https://alextoolsbox.it/conti-digitali.html" },
-            { "@type": "ListItem", "position": 3, "name": "Satispay", "item": "https://alextoolsbox.it/satispay/" },
-            { "@type": "ListItem", "position": 4, "name": "IBAN Satispay", "item": "https://alextoolsbox.it/satispay/iban-satispay.html" }
-        ]
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBAN Satispay: cos'è, bonifici, stipendio e tasse (2026)</title>
+  <meta name="description" content="IBAN Satispay spiegato bene: IBAN LU, bonifici SEPA, stipendio, costi, limiti, protezione del saldo, quadro RW, IVAFE e ISEE.">
+  <link rel="canonical" href="https://alextoolsbox.it/satispay/iban-satispay.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AlexToolsBox">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="IBAN Satispay: cos'è, bonifici, stipendio e tasse (2026)">
+  <meta property="og:description" content="Che cos'è davvero l'IBAN Satispay, cosa puoi farci e perché non è un conto corrente bancario.">
+  <meta property="og:url" content="https://alextoolsbox.it/satispay/iban-satispay.html">
+  <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IBAN Satispay: come funziona davvero">
+  <meta name="twitter:description" content="IBAN LU, bonifici SEPA, stipendio, costi, protezione, fisco e ISEE.">
+  <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
+  <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/style.css?v=84a36c72">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <script src="/js/promo.js?v=f0912127" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Satispay ha un conto corrente?","acceptedAnswer":{"@type":"Answer","text":"No. Hai un conto di moneta elettronica con IBAN personale, non un conto corrente bancario."}},
+    {"@type":"Question","name":"L'IBAN Satispay è italiano?","acceptedAnswer":{"@type":"Answer","text":"No. È lussemburghese e inizia con LU."}},
+    {"@type":"Question","name":"Posso usarlo come qualsiasi conto bancario?","acceptedAnswer":{"@type":"Answer","text":"No. Puoi inviare e ricevere bonifici SEPA e usare le funzioni disponibili nell'app, ma non devi presumere che includa ogni servizio bancario."}},
+    {"@type":"Question","name":"Posso ricevere lo stipendio?","acceptedAnswer":{"@type":"Answer","text":"Sì. Satispay lo indica espressamente nella guida ufficiale. Se l'ufficio paghe rifiuta solo perché l'IBAN è LU, chiedi una motivazione scritta."}},
+    {"@type":"Question","name":"Posso domiciliare le bollette?","acceptedAnswer":{"@type":"Answer","text":"Non darlo per disponibile. Verifica nell'app se il tuo profilo supporta gli addebiti diretti SEPA."}},
+    {"@type":"Question","name":"Ogni pagamento Satispay è un bonifico SEPA?","acceptedAnswer":{"@type":"Answer","text":"No. Pagamenti e trasferimenti P2P interni seguono il circuito Satispay; i bonifici sono una funzione distinta."}},
+    {"@type":"Question","name":"Posso scollegare il conto esterno?","acceptedAnswer":{"@type":"Answer","text":"L'IBAN personale non dimostra da solo che puoi eliminare il conto collegato. Le condizioni Consumer continuano a richiedere un conto bancario SEPA per usare pienamente il servizio."}},
+    {"@type":"Question","name":"Il saldo è protetto fino a 100.000 euro?","acceptedAnswer":{"@type":"Answer","text":"No. Non si applica automaticamente la garanzia bancaria dei depositi. Si applica la diversa tutela prevista per i fondi di moneta elettronica."}},
+    {"@type":"Question","name":"Devo dichiararlo?","acceptedAnswer":{"@type":"Answer","text":"Non dare per scontato che la risposta sia sempre no. Essendo un rapporto estero con IBAN LU, va valutato ai fini del monitoraggio fiscale con CAF o commercialista."}},
+    {"@type":"Question","name":"Si paga il bollo?","acceptedAnswer":{"@type":"Answer","text":"Non il bollo italiano applicato dalle banche italiane ai conti correnti. Restano però da verificare eventuali obblighi RW/W e IVAFE."}},
+    {"@type":"Question","name":"Dove trovo saldo, ricevute e giacenza media?","acceptedAnswer":{"@type":"Answer","text":"Lo storico e le ricevute sono disponibili nell'app. Per certificazione IBAN, saldo al 31 dicembre o giacenza media, usa i documenti presenti nel profilo o chiedi all'assistenza se non trovi un certificato dedicato."}},
+    {"@type":"Question","name":"Cosa succede se chiudo Satispay?","acceptedAnswer":{"@type":"Answer","text":"Prima trasferisci la Disponibilità residua e scarica la documentazione. La chiusura del rapporto comporta anche la cessazione dell'IBAN personale secondo le procedure contrattuali applicabili."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"IBAN Satispay: come funziona davvero","description":"Guida all'IBAN personale Satispay, ai bonifici SEPA e agli aspetti fiscali.","author":{"@type":"Person","name":"Alex"},"datePublished":"2026-07-15","dateModified":"2026-08-29","mainEntityOfPage":"https://alextoolsbox.it/satispay/iban-satispay.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://alextoolsbox.it/"},
+    {"@type":"ListItem","position":2,"name":"Conti Digitali","item":"https://alextoolsbox.it/conti-digitali.html"},
+    {"@type":"ListItem","position":3,"name":"Satispay","item":"https://alextoolsbox.it/satispay/"},
+    {"@type":"ListItem","position":4,"name":"IBAN Satispay","item":"https://alextoolsbox.it/satispay/iban-satispay.html"}
+  ]}
+  </script>
 </head>
-
 <body>
+  <div id="header"></div>
+  <script>fetch("/includes/header.html").then(res=>res.text()).then(data=>{document.getElementById("header").innerHTML=data;updatePromo();});</script>
 
-    <div id="header"></div>
-    <script>
-        fetch("/includes/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                updatePromo();
-            });
-    </script>
+  <div class="hero">
+    <h1>IBAN Satispay: come funziona davvero</h1>
+    <p class="hero-description">Con Satispay puoi avere un IBAN personale per inviare e ricevere bonifici. È comodo, gratuito e integrato con la tua Disponibilità, ma non è un conto corrente bancario. Vediamo cosa puoi farci davvero, senza complicazioni.</p>
+  </div>
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>IBAN Satispay: il conto collegato spiegato bene</h1>
-        <p class="hero-description">
-            Satispay ha un proprio IBAN per ricevere e inviare bonifici SEPA direttamente dall'app. Ti spiego
-            come funziona, quanto è sicuro e cosa cambia rispetto al conto collegato esterno.
-        </p>
-        <a class="button" href="/satispay/link.html">
-            Scarica Satispay (gratis)
-        </a>
+  <div class="container" id="main-content">
+    <div class="tip highlight">
+      <p><strong>📌 In sintesi</strong></p>
+      <p>L'IBAN Satispay è personale, inizia con <strong>LU</strong> e ti permette di inviare e ricevere bonifici SEPA direttamente dalla tua Disponibilità. La cosa importante da capire è una: <strong>non stai aprendo un conto corrente bancario</strong>, ma stai aggiungendo un IBAN al tuo conto di moneta elettronica Satispay.</p>
     </div>
 
-    <div class="container" id="main-content">
+    <h2>Che cos'è l'IBAN Satispay</h2>
+    <p>In pratica, è il tuo indirizzo personale per i bonifici. Lo condividi con chi deve mandarti denaro e ciò che ricevi finisce direttamente nella Disponibilità Satispay. Il saldo resta però <strong>moneta elettronica</strong>: avere un IBAN non trasforma Satispay in una banca.</p>
+    <p>È stato introdotto gradualmente ed è pensato per gli utenti maggiorenni. Come per le altre funzioni nuove di Satispay, conviene comunque controllare direttamente nell'app: alcune opzioni arrivano in momenti diversi per utenti diversi.</p>
 
-        <!-- IN SINTESI -->
-        <div class="tip highlight">
-            <p><strong>📌 In sintesi</strong></p>
-            <p>
-                L'IBAN Satispay ti permette di ricevere bonifici come su un conto corrente tradizionale e di
-                inviarne di tuoi, tutto dall'app. Ogni bonifico in uscita è protetto dalla <strong>verifica del
-                beneficiario in tempo reale</strong> (controllo che il nome corrisponda all'intestatario
-                dell'IBAN), in linea con la normativa europea sui pagamenti.
-            </p>
-        </div>
+    <h2>Chi lo emette</h2>
+    <p>Dietro l'IBAN c'è <strong>Satispay Europe S.A.</strong>, un istituto di moneta elettronica lussemburghese vigilato dalla CSSF. Per questo il tuo IBAN inizia con <strong>LU</strong> e non con IT. Non è un errore e non è un IBAN meno valido: è semplicemente un IBAN lussemburghese utilizzabile nell'area SEPA.</p>
+    <p>Il servizio segue le condizioni Satispay Consumer, con in più l'addendum dedicato all'IBAN personale.</p>
+    <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"Quando valuti un servizio con IBAN, non fermarti alle due lettere iniziali. Controlla soprattutto chi detiene il conto, che licenza ha e che protezione si applica al saldo."</em></div>
 
-        <!-- COS'È -->
-        <h2>Cos'è l'IBAN Satispay</h2>
-        <p>
-            Oltre al classico conto collegato (la carta o il conto corrente che colleghi per far partire i
-            pagamenti P2P e in negozio), Satispay offre un proprio <strong>IBAN</strong>. Puoi usarlo per farti
-            accreditare bonifici da chiunque, anche da chi non ha l'app, esattamente come faresti con l'IBAN di
-            una banca tradizionale.
-        </p>
-        <p>
-            Attivarlo richiede pochi minuti dall'app: una volta attivo, puoi condividere il tuo IBAN Satispay per
-            ricevere pagamenti ricorrenti, bonifici da terzi o semplicemente per centralizzare i movimenti in
-            un'unica app.
-        </p>
+    <h2>Come si attiva</h2>
+    <p>Per attivarlo vai su <strong>Home → foto profilo → Il tuo IBAN Satispay</strong>. Segui i passaggi mostrati nell'app e, una volta generato, puoi copiarlo o condividerlo. Non ci sono costi di attivazione.</p>
+    <p>L'IBAN è individuale, non è trasferibile a un'altra persona e resta legato al tuo rapporto Satispay. Se chiudi il rapporto, quel codice non ti segue in un'altra banca: per la portabilità dei servizi di pagamento e l'eventuale trasferimento operativo, verifica le procedure con entrambi i prestatori coinvolti.</p>
 
-        <!-- SICUREZZA VOP -->
-        <h2 id="sicurezza-bonifici">Sicurezza dei bonifici: la verifica del beneficiario</h2>
-        <p>
-            Una delle cause più comuni di errori o truffe nei bonifici è inviare denaro all'IBAN sbagliato.
-            Satispay applica la normativa europea sulla <strong>Verifica del Beneficiario</strong> (Verification
-            of the Payee): prima di confermare un bonifico in uscita, il sistema controlla che il nome inserito
-            corrisponda davvero all'intestatario dell'IBAN di destinazione. In caso di discrepanza, ricevi un
-            avviso prima di procedere.
-        </p>
-        <p>
-            A questo si aggiungono le <strong>notifiche push</strong> per ogni bonifico in entrata o in uscita, e
-            la possibilità di scaricare la <strong>ricevuta</strong> di ogni operazione dalla sezione Transazioni
-            dell'app, utile per qualsiasi verifica successiva.
-        </p>
+    <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"Appena lo attivi, salva la certificazione dell'IBAN e fai un primo bonifico di prova. Così controlli subito tempi, intestazione e funzionamento senza rischiare cifre importanti."</em></div>
 
-        <div class="features">
-            <div class="card">
-                🔎
-                <p><b>Verifica beneficiario</b></p>
-                <p>Controllo del nome prima di confermare il bonifico.</p>
-            </div>
-            <div class="card">
-                🔔
-                <p><b>Notifiche push</b></p>
-                <p>Avviso immediato per ogni bonifico in entrata o uscita.</p>
-            </div>
-            <div class="card">
-                🧾
-                <p><b>Ricevute scaricabili</b></p>
-                <p>Per ogni operazione, direttamente dall'app.</p>
-            </div>
-        </div>
+    <h2>Bonifici in entrata</h2>
+    <p>Puoi ricevere <strong>bonifici SEPA ordinari</strong> anche da chi non usa Satispay. Quando il bonifico arriva, aumenta la tua Disponibilità e puoi usare subito il denaro nell'app. In genere servono 1 o 2 giorni lavorativi, ma i tempi dipendono anche dalla banca di partenza.</p>
+    <p>Puoi usarlo per spostare denaro da un tuo conto, ricevere un rimborso, farti pagare da un'altra persona o accreditare lo stipendio. Per pensioni e pagamenti della Pubblica Amministrazione la struttura del bonifico è compatibile, ma devi sempre verificare la procedura prevista dall'ente.</p>
+    <p><strong>E gli istantanei?</strong> Considera per certe solo le funzioni che vedi davvero nella tua app: la documentazione descrive bonifici ordinari, quindi non dare per scontato che ognuno parta o arrivi in pochi secondi.</p>
 
-        <div class="alex-tip">
-            <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Uso l'IBAN Satispay soprattutto per centralizzare piccoli bonifici ricorrenti: mi arriva la
-                notifica push all'istante e non devo aprire l'app della banca per controllare."</em>
-        </div>
+    <h2>Bonifici in uscita</h2>
+    <p>Dalla Disponibilità puoi inviare bonifici verso altri IBAN dell'area SEPA. Se la funzione è presente nel tuo profilo, puoi anche programmare bonifici ricorrenti. Attenzione però a non fare confusione: quando mandi denaro a un altro utente Satispay stai facendo un <strong>trasferimento P2P interno</strong>, non un bonifico SEPA.</p>
+    <p>Quando disponibile, la verifica del beneficiario confronta il nome inserito con l'intestatario dell'IBAN. Se ricevi un avviso di mancata corrispondenza e autorizzi comunque, ti assumi il rischio dell'errore.</p>
+    <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"Prima di un bonifico importante faccio sempre una prova con una cifra piccola e controllo nome, IBAN e ricevuta. La verifica del beneficiario aiuta, ma non sostituisce il tuo controllo."</em></div>
 
-        <!-- CONTO COLLEGATO VS IBAN -->
-        <h2>IBAN Satispay vs conto collegato: che differenza c'è</h2>
-        <p>
-            Il <strong>conto collegato</strong> (carta o conto corrente esterno) è quello che permette a Satispay
-            di addebitare i pagamenti P2P e in negozio: funziona in background, come un bonifico automatico ogni
-            volta che paghi. L'<strong>IBAN Satispay</strong> invece è un vero e proprio recapito bancario tutto
-            tuo, utile per ricevere bonifici da chiunque, non solo per pagare.
-        </p>
-        <p>
-            <a href="/satispay/come-funziona.html">Torna alla guida generale su P2P e QR in negozio →</a>
-        </p>
+    <h2>Stipendio, pensione e domiciliazioni</h2>
+    <div class="features">
+      <div class="card">💼<p><b>Stipendio</b></p><p>Sì, la guida ufficiale indica che puoi comunicarlo al datore di lavoro.</p></div>
+      <div class="card">🏛️<p><b>Pensione ed enti</b></p><p>Possibili come accrediti SEPA, ma verifica che l'ente accetti l'IBAN e la procedura richiesta.</p></div>
+      <div class="card">🧾<p><b>Domiciliazioni</b></p><p>Non trattarle come supportate finché nell'app e nelle condizioni non trovi gli addebiti diretti SEPA.</p></div>
+    </div>
+    <p>L'IBAN che inizia con LU non giustifica un rifiuto basato solo sul Paese, se il pagamento rientra nell'area SEPA: se un datore di lavoro o un fornitore lo rifiuta soltanto perché non è italiano, può trattarsi di <strong>discriminazione IBAN</strong>.</p>
 
-        <!-- ALTRE GUIDE -->
-        <h2>Altre guide Satispay</h2>
-        <ul>
-            <li><a href="/satispay/">📘 Guida introduttiva</a></li>
-            <li><a href="/satispay/come-funziona.html">📲 Come funziona: P2P e QR in negozio</a></li>
-            <li><a href="/satispay/bonus.html">🎁 Bonus 5€ con il codice invito</a></li>
-            <li><a href="/satispay/punti-satispay.html">⭐ Punti Satispay</a></li>
-            <li><a href="/satispay/sicurezza.html">🔒 Satispay è sicuro?</a></li>
-            <li><a href="/satispay/faq.html">❓ FAQ complete</a></li>
-        </ul>
+    <h2>IBAN Satispay e conto collegato: che differenza c'è</h2>
+    <p>Sono due cose diverse. Il <strong>conto bancario esterno collegato</strong> serve al meccanismo di Budget, alle ricariche periodiche e agli eventuali addebiti previsti dal servizio. L'<strong>IBAN Satispay</strong> serve invece a far entrare o uscire fondi con bonifico SEPA direttamente dalla Disponibilità.</p>
+    <p>Il Budget non coincide con il saldo massimo e non è un fido. È il livello di Disponibilità che Satispay prova a ripristinare tramite il conto collegato secondo la frequenza prevista. Un bonifico ricevuto aumenta la Disponibilità, ma non rende ogni pagamento Satispay un bonifico.</p>
+    <p><strong>Puoi fare a meno del conto esterno?</strong> Non darlo per scontato. Le condizioni Consumer continuano a indicare, per l'uso pieno del servizio, la titolarità di un conto bancario SEPA. L'IBAN personale facilita la ricarica, ma non equivale automaticamente alla possibilità di scollegare per sempre il conto esterno.</p>
+    <p><a href="/satispay/come-funziona.html">Approfondisci Budget, Disponibilità e pagamenti Satispay →</a></p>
 
-        <!-- TRUST -->
-        <div class="trust">
-            <h3>Informazioni sulla guida</h3>
-            <p>
-                Contenuto verificato sulla documentazione ufficiale Satispay e sulla mia esperienza diretta,
-                aggiornato a luglio 2026. <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
-            </p>
-            <p style="font-size:13px; color:#888; margin-top:10px;">
-                Ultimo aggiornamento: <span id="last-modified"></span>
-            </p>
-        </div>
+    <h2>Costi e limiti</h2>
+    <p>Attivare l'IBAN, inviare bonifici e riceverli non costa nulla. Potrebbero però esserci costi applicati dalla banca dall'altra parte. Occhio anche a non confondere il bonifico con la ricarica istantanea della Disponibilità, che è un servizio diverso e può avere una commissione.</p>
+    <p>Non c'è un limite fisso: dipende dal profilo, dai controlli e dalle soglie mostrate nell'app. Prima di muovere una cifra alta, controlla il limite disponibile e l'eventuale richiesta di documenti sull'origine dei fondi.</p>
 
+    <h2>Come sono protetti i soldi</h2>
+    <p>Il saldo non è un deposito bancario e <strong>non è coperto automaticamente dalla garanzia dei depositi fino a 100.000 euro</strong>. Satispay Europe è un istituto di moneta elettronica: ai fondi dei clienti si applicano le regole di salvaguardia previste per questa categoria, con separazione e protezione secondo la normativa applicabile.</p>
+    <p>È una protezione diversa dalla garanzia bancaria. Evita quindi sia l'allarmismo, sia la frase imprecisa "è garantito fino a 100.000 euro".</p>
+
+    <h2>Fiscalità, bollo e ISEE</h2>
+    <p>Qui serve un po' di attenzione in più. L'IBAN è lussemburghese e il rapporto è presso un istituto di quel Paese: per un residente fiscale italiano può quindi rilevare come <strong>attività finanziaria estera</strong>. Il quadro RW del modello Redditi, o il quadro W del 730, serve al monitoraggio delle attività estere; l'esonero fino a 15.000 euro riguarda espressamente depositi e conti correnti bancari esteri. Satispay è un conto di moneta elettronica, quindi non dare per scontato che quella soglia si applichi allo stesso modo: va valutata caso per caso.</p>
+    <p>Anche sull'<strong>IVAFE</strong> evita le formule assolute: non è vero che si paga sempre, ma non è nemmeno vero che non si paga mai. Dipende dalla qualificazione del rapporto e dai valori detenuti: verificalo con CAF o commercialista usando la documentazione annuale disponibile.</p>
+    <p>Satispay non applica il <strong>bollo italiano sul conto corrente</strong> come farebbe una banca italiana, ma questo non significa che il rapporto sia fiscalmente invisibile o che non ci siano obblighi dichiarativi.</p>
+    <p>Per l'<strong>ISEE</strong>, la Disponibilità è patrimonio mobiliare. Conserva saldo al 31 dicembre, movimenti e dato di giacenza media o la documentazione equivalente. Se l'app non produce un certificato dedicato, chiedilo all'assistenza e verifica con il CAF come indicare il rapporto nella DSU.</p>
+    <div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br><em>"Se attivi l'IBAN LU, a fine anno scarica subito tutto quello che trovi: saldo, cronologia, ricevute e documenti. Sul fisco preferisco una verifica in più con il CAF piuttosto che una frase troppo sicura letta online."</em></div>
+
+    <h2>La mia esperienza con l'IBAN Satispay</h2>
+    <p>Per me il vantaggio è soprattutto pratico: puoi ricevere un bonifico direttamente sulla Disponibilità e usarlo senza passare prima dalla banca collegata. Lo vedo bene per piccoli accrediti, rimborsi e somme che vuoi già destinare a Satispay.</p>
+    <p>Non lo userei però come sostituto automatico del conto principale finché non hai verificato nell'app le funzioni che ti servono davvero, come bonifici istantanei, addebiti diretti, documenti annuali e gestione degli accrediti più importanti.</p>
+
+    <h2>Domande frequenti sull'IBAN Satispay</h2>
+    <div class="faq">
+      <details class="faq-item"><summary>Satispay ha un conto corrente?</summary><div class="faq-a"><p>No. Hai un conto di moneta elettronica con IBAN personale, non un conto corrente bancario.</p></div></details>
+      <details class="faq-item"><summary>L'IBAN Satispay è italiano?</summary><div class="faq-a"><p>No. È lussemburghese e inizia con LU.</p></div></details>
+      <details class="faq-item"><summary>Posso usarlo come qualsiasi conto bancario?</summary><div class="faq-a"><p>No. Puoi inviare e ricevere bonifici SEPA e usare le funzioni disponibili nell'app, ma non devi presumere che includa ogni servizio bancario.</p></div></details>
+      <details class="faq-item"><summary>Posso ricevere lo stipendio?</summary><div class="faq-a"><p>Sì. Satispay lo indica espressamente nella guida ufficiale. Se l'ufficio paghe rifiuta solo perché l'IBAN è LU, chiedi una motivazione scritta.</p></div></details>
+      <details class="faq-item"><summary>Posso domiciliare le bollette?</summary><div class="faq-a"><p>Non darlo per disponibile. Verifica nell'app se il tuo profilo supporta gli addebiti diretti SEPA.</p></div></details>
+      <details class="faq-item"><summary>Ogni pagamento Satispay è un bonifico SEPA?</summary><div class="faq-a"><p>No. Pagamenti e trasferimenti P2P interni seguono il circuito Satispay; i bonifici sono una funzione distinta.</p></div></details>
+      <details class="faq-item"><summary>Posso scollegare il conto esterno?</summary><div class="faq-a"><p>L'IBAN personale non dimostra da solo che puoi eliminare il conto collegato. Le condizioni Consumer continuano a richiedere un conto bancario SEPA per usare pienamente il servizio.</p></div></details>
+      <details class="faq-item"><summary>Il saldo è protetto fino a 100.000 euro?</summary><div class="faq-a"><p>No. Non si applica automaticamente la garanzia bancaria dei depositi. Si applica la diversa tutela prevista per i fondi di moneta elettronica.</p></div></details>
+      <details class="faq-item"><summary>Devo dichiararlo?</summary><div class="faq-a"><p>Non dare per scontato che la risposta sia sempre no. Essendo un rapporto estero con IBAN LU, va valutato ai fini del monitoraggio fiscale con CAF o commercialista.</p></div></details>
+      <details class="faq-item"><summary>Si paga il bollo?</summary><div class="faq-a"><p>Non il bollo italiano applicato dalle banche italiane ai conti correnti. Restano però da verificare eventuali obblighi RW/W e IVAFE.</p></div></details>
+      <details class="faq-item"><summary>Dove trovo saldo, ricevute e giacenza media?</summary><div class="faq-a"><p>Lo storico e le ricevute sono disponibili nell'app. Per certificazione IBAN, saldo al 31 dicembre o giacenza media, usa i documenti presenti nel profilo o chiedi all'assistenza se non trovi un certificato dedicato.</p></div></details>
+      <details class="faq-item"><summary>Cosa succede se chiudo Satispay?</summary><div class="faq-a"><p>Prima trasferisci la Disponibilità residua e scarica la documentazione. La chiusura del rapporto comporta anche la cessazione dell'IBAN personale secondo le procedure contrattuali applicabili.</p></div></details>
     </div>
 
-    <div id="footer"></div>
-    <script>
-        fetch("/includes/footer.html")
-            .then(r => r.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
+    <h2>Altre guide Satispay</h2>
+    <ul>
+      <li><a href="/satispay/">📘 Guida introduttiva</a></li>
+      <li><a href="/satispay/come-funziona.html">📲 Come funziona Satispay</a></li>
+      <li><a href="/satispay/bonus.html">🎁 Bonus Satispay</a></li>
+      <li><a href="/satispay/punti-satispay.html">⭐ Punti Satispay</a></li>
+      <li><a href="/satispay/sicurezza.html">🔒 Satispay è sicuro?</a></li>
+      <li><a href="/satispay/faq.html">❓ FAQ complete</a></li>
+    </ul>
 
+    <div class="trust">
+      <h3>Informazioni sulla guida</h3>
+      <p>Ho verificato questa pagina sulle condizioni Satispay, sulla documentazione ufficiale e sulla mia esperienza diretta. Le funzioni possono cambiare o essere rilasciate gradualmente: prima di un'operazione importante controlla sempre ciò che compare nella tua app. Questa guida è informativa e non sostituisce una consulenza fiscale personale.</p>
+      <p><a href="/trasparenza.html">Leggi la pagina Trasparenza →</a></p>
+      <p style="font-size:13px;color:#888;margin-top:10px;">Ultimo aggiornamento: <span id="last-modified"></span></p>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script>fetch("/includes/footer.html").then(r=>r.text()).then(data=>{document.getElementById("footer").innerHTML=data;});</script>
 </body>
 </html>
