@@ -1,323 +1,155 @@
 <!DOCTYPE html>
+
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come funziona Satispay: P2P, QR, conto e carte Mastercard (2026)</title>
-    <meta name="description" content="Come funziona Satispay nel dettaglio: pagamenti tra amici (P2P), QR code in negozio, conto collegato con bonifico SEPA e le nuove carte Mastercard Red, Metal e Velvet.">
-    <link rel="canonical" href="https://alextoolsbox.it/satispay/come-funziona.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="AlexToolsBox">
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="Come funziona Satispay: P2P, QR, conto e carte Mastercard (2026)">
-    <meta property="og:description" content="Pagamenti P2P, QR in negozio, conto collegato e carte Mastercard Red/Metal/Velvet: come funziona Satispay nel dettaglio.">
-    <meta property="og:url" content="https://alextoolsbox.it/satispay/come-funziona.html">
-    <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Come funziona Satispay: P2P, QR, conto e carte Mastercard">
-    <meta name="twitter:description" content="Pagamenti P2P, QR in negozio, conto collegato e carte Mastercard: come funziona Satispay nel dettaglio.">
-    <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
-    <!-- Plausible Analytics -->
-    <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=84a36c72">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <script src="/js/promo.js?v=f0912127" defer></script>
-
-    <!-- SCHEMA FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Come funziona il pagamento P2P su Satispay?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Cerchi il contatto nella rubrica dell'app (nome o numero di telefono, senza bisogno di conoscere l'IBAN) e invii l'importo desiderato: il denaro viene addebitato sul tuo conto collegato e accreditato quasi istantaneamente al destinatario, senza commissioni."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Come si paga in negozio con il QR code Satispay?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Inquadri il QR code esposto dall'esercente con la fotocamera dell'app (o generi il tuo QR per farti scansionare), confermi l'importo e il pagamento viene addebitato sul conto collegato in pochi secondi. L'esercente non ha bisogno di un terminale POS."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Satispay usa il circuito Visa o Mastercard?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Per i pagamenti P2P e QR no: ogni pagamento è un trasferimento diretto, gestito come un bonifico SEPA. Da luglio 2026, però, Satispay emette anche tre carte fisiche Mastercard opzionali e a pagamento (Red, Metal, Velvet), pensate per chi vuole pagare all'estero o su circuiti internazionali."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Quali carte Mastercard offre Satispay e quanto costano?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Tre livelli: Red (Mastercard Platinum, 3,99€/mese o 39,99€/anno), Metal (Mastercard World, 9,99€/mese o 99,99€/anno) e Velvet (Mastercard World Elite, 39,99€/mese o 399,99€/anno). Cambiano massimali giornalieri, commissioni sul cambio valuta, accesso alle lounge aeroportuali e punti per euro speso."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- SCHEMA ARTICLE -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Come funziona Satispay: P2P, QR in negozio, conto collegato e carte Mastercard",
-        "description": "Guida dettagliata al funzionamento di Satispay: pagamenti tra persone, QR in negozio, conto collegato con IBAN e le carte Mastercard Red, Metal e Velvet.",
-        "author": { "@type": "Person", "name": "Alex" },
-        "datePublished": "2026-07-15",
-        "dateModified": "2026-08-21"
-    }
-    </script>
-
-    <!-- BREADCRUMBLIST -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alextoolsbox.it/" },
-            { "@type": "ListItem", "position": 2, "name": "Conti Digitali", "item": "https://alextoolsbox.it/conti-digitali.html" },
-            { "@type": "ListItem", "position": 3, "name": "Satispay", "item": "https://alextoolsbox.it/satispay/" },
-            { "@type": "ListItem", "position": 4, "name": "Come funziona", "item": "https://alextoolsbox.it/satispay/come-funziona.html" }
-        ]
-    }
-    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Come funziona Satispay: Budget, QR, IBAN e carte (2026)</title>
+<meta content="Come funziona Satispay nell'uso quotidiano: Budget, P2P, QR, IBAN, carte Mastercard opzionali e Punti, con i test personali distinti dalle fonti ufficiali." name="description"/>
+<link href="https://alextoolsbox.it/satispay/come-funziona.html" rel="canonical"/>
+<meta content="article" property="og:type"/><meta content="AlexToolsBox" property="og:site_name"/><meta content="it_IT" property="og:locale"/>
+<meta content="Come funziona Satispay: Budget, QR, IBAN e carte (2026)" property="og:title"/>
+<meta content="Guida pratica a Budget, P2P, QR, IBAN, carte opzionali, Punti e servizi Satispay." property="og:description"/>
+<meta content="https://alextoolsbox.it/satispay/come-funziona.html" property="og:url"/><meta content="https://alextoolsbox.it/img/og-default.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="Come funziona Satispay: Budget, QR, IBAN e carte" name="twitter:title"/><meta content="Cosa succede davvero quando ricarichi, paghi, invii denaro o usi una carta Satispay." name="twitter:description"/><meta content="https://alextoolsbox.it/img/og-default.jpg" name="twitter:image"/>
+<script data-domain="alextoolsbox.it" defer="" src="https://plausible.io/js/script.js"></script>
+<link href="/css/style.css?v=84a36c72" rel="stylesheet"/><link href="/img/favicon.png" rel="icon" type="image/png"/><script defer="" src="/js/promo.js?v=f0912127"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Come funziona Satispay nell'uso quotidiano","description":"Guida pratica a Budget, P2P, QR, IBAN, carte Mastercard opzionali, Punti e servizi finanziari Satispay.","author":{"@type":"Person","name":"Alex"},"publisher":{"@type":"Organization","name":"AlexToolsBox","logo":{"@type":"ImageObject","url":"https://alextoolsbox.it/img/logo-atb.svg"}},"datePublished":"2026-07-15","dateModified":"2026-08-30","mainEntityOfPage":"https://alextoolsbox.it/satispay/come-funziona.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Satispay funziona senza carta?","acceptedAnswer":{"@type":"Answer","text":"Sì per P2P e QR. Le carte Mastercard sono opzionali e non devi sottoscriverle per continuare a usare le funzioni storiche."}},
+{"@type":"Question","name":"Il pagamento parte direttamente dal conto collegato?","acceptedAnswer":{"@type":"Answer","text":"Di norma no: riduce la Disponibilità Satispay. Il conto collegato alimenta la Disponibilità tramite ricariche e addebiti SDD."}},
+{"@type":"Question","name":"Ogni pagamento è un bonifico SEPA?","acceptedAnswer":{"@type":"Answer","text":"No. Bonifici SEPA, ricariche SDD, pagamenti P2P, QR e transazioni Mastercard sono flussi distinti."}},
+{"@type":"Question","name":"Satispay usa Visa o Mastercard?","acceptedAnswer":{"@type":"Answer","text":"P2P e QR non usano circuiti di carta. Le carte opzionali Satispay usano Mastercard."}},
+{"@type":"Question","name":"Il denaro arriva in pochi istanti?","acceptedAnswer":{"@type":"Answer","text":"P2P e conferma QR sono normalmente rapidi. Ricariche standard, bonifici e disinvestimenti hanno tempi diversi e non vanno promessi come istantanei."}},
+{"@type":"Question","name":"Satispay è pensata soltanto per l'Italia?","acceptedAnswer":{"@type":"Answer","text":"No, non in modo assoluto: la rete QR resta fortemente legata all'Italia, ma le carte Mastercard ampliano l'uso anche all'estero."}}
+]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://alextoolsbox.it/"},{"@type":"ListItem","position":2,"name":"Conti Digitali","item":"https://alextoolsbox.it/conti-digitali.html"},{"@type":"ListItem","position":3,"name":"Satispay","item":"https://alextoolsbox.it/satispay/"},{"@type":"ListItem","position":4,"name":"Come funziona","item":"https://alextoolsbox.it/satispay/come-funziona.html"}]}</script>
 </head>
-
 <body>
-
-    <div id="header"></div>
-    <script>
-        fetch("/includes/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                updatePromo();
-            });
-    </script>
-
-    <!-- HERO -->
-    <div class="hero">
-        <h1>Come funziona Satispay davvero</h1>
-        <p class="hero-description">
-            Per P2P e QR non serve nessuna carta: Satispay funziona in modo diverso da Revolut o Wise. Dal 2026
-            ha aggiunto anche carte fisiche Mastercard opzionali. Ti spiego P2P, QR in negozio, conto collegato
-            e le nuove carte con l'esperienza di chi lo usa ogni giorno.
+<div id="header"></div><script>fetch("/includes/header.html").then(res=>res.text()).then(data=>{document.getElementById("header").innerHTML=data;updatePromo();});</script>
+<div class="hero">
+<h1>Come funziona Satispay davvero</h1>
+<p class="hero-description">
+            Satispay funziona senza carta quando mandi denaro agli amici o paghi con il QR. Dal 2026, però,
+            puoi anche avere un IBAN personale, scegliere una carta Mastercard e usare Punti, risparmi e
+            investimenti. Ti spiego cosa cambia nell'uso quotidiano e cosa ho già provato di persona.
         </p>
-        <a class="button" href="/satispay/link.html">
-            Scarica Satispay (gratis)
-        </a>
-    </div>
-
-    <div class="container" id="main-content">
-
-        <!-- IN SINTESI -->
-        <div class="tip highlight">
-            <p><strong>📌 In sintesi</strong></p>
-            <p>
-                Satispay funziona su tre pilastri storici: <strong>pagamenti P2P</strong> gratuiti tra persone,
-                <strong>QR code</strong> per pagare in negozio senza POS lato esercente, e un <strong>conto
-                collegato</strong> (o IBAN proprio) da cui ogni pagamento parte come un bonifico SEPA diretto —
-                nessuna carta coinvolta. Da luglio 2026 si aggiungono tre <strong>carte fisiche Mastercard</strong>
-                opzionali e a pagamento (Red, Metal, Velvet), per chi vuole spendere all'estero o su circuiti
-                internazionali.
+</div>
+<div class="container" id="main-content">
+<div class="tip highlight">
+<p><strong>📌 In sintesi</strong></p>
+<p>
+                Per usare Satispay nel modo classico colleghi il conto corrente, imposti un Budget e spendi
+                la Disponibilità presente nell'app. Puoi mandare denaro ai contatti e pagare nei negozi con
+                il QR senza sottoscrivere una carta. L'IBAN personale e le carte Mastercard Red, Metal e Velvet
+                sono funzioni aggiuntive: utili se vuoi ricevere bonifici o pagare anche fuori dalla rete Satispay.
             </p>
-        </div>
-
-        <!-- P2P -->
-        <h2 id="p2p">Pagamenti P2P: inviare e ricevere denaro tra persone</h2>
-        <p>
-            La funzione più usata di Satispay è il pagamento tra persone. Cerchi il contatto nella rubrica
-            dell'app (basta il nome o il numero di telefono, non serve conoscere l'IBAN di nessuno) e invii
-            l'importo che vuoi. Il denaro parte dal tuo conto collegato e arriva sul conto del destinatario in
-            pochi istanti, senza commissioni per nessuno dei due.
+</div>
+<div class="features">
+<div class="card">👥<p><b>P2P senza carta</b></p><p>Invii e chiedi denaro ai contatti Satispay.</p></div>
+<div class="card">📱<p><b>QR in negozio</b></p><p>Paghi dalla Disponibilità nella rete Satispay.</p></div>
+<div class="card">💳<p><b>Mastercard opzionale</b></p><p>La richiedi solo se vuoi ampliare la spendibilità.</p></div>
+</div>
+<p><small>Pagina controllata il <strong>30 agosto 2026</strong>. Costi, soglie e funzioni possono cambiare o essere distribuiti gradualmente: controlla sempre il riepilogo nell'app prima di confermare.</small></p>
+<h2 id="budget">Come funziona il Budget</h2>
+<p>Il Budget non è un limite di spesa e non coincide con il saldo del tuo conto. È l'importo di riferimento che scegli di mantenere nella <strong>Disponibilità Satispay</strong>. Scegli tu se farlo controllare ogni settimana o una volta al mese. Alla data prevista, Satispay confronta Budget e Disponibilità e calcola l'eventuale ricarica.</p>
+<p>Se la Disponibilità è sotto il Budget, viene richiesta una ricarica tramite addebito diretto sul conto collegato. Se è sopra, l'eccedenza può essere trasferita secondo le opzioni disponibili nel tuo account. La prima ricarica e le ricariche standard <strong>non sono necessariamente immediate</strong>: l'addebito SDD e l'accredito possono richiedere giorni lavorativi. La ricarica istantanea, se disponibile, è un'operazione distinta e può costare 1 €.</p>
+<div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br/><em>"Quando controlli Satispay, distingui sempre Budget e Disponibilità: il primo è un obiettivo automatico, la seconda è il denaro che puoi usare in quel momento."</em></div>
+<h2 id="p2p">P2P: inviare e chiedere denaro</h2>
+<p>Apri la rubrica nell'app, scegli un contatto Satispay e invii oppure richiedi un importo senza conoscere il suo IBAN. Dopo la conferma, l'importo viene tolto dalla tua Disponibilità e compare su quella del destinatario normalmente in pochi istanti. Per i privati, inviare e ricevere denaro dai contatti è gratuito.</p>
+<p>
+            Qui c'è la distinzione più importante: quando mandi denaro non parte ogni volta un bonifico dal
+            tuo conto corrente. Usi normalmente la Disponibilità che hai già nell'app. Il conto collegato
+            serve soprattutto a ricaricarla.
         </p>
-        <div class="alex-tip">
-            <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Lo uso soprattutto per dividere spese con gli amici: cena, benzina, regali di gruppo. È più
-                veloce che chiedere l'IBAN e fare un bonifico tradizionale."</em>
-        </div>
-
-        <!-- QR IN NEGOZIO -->
-        <h2 id="qr">Pagare in negozio con il QR code</h2>
-        <p>
-            Per pagare in un negozio convenzionato, inquadri con la fotocamera dell'app il QR code esposto alla
-            cassa (oppure generi il tuo QR personale, e sarà l'esercente a scansionarlo). Confermi l'importo e il
-            pagamento viene addebitato sul conto collegato in pochi secondi.
+<div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br/><em>"Il P2P è la funzione che uso per dividere cena, benzina e regali. È più pratico che scambiarsi l'IBAN, ma resta utile verificare nome e importo prima dell'invio."</em></div>
+<h2 id="qr">QR: pagare nei negozi Satispay</h2>
+<p>Nel caso più comune scegli il negozio nell'app oppure inquadri il suo QR, controlli l'importo e confermi. In altri casi è l'esercente a predisporre la richiesta oppure a scansionare il tuo QR personale. I passaggi effettivi dipendono dall'integrazione usata dal negozio.</p>
+<p>Il QR usa la rete Satispay, non Visa o Mastercard. Per accettarlo l'esercente non deve avere un <strong>POS dedicato Satispay</strong>: può usare QR, app, dashboard o un'integrazione compatibile. Questo non significa che l'esercente possa fare a meno degli altri strumenti di pagamento richiesti dalla legge o dai clienti.</p>
+<p>
+            Per te il pagamento in negozio non ha commissioni. L'esercente segue invece le condizioni
+            Satispay Business, che possono cambiare in base al canale e alla categoria. Da settembre 2026
+            il modello standard annunciato prevede zero commissioni sotto 10 € e lo 0,95% da 10 € in su,
+            con condizioni particolari per alcune attività.
         </p>
-        <p>
-            Per l'esercente il vantaggio è che non serve un terminale POS tradizionale: il QR funziona anche solo
-            con un cartello stampato o uno smartphone. È uno dei motivi per cui Satispay si è diffusa così tanto
-            tra bar, negozi di quartiere e piccoli esercenti.
+<div class="alex-tip">
+<span class="alex-label">💡 Alex's Tip</span><br/>
+<em>"Quando il negozio espone Satispay, io apro l'app e controllo sempre nome dell'attività e importo prima di confermare. Bastano pochi secondi, ma eviti di pagare il destinatario sbagliato."</em>
+</div>
+<h2 id="iban">IBAN Satispay e conto collegato</h2>
+<p>Il <strong>conto collegato esterno</strong> e l'<strong>IBAN personale Satispay</strong> non sono la stessa cosa. Il conto collegato autorizza ricariche e addebiti SDD. L'IBAN Satispay ti permette di ricevere e inviare bonifici SEPA secondo le funzioni e i limiti del tuo account.</p>
+<p>
+            Attenzione a non confondere anche un terzo elemento, la carta Satispay che vedi nella prossima
+            sezione: non sostituisce né il conto collegato né l'IBAN personale. È una carta emessa
+            all'interno dell'ecosistema Satispay, mentre il conto collegato resta la fonte esterna per le
+            ricariche previste dal tuo profilo.
         </p>
-
-        <div class="features">
-            <div class="card">
-                🧾
-                <p><b>Nessun POS richiesto</b></p>
-                <p>L'esercente può accettare pagamenti anche solo con un QR stampato.</p>
-            </div>
-            <div class="card">
-                ⚡
-                <p><b>Pagamento in pochi secondi</b></p>
-                <p>Scansione, conferma importo, fatto.</p>
-            </div>
-            <div class="card">
-                💶
-                <p><b>Nessuna commissione per te</b></p>
-                <p>Le commissioni riguardano solo l'esercente, non chi paga.</p>
-            </div>
-        </div>
-
-        <!-- CONTO COLLEGATO -->
-        <h2 id="conto">Il conto collegato: come Satispay addebita i pagamenti</h2>
-        <p>
-            Ogni pagamento che fai su Satispay non passa da una carta: è collegato direttamente al tuo <strong>conto
-            corrente</strong> (o alla carta che hai aggiunto) e viene gestito come un <strong>bonifico SEPA</strong>.
-            Dal 2026 Satispay offre anche un proprio <strong>IBAN</strong>, per ricevere bonifici come su un conto
-            tradizionale, senza dover passare dal conto collegato esterno.
+<p><a href="/satispay/iban-satispay.html">Approfondisci l'IBAN Satispay →</a></p>
+<h2 id="carte">Carte opzionali Red, Metal e Velvet</h2>
+<p>Le carte Satispay usano <strong>Mastercard</strong> e sono separate dai pagamenti P2P e QR. È ancora corretto dire che “Satispay funziona senza carta”: vale per il funzionamento storico, cioè P2P e QR. Dal 2026 si aggiungono però carte fisiche opzionali, legate a piani a pagamento.</p>
+<table class="table"><tr><th>Carta</th><th>Piano incluso</th><th>Circuito</th><th>Canone</th><th>Uso principale</th></tr><tr><td>Red</td><td>Plus</td><td>Mastercard Platinum</td><td>3,99 €/mese o 39,99 €/anno</td><td>Spese quotidiane e internazionali</td></tr><tr><td>Metal</td><td>Metal</td><td>Mastercard World</td><td>9,99 €/mese o 99,99 €/anno</td><td>Viaggi e benefit aggiuntivi</td></tr><tr><td>Velvet</td><td>Velvet</td><td>Mastercard World Elite</td><td>39,99 €/mese o 399,99 €/anno</td><td>Benefit premium e lounge</td></tr></table>
+<p>
+            I piani cambiano per limiti, cambio valuta, prelievi, assicurazioni, lounge e moltiplicatori dei
+            Punti. La differenza pratica è semplice: con il QR paghi solo nella rete Satispay; con la carta
+            paghi presso gli esercenti che accettano Mastercard, anche all'estero. Per questo oggi non è
+            più corretto dire che Satispay funziona solo in Italia o che non si può usare in valuta estera.
         </p>
-        <p>
-            <a href="/satispay/iban-satispay.html">Approfondisci: come funziona l'IBAN Satispay →</a>
+<div class="alex-tip">
+<span class="alex-label">💡 Alex's Tip</span><br/>
+<em>"Non scegliere una carta solo per il colore: guarda prima canone, cambio, prelievi e benefit che useresti davvero. P2P e QR continuano a funzionare anche senza un piano a pagamento."</em>
+</div>
+<p><a href="/satispay/piani.html">Confronta carte, limiti e costi →</a></p>
+<h2 id="punti">Punti Satispay</h2>
+<p>Dopo l'attivazione del programma accumuli normalmente Punti sugli acquisti idonei. La regola base comunicata è 1 punto per ogni euro speso, ma nell'app puoi trovare promozioni e moltiplicatori diversi. I Punti si trasformano in sconti utilizzabili nelle attività e nei servizi aderenti: non sono denaro, non hanno un valore universale fisso e vanno descritti secondo le regole mostrate nell'app.</p>
+<p><a href="/satispay/punti-satispay.html">Come accumulare e usare i Punti →</a></p>
+<h2 id="servizi">Pagamenti e servizi nell'app</h2>
+<ul><li><strong>Acquisti online:</strong> scegli Satispay al checkout e autorizzi dall'app presso i siti compatibili.</li><li><strong>PagoPA, bollettini e bollo:</strong> scansioni o inserisci i dati e controlli la commissione prima di pagare. La tariffa standard indicata per pagoPA e bollettini è 1 €.</li><li><strong>Ricariche telefoniche:</strong> scegli numero, operatore e importo; Satispay non applica una commissione standard.</li><li><strong>Buoni regalo:</strong> acquisti le gift card disponibili nell'app. Disponibilità, tagli e Punti cambiano per marchio.</li><li><strong>Donazioni:</strong> puoi donare alle organizzazioni presenti; Satispay indica il servizio come gratuito per il privato.</li></ul>
+<p>Il vecchio <strong>cashback</strong> come meccanismo generale non c'è più: oggi il programma strutturale è Punti. Possono comunque comparire ancora promozioni specifiche a cashback su singole iniziative.</p>
+<h2 id="finanza">Prodotti finanziari recenti</h2>
+<p><strong>Investimenti</strong> comprende funzioni come fondi, azioni ed ETF disponibili nell'app. L'app rende tutto semplice da usare, ma il rischio non sparisce: costi e possibilità di perdita cambiano in base al prodotto che scegli.</p>
+<p>
+            Il <strong>Salvadanaio Remunerato</strong> investe in un fondo monetario. Il rendimento cambia nel
+            tempo e il capitale non è garantito. Io l'ho provato: il vantaggio è soprattutto la semplicità,
+            perché sposti il denaro e controlli l'andamento dalla stessa app, senza aprire un conto titoli a
+            parte — resta comunque un prodotto troppo recente per parlarne come test di lungo periodo. Puoi
+            chiedere di riportare il denaro nella Disponibilità, ma il rientro non è istantaneo in ogni
+            situazione: controlla sempre tempi e operazioni in corso direttamente nell'app.
         </p>
-
-        <!-- CARTE MASTERCARD -->
-        <h2 id="carte-mastercard">Le carte Mastercard di Satispay: Red, Metal, Velvet (novità 2026)</h2>
-        <p>
-            Dal 2026 Satispay emette anche <strong>carte fisiche Mastercard</strong>, in tre livelli a pagamento:
-            <strong>Red</strong> (Mastercard Platinum), <strong>Metal</strong> (Mastercard World) e
-            <strong>Velvet</strong> (Mastercard World Elite). Sono un prodotto separato dal funzionamento base:
-            restano opzionali, e per i pagamenti P2P e QR in negozio non servono. Hanno senso soprattutto se vuoi
-            usare Satispay anche per pagare all'estero o su circuiti che richiedono Visa/Mastercard.
+<div class="tip highlight"><p><strong>🔒 Da sapere:</strong> Salvadanaio Remunerato, fondi, azioni ed ETF sono prodotti d'investimento, non semplice Disponibilità e non depositi bancari garantiti.</p></div>
+<p><a href="/satispay/investimenti.html">Guida agli Investimenti →</a> · <a href="/satispay/salvadanaio-remunerato.html">Guida al Salvadanaio Remunerato →</a></p>
+<h2 id="esperienza">La mia esperienza personale</h2>
+<p>
+            Le due funzioni che conosco meglio sono P2P e QR: uso Satispay per dividere spese con gli amici
+            e per pagare nei negozi convenzionati. È su questa parte che posso darti un giudizio basato
+            sull'uso reale, non solo sulla documentazione. Ho provato anche il Salvadanaio Remunerato, ma da
+            troppo poco tempo per parlartene con la stessa sicurezza.
         </p>
-
-        <table class="table">
-            <tr>
-                <th>Caratteristica</th>
-                <th>Red</th>
-                <th>Metal</th>
-                <th>Velvet</th>
-            </tr>
-            <tr>
-                <td>Circuito / livello</td>
-                <td>Mastercard Platinum</td>
-                <td>Mastercard World</td>
-                <td>Mastercard World Elite</td>
-            </tr>
-            <tr>
-                <td>Costo</td>
-                <td>3,99€/mese o 39,99€/anno</td>
-                <td>9,99€/mese o 99,99€/anno</td>
-                <td>39,99€/mese o 399,99€/anno</td>
-            </tr>
-            <tr>
-                <td>Massimale giornaliero</td>
-                <td>3.000€</td>
-                <td>5.000€</td>
-                <td>oltre 10.000€</td>
-            </tr>
-            <tr>
-                <td>Commissioni cambio valuta</td>
-                <td>Gratis fino a 3.200€/mese</td>
-                <td>Illimitate gratis</td>
-                <td>Illimitate gratis</td>
-            </tr>
-            <tr>
-                <td>Accesso lounge aeroportuali</td>
-                <td>Non incluso</td>
-                <td>Scontato (spesa 1.400€+/anno)</td>
-                <td>Gratuito (spesa 1.400€+/anno)</td>
-            </tr>
-            <tr>
-                <td>Assicurazione viaggio</td>
-                <td>Allianz Partners</td>
-                <td>Allianz Partners</td>
-                <td>Allianz Partners</td>
-            </tr>
-            <tr>
-                <td>Punti per euro speso</td>
-                <td>2x</td>
-                <td>3x</td>
-                <td>4x</td>
-            </tr>
-        </table>
-
-        <div class="alex-tip">
-            <span class="alex-label">💡 Alex's Tip</span><br>
-            <em>"Le carte Mastercard sono uscite da poche settimane: non le ho ancora usate abbastanza a lungo
-                da darti un giudizio basato sull'esperienza diretta, come faccio di solito. I dati sopra vengono
-                dalle condizioni ufficiali Satispay, verificate ad agosto 2026 — controllali sempre in app prima
-                di sottoscrivere, perché condizioni e soglie su questo tipo di prodotti possono cambiare."</em>
-        </div>
-
-        <p>
-            <a href="/satispay/piani.html">Confronto approfondito delle 3 carte (prelievi ATM, ricariche, lounge) e quale conviene in base a come le usi →</a>
+<p>
+            Per rendere questa sezione davvero completa devo ancora recuperare la data esatta di apertura
+            dell'account e verificare dalla cronologia bonus e Punti. Su IBAN, carte e Investimenti preferisco
+            non scrivere “l'ho provato” finché non ho una prova diretta sul mio account.
         </p>
+<div class="features">
+<div class="card">✅<p><b>Già provato</b></p><p>P2P, pagamenti QR e Salvadanaio Remunerato (di recente).</p></div>
+<div class="card">🧾<p><b>Da documentare</b></p><p>Anni d'uso, bonus e Punti riscattati.</p></div>
+<div class="card">🧪<p><b>Non ancora testato</b></p><p>IBAN, carta e Investimenti.</p></div>
+</div>
+<div class="alex-tip"><span class="alex-label">💡 Alex's Tip</span><br/><em>"Quando non ho ancora provato una funzione, preferisco dirtelo. Le informazioni ufficiali servono a capire come dovrebbe funzionare; l'esperienza personale serve a raccontare cosa è successo davvero sul mio account."</em></div>
+<h2 id="limiti">Cosa non dare per scontato</h2>
+<ul><li>Una ricarica standard via SDD non è immediata.</li><li>Non ogni pagamento è un bonifico SEPA: sono flussi distinti.</li><li>I tempi osservati su una singola operazione non sono generalizzabili a ogni caso.</li><li>Carte, IBAN e Investimenti richiedono ancora un test personale su un uso prolungato.</li><li>Costi Business, rendimento e condizioni dei piani possono cambiare nel tempo.</li><li>Il QR Satispay non ha la stessa accettazione internazionale di Mastercard.</li></ul>
 
-        <!-- CONFRONTO RAPIDO -->
-        <h2>La differenza rispetto a Revolut e Wise</h2>
-        <p>
-            Se conosci già Revolut o Wise, la differenza principale resta questa: quei conti nascono con IBAN e
-            carta multivaluta inclusi fin dall'inizio, pensati per viaggi e spese in valute diverse. Satispay
-            nasce per il mercato italiano e per i pagamenti P2P/QR non serve nessuna carta; le nuove carte
-            Mastercard (Red/Metal/Velvet) sono un'aggiunta a pagamento, non incluse di default come su Revolut o
-            Wise.
-        </p>
-        <div class="alex-tip">
-            <span class="alex-label">🔥 Alex's Tip:</span>
-            <strong>Anche con le nuove carte, per me restano servizi complementari più che alternativi: uso
-                Satispay per la vita quotidiana in Italia e Revolut/Wise per viaggi e spese in valuta estera,
-                dove la loro carta multivaluta gratuita resta più conveniente delle carte Satispay a pagamento.</strong>
-        </div>
 
-        <!-- ALTRE GUIDE -->
-        <h2>Altre guide Satispay</h2>
-        <ul>
-            <li><a href="/satispay/">📘 Guida introduttiva</a></li>
-            <li><a href="/satispay/investimenti.html">📈 Investimenti: azioni ed ETF</a></li>
-            <li><a href="/satispay/salvadanaio-remunerato.html">💰 Salvadanaio Remunerato</a></li>
-            <li><a href="/satispay/piani.html">💳 Le carte Red, Metal e Velvet a confronto</a></li>
-            <li><a href="/satispay/bonus.html">🎁 Bonus 5€ con il codice invito</a></li>
-            <li><a href="/satispay/iban-satispay.html">🏦 IBAN Satispay</a></li>
-            <li><a href="/satispay/punti-satispay.html">⭐ Punti Satispay</a></li>
-            <li><a href="/satispay/sicurezza.html">🔒 Satispay è sicuro?</a></li>
-            <li><a href="/satispay/faq.html">❓ FAQ complete</a></li>
-        </ul>
 
-        <!-- TRUST -->
-        <div class="trust">
-            <h3>Informazioni sulla guida</h3>
-            <p>
-                Le sezioni su P2P, QR e conto collegato si basano sul mio utilizzo quotidiano di Satispay. La
-                sezione sulle carte Mastercard riguarda un prodotto lanciato da poche settimane: è costruita sulle
-                condizioni ufficiali, non su mesi di uso diretto. Aggiornato ad agosto 2026.
-                <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
-            </p>
-            <p style="font-size:13px; color:#888; margin-top:10px;">
-                Ultimo aggiornamento: <span id="last-modified"></span>
-            </p>
-        </div>
 
-    </div>
-
-    <div id="footer"></div>
-    <script>
-        fetch("/includes/footer.html")
-            .then(r => r.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
-
-</body>
-</html>
+<h2 id="faq">FAQ su come funziona Satispay</h2><div class="faq">
+<details class="faq-item"><summary>Satispay funziona senza carta?</summary><div class="faq-a"><p>Sì per P2P e QR. Le carte Mastercard sono opzionali e non devi sottoscriverle per continuare a usare le funzioni storiche.</p></div></details>
+<details class="faq-item"><summary>Il pagamento parte direttamente dal conto collegato?</summary><div class="faq-a"><p>Di norma no: riduce la Disponibilità Satispay. Il conto collegato alimenta la Disponibilità tramite ricariche e addebiti SDD.</p></div></details>
+<details class="faq-item"><summary>Ogni pagamento è un bonifico SEPA?</summary><div class="faq-a"><p>No. Bonifici SEPA, ricariche SDD, pagamenti P2P, QR e transazioni Mastercard sono flussi distinti.</p></div></details>
+<details class="faq-item"><summary>Satispay usa Visa o Mastercard?</summary><div class="faq-a"><p>P2P e QR non usano circuiti di carta. Le carte opzionali Satispay usano Mastercard.</p></div></details>
+<details class="faq-item"><summary>Il denaro arriva in pochi istanti?</summary><div class="faq-a"><p>P2P e conferma QR sono normalmente rapidi. Ricariche standard, bonifici e disinvestimenti hanno tempi diversi e non vanno promessi come istantanei.</p></div></details>
+<details class="faq-item"><summary>Satispay è pensata soltanto per l'Italia?</summary><div class="faq-a"><p>No, non in modo assoluto: la rete QR resta fortemente legata all'Italia, ma le carte Mastercard ampliano l'uso anche all'estero.</p></div></details>
+</div>
+<h2 id="guide-correlate">Guide correlate</h2><ul><li><a href="/satispay/">📘 Guida completa a Satispay</a></li><li><a href="/satispay/iban-satispay.html">🏦 IBAN Satispay</a></li><li><a href="/satispay/piani.html">💳 Carte e piani</a></li><li><a href="/satispay/punti-satispay.html">⭐ Punti Satispay</a></li><li><a href="/satispay/investimenti.html">📈 Investimenti</a></li><li><a href="/satispay/salvadanaio-remunerato.html">💰 Salvadanaio Remunerato</a></li><li><a href="/satispay/bonus.html">🎁 Bonus</a></li><li><a href="/satispay/faq.html">❓ FAQ complete</a></li></ul>
+<div class="trust"><h3>Vuoi vedere come funziona sul tuo account?</h3><p>Puoi aprire l'app e verificare Budget, costi e funzioni disponibili sul tuo account. Prima di attivare piani o investimenti, leggi condizioni e rischi aggiornati.</p><a class="button" href="/satispay/link.html">Apri Satispay</a><p style="margin-top:15px;font-size:14px;color:#888;"><a href="/trasparenza.html">Leggi la pagina Trasparenza →</a></p><p style="font-size:13px;color:#888;margin-top:10px;">Ultimo aggiornamento: <span id="last-modified"></span></p></div>
+</div><div id="footer"></div><script>fetch("/includes/footer.html").then(r=>r.text()).then(data=>{document.getElementById("footer").innerHTML=data;});</script>
+</body></html>
