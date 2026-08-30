@@ -190,5 +190,83 @@
     "tipo": "esperienza",
     "fonte": "Somma di Revolut, Microsoft Rewards e app passive indicate nella pagina I miei risultati, dato indicativo aggiornato periodicamente",
     "verificato": "2026-08-21"
+  },
+  "hype-piano-base-canone": {
+    "valore": "0€",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale HYPE",
+    "verificato": "2026-08-27"
+  },
+  "hype-piano-next-canone": {
+    "valore": "2,90€/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale HYPE",
+    "verificato": "2026-08-27"
+  },
+  "hype-piano-premium-canone": {
+    "valore": "9,90€/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale HYPE",
+    "verificato": "2026-08-27"
+  },
+  "hype-piano-business-canone": {
+    "valore": "2,90€/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale HYPE",
+    "verificato": "2026-08-27"
+  },
+  "n26-piano-standard-canone": {
+    "valore": "0 €/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale N26",
+    "verificato": "2026-08-26"
+  },
+  "n26-piano-smart-canone": {
+    "valore": "4,90 €/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale N26",
+    "verificato": "2026-08-26"
+  },
+  "n26-piano-go-canone": {
+    "valore": "9,90 €/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale N26",
+    "verificato": "2026-08-26"
+  },
+  "n26-piano-metal-canone": {
+    "valore": "16,90 €/mese",
+    "tipo": "ufficiale",
+    "fonte": "Pagina piani ufficiale N26",
+    "verificato": "2026-08-26"
+  },
+  "n26-instant-savings-standard-tasso": {
+    "valore": "0,30%",
+    "tipo": "ufficiale",
+    "fonte": "N26 Support EU — N26 Instant Savings",
+    "verificato": "2026-08-27"
+  },
+  "n26-instant-savings-smart-tasso": {
+    "valore": "0,30%",
+    "tipo": "ufficiale",
+    "fonte": "N26 Support EU — N26 Instant Savings",
+    "verificato": "2026-08-27"
+  },
+  "n26-instant-savings-go-tasso": {
+    "valore": "0,50%",
+    "tipo": "ufficiale",
+    "fonte": "N26 Support EU — N26 Instant Savings",
+    "verificato": "2026-08-27"
+  },
+  "n26-instant-savings-metal-tasso": {
+    "valore": "1,50%",
+    "tipo": "ufficiale",
+    "fonte": "N26 Support EU — N26 Instant Savings",
+    "verificato": "2026-08-27"
+  },
+  "n26-instant-savings-metal-promo-tasso": {
+    "valore": "2,25%",
+    "tipo": "ufficiale",
+    "fonte": "N26 Support EU — N26 Instant Savings",
+    "verificato": "2026-08-27"
   }
 }
