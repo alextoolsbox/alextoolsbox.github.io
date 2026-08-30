@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interessi sulla liquidità 2026: quanto rendono davvero i soldi fermi</title>
-    <meta name="description" content="Trade Republic, Revolut e Wise a confronto sul rendimento netto reale: al netto di ritenuta, bollo, canone e commissioni. I conti li ho fatti sui miei conti veri, capitale per capitale.">
+    <meta name="description" content="Trade Republic, Revolut, Wise e Satispay a confronto sul rendimento netto reale: al netto di ritenuta, bollo, canone e commissioni. Calcolatore incluso.">
     <link rel="canonical" href="https://alextoolsbox.it/confronti/interessi-sulla-liquidita.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="AlexToolsBox">
     <meta property="og:locale" content="it_IT">
     <meta property="og:title" content="Interessi sulla liquidità 2026: quanto rendono davvero i soldi fermi">
-    <meta property="og:description" content="Il tasso in pubblicità non è quello che incassi. Il calcolo netto con ritenuta, bollo, canone e commissioni.">
+    <meta property="og:description" content="Il tasso in pubblicità non è quello che incassi. Calcolo netto con ritenuta, bollo, canone e commissioni, più un calcolatore interattivo.">
     <meta property="og:url" content="https://alextoolsbox.it/confronti/interessi-sulla-liquidita.html">
     <meta property="og:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Interessi sulla liquidità 2026: quanto rendono davvero i soldi fermi">
-    <meta name="twitter:description" content="Il tasso in pubblicità non è quello che incassi. Il calcolo netto, capitale per capitale.">
+    <meta name="twitter:description" content="Il tasso in pubblicità non è quello che incassi. Il calcolo netto, capitale per capitale, con calcolatore.">
     <meta name="twitter:image" content="https://alextoolsbox.it/img/og-default.jpg">
     <!-- Plausible Analytics -->
     <script defer data-domain="alextoolsbox.it" src="https://plausible.io/js/script.js"></script>
@@ -33,7 +33,7 @@
         "description": "Confronto sul rendimento netto reale della liquidità tra Trade Republic, Revolut e Wise, al netto di ritenuta del 26%, imposta di bollo, canone del piano e commissioni di gestione. Dati verificati ad agosto 2026.",
         "author": { "@type": "Person", "name": "Alex" },
         "datePublished": "2026-08-12",
-        "dateModified": "2026-08-12"
+        "dateModified": "2026-08-30"
     }
     </script>
 
@@ -131,6 +131,87 @@
                 4.000€ — ma paga il prezzo di non essere un deposito garantito.
             </p>
         </div>
+
+        <!-- CALCOLATORE -->
+        <h2 id="calcolatore">Calcolatore: quale conto rende di più con la tua cifra</h2>
+        <p>
+            Inserisci il capitale che tieni fermo e confronta subito il rendimento netto stimato sui conti
+            di questa pagina, Satispay compreso. I calcoli usano le stesse formule delle tabelle qui sotto.
+        </p>
+        <div class="calculator-box">
+            <h3>Calcolatore interessi netti multi-conto</h3>
+            <label for="mcAmount">Capitale fermo (€)</label>
+            <input type="number" id="mcAmount" min="0.01" step="100" placeholder="Es. 20000" inputmode="decimal">
+            <label for="mcTrStatus">Condizione Trade Republic</label>
+            <select id="mcTrStatus">
+                <option value="new">Nuovo cliente: 3% fino a 50.000€</option>
+                <option value="existing">Cliente esistente senza promo: 2%</option>
+            </select>
+            <button type="button" onclick="calcolaMultiConto()">Confronta i conti</button>
+            <div id="mcResult" class="result-box" aria-live="polite" role="status"></div>
+        </div>
+        <p style="font-size:14px;color:#888;">
+            Stima indicativa. Trade Republic e Revolut: ritenuta 26% e bollo 34,20€/anno se il capitale
+            supera 5.000€, calcolati come nelle tabelle sotto. Wise: tasso netto composito già pubblicato
+            in questa pagina (~1,29%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento
+            annualizzato stimato 2,37% al netto della ritenuta 26%, senza stimare un bollo specifico (non
+            quantificato dalla pagina ufficiale del prodotto). N26 Instant Savings non è disponibile con IBAN
+            italiano e HYPE non paga interessi sulla liquidità: compaiono in tabella per completezza, non nel
+            calcolo. I tassi cambiano nel tempo: verifica sempre le condizioni ufficiali prima di decidere.
+        </p>
+        <script>
+        function calcolaMultiConto() {
+            var result = document.getElementById("mcResult");
+            var amount = parseFloat(document.getElementById("mcAmount").value);
+            var trStatus = document.getElementById("mcTrStatus").value;
+            if (isNaN(amount) || amount <= 0) {
+                result.innerHTML = "Inserisci un importo valido";
+                return;
+            }
+            var TAX = 0.26, BOLLO_CC = 34.20, BOLLO_SOGLIA = 5000;
+            function bolloCC(cap) { return cap > BOLLO_SOGLIA ? BOLLO_CC : 0; }
+            var trCap = Math.min(amount, 50000);
+            var trRate = trStatus === "new" ? 0.03 : 0.02;
+            var trLordo = trCap * trRate;
+            var trNetto = trLordo * (1 - TAX) - bolloCC(trCap);
+            var piani = [
+                { nome: "Standard", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 0 },
+                { nome: "Plus", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 3.99 },
+                { nome: "Premium", soglia: 6000, r1: 0.02, r2: 0.0125, canoneMese: 9.99 },
+                { nome: "Metal", soglia: 100000, r1: 0.0225, r2: 0.02, canoneMese: 15.99 },
+                { nome: "Ultra", soglia: 100000, r1: 0.025, r2: 0.02, canoneMese: 55 }
+            ];
+            var revolutRisultati = piani.map(function(p) {
+                var t1 = Math.min(amount, p.soglia);
+                var t2 = Math.max(0, amount - p.soglia);
+                var lordo = t1 * p.r1 + t2 * p.r2;
+                var canoneAnno = p.canoneMese * 12;
+                var netto = lordo * (1 - TAX) - canoneAnno - bolloCC(amount);
+                return { nome: "Revolut " + p.nome, netto: netto };
+            });
+            var wiseNetto = amount * 0.0129;
+            var satispayNetto = amount * 0.0237 * (1 - TAX);
+            var righe = [
+                { nome: trStatus === "new" ? "Trade Republic (nuovo cliente)" : "Trade Republic (esistente)", netto: trNetto }
+            ].concat(revolutRisultati).concat([
+                { nome: "Wise Interessi", netto: wiseNetto },
+                { nome: "Satispay Salvadanaio Remunerato (stima)", netto: satispayNetto }
+            ]);
+            righe.sort(function(a, b) { return b.netto - a.netto; });
+            function fmt(n) {
+                return n.toLocaleString("it-IT", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "€";
+            }
+            var html = "<table class=\"table\" style=\"margin-top:10px;\"><tr><th>Conto</th><th>Netto stimato/anno</th></tr>";
+            righe.forEach(function(r, i) {
+                var style = i === 0 ? " style=\"background:#eafaf1;font-weight:600;\"" : "";
+                html += "<tr" + style + "><td>" + (i === 0 ? "\ud83c\udfc6 " : "") + r.nome + "</td><td>" + fmt(r.netto) + "</td></tr>";
+            });
+            html += "<tr><td>N26 Instant Savings</td><td>Non disponibile con IBAN italiano</td></tr>";
+            html += "<tr><td>HYPE</td><td>Non paga interessi sulla liquidit\u00e0</td></tr>";
+            html += "</table>";
+            result.innerHTML = html;
+        }
+        </script>
 
         <!-- PERCHÉ -->
         <h2>Perché ho fatto questi conti</h2>
@@ -388,6 +469,11 @@
                 <td>Quote di un fondo monetario (BlackRock ICS Euro Government Liquidity Fund) tramite Wise Assets Europe, Estonia</td>
                 <td><strong>Nessuna garanzia depositi.</strong> Non è un deposito: sono titoli di Stato a breve termine. Wise lo dichiara esplicitamente</td>
             </tr>
+            <tr>
+                <td><strong>🔵 Satispay</strong></td>
+                <td>Quote del fondo monetario Amundi Euro Liquidity Select, classe R2 (C), tramite Satispay Invest S.A., Lussemburgo</td>
+                <td><strong>Nessuna garanzia depositi.</strong> Sistema lussemburghese SIIL fino a 20.000€, solo per mancata restituzione degli strumenti: non copre le perdite di mercato del fondo</td>
+            </tr>
         </table>
         </div>
 
@@ -461,6 +547,22 @@
             ma se già ce l'hai e ci tieni della liquidità sopra i 4.000€, sta lavorando meglio di quanto
             immagini. Il confronto sull'uso quotidiano è
             <a href="/confronti/wise-vs-revolut.html">Wise vs Revolut</a>.
+        </p>
+
+        <!-- ALTRI TRE -->
+        <h2>E gli altri tre? Satispay, N26 e HYPE</h2>
+        <p>
+            Il <strong>Salvadanaio Remunerato di Satispay</strong> non è un conto deposito: sono quote del
+            fondo monetario Amundi Euro Liquidity Select, e Satispay stessa parla di un rendimento
+            annualizzato <em>stimato</em> del 2,37%, al netto dei costi del fondo ma al lordo delle imposte.
+            Applicando la ritenuta del 26% il netto si avvicina a quello di Trade Republic sotto i 50.000€,
+            ma resta un investimento in un fondo, non un deposito garantito: lo trovi nel calcolatore sopra
+            e nel dettaglio nella <a href="/satispay/salvadanaio.html">guida al Salvadanaio Remunerato</a>.
+        </p>
+        <p>
+            <strong>N26 Instant Savings</strong> esiste, ma richiede un IBAN tedesco: con l'IBAN italiano che
+            N26 assegna in Italia non è attivabile, quindi non entra nel confronto. <strong>HYPE</strong> non
+            remunera la liquidità su nessuno dei suoi piani: zero interessi, a prescindere dal capitale.
         </p>
 
         <!-- COSA SCEGLIEREI -->
