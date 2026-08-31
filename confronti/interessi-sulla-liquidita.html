@@ -147,11 +147,22 @@
                 <option value="new">Nuovo cliente: 3% fino a 50.000€</option>
                 <option value="existing">Cliente esistente senza promo: 2%</option>
             </select>
+            <label for="mcRevolutPlan">Piano Revolut</label>
+            <select id="mcRevolutPlan">
+                <option value="standard">Standard: canone 0€</option>
+                <option value="plus">Plus: 3,99€/mese</option>
+                <option value="premium">Premium: 9,99€/mese</option>
+                <option value="metal">Metal: 15,99€/mese</option>
+                <option value="ultra">Ultra: 55€/mese</option>
+                <option value="all">Confronta tutti i piani Revolut</option>
+            </select>
             <button type="button" onclick="calcolaMultiConto()">Confronta i conti</button>
             <div id="mcResult" class="result-box" aria-live="polite" role="status"></div>
         </div>
         <p style="font-size:14px;color:#888;">
-            Stima indicativa. Trade Republic e Revolut: ritenuta 26% e bollo 34,20€/anno se il capitale
+            Seleziona il tuo piano Revolut per un confronto alla pari con la tua condizione Trade
+            Republic, oppure scegli "Confronta tutti i piani" per vederli tutti insieme. Stima
+            indicativa. Trade Republic e Revolut: ritenuta 26% e bollo 34,20€/anno se il capitale
             supera 5.000€, calcolati come nelle tabelle sotto. Wise: tasso netto composito già pubblicato
             in questa pagina (~1,29%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento
             annualizzato stimato 2,37% al netto della ritenuta 26%, senza stimare un bollo specifico (non
@@ -164,6 +175,7 @@
             var result = document.getElementById("mcResult");
             var amount = parseFloat(document.getElementById("mcAmount").value);
             var trStatus = document.getElementById("mcTrStatus").value;
+            var revolutPlan = document.getElementById("mcRevolutPlan").value;
             if (isNaN(amount) || amount <= 0) {
                 result.innerHTML = "Inserisci un importo valido";
                 return;
@@ -175,20 +187,27 @@
             var trLordo = trCap * trRate;
             var trNetto = trLordo * (1 - TAX) - bolloCC(trCap);
             var piani = [
-                { nome: "Standard", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 0 },
-                { nome: "Plus", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 3.99 },
-                { nome: "Premium", soglia: 6000, r1: 0.02, r2: 0.0125, canoneMese: 9.99 },
-                { nome: "Metal", soglia: 100000, r1: 0.0225, r2: 0.02, canoneMese: 15.99 },
-                { nome: "Ultra", soglia: 100000, r1: 0.025, r2: 0.02, canoneMese: 55 }
+                { chiave: "standard", nome: "Standard", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 0 },
+                { chiave: "plus", nome: "Plus", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 3.99 },
+                { chiave: "premium", nome: "Premium", soglia: 6000, r1: 0.02, r2: 0.0125, canoneMese: 9.99 },
+                { chiave: "metal", nome: "Metal", soglia: 100000, r1: 0.0225, r2: 0.02, canoneMese: 15.99 },
+                { chiave: "ultra", nome: "Ultra", soglia: 100000, r1: 0.025, r2: 0.02, canoneMese: 55 }
             ];
-            var revolutRisultati = piani.map(function(p) {
+            function calcolaPiano(p) {
                 var t1 = Math.min(amount, p.soglia);
                 var t2 = Math.max(0, amount - p.soglia);
                 var lordo = t1 * p.r1 + t2 * p.r2;
                 var canoneAnno = p.canoneMese * 12;
                 var netto = lordo * (1 - TAX) - canoneAnno - bolloCC(amount);
                 return { nome: "Revolut " + p.nome, netto: netto };
-            });
+            }
+            var revolutRisultati;
+            if (revolutPlan === "all") {
+                revolutRisultati = piani.map(calcolaPiano);
+            } else {
+                var pianoScelto = piani.filter(function(p) { return p.chiave === revolutPlan; })[0] || piani[0];
+                revolutRisultati = [calcolaPiano(pianoScelto)];
+            }
             var wiseNetto = amount * 0.0129;
             var satispayNetto = amount * 0.0237 * (1 - TAX);
             var righe = [
