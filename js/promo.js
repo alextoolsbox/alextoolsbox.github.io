@@ -328,3 +328,59 @@ function initImageLightbox(){
 }
 
 initImageLightbox();
+
+/* ============================================
+   TRACKING CTA AFFILIATE — baseline PRE-AdSense (1 settembre 2026).
+   Serve a confrontare il CTR sui link affiliati prima/dopo l'attivazione
+   di Google AdSense (Auto Ads), per capire se gli annunci cannibalizzano
+   i click sulle affiliazioni. Copre entrambi i pattern in uso sul sito,
+   senza toccare le pagine HTML esistenti:
+     1) pagine di redirect interne tipo /hype/link.html o
+        /app-passive/earnapp/link.html (financeAds o altro network dietro
+        un redirect proprio)
+     2) href assoluti diretti verso un dominio esterno (es. i CTA Hype
+        con subid financeads.net inseriti verbatim su piani.html)
+   Evento inviato: "CTA Affiliate Click" con due custom props (pagina di
+   partenza, destinazione). Per vederlo nei report va aggiunto come
+   Custom Event goal in Plausible → Site Settings → Goals (una tantum,
+   non richiede altre modifiche a questo file). Le custom props
+   richiedono un piano Plausible che le supporti: se non disponibili, il
+   conteggio totale dell'evento resta comunque visibile e sufficiente
+   per il confronto prima/dopo.
+   ============================================ */
+window.plausible = window.plausible || function(){ (window.plausible.q = window.plausible.q || []).push(arguments); };
+
+function initAffiliateTracking(){
+  const NON_AFFILIATE_HOSTS = ['plausible.io', 'fonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com'];
+  const LINK_REDIRECT_RE = /\/([a-z0-9-]+)\/link\.html(?:[?#]|$)/i;
+
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    let destinazione = null;
+
+    const redirectMatch = href.match(LINK_REDIRECT_RE);
+    if (redirectMatch) {
+      destinazione = 'interno:' + redirectMatch[1];
+    } else {
+      try {
+        const url = new URL(href, window.location.origin);
+        if (url.hostname && url.hostname !== window.location.hostname &&
+            !NON_AFFILIATE_HOSTS.some(h => url.hostname.endsWith(h))) {
+          destinazione = url.hostname;
+        }
+      } catch (err) {
+        // href non parsabile come URL (mailto:, tel:, javascript:...) — ignora
+      }
+    }
+
+    if (!destinazione) return;
+    window.plausible('CTA Affiliate Click', { props: { pagina: window.location.pathname, destinazione } });
+  }, true);
+}
+
+initAffiliateTracking();
+
