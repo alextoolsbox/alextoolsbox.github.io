@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Frammenti HTML non navigabili: dal 4/9/2026 l'header e' inline nelle pagine
+# (tools/build_header.py). Google li stava indicizzando come pagine a se'.
+Disallow: /includes/
+
 Sitemap: https://alextoolsbox.it/sitemap.xml

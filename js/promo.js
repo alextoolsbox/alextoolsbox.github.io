@@ -384,3 +384,19 @@ function initAffiliateTracking(){
 
 initAffiliateTracking();
 
+
+/* ============================================
+   INIT HEADER INLINE (dal 4 settembre 2026)
+   L'header non viene piu' iniettato via fetch("/includes/header.html"):
+   e' gia' presente nell'HTML servito, generato da tools/build_header.py.
+   updatePromo() (che inizializza promo bar, ricerca, cluster-nav e
+   altezza header) va quindi chiamata al DOMContentLoaded.
+
+   Il guard su .site-header evita la doppia inizializzazione sulle pagine
+   che usano ancora l'injection lato client (es. cluster ing/ in lavorazione):
+   li' l'header non c'e' ancora al DOMContentLoaded e ci pensa la callback
+   del fetch, come prima.
+   ============================================ */
+document.addEventListener('DOMContentLoaded', function(){
+  if (document.querySelector('.site-header')) updatePromo();
+});
