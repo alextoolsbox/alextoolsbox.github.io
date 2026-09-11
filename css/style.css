@@ -682,6 +682,15 @@ background:var(--accent);
 color:#fff;
 }
 
+/* APPROFONDISCI (sotto-link piccoli nelle liste 'Guida completa a X' dei confronti) */
+
+.approf-sub{
+display:block;
+font-size:13px;
+margin-top:3px;
+color:#777;
+}
+
 /* TRUST */
 
 .trust{
