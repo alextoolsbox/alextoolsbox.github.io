@@ -243,6 +243,97 @@
 
     <div class="container" id="main-content">
 
+<style>
+.compare-chips-grid{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.compare-chip{padding:10px 18px;border-radius:999px;border:2px solid #ddd;background:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:0.15s;font-family:inherit}
+.compare-chip:hover:not(:disabled){border-color:#aaa}
+.compare-chip.selected{background:#000;color:#fff;border-color:#000}
+.compare-chip:disabled{opacity:0.4;cursor:not-allowed}
+#compare-status{margin-top:8px;font-size:14px;color:#555;min-height:20px}
+#compare-reset{background:none;border:none;color:#666;text-decoration:underline;font-size:13px;cursor:pointer;padding:0;margin-top:4px;display:none;font-family:inherit}
+</style>
+<div class="calculator-box" id="quick-compare">
+<h3>🆚 Scegli 2 conti da confrontare</h3>
+<p style="font-size:14px;color:#555;margin-bottom:4px">Clicca due brand: ti porto subito al confronto diretto tra i due, se esiste già (oggi copro tutte le 21 combinazioni possibili tra i 7 conti che tratto).</p>
+<div class="compare-chips-grid">
+<button type="button" class="compare-chip" data-slug="revolut">Revolut</button>
+<button type="button" class="compare-chip" data-slug="wise">Wise</button>
+<button type="button" class="compare-chip" data-slug="satispay">Satispay</button>
+<button type="button" class="compare-chip" data-slug="trade-republic">Trade Republic</button>
+<button type="button" class="compare-chip" data-slug="hype">Hype</button>
+<button type="button" class="compare-chip" data-slug="n26">N26</button>
+<button type="button" class="compare-chip" data-slug="ing">ING</button>
+</div>
+<div id="compare-status"></div>
+<button type="button" id="compare-reset">Ricomincia</button>
+</div>
+<script>
+(function(){
+var PAIR_URLS={
+"hype|ing":"ing-vs-hype.html",
+"hype|n26":"n26-vs-hype.html",
+"hype|revolut":"hype-vs-revolut.html",
+"hype|satispay":"hype-vs-satispay.html",
+"hype|trade-republic":"trade-republic-vs-hype.html",
+"hype|wise":"hype-vs-wise.html",
+"ing|n26":"ing-vs-n26.html",
+"ing|revolut":"ing-vs-revolut.html",
+"ing|satispay":"ing-vs-satispay.html",
+"ing|trade-republic":"ing-vs-trade-republic.html",
+"ing|wise":"ing-vs-wise.html",
+"n26|revolut":"n26-vs-revolut.html",
+"n26|satispay":"n26-vs-satispay.html",
+"n26|trade-republic":"trade-republic-vs-n26.html",
+"n26|wise":"n26-vs-wise.html",
+"revolut|satispay":"revolut-vs-satispay.html",
+"revolut|trade-republic":"trade-republic-vs-revolut.html",
+"revolut|wise":"wise-vs-revolut.html",
+"satispay|trade-republic":"satispay-vs-trade-republic.html",
+"satispay|wise":"satispay-vs-wise.html",
+"trade-republic|wise":"trade-republic-vs-wise.html"
+};
+var selected=[];
+var chips=Array.prototype.slice.call(document.querySelectorAll(".compare-chip"));
+var status=document.getElementById("compare-status");
+var resetBtn=document.getElementById("compare-reset");
+function reset(){
+selected=[];
+chips.forEach(function(c){c.classList.remove("selected");c.disabled=false;});
+status.textContent="";
+resetBtn.style.display="none";
+}
+resetBtn.addEventListener("click",reset);
+chips.forEach(function(chip){
+chip.addEventListener("click",function(){
+var slug=chip.dataset.slug;
+if(chip.classList.contains("selected")){
+chip.classList.remove("selected");
+selected=selected.filter(function(s){return s!==slug;});
+chips.forEach(function(c){c.disabled=false;});
+status.textContent="";
+resetBtn.style.display="none";
+return;
+}
+if(selected.length>=2)return;
+selected.push(slug);
+chip.classList.add("selected");
+if(selected.length===2){
+chips.forEach(function(c){if(!c.classList.contains("selected"))c.disabled=true;});
+var key=selected.slice().sort().join("|");
+var url=PAIR_URLS[key];
+if(url){
+status.textContent="Ti porto al confronto \u2192";
+setTimeout(function(){window.location.href=url;},450);
+}else{
+status.textContent="Confronto non ancora disponibile per questa coppia.";
+resetBtn.style.display="inline-block";
+}
+}
+});
+});
+})();
+</script>
+
         <!-- IN SINTESI -->
         <div class="tip highlight">
             <p><strong>📌 In sintesi</strong></p>
