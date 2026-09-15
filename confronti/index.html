@@ -33,7 +33,7 @@
         "description": "Confronti onesti tra conti digitali, app fintech e banche tradizionali. Basati su esperienza reale, per aiutarti a scegliere senza marketing.",
         "author": { "@type": "Person", "name": "Alex" }, "publisher": { "@type": "Organization", "name": "AlexToolsBox" },
         "datePublished": "2026-05-28",
-        "dateModified": "2026-08-20"
+        "dateModified": "2026-09-15"
     }
     </script>
 
@@ -48,6 +48,7 @@
         ]
     }
     </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Come funziona lo strumento “Scegli 2 conti da confrontare”?", "acceptedAnswer": {"@type": "Answer", "text": "Clicca due dei sette brand nel box in cima alla pagina: appena selezioni il secondo, ti chiedo conferma e poi ti porto direttamente al confronto tra quei due. Copre tutte le 21 combinazioni possibili tra i 7 conti che tratto, quindi trovi sempre una risposta."}}, {"@type": "Question", "name": "Avete confrontato davvero tutte le combinazioni possibili?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Con 7 conti (Revolut, Wise, Satispay, Trade Republic, Hype, N26, ING) le coppie possibili sono 21, e sono tutte pubblicate dopo aver aperto e testato personalmente ogni servizio. Lo strumento in cima alla pagina ti porta sempre alla pagina giusta, senza bisogno di scorrere l'elenco sotto."}}, {"@type": "Question", "name": "I confronti sono imparziali?", "acceptedAnswer": {"@type": "Answer", "text": "Sì, nel limite del possibile. Uso link affiliati per Revolut e altri servizi, ma questo non influenza il giudizio. Se un servizio non mi convince, non ne parlo affatto. La mia credibilità vale più di qualsiasi commissione."}}, {"@type": "Question", "name": "Trade Republic o Revolut: qual è la differenza principale?", "acceptedAnswer": {"@type": "Answer", "text": "La fiscalità sugli investimenti, trattata in modo diverso tra i due servizi. Il confronto completo, con tutti i dettagli, è su Trade Republic vs Revolut."}}, {"@type": "Question", "name": "Trade Republic o Wise: si possono confrontare direttamente?", "acceptedAnswer": {"@type": "Answer", "text": "Non sono sostituti diretti: l'uso è diverso, investimenti contro conto multivaluta. Il confronto resta utile per capire quando ha senso l'uno o l'altro: Trade Republic vs Wise."}}, {"@type": "Question", "name": "Satispay o Wise: fanno la stessa cosa?", "acceptedAnswer": {"@type": "Answer", "text": "Quasi mai per lo stesso scopo: pagamenti quotidiani in Italia contro conto multivaluta per l'estero. Un'eccezione però c'è — Salvadanaio Remunerato e Interessi Wise sono davvero lo stesso tipo di prodotto, un fondo monetario a capitale non garantito. Approfondimento in Satispay vs Wise."}}, {"@type": "Question", "name": "N26 o Satispay: come si confrontano?", "acceptedAnswer": {"@type": "Answer", "text": "Non sono sostituti diretti: N26 è pensato per l'operatività bancaria (stipendio, bonifici, carta), Satispay è nata per P2P e QR, oggi ampliata con IBAN, carte e investimenti. Confronto completo in N26 vs Satispay."}}, {"@type": "Question", "name": "Qual è il conto digitale migliore in assoluto?", "acceptedAnswer": {"@type": "Answer", "text": "Non ce n'è uno solo: dipende da come lo usi. Ho scritto un roundup a 6 (Revolut, Wise, Satispay, Trade Republic, Hype e N26) proprio per aiutarti a scegliere in base al tuo profilo, non a una classifica generica."}}, {"@type": "Question", "name": "Posso suggerire un confronto?", "acceptedAnswer": {"@type": "Answer", "text": "Certo. Se vuoi vedere un confronto specifico, scrivimi dalla pagina Supporto. Non prometto di farlo subito, ma terrò conto del tuo suggerimento."}}]}</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2943403250875512" crossorigin="anonymous"></script>
 </head>
 
@@ -244,17 +245,28 @@
     <div class="container" id="main-content">
 
 <style>
-.compare-chips-grid{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
-.compare-chip{padding:10px 18px;border-radius:999px;border:2px solid #ddd;background:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:0.15s;font-family:inherit}
+#quick-compare{width:100%;max-width:100%;margin:15px auto;padding:16px;background:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08)}
+#quick-compare h3{margin:0 0 8px;font-size:18px}
+#quick-compare>p{margin:0 0 10px;font-size:13px;color:#555;line-height:1.4}
+.compare-chips-grid{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.compare-chip{display:inline-block;width:auto;padding:7px 14px;border-radius:999px;border:2px solid #ddd;background:#fff;color:#111;font-size:13px;font-weight:600;cursor:pointer;transition:0.15s;font-family:inherit;line-height:1.3}
 .compare-chip:hover:not(:disabled){border-color:#aaa}
-.compare-chip.selected{background:#000;color:#fff;border-color:#000}
-.compare-chip:disabled{opacity:0.4;cursor:not-allowed}
-#compare-status{margin-top:8px;font-size:14px;color:#555;min-height:20px}
+.compare-chip.selected{background:#7c3aed;color:#fff;border-color:#7c3aed}
+.compare-chip:disabled{opacity:0.35;cursor:not-allowed}
+#compare-status{margin-top:6px;font-size:13px;color:#555;min-height:18px}
 #compare-reset{background:none;border:none;color:#666;text-decoration:underline;font-size:13px;cursor:pointer;padding:0;margin-top:4px;display:none;font-family:inherit}
+#compare-confirm{display:none;margin-top:10px;padding:12px 14px;background:#f5f0ff;border-radius:10px;font-size:14px}
+#compare-confirm strong{color:#7c3aed}
+#compare-confirm .qc-btns{display:flex;gap:10px;margin-top:10px}
+#compare-confirm button{width:auto;padding:8px 20px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+#qc-yes{background:#7c3aed;color:#fff}
+#qc-yes:hover{opacity:0.85}
+#qc-no{background:#eee;color:#333}
+#qc-no:hover{background:#e0e0e0}
 </style>
-<div class="calculator-box" id="quick-compare">
+<div id="quick-compare">
 <h3>🆚 Scegli 2 conti da confrontare</h3>
-<p style="font-size:14px;color:#555;margin-bottom:4px">Clicca due brand: ti porto subito al confronto diretto tra i due, se esiste già (oggi copro tutte le 21 combinazioni possibili tra i 7 conti che tratto).</p>
+<p>Clicca due brand: ti chiedo conferma e ti porto al confronto diretto (oggi copro tutte le 21 combinazioni possibili tra i 7 conti che tratto).</p>
 <div class="compare-chips-grid">
 <button type="button" class="compare-chip" data-slug="revolut">Revolut</button>
 <button type="button" class="compare-chip" data-slug="wise">Wise</button>
@@ -266,9 +278,17 @@
 </div>
 <div id="compare-status"></div>
 <button type="button" id="compare-reset">Ricomincia</button>
+<div id="compare-confirm">
+<p style="margin:0">Hai selezionato <strong id="qc-pair-label"></strong>. Vuoi andare al confronto?</p>
+<div class="qc-btns">
+<button type="button" id="qc-yes">Sì</button>
+<button type="button" id="qc-no">No</button>
+</div>
+</div>
 </div>
 <script>
 (function(){
+var NAMES={revolut:"Revolut",wise:"Wise",satispay:"Satispay","trade-republic":"Trade Republic",hype:"Hype",n26:"N26",ing:"ING"};
 var PAIR_URLS={
 "hype|ing":"ing-vs-hype.html",
 "hype|n26":"n26-vs-hype.html",
@@ -293,16 +313,32 @@ var PAIR_URLS={
 "trade-republic|wise":"trade-republic-vs-wise.html"
 };
 var selected=[];
+var pendingUrl=null;
 var chips=Array.prototype.slice.call(document.querySelectorAll(".compare-chip"));
 var status=document.getElementById("compare-status");
 var resetBtn=document.getElementById("compare-reset");
+var confirmBox=document.getElementById("compare-confirm");
+var pairLabel=document.getElementById("qc-pair-label");
+var qcYes=document.getElementById("qc-yes");
+var qcNo=document.getElementById("qc-no");
+function hideConfirm(){
+confirmBox.style.display="none";
+pendingUrl=null;
+}
 function reset(){
 selected=[];
 chips.forEach(function(c){c.classList.remove("selected");c.disabled=false;});
 status.textContent="";
 resetBtn.style.display="none";
+hideConfirm();
 }
 resetBtn.addEventListener("click",reset);
+qcYes.addEventListener("click",function(){
+if(pendingUrl)window.location.href=pendingUrl;
+});
+qcNo.addEventListener("click",function(){
+reset();
+});
 chips.forEach(function(chip){
 chip.addEventListener("click",function(){
 var slug=chip.dataset.slug;
@@ -312,6 +348,7 @@ selected=selected.filter(function(s){return s!==slug;});
 chips.forEach(function(c){c.disabled=false;});
 status.textContent="";
 resetBtn.style.display="none";
+hideConfirm();
 return;
 }
 if(selected.length>=2)return;
@@ -322,8 +359,9 @@ chips.forEach(function(c){if(!c.classList.contains("selected"))c.disabled=true;}
 var key=selected.slice().sort().join("|");
 var url=PAIR_URLS[key];
 if(url){
-status.textContent="Ti porto al confronto \u2192";
-setTimeout(function(){window.location.href=url;},450);
+pendingUrl=url;
+pairLabel.textContent=NAMES[selected[0]]+" vs "+NAMES[selected[1]];
+confirmBox.style.display="block";
 }else{
 status.textContent="Confronto non ancora disponibile per questa coppia.";
 resetBtn.style.display="inline-block";
@@ -333,8 +371,7 @@ resetBtn.style.display="inline-block";
 });
 })();
 </script>
-
-        <!-- IN SINTESI -->
+<!-- IN SINTESI -->
         <div class="tip highlight">
             <p><strong>📌 In sintesi</strong></p>
             <p>
@@ -635,66 +672,7 @@ resetBtn.style.display="inline-block";
 
         <!-- FAQ -->
         <h2>Domande frequenti sui confronti</h2>
-        <div class="faq">
-            <h3>I confronti sono imparziali?</h3>
-            <p>
-                Sì, nel limite del possibile. Uso link affiliati per Revolut e altri servizi,
-                ma questo non influenza il giudizio. Se un servizio non mi convince, non ne
-                parlo affatto. La mia credibilità vale più di qualsiasi commissione.
-            </p>
-
-            <h3>C'è un confronto tra N26 e Revolut?</h3>
-            <p>
-                Sì, <a href="/confronti/n26-vs-revolut.html">N26 vs Revolut</a> è già pubblicato, insieme a
-                <a href="/confronti/n26-vs-hype.html">N26 vs Hype</a>. Li ho scritti dopo aver aperto e
-                testato personalmente il conto N26.
-            </p>
-
-            <h3>C'è un confronto tra Trade Republic e Revolut?</h3>
-            <p>
-                Sì, <a href="/confronti/trade-republic-vs-revolut.html">Trade Republic vs Revolut</a> è
-                già pubblicato: il punto chiave è la fiscalità sugli investimenti, diversa tra i due.
-            </p>
-
-            <h3>C'è un confronto tra Trade Republic e Wise?</h3>
-            <p>
-                Sì, <a href="/confronti/trade-republic-vs-wise.html">Trade Republic vs Wise</a> è già
-                pubblicato: non sono sostituti diretti, il confronto è per uso (investimenti contro
-                conto multivaluta), non un semplice testa a testa sui tassi.
-            </p>
-
-            <h3>C'è un confronto tra Satispay e Wise?</h3>
-            <p>
-                Sì, <a href="/confronti/satispay-vs-wise.html">Satispay vs Wise</a> è già pubblicato:
-                anche qui non sono sostituti diretti, il confronto è per uso (pagamenti quotidiani in
-                Italia contro conto multivaluta per l'estero), con un'eccezione — il Salvadanaio
-                Remunerato e gli Interessi Wise sono davvero lo stesso tipo di prodotto (fondi
-                monetari, capitale non garantito).
-            </p>
-
-            <h3>C'è un confronto tra N26 e Satispay?</h3>
-            <p>
-                Sì, <a href="/confronti/n26-vs-satispay.html">N26 vs Satispay</a> è già pubblicato:
-                non sono sostituti diretti, il confronto è tra un conto pensato per l'operatività
-                bancaria (stipendio, bonifici, carta) e un'app nata per P2P e QR, oggi ampliata con
-                IBAN, carte e investimenti.
-            </p>
-
-            <h3>Qual è il conto digitale migliore in assoluto?</h3>
-            <p>
-                Non ce n'è uno solo: dipende da come lo usi. Ho scritto un
-                <a href="/confronti/migliori-conti-digitali.html">roundup a 6</a> (Revolut, Wise, Satispay,
-                Trade Republic, Hype e N26) proprio per aiutarti a scegliere in base al tuo profilo, non a
-                una classifica generica.
-            </p>
-
-            <h3>Posso suggerire un confronto?</h3>
-            <p>
-                Certo. Se vuoi vedere un confronto specifico, scrivimi dalla pagina
-                <a href="/supporto.html">Supporto</a>. Non prometto di farlo subito, ma
-                terrò conto del tuo suggerimento.
-            </p>
-        </div>
+        <div class="faq"><details class="faq-item"><summary>Come funziona lo strumento “Scegli 2 conti da confrontare”?</summary><div class="faq-a"><p>Clicca due dei sette brand nel box in cima alla pagina: appena selezioni il secondo, ti chiedo conferma e poi ti porto direttamente al confronto tra quei due. Copre tutte le 21 combinazioni possibili tra i 7 conti che tratto, quindi trovi sempre una risposta.</p></div></details><details class="faq-item"><summary>Avete confrontato davvero tutte le combinazioni possibili?</summary><div class="faq-a"><p>Sì. Con 7 conti (Revolut, Wise, Satispay, Trade Republic, Hype, N26, ING) le coppie possibili sono 21, e sono tutte pubblicate dopo aver aperto e testato personalmente ogni servizio. Lo strumento in cima alla pagina ti porta sempre alla pagina giusta, senza bisogno di scorrere l'elenco sotto.</p></div></details><details class="faq-item"><summary>I confronti sono imparziali?</summary><div class="faq-a"><p>Sì, nel limite del possibile. Uso link affiliati per Revolut e altri servizi, ma questo non influenza il giudizio. Se un servizio non mi convince, non ne parlo affatto. La mia credibilità vale più di qualsiasi commissione.</p></div></details><details class="faq-item"><summary>Trade Republic o Revolut: qual è la differenza principale?</summary><div class="faq-a"><p>La fiscalità sugli investimenti, trattata in modo diverso tra i due servizi. Il confronto completo, con tutti i dettagli, è su <a href="/confronti/trade-republic-vs-revolut.html">Trade Republic vs Revolut</a>.</p></div></details><details class="faq-item"><summary>Trade Republic o Wise: si possono confrontare direttamente?</summary><div class="faq-a"><p>Non sono sostituti diretti: l'uso è diverso, investimenti contro conto multivaluta. Il confronto resta utile per capire quando ha senso l'uno o l'altro: <a href="/confronti/trade-republic-vs-wise.html">Trade Republic vs Wise</a>.</p></div></details><details class="faq-item"><summary>Satispay o Wise: fanno la stessa cosa?</summary><div class="faq-a"><p>Quasi mai per lo stesso scopo: pagamenti quotidiani in Italia contro conto multivaluta per l'estero. Un'eccezione però c'è — Salvadanaio Remunerato e Interessi Wise sono davvero lo stesso tipo di prodotto, un fondo monetario a capitale non garantito. Approfondimento in <a href="/confronti/satispay-vs-wise.html">Satispay vs Wise</a>.</p></div></details><details class="faq-item"><summary>N26 o Satispay: come si confrontano?</summary><div class="faq-a"><p>Non sono sostituti diretti: N26 è pensato per l'operatività bancaria (stipendio, bonifici, carta), Satispay è nata per P2P e QR, oggi ampliata con IBAN, carte e investimenti. Confronto completo in <a href="/confronti/n26-vs-satispay.html">N26 vs Satispay</a>.</p></div></details><details class="faq-item"><summary>Qual è il conto digitale migliore in assoluto?</summary><div class="faq-a"><p>Non ce n'è uno solo: dipende da come lo usi. Ho scritto un <a href="/confronti/migliori-conti-digitali.html">roundup a 6</a> (Revolut, Wise, Satispay, Trade Republic, Hype e N26) proprio per aiutarti a scegliere in base al tuo profilo, non a una classifica generica.</p></div></details><details class="faq-item"><summary>Posso suggerire un confronto?</summary><div class="faq-a"><p>Certo. Se vuoi vedere un confronto specifico, scrivimi dalla pagina <a href="/supporto.html">Supporto</a>. Non prometto di farlo subito, ma terrò conto del tuo suggerimento.</p></div></details></div>
 
         <!-- CTA FINALE -->
         <div class="tip highlight" style="text-align:center;">
