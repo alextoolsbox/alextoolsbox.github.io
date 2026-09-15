@@ -255,18 +255,45 @@
 .compare-chip:disabled{opacity:0.35;cursor:not-allowed}
 #compare-status{margin-top:6px;font-size:13px;color:#555;min-height:18px}
 #compare-reset{background:none;border:none;color:#666;text-decoration:underline;font-size:13px;cursor:pointer;padding:0;margin-top:4px;display:none;font-family:inherit}
-#compare-confirm{display:none;margin-top:10px;padding:12px 14px;background:#f5f0ff;border-radius:10px;font-size:14px}
-#compare-confirm strong{color:#7c3aed}
-#compare-confirm .qc-btns{display:flex;gap:10px;margin-top:10px}
-#compare-confirm button{width:auto;padding:8px 20px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+#compare-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9999;align-items:center;justify-content:center;padding:20px}
+#compare-modal-overlay.open{display:flex}
+#compare-modal{background:#fff;border-radius:16px;padding:24px;max-width:340px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.25)}
+#compare-modal p{margin:0 0 14px;font-size:15px}
+#qc-pair-label{color:#7c3aed;font-size:19px;display:block;margin-top:4px}
+.qc-modal-btns{display:flex;gap:10px;justify-content:center;margin-top:4px}
+.qc-modal-btns button{padding:10px 22px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
 #qc-yes{background:#7c3aed;color:#fff}
 #qc-yes:hover{opacity:0.85}
 #qc-no{background:#eee;color:#333}
 #qc-no:hover{background:#e0e0e0}
+.compare-section{margin-top:28px}
+.compare-section h3{margin:0 0 10px;font-size:17px}
+.compare-row-list{display:flex;flex-direction:column;gap:8px}
+.compare-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;background:#f7f8fc;border-radius:10px;text-decoration:none;color:inherit;transition:0.15s ease}
+.compare-row:hover{background:#eef0fa;transform:translateX(2px)}
+.compare-row .cr-text{min-width:0}
+.compare-row .cr-title{font-weight:600;font-size:14.5px;display:block;margin-bottom:2px}
+.compare-row .cr-desc{font-size:12.5px;color:#666;line-height:1.35;display:block}
+.compare-row .cr-arrow{font-size:18px;color:#999;flex-shrink:0;margin-left:8px}
 </style>
+<div class="tip highlight">
+            <p><strong>📌 In sintesi</strong></p>
+            <p>
+                Questa pagina ha due modi per trovare il confronto giusto: <strong>usa lo strumento qui
+                sotto</strong> — scegli 2 dei 7 conti che tratto e ti porto subito al confronto —
+                oppure <strong>scorri le card più in basso</strong>, organizzate per conto (si parte da
+                Revolut, ING e Trade Republic), se preferisci farti prima un'idea di tutto quello che c'è.
+            </p>
+            <p>
+                Ogni confronto è scritto dopo aver usato entrambi gli strumenti nella vita reale: niente
+                copia-incolla da siti di finanza, niente recensioni pagate. Il più completo resta il
+                <strong>roundup a 6</strong> (Revolut, Wise, Satispay, Trade Republic, Hype e N26), utile se
+                vuoi un quadro d'insieme prima di scendere nei confronti diretti.
+            </p>
+        </div>
 <div id="quick-compare">
 <h3>🆚 Scegli 2 conti da confrontare</h3>
-<p>Clicca due brand: ti chiedo conferma e ti porto al confronto diretto (oggi copro tutte le 21 combinazioni possibili tra i 7 conti che tratto).</p>
+<p>Clicca due brand: ti chiedo conferma e apro il confronto in una nuova scheda, così questa pagina resta aperta per farne altri (oggi copro tutte le 21 combinazioni possibili tra i 7 conti che tratto).</p>
 <div class="compare-chips-grid">
 <button type="button" class="compare-chip" data-slug="revolut">Revolut</button>
 <button type="button" class="compare-chip" data-slug="wise">Wise</button>
@@ -278,11 +305,14 @@
 </div>
 <div id="compare-status"></div>
 <button type="button" id="compare-reset">Ricomincia</button>
-<div id="compare-confirm">
-<p style="margin:0">Hai selezionato <strong id="qc-pair-label"></strong>. Vuoi andare al confronto?</p>
-<div class="qc-btns">
-<button type="button" id="qc-yes">Sì</button>
-<button type="button" id="qc-no">No</button>
+</div>
+<div id="compare-modal-overlay">
+<div id="compare-modal">
+<p>Hai selezionato<span id="qc-pair-label"></span></p>
+<p style="font-size:13px;color:#666">Vuoi aprire il confronto in una nuova scheda?</p>
+<div class="qc-modal-btns">
+<button type="button" id="qc-yes">Sì, aprilo</button>
+<button type="button" id="qc-no">No, annulla</button>
 </div>
 </div>
 </div>
@@ -317,12 +347,12 @@ var pendingUrl=null;
 var chips=Array.prototype.slice.call(document.querySelectorAll(".compare-chip"));
 var status=document.getElementById("compare-status");
 var resetBtn=document.getElementById("compare-reset");
-var confirmBox=document.getElementById("compare-confirm");
+var overlay=document.getElementById("compare-modal-overlay");
 var pairLabel=document.getElementById("qc-pair-label");
 var qcYes=document.getElementById("qc-yes");
 var qcNo=document.getElementById("qc-no");
-function hideConfirm(){
-confirmBox.style.display="none";
+function closeModal(){
+overlay.classList.remove("open");
 pendingUrl=null;
 }
 function reset(){
@@ -330,14 +360,18 @@ selected=[];
 chips.forEach(function(c){c.classList.remove("selected");c.disabled=false;});
 status.textContent="";
 resetBtn.style.display="none";
-hideConfirm();
+closeModal();
 }
 resetBtn.addEventListener("click",reset);
 qcYes.addEventListener("click",function(){
-if(pendingUrl)window.location.href=pendingUrl;
+if(pendingUrl)window.open(pendingUrl,"_blank");
+reset();
 });
 qcNo.addEventListener("click",function(){
 reset();
+});
+overlay.addEventListener("click",function(e){
+if(e.target===overlay)reset();
 });
 chips.forEach(function(chip){
 chip.addEventListener("click",function(){
@@ -348,7 +382,7 @@ selected=selected.filter(function(s){return s!==slug;});
 chips.forEach(function(c){c.disabled=false;});
 status.textContent="";
 resetBtn.style.display="none";
-hideConfirm();
+closeModal();
 return;
 }
 if(selected.length>=2)return;
@@ -361,7 +395,7 @@ var url=PAIR_URLS[key];
 if(url){
 pendingUrl=url;
 pairLabel.textContent=NAMES[selected[0]]+" vs "+NAMES[selected[1]];
-confirmBox.style.display="block";
+overlay.classList.add("open");
 }else{
 status.textContent="Confronto non ancora disponibile per questa coppia.";
 resetBtn.style.display="inline-block";
@@ -371,29 +405,7 @@ resetBtn.style.display="inline-block";
 });
 })();
 </script>
-<!-- IN SINTESI -->
-        <div class="tip highlight">
-            <p><strong>📌 In sintesi</strong></p>
-            <p>
-                Qui trovi tutti i <strong>confronti diretti</strong> che ho scritto
-                basandomi sulla mia esperienza. Ogni confronto è fatto dopo aver usato
-                entrambi gli strumenti nella vita reale: niente copia-incolla da siti
-                di finanza, niente recensioni pagate.
-            </p>
-            <p>
-                Il confronto più completo è il <strong>roundup a 6</strong>: Revolut, Wise, Satispay, Trade
-                Republic, Hype e N26 messi a confronto su canone, IBAN, interessi, cashback e sicurezza.
-                Trovi anche i confronti diretti <strong>Revolut vs Banca Tradizionale</strong>,
-                <strong>Wise vs Revolut</strong>, <strong>Revolut vs Satispay</strong>,
-                <strong>Trade Republic vs Unicredit/Intesa Sanpaolo</strong>, <strong>Hype vs Revolut</strong>,
-                <strong>Hype vs Satispay</strong>, <strong>N26 vs Revolut</strong>, <strong>N26 vs
-                Hype</strong>, <strong>Trade Republic vs Revolut</strong>, <strong>Satispay vs Trade
-                Republic</strong>, <strong>Trade Republic vs Wise</strong>, <strong>Satispay vs
-                Wise</strong> e <strong>N26 vs Satispay</strong>.
-            </p>
-        </div>
-
-        <!-- PERCHÉ I CONFRONTI -->
+<!-- PERCHÉ I CONFRONTI -->
         <h2>Perché ho creato questa sezione</h2>
         <p>
             Quando cercavo informazioni per scegliere un conto digitale, trovavo solo due
@@ -421,235 +433,17 @@ resetBtn.style.display="inline-block";
 
         <!-- CONFRONTI DISPONIBILI -->
         <h2>📊 Confronti disponibili</h2>
-        <p>Ogni confronto è scritto dopo aver usato entrambi gli strumenti. Niente ipotesi, solo realtà.</p>
+        <p>Ogni confronto è scritto dopo aver usato entrambi gli strumenti. Qui sotto trovi prima i due confronti più completi, poi tutte le coppie dirette organizzate per conto, in ordine di popolarità: Revolut, ING, Trade Republic e infine le altre combinazioni.</p>
 
         <div class="features">
-            <!-- Miglior conto digitale (roundup a 6) -->
-            <a href="/confronti/migliori-conti-digitali.html" class="card-link">
-                <div class="card">
-                    <h3>🏆 Miglior conto digitale 2026</h3>
-                    <p>Revolut, Wise, Satispay, Trade Republic, Hype e N26 a confronto: canone, IBAN, interessi, cashback e sicurezza. Tutti conti che uso davvero.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Revolut vs Banca Tradizionale -->
-            <a href="/confronti/revolut-vs-banca-tradizionale.html" class="card-link">
-                <div class="card">
-                    <h3>💳 Revolut vs Banca Tradizionale</h3>
-                    <p>Ho usato la mia vecchia banca per 15 anni, poi sono passato a Revolut. Costi, carta, bonifici, deposito e quando serve ancora una banca tradizionale.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Wise vs Revolut -->
-            <a href="/confronti/wise-vs-revolut.html" class="card-link">
-                <div class="card">
-                    <h3>🌍 Wise vs Revolut</h3>
-                    <p>Non sono sostituti diretti: commissioni di cambio, sicurezza, IBAN e interessi a confronto, basato su esperienza reale con entrambi.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Revolut vs Satispay -->
-            <a href="/confronti/revolut-vs-satispay.html" class="card-link">
-                <div class="card">
-                    <h3>📲 Revolut vs Satispay</h3>
-                    <p>Revolut resta il conto più completo (IBAN, carta, deposito); Satispay resta la più immediata per P2P e QR, ma oggi ha anche IBAN, carte e investimenti. Basato su esperienza reale con entrambi.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Trade Republic vs Banca Tradizionale -->
-            <a href="/confronti/trade-republic-vs-banca-tradizionale.html" class="card-link">
-                <div class="card">
-                    <h3>💹 Trade Republic vs banca tradizionale</h3>
-                    <p>Un euro fisso per ordine contro una commissione con minimo: costi, PAC e deposito titoli a confronto su due listini bancari reali.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Hype vs Revolut -->
-            <a href="/confronti/hype-vs-revolut.html" class="card-link">
-                <div class="card">
-                    <h3>💜 Hype vs Revolut</h3>
-                    <p>Hype per i pagamenti italiani, Revolut per cambio, viaggi e deposito: piani, carta, cashback e sicurezza a confronto, con la mia esperienza su entrambi.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Hype vs Satispay -->
-            <a href="/confronti/hype-vs-satispay.html" class="card-link">
-                <div class="card">
-                    <h3>📲 Hype vs Satispay</h3>
-                    <p>Hype è un conto bancario completo, Satispay è cresciuta con IBAN, carte e investimenti: il confronto aggiornato su costi, sicurezza e utilizzo quotidiano.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- N26 vs Revolut -->
-            <a href="/confronti/n26-vs-revolut.html" class="card-link">
-                <div class="card">
-                    <h3>🏦 N26 vs Revolut</h3>
-                    <p>I due conti digitali più cercati insieme: piani, deposito remunerato, bonus e sicurezza (licenza bancaria tedesca vs lituana) a confronto.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- N26 vs Hype -->
-            <a href="/confronti/n26-vs-hype.html" class="card-link">
-                <div class="card">
-                    <h3>🏦 N26 vs Hype</h3>
-                    <p>Conto essenziale o app con più servizi italiani integrati (PagoPA, CBILL, cashback)? Piani, carte, sicurezza e partita IVA a confronto.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs Revolut -->
-            <a href="/confronti/ing-vs-revolut.html" class="card-link">
-                <div class="card">
-                    <h3>🍊 ING vs Revolut</h3>
-                    <p>Banca completa contro conto operativo: carta di credito, F24 e interessi. Con i costi reali su tre profili d'uso.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs N26 -->
-            <a href="/confronti/ing-vs-n26.html" class="card-link">
-                <div class="card">
-                    <h3>🏦 ING vs N26</h3>
-                    <p>I due più simili: banche vere, IBAN italiano, zero filiali. Ma su N26 in Italia non puoi avere interessi.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs Trade Republic -->
-            <a href="/confronti/ing-vs-trade-republic.html" class="card-link">
-                <div class="card">
-                    <h3>📈 ING vs Trade Republic</h3>
-                    <p>3% contro 0,20% sulla liquidità. Ma i soldi non sono protetti allo stesso modo: ecco perché.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Interessi sulla liquidità -->
-            <a href="/confronti/interessi-sulla-liquidita.html" class="card-link">
-                <div class="card">
-                    <h3>💰 Interessi sulla liquidità</h3>
-                    <p>Quanto rendono davvero i soldi fermi: Trade Republic, Revolut e Wise al netto di ritenuta, bollo, canone e commissioni. Con i numeri capitale per capitale.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Trade Republic vs Revolut -->
-            <a href="/confronti/trade-republic-vs-revolut.html" class="card-link">
-                <div class="card">
-                    <h3>💹 Trade Republic vs Revolut</h3>
-                    <p>Investimenti o conto multifunzione? Interessi sulla liquidità, fiscalità (sostituto d'imposta vs regime dichiarativo) e piani a confronto.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Satispay vs Trade Republic -->
-            <a href="/confronti/satispay-vs-trade-republic.html" class="card-link">
-                <div class="card">
-                    <h3>📲 Satispay vs Trade Republic</h3>
-                    <p>Pagamenti quotidiani o investimenti? Con la novità di luglio 2026: Satispay lancia azioni, ETF e il Salvadanaio Remunerato.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Trade Republic vs Wise -->
-            <a href="/confronti/trade-republic-vs-wise.html" class="card-link">
-                <div class="card">
-                    <h3>💹 Trade Republic vs Wise</h3>
-                    <p>Non sono sostituti diretti: broker con liquidità remunerata contro conto multivaluta per l'estero. Confronto per uso, non solo per tasso.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Satispay vs Wise -->
-            <a href="/confronti/satispay-vs-wise.html" class="card-link">
-                <div class="card">
-                    <h3>📲 Satispay vs Wise</h3>
-                    <p>Non sono sostituti diretti: pagamenti quotidiani italiani contro conto multivaluta per l'estero. Confronto per uso, non un semplice testa a testa.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- N26 vs Satispay -->
-            <a href="/confronti/n26-vs-satispay.html" class="card-link">
-                <div class="card">
-                    <h3>🏦 N26 vs Satispay</h3>
-                    <p>N26 per conto, stipendio e bonifici; Satispay per P2P e QR. Non sono sostituti diretti, ma spesso ha senso usarli insieme.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Trade Republic vs Hype -->
-            <a href="/confronti/trade-republic-vs-hype.html" class="card-link">
-                <div class="card">
-                    <h3>💹 Trade Republic vs Hype</h3>
-                    <p>Investimenti e PAC o conto operativo italiano? Trade Republic vince sugli investimenti, Hype è più comoda per PagoPA, bollette e vita quotidiana. Testati entrambi.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Trade Republic vs N26 -->
-            <a href="/confronti/trade-republic-vs-n26.html" class="card-link">
-                <div class="card">
-                    <h3>💹 Trade Republic vs N26</h3>
-                    <p>Due banche tedesche, ma due lavori diversi: Trade Republic per PAC e investimenti, N26 come conto essenziale per spese e quotidianità. Aperti entrambi per il test.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs Satispay -->
-            <a href="/confronti/ing-vs-satispay.html" class="card-link">
-                <div class="card">
-                    <h3>🏦 ING vs Satispay</h3>
-                    <p>Banca vera contro wallet: ING per stipendio, F24 e domiciliazioni, Satispay per P2P e QR immediati. Non sono alternative perfette, spesso ha senso usarle insieme.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs Wise -->
-            <a href="/confronti/ing-vs-wise.html" class="card-link">
-                <div class="card">
-                    <h3>🌍 ING vs Wise</h3>
-                    <p>Banca contro conto multivaluta: ING per stipendio e F24, Wise per cambio valuta e un interesse sulla liquidità disponibile anche in Italia.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- ING vs Hype -->
-            <a href="/confronti/ing-vs-hype.html" class="card-link">
-                <div class="card">
-                    <h3>💳 ING vs Hype</h3>
-                    <p>Banca completa contro conto smart: ING per l'operatività bancaria, Hype per la gestione leggera e il cashback, oggi protetta dal FITD.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- N26 vs Wise -->
-            <a href="/confronti/n26-vs-wise.html" class="card-link">
-                <div class="card">
-                    <h3>🇩🇪 N26 vs Wise</h3>
-                    <p>N26 in stile app contro Wise multivaluta. L'Instant Savings di N26 non è attivo in Italia: su questo punto Wise offre di più.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
-            <!-- Hype vs Wise -->
-            <a href="/confronti/hype-vs-wise.html" class="card-link">
-                <div class="card">
-                    <h3>🔀 Hype vs Wise</h3>
-                    <p>Conto smart con cashback contro conto multivaluta con interessi. Due strumenti per compiti diversi, spesso complementari.</p>
-                    <span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span>
-                </div>
-            </a>
-
+            <a href="/confronti/migliori-conti-digitali.html" class="card-link"><div class="card"><h3>🏆 Miglior conto digitale 2026</h3><p>Revolut, Wise, Satispay, Trade Republic, Hype e N26 a confronto: canone, IBAN, interessi, cashback e sicurezza. Tutti conti che uso davvero.</p><span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span></div></a>
+            <a href="/confronti/interessi-sulla-liquidita.html" class="card-link"><div class="card"><h3>💰 Interessi sulla liquidità</h3><p>Quanto rendono davvero i soldi fermi: Trade Republic, Revolut e Wise al netto di ritenuta, bollo, canone e commissioni. Con i numeri capitale per capitale.</p><span class="button" style="background:#635bff; margin-top:10px;">Leggi il confronto</span></div></a>
         </div>
+
+        <div class="compare-section"><h3>🚀 Confronti con Revolut</h3><div class="compare-row-list"><a href="/confronti/ing-vs-revolut.html" class="compare-row"><span class="cr-text"><span class="cr-title">🍊 ING vs Revolut</span><span class="cr-desc">Banca completa contro conto operativo: carta di credito, F24 e interessi. Con i costi reali su tre profili d'uso.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/wise-vs-revolut.html" class="compare-row"><span class="cr-text"><span class="cr-title">🌍 Wise vs Revolut</span><span class="cr-desc">Non sono sostituti diretti: commissioni di cambio, sicurezza, IBAN e interessi a confronto, basato su esperienza reale con entrambi.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/revolut-vs-satispay.html" class="compare-row"><span class="cr-text"><span class="cr-title">📲 Revolut vs Satispay</span><span class="cr-desc">Revolut resta il conto più completo (IBAN, carta, deposito); Satispay resta la più immediata per P2P e QR, ma oggi ha anche IBAN, carte e investimenti. Basato su esperienza reale con entrambi.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/trade-republic-vs-revolut.html" class="compare-row"><span class="cr-text"><span class="cr-title">💹 Trade Republic vs Revolut</span><span class="cr-desc">Investimenti o conto multifunzione? Interessi sulla liquidità, fiscalità (sostituto d'imposta vs regime dichiarativo) e piani a confronto.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/hype-vs-revolut.html" class="compare-row"><span class="cr-text"><span class="cr-title">💜 Hype vs Revolut</span><span class="cr-desc">Hype per i pagamenti italiani, Revolut per cambio, viaggi e deposito: piani, carta, cashback e sicurezza a confronto, con la mia esperienza su entrambi.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/n26-vs-revolut.html" class="compare-row"><span class="cr-text"><span class="cr-title">🏦 N26 vs Revolut</span><span class="cr-desc">I due conti digitali più cercati insieme: piani, deposito remunerato, bonus e sicurezza (licenza bancaria tedesca vs lituana) a confronto.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/revolut-vs-banca-tradizionale.html" class="compare-row"><span class="cr-text"><span class="cr-title">💳 Revolut vs Banca Tradizionale</span><span class="cr-desc">Ho usato la mia vecchia banca per 15 anni, poi sono passato a Revolut. Costi, carta, bonifici, deposito e quando serve ancora una banca tradizionale.</span></span><span class="cr-arrow">→</span></a></div></div>
+        <div class="compare-section"><h3>🍊 Confronti con ING</h3><div class="compare-row-list"><a href="/confronti/ing-vs-wise.html" class="compare-row"><span class="cr-text"><span class="cr-title">🌍 ING vs Wise</span><span class="cr-desc">Banca contro conto multivaluta: ING per stipendio e F24, Wise per cambio valuta e un interesse sulla liquidità disponibile anche in Italia.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/ing-vs-satispay.html" class="compare-row"><span class="cr-text"><span class="cr-title">🏦 ING vs Satispay</span><span class="cr-desc">Banca vera contro wallet: ING per stipendio, F24 e domiciliazioni, Satispay per P2P e QR immediati. Non sono alternative perfette, spesso ha senso usarle insieme.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/ing-vs-trade-republic.html" class="compare-row"><span class="cr-text"><span class="cr-title">📈 ING vs Trade Republic</span><span class="cr-desc">3% contro 0,20% sulla liquidità. Ma i soldi non sono protetti allo stesso modo: ecco perché.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/ing-vs-hype.html" class="compare-row"><span class="cr-text"><span class="cr-title">💳 ING vs Hype</span><span class="cr-desc">Banca completa contro conto smart: ING per l'operatività bancaria, Hype per la gestione leggera e il cashback, oggi protetta dal FITD.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/ing-vs-n26.html" class="compare-row"><span class="cr-text"><span class="cr-title">🏦 ING vs N26</span><span class="cr-desc">I due più simili: banche vere, IBAN italiano, zero filiali. Ma su N26 in Italia non puoi avere interessi.</span></span><span class="cr-arrow">→</span></a></div></div>
+        <div class="compare-section"><h3>📈 Confronti con Trade Republic</h3><div class="compare-row-list"><a href="/confronti/trade-republic-vs-wise.html" class="compare-row"><span class="cr-text"><span class="cr-title">💹 Trade Republic vs Wise</span><span class="cr-desc">Non sono sostituti diretti: broker con liquidità remunerata contro conto multivaluta per l'estero. Confronto per uso, non solo per tasso.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/satispay-vs-trade-republic.html" class="compare-row"><span class="cr-text"><span class="cr-title">📲 Satispay vs Trade Republic</span><span class="cr-desc">Pagamenti quotidiani o investimenti? Con la novità di luglio 2026: Satispay lancia azioni, ETF e il Salvadanaio Remunerato.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/trade-republic-vs-hype.html" class="compare-row"><span class="cr-text"><span class="cr-title">💹 Trade Republic vs Hype</span><span class="cr-desc">Investimenti e PAC o conto operativo italiano? Trade Republic vince sugli investimenti, Hype è più comoda per PagoPA, bollette e vita quotidiana. Testati entrambi.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/trade-republic-vs-n26.html" class="compare-row"><span class="cr-text"><span class="cr-title">💹 Trade Republic vs N26</span><span class="cr-desc">Due banche tedesche, ma due lavori diversi: Trade Republic per PAC e investimenti, N26 come conto essenziale per spese e quotidianità. Aperti entrambi per il test.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/trade-republic-vs-banca-tradizionale.html" class="compare-row"><span class="cr-text"><span class="cr-title">💹 Trade Republic vs banca tradizionale</span><span class="cr-desc">Un euro fisso per ordine contro una commissione con minimo: costi, PAC e deposito titoli a confronto su due listini bancari reali.</span></span><span class="cr-arrow">→</span></a></div></div>
+        <div class="compare-section"><h3>🔄 Altri confronti</h3><div class="compare-row-list"><a href="/confronti/satispay-vs-wise.html" class="compare-row"><span class="cr-text"><span class="cr-title">📲 Satispay vs Wise</span><span class="cr-desc">Non sono sostituti diretti: pagamenti quotidiani italiani contro conto multivaluta per l'estero. Confronto per uso, non un semplice testa a testa.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/hype-vs-wise.html" class="compare-row"><span class="cr-text"><span class="cr-title">🔀 Hype vs Wise</span><span class="cr-desc">Conto smart con cashback contro conto multivaluta con interessi. Due strumenti per compiti diversi, spesso complementari.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/n26-vs-wise.html" class="compare-row"><span class="cr-text"><span class="cr-title">🇩🇪 N26 vs Wise</span><span class="cr-desc">N26 in stile app contro Wise multivaluta. L'Instant Savings di N26 non è attivo in Italia: su questo punto Wise offre di più.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/hype-vs-satispay.html" class="compare-row"><span class="cr-text"><span class="cr-title">📲 Hype vs Satispay</span><span class="cr-desc">Hype è un conto bancario completo, Satispay è cresciuta con IBAN, carte e investimenti: il confronto aggiornato su costi, sicurezza e utilizzo quotidiano.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/n26-vs-satispay.html" class="compare-row"><span class="cr-text"><span class="cr-title">🏦 N26 vs Satispay</span><span class="cr-desc">N26 per conto, stipendio e bonifici; Satispay per P2P e QR. Non sono sostituti diretti, ma spesso ha senso usarli insieme.</span></span><span class="cr-arrow">→</span></a><a href="/confronti/n26-vs-hype.html" class="compare-row"><span class="cr-text"><span class="cr-title">🏦 N26 vs Hype</span><span class="cr-desc">Conto essenziale o app con più servizi italiani integrati (PagoPA, CBILL, cashback)? Piani, carte, sicurezza e partita IVA a confronto.</span></span><span class="cr-arrow">→</span></a></div></div>
 
         <!-- COME SCRIVO I CONFRONTI -->
         <h2>Come scrivo i confronti</h2>
