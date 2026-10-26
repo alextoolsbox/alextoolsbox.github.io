@@ -30,10 +30,10 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Interessi sulla liquidità 2026: quanto rendono davvero i soldi fermi",
-        "description": "Confronto sul rendimento netto reale della liquidità tra Trade Republic, Revolut e Wise, al netto di ritenuta del 26%, imposta di bollo, canone del piano e commissioni di gestione. Dati verificati ad agosto 2026.",
+        "description": "Confronto sul rendimento netto reale della liquidità tra Trade Republic, Revolut e Wise, al netto di ritenuta del 26%, imposta di bollo, canone del piano e commissioni di gestione. Dati verificati a ottobre 2026.",
         "author": { "@type": "Person", "name": "Alex" }, "publisher": { "@type": "Organization", "name": "AlexToolsBox" },
         "datePublished": "2026-08-12",
-        "dateModified": "2026-08-30"
+        "dateModified": "2026-10-26"
     }
     </script>
 
@@ -48,7 +48,7 @@
                 "name": "Quanto rendono davvero 10.000 euro fermi sul conto?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Su Trade Republic con il 3% per nuovi clienti sono circa 188€ netti all'anno, con il 2% ordinario circa 114€. Su Revolut Standard circa 62€. I numeri sono già al netto della ritenuta del 26% e dell'imposta di bollo da 34,20€. Il tasso lordo pubblicizzato non è quello che incassi."
+                    "text": "Su Trade Republic con il 3% per nuovi clienti sono circa 188€ netti all'anno, con il tasso ordinario (BCE, 2,5%) circa 151€. Su Revolut Standard circa 73€. I numeri sono già al netto della ritenuta del 26% e dell'imposta di bollo da 34,20€. Il tasso lordo pubblicizzato non è quello che incassi."
                 }
             },
             {
@@ -56,7 +56,7 @@
                 "name": "Da quanto capitale conviene un piano Revolut a pagamento?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Considerando solo gli interessi, Metal (15,99€/mese) si ripaga da 23.144€ di capitale fermo, Ultra (55€/mese) da 61.459€. Premium richiede 58.800€, più del doppio di Metal, perché sopra i 6.000€ scende all'1,25% mentre Metal resta al 2,25% fino a 100.000€. Plus non conviene mai per questo scopo: ha gli stessi tassi di Standard con un canone in più."
+                    "text": "Considerando solo gli interessi, Metal (15,99€/mese) batte Standard da 20.287€ di capitale fermo, Ultra (55€/mese) da 53.537€ e Premium da 52.800€, più del doppio di Metal, perché sopra i 6.000€ scende all'1,25% mentre Metal resta al 2,50% su tutto il saldo. Ultra e Premium però non superano mai Metal. Plus non conviene mai per questo scopo: ha gli stessi tassi di Standard con un canone in più."
                 }
             },
             {
@@ -278,7 +278,7 @@
     <div class="hero">
         <h1>Interessi sulla liquidità: quanto rendono davvero i soldi fermi</h1>
         <p class="hero-description">
-            Trade Republic dice 3%, Revolut Ultra dice 2,5%, Wise dice 2,02%. Nessuno di questi numeri è
+            Trade Republic dice 3%, Revolut Ultra dice 2,75%, Wise dice 2,25%. Nessuno di questi numeri è
             quello che ti arriva sul conto, e non sono nemmeno confrontabili tra loro. Ho rifatto i conti
             sui miei conti veri, togliendo tutto quello che di solito non viene scritto.
         </p>
@@ -293,11 +293,7 @@
                 Tra il tasso in pubblicità e quello che incassi ci sono quattro voci: <strong>ritenuta del
                 26%</strong>, <strong><a href="/guide/imposta-di-bollo-conto-corrente/">imposta di bollo</a></strong>, <strong>canone del piano</strong> e
                 <strong>commissioni di gestione</strong>. Su alcuni importi si mangiano più della metà del
-                rendimento. Il risultato: sotto i 50.000€ <strong>Trade Republic</strong> non ha rivali,
-                perché non ha canone e il bollo è una quota fissa. Sopra i 56.000€ circa passa avanti
-                <strong>Revolut Metal</strong>, perché Trade Republic smette di remunerare oltre i 50.000€.
-                <strong>Wise</strong> è più competitivo di quanto sembri — batte Revolut Standard già da
-                4.000€ — ma paga il prezzo di non essere un deposito garantito.
+                rendimento. Il risultato, con i tassi di ottobre 2026: <strong>Trade Republic</strong> esce davanti a ogni capitale, perché non ha canone, paga il 3% sui primi 50.000€ (nuovi clienti) e il tasso BCE del 2,5% oltre. <strong>Revolut Metal</strong> ha senso solo rispetto a Revolut Standard, da circa 20.300€ in su. <strong>Wise</strong> è più competitivo di quanto sembri — batte Revolut Standard già da 4.600€ circa — ma paga il prezzo di non essere un deposito garantito.
             </p>
         </div>
 
@@ -314,7 +310,7 @@
             <label for="mcTrStatus">Condizione Trade Republic</label>
             <select id="mcTrStatus">
                 <option value="new">Nuovo cliente: 3% fino a 50.000€</option>
-                <option value="existing">Cliente esistente senza promo: 2%</option>
+                <option value="existing">Cliente esistente senza promo: 2,5% (tasso BCE)</option>
             </select>
             <label for="mcRevolutPlan">Piano Revolut</label>
             <select id="mcRevolutPlan">
@@ -333,9 +329,7 @@
             Republic, oppure scegli "Confronta tutti i piani" per vederli tutti insieme. Stima
             indicativa. Trade Republic e Revolut: ritenuta 26% e bollo 34,20€/anno se il capitale
             supera 5.000€, calcolati come nelle tabelle sotto. Wise: tasso netto composito già pubblicato
-            in questa pagina (~1,29%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento
-            annualizzato stimato 2,37% al netto della ritenuta 26%, senza stimare un bollo specifico (non
-            quantificato dalla pagina ufficiale del prodotto). N26 Instant Savings non è disponibile con IBAN
+            in questa pagina (~1,47%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento annualizzato stimato 2,61% (14/09/2026) al netto della ritenuta 26% e del bollo dello 0,20% indicato da Satispay (~1,73% netto). Trade Republic: 3% (o 2,5% ordinario) fino a 50.000€ e tasso BCE 2,5% sull'eccedenza, come indica la FAQ ufficiale. N26 Instant Savings non è disponibile con IBAN
             italiano e HYPE non paga interessi sulla liquidità: compaiono in tabella per completezza, non nel
             calcolo. I tassi cambiano nel tempo: verifica sempre le condizioni ufficiali prima di decidere.
         </p>
@@ -352,15 +346,15 @@
             var TAX = 0.26, BOLLO_CC = 34.20, BOLLO_SOGLIA = 5000;
             function bolloCC(cap) { return cap > BOLLO_SOGLIA ? BOLLO_CC : 0; }
             var trCap = Math.min(amount, 50000);
-            var trRate = trStatus === "new" ? 0.03 : 0.02;
-            var trLordo = trCap * trRate;
-            var trNetto = trLordo * (1 - TAX) - bolloCC(trCap);
+            var trRate = trStatus === "new" ? 0.03 : 0.025;
+            var trLordo = trCap * trRate + Math.max(0, amount - 50000) * 0.025;
+            var trNetto = trLordo * (1 - TAX) - bolloCC(amount);
             var piani = [
-                { chiave: "standard", nome: "Standard", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 0 },
-                { chiave: "plus", nome: "Plus", soglia: 3000, r1: 0.02, r2: 0.01, canoneMese: 3.99 },
-                { chiave: "premium", nome: "Premium", soglia: 6000, r1: 0.02, r2: 0.0125, canoneMese: 9.99 },
-                { chiave: "metal", nome: "Metal", soglia: 100000, r1: 0.0225, r2: 0.02, canoneMese: 15.99 },
-                { chiave: "ultra", nome: "Ultra", soglia: 100000, r1: 0.025, r2: 0.02, canoneMese: 55 }
+                { chiave: "standard", nome: "Standard", soglia: 3000, r1: 0.025, r2: 0.01, canoneMese: 0 },
+                { chiave: "plus", nome: "Plus", soglia: 3000, r1: 0.025, r2: 0.01, canoneMese: 3.99 },
+                { chiave: "premium", nome: "Premium", soglia: 6000, r1: 0.025, r2: 0.0125, canoneMese: 9.99 },
+                { chiave: "metal", nome: "Metal", soglia: 100000, r1: 0.025, r2: 0.025, canoneMese: 15.99 },
+                { chiave: "ultra", nome: "Ultra", soglia: 100000, r1: 0.0275, r2: 0.025, canoneMese: 55 }
             ];
             function calcolaPiano(p) {
                 var t1 = Math.min(amount, p.soglia);
@@ -377,8 +371,8 @@
                 var pianoScelto = piani.filter(function(p) { return p.chiave === revolutPlan; })[0] || piani[0];
                 revolutRisultati = [calcolaPiano(pianoScelto)];
             }
-            var wiseNetto = amount * 0.0129;
-            var satispayNetto = amount * 0.0237 * (1 - TAX);
+            var wiseNetto = amount * 0.01465;
+            var satispayNetto = amount * (0.0261 * (1 - TAX) - 0.002);
             var righe = [
                 { nome: trStatus === "new" ? "Trade Republic (nuovo cliente)" : "Trade Republic (esistente)", netto: trNetto }
             ].concat(revolutRisultati).concat([
@@ -426,11 +420,9 @@
         </div>
 
         <!-- CONTESTO -->
-        <h2>Dove sono i tassi ad agosto 2026</h2>
+        <h2>Dove sono i tassi a ottobre 2026</h2>
         <p>
-            Il tasso sui depositi della BCE è al <strong>2,25%</strong>, in vigore dal 17 giugno 2026 dopo
-            il rialzo di 25 punti base deciso l'11 giugno. Nella riunione del 23 luglio il Consiglio
-            direttivo ha lasciato tutto invariato; la prossima è il <strong>10 settembre 2026</strong>.
+            Il tasso sui depositi della BCE è al <strong>2,50%</strong>, in vigore dal 16 settembre 2026 dopo il rialzo di 25 punti base deciso il 10 settembre: il secondo del 2026, dopo quello dell'11 giugno (dal 2,00% al 2,25%). La prossima riunione è il <strong>29 ottobre 2026</strong>. Dopo il rialzo sono saliti anche i tassi sulla liquidità: Revolut ha alzato tutti i piani (Foglio Informativo del 15 ottobre), Wise Interessi è passato da 2,02% a 2,25%, il Salvadanaio Satispay da 2,37% a 2,61%.
         </p>
         <p>
             Perché conta: i tassi che ti offrono sulla liquidità sono <strong>variabili</strong> e agganciati
@@ -468,10 +460,7 @@
         <div class="alex-tip">
             <span class="alex-label">⚠️ Alex's Tip</span>
             <strong>La trappola dei 5.000€.</strong> Il bollo è tutto-o-niente. Con 5.000€ di giacenza media
-            netti <strong>74€</strong> l'anno al 2%. Con 5.100€ ne netti <strong>41€</strong>: hai
-            guadagnato 1,48€ di interessi in più e pagato 34,20€ di bollo. Torni al punto di partenza solo
-            intorno a <strong>7.300€</strong>. Se la tua giacenza media è appena sopra i 5.000€, sei nella
-            fascia peggiore in assoluto: o scendi sotto, o sali oltre i 7.300€.
+            netti <strong>92€</strong> l'anno al 2,5%. Con 5.100€ ne netti <strong>60€</strong>: hai guadagnato 1,85€ di interessi in più e pagato 34,20€ di bollo. Torni al punto di partenza solo intorno a <strong>6.850€</strong>. Se la tua giacenza media è appena sopra i 5.000€, sei nella fascia peggiore in assoluto: o scendi sotto, o sali oltre i 6.850€.
         </div>
 
         <h3>3. Canone del piano</h3>
@@ -486,7 +475,7 @@
             Riguarda solo Wise: <strong>0,26% annuo</strong> sugli euro, perché il prodotto è un fondo e non
             un deposito. Qui però c'è una differenza che è facilissimo sbagliare: <strong>Wise pubblica il
             tasso già al netto della sua commissione</strong>, gli altri pubblicano il lordo. Mettere il
-            2,02% di Wise nella stessa colonna del 3% di Trade Republic significa confrontare due numeri
+            2,25% di Wise nella stessa colonna del 3% di Trade Republic significa confrontare due numeri
             che non sono la stessa cosa — è l'errore che ho evitato rifacendo tutti i conti sul netto
             finale.
         </p>
@@ -502,33 +491,29 @@
             <tr>
                 <th>Capitale fermo</th>
                 <th>💹 Trade Republic<br><small>3% nuovi clienti</small></th>
-                <th>💹 Trade Republic<br><small>2% ordinario</small></th>
+                <th>💹 Trade Republic<br><small>2,5% ordinario (BCE)</small></th>
                 <th>💳 Revolut Standard<br><small>gratuito</small></th>
             </tr>
-            <tr><td><strong>1.000€</strong></td><td>22€</td><td>15€</td><td>15€</td></tr>
-            <tr><td><strong>3.000€</strong></td><td>67€</td><td>44€</td><td>44€</td></tr>
-            <tr><td><strong>5.000€</strong></td><td>111€</td><td>74€</td><td>59€</td></tr>
-            <tr><td><strong>10.000€</strong></td><td>188€</td><td>114€</td><td>62€</td></tr>
-            <tr><td><strong>20.000€</strong></td><td>410€</td><td>262€</td><td>136€</td></tr>
-            <tr><td><strong>30.000€</strong></td><td>632€</td><td>410€</td><td>210€</td></tr>
-            <tr><td><strong>50.000€</strong></td><td>1.076€</td><td>706€</td><td>358€</td></tr>
-            <tr><td><strong>75.000€</strong></td><td>1.076€</td><td>706€</td><td>543€</td></tr>
-            <tr><td><strong>100.000€</strong></td><td>1.076€</td><td>706€</td><td>728€</td></tr>
+            <tr><td><strong>1.000€</strong></td><td>22€</td><td>18€</td><td>18€</td></tr>
+            <tr><td><strong>3.000€</strong></td><td>67€</td><td>56€</td><td>56€</td></tr>
+            <tr><td><strong>5.000€</strong></td><td>111€</td><td>92€</td><td>70€</td></tr>
+            <tr><td><strong>10.000€</strong></td><td>188€</td><td>151€</td><td>73€</td></tr>
+            <tr><td><strong>20.000€</strong></td><td>410€</td><td>336€</td><td>147€</td></tr>
+            <tr><td><strong>30.000€</strong></td><td>632€</td><td>521€</td><td>221€</td></tr>
+            <tr><td><strong>50.000€</strong></td><td>1.076€</td><td>891€</td><td>369€</td></tr>
+            <tr><td><strong>75.000€</strong></td><td>1.538€</td><td>1.353€</td><td>554€</td></tr>
+            <tr><td><strong>100.000€</strong></td><td>2.001€</td><td>1.816€</td><td>739€</td></tr>
         </table>
         </div>
         <p style="font-size:14px;color:#888;">
-            Ipotesi: capitale fermo 12 mesi, tassi costanti, giacenza media pari al capitale. Tassi
-            verificati sui documenti ufficiali ad agosto 2026. Dettagli Revolut nella
+            Ipotesi: capitale fermo 12 mesi, tassi costanti, giacenza media pari al capitale. Trade Republic: 3% (nuovi clienti) o 2,5% fino a 50.000€ e tasso BCE 2,5% oltre, come da FAQ ufficiale. Tassi verificati sui documenti ufficiali il 26 ottobre 2026. Dettagli Revolut nella
             <a href="/revolut/piani.html">guida piani</a> e nella
             <a href="/revolut/deposito-senza-vincoli.html">guida al deposito senza vincoli</a>; dettagli
             Trade Republic nella <a href="/trade-republic/interessi-liquidita.html">guida interessi</a>.
         </p>
 
         <p>
-            Due cose saltano all'occhio. La prima: <strong>Trade Republic domina fino a 50.000€</strong>,
-            e non è nemmeno vicino — a 30.000€ rende il triplo di Revolut Standard. La seconda: dopo i
-            50.000€ la colonna di Trade Republic <strong>si blocca</strong>. Il tasso vale solo fino a
-            50.000€, quindi che tu ne abbia 50.000 o 200.000, incassi sempre 1.076€.
+            Due cose saltano all'occhio. La prima: <strong>Trade Republic domina</strong>, e non è nemmeno vicino — a 30.000€ rende più del doppio di Revolut Standard. La seconda: oltre i 50.000€ il 3% promozionale finisce, ma la colonna <strong>non si blocca</strong>: sull'eccedenza Trade Republic riconosce il tasso BCE (2,5%). Nella prima versione di questa pagina avevo considerato zero interessi oltre i 50.000€: la FAQ ufficiale dice il contrario, e questo cambia le conclusioni più sotto.
         </p>
 
         <div class="alex-tip">
@@ -549,23 +534,22 @@
         <table class="plans-table">
             <tr>
                 <th>Capitale fermo</th>
-                <th>💹 Trade Republic<br><small>2% ordinario</small></th>
+                <th>💹 Trade Republic<br><small>2,5% ordinario (BCE)</small></th>
                 <th>💳 Revolut Metal<br><small>15,99€/mese</small></th>
                 <th>💳 Revolut Ultra<br><small>55€/mese</small></th>
             </tr>
-            <tr><td><strong>1.000€</strong></td><td>15€</td><td>−175€</td><td>−642€</td></tr>
-            <tr><td><strong>5.000€</strong></td><td>74€</td><td>−109€</td><td>−568€</td></tr>
-            <tr><td><strong>10.000€</strong></td><td>114€</td><td>−60€</td><td>−509€</td></tr>
-            <tr><td><strong>20.000€</strong></td><td>262€</td><td>107€</td><td>−324€</td></tr>
-            <tr><td><strong>30.000€</strong></td><td>410€</td><td>273€</td><td>−139€</td></tr>
-            <tr><td><strong>50.000€</strong></td><td>706€</td><td>606€</td><td>231€</td></tr>
-            <tr><td><strong>75.000€</strong></td><td>706€</td><td><strong>1.023€</strong></td><td>693€</td></tr>
-            <tr><td><strong>100.000€</strong></td><td>706€</td><td><strong>1.439€</strong></td><td>1.156€</td></tr>
+            <tr><td><strong>1.000€</strong></td><td>18€</td><td>−173€</td><td>−640€</td></tr>
+            <tr><td><strong>5.000€</strong></td><td>92€</td><td>−99€</td><td>−558€</td></tr>
+            <tr><td><strong>10.000€</strong></td><td>151€</td><td>−41€</td><td>−491€</td></tr>
+            <tr><td><strong>20.000€</strong></td><td>336€</td><td>144€</td><td>−287€</td></tr>
+            <tr><td><strong>30.000€</strong></td><td>521€</td><td>329€</td><td>−84€</td></tr>
+            <tr><td><strong>50.000€</strong></td><td>891€</td><td>699€</td><td>323€</td></tr>
+            <tr><td><strong>75.000€</strong></td><td>1.353€</td><td>1.161€</td><td>832€</td></tr>
+            <tr><td><strong>100.000€</strong></td><td>1.816€</td><td>1.624€</td><td>1.341€</td></tr>
         </table>
         </div>
         <p style="font-size:14px;color:#888;">
-            I numeri negativi non sono errori di calcolo: sono il canone che supera il rendimento. Chi tiene
-            1.000€ su Revolut Ultra <em>per gli interessi</em> perde 642€ l'anno.
+            I numeri negativi non sono errori di calcolo: sono il canone che supera il rendimento. Chi tiene 1.000€ su Revolut Ultra <em>per gli interessi</em> perde 640€ l'anno.
         </p>
 
         <h3>Da quale capitale un piano si ripaga</h3>
@@ -586,19 +570,19 @@
             <tr>
                 <td><strong>Premium</strong></td>
                 <td>9,99€/mese</td>
-                <td>58.800€</td>
+                <td>52.800€</td>
                 <td>❌ No — a quel capitale Metal rende già molto di più</td>
             </tr>
             <tr>
                 <td><strong>Metal</strong></td>
                 <td>15,99€/mese</td>
-                <td>23.144€</td>
-                <td>✅ Sì, sopra i 23.144€</td>
+                <td>20.287€</td>
+                <td>✅ Sì, sopra i 20.287€ (ma mai contro Trade Republic)</td>
             </tr>
             <tr>
                 <td><strong>Ultra</strong></td>
                 <td>55€/mese</td>
-                <td>61.459€</td>
+                <td>53.537€</td>
                 <td>❌ No — non batte Metal a nessun capitale</td>
             </tr>
         </table>
@@ -606,17 +590,13 @@
         <p>
             La colonna a destra è quella che conta, e ribalta la lettura: battere Standard non basta, perché
             nel frattempo c'è Metal. <strong>Ultra non supera Metal a nessuna cifra</strong>: lo 0,25% in più
-            vale al massimo 185€ netti l'anno (si applica solo fino a 100.000€, e oltre quella soglia entrambi
-            scendono al 2%), mentre il canone costa 468€ in più. <strong>Per il solo deposito i piani
-            sensati sono due: Standard fino a 23.144€, Metal oltre.</strong> Con la fatturazione annuale il
-            passaggio si sposta a 19.157€.
+            vale al massimo 185€ netti l'anno (si applica solo fino a 100.000€, e oltre quella soglia entrambi pagano il 2,50%), mentre il canone costa 468€ in più. <strong>Per il solo deposito i piani sensati sono due: Standard fino a 20.287€, Metal oltre.</strong> Con la fatturazione annuale il passaggio si sposta a 16.964€.
         </p>
 
         <div class="alex-tip">
             <span class="alex-label">🔥 Alex's Tip</span>
             <strong>L'anomalia che non mi aspettavo: Premium costa meno di Metal ma richiede più del doppio
-            del capitale per ripagarsi</strong> — 58.800€ contro 23.144€. Il motivo è che sopra i 6.000€
-            Premium scende all'1,25%, mentre Metal resta al 2,25% fino a 100.000€. Andando a fondo è venuto
+            del capitale per ripagarsi</strong> — 52.800€ contro 20.287€. Il motivo è che sopra i 6.000€ Premium scende all'1,25%, mentre Metal resta al 2,50% su tutto il saldo. Andando a fondo è venuto
             fuori di peggio: <strong>tre piani su cinque non sono la scelta migliore a nessun capitale.</strong>
             Se valuti un piano Revolut <em>per gli interessi</em>, la scelta è solo tra Standard e Metal. Se
             invece lo valuti per assicurazioni, cambio valuta o lounge il ragionamento cambia, e lo trovi
@@ -624,8 +604,7 @@
         </div>
 
         <p>
-            I punti di sorpasso esatti, per chi ha capitali importanti: Revolut Metal supera Trade Republic
-            ordinario da <strong>55.969€</strong>, e la promo al 3% da <strong>78.191€</strong>.
+            E il confronto con Trade Republic? Con i tassi di ottobre 2026 <strong>Revolut Metal non lo supera a nessun capitale</strong>: sopra i 50.000€ entrambi pagano il 2,50% lordo, ma su Metal resta il canone da 191,88€ l'anno. Nella versione di agosto di questa pagina indicavo un sorpasso da circa 56.000€, calcolato senza gli interessi BCE sull'eccedenza di Trade Republic.
         </p>
 
         <!-- DEPOSITO O FONDO -->
@@ -712,27 +691,22 @@
         <h2>E Wise? Più competitivo di quanto pensassi</h2>
         <p>
             Wise l'ho aperto per testare il cambio valuta, non per gli interessi, e mi aspettavo di
-            liquidarlo in due righe. Rifacendo i conti sul dato ufficiale — <strong>2,02%</strong>
-            sull'euro, aggiornato al 5 agosto 2026 — è uscito il contrario.
+            liquidarlo in due righe. Rifacendo i conti sul dato ufficiale — <strong>2,25%</strong> sull'euro, aggiornato al 23 settembre 2026 (era 2,02% ad agosto) — è uscito il contrario.
         </p>
         <p>
-            Quel 2,02% è <em>già al netto</em> della commissione di gestione: restano da togliere la
-            ritenuta del 26% e lo 0,20% di IVAFE, e il netto effettivo si assesta intorno all'<strong>1,29%
-            </strong>, praticamente costante a ogni capitale — perché Wise non ha scaglioni né tetti.
+            Quel 2,25% è <em>già al netto</em> della commissione di gestione: restano da togliere la ritenuta del 26% e lo 0,20% di IVAFE, e il netto effettivo si assesta intorno all'<strong>1,47%</strong>, praticamente costante a ogni capitale — perché Wise non ha scaglioni né tetti.
             Ed è proprio l'assenza di scaglioni a renderlo interessante dove gli altri si spengono:
         </p>
         <ul>
-            <li>✅ <strong>Batte Revolut Standard da 4.000€ in su</strong>, e il distacco cresce: a 50.000€
-                sono 647€ contro 358€</li>
-            <li>✅ <strong>Batte Trade Republic ordinario oltre i 54.500€</strong>, dove il tetto dei
-                50.000€ blocca il rendimento</li>
-            <li>❌ <strong>Non batte mai Revolut Metal né Ultra</strong> ad alti capitali</li>
+            <li>✅ <strong>Batte Revolut Standard da circa 4.600€ in su</strong>, e il distacco cresce: a 50.000€ sono 732€ contro 369€</li>
+            <li>✅ <strong>Batte Revolut Metal fino a circa 58.700€</strong>, perché non ha canone</li>
+            <li>❌ <strong>Non batte mai Trade Republic</strong>, né con la promo né al tasso ordinario</li>
         </ul>
         <p>
             Detto questo, il numero non è tutto: <strong>non è un deposito garantito</strong>, ti costa il
             quadro RW ogni anno, e il tasso di un fondo monetario si muove con il mercato senza che nessuno
             te lo comunichi. Per me resta lo strumento del cambio valuta, con gli interessi come extra —
-            ma se già ce l'hai e ci tieni della liquidità sopra i 4.000€, sta lavorando meglio di quanto
+            ma se già ce l'hai e ci tieni della liquidità sopra i 4.600€, sta lavorando meglio di quanto
             immagini. Il confronto sull'uso quotidiano è
             <a href="/confronti/wise-vs-revolut.html">Wise vs Revolut</a>.
         </p>
@@ -742,8 +716,7 @@
         <p>
             Il <strong>Salvadanaio Remunerato di Satispay</strong> non è un conto deposito: sono quote del
             fondo monetario Amundi Euro Liquidity Select, e Satispay stessa parla di un rendimento
-            annualizzato <em>stimato</em> del 2,37%, al netto dei costi del fondo ma al lordo delle imposte.
-            Applicando la ritenuta del 26% il netto si avvicina a quello di Trade Republic sotto i 50.000€,
+            annualizzato <em>stimato</em> del 2,61% (al 14 settembre 2026), al netto dei costi del fondo ma al lordo delle imposte. Togliendo la ritenuta del 26% e lo 0,20% di bollo il netto è circa l'1,73%: leggermente sopra Trade Republic ordinario fino a circa 28.500€ (dove pesa il bollo fisso) e poco sotto oltre,
             ma resta un investimento in un fondo, non un deposito garantito: lo trovi nel calcolatore sopra
             e nel dettaglio nella <a href="/satispay/salvadanaio.html">guida al Salvadanaio Remunerato</a>.
         </p>
@@ -759,13 +732,9 @@
             <li>✅ <strong>Sotto i 5.000€</strong> — Trade Republic e non ci penso più: sei sotto la soglia
                 del bollo, nessun canone, tasso pieno. Aprire un piano a pagamento per queste cifre è una
                 perdita certa, non un rischio.</li>
-            <li>✅ <strong>Tra 5.000 e 50.000€</strong> — ancora Trade Republic, con un occhio alla fascia
-                5.000-7.300€ di giacenza media dove il bollo morde.</li>
-            <li>✅ <strong>Tra 50.000 e 100.000€</strong> — zona di sorpasso: da circa 56.000€ Revolut Metal
-                rende di più (da 78.000€ se hai la promo 3%). L'alternativa che preferisco è tenere 50.000€
-                su Trade Republic e il resto altrove, così ogni euro lavora invece di fermarsi al tetto.</li>
-            <li>✅ <strong>Oltre i 100.000€</strong> — nessuno dei tre remunera oltre quella soglia, e
-                soprattutto <strong>nessuna garanzia copre oltre i 100.000€ per istituto</strong>. Lì il
+            <li>✅ <strong>Tra 5.000 e 50.000€</strong> — ancora Trade Republic, con un occhio alla fascia 5.000-6.850€ di giacenza media dove il bollo morde.</li>
+            <li>✅ <strong>Tra 50.000 e 100.000€</strong> — Trade Republic resta davanti: 3% sui primi 50.000€ se sei nuovo cliente, tasso BCE sul resto, nessun canone. Revolut Metal ha senso solo se Revolut lo usi già come conto principale e vuoi tenere lì la liquidità.</li>
+            <li>✅ <strong>Oltre i 100.000€</strong> — i tassi continuano a correre (Trade Republic al tasso BCE, Revolut Metal al 2,50%), ma <strong>nessuna garanzia copre oltre i 100.000€ per istituto</strong>. Lì il
                 tema non è più il decimale di rendimento: è dividere il capitale su più istituti e valutare
                 strumenti diversi dalla liquidità a vista.</li>
         </ul>
@@ -774,8 +743,7 @@
         <h2>Domande frequenti</h2>
         <div class="faq">
             <h3>Il 3% di Trade Republic dura per sempre?</h3>
-            <p>No, è un'offerta per nuovi clienti. Il tasso ordinario è il 2%, e come tutti gli altri è
-                variabile: segue le decisioni BCE e può cambiare senza preavviso contrattuale.</p>
+            <p>No, è un'offerta per nuovi clienti. Il tasso ordinario segue quello sui depositi BCE (2,5% da settembre 2026) e, come tutti gli altri, è variabile: può scendere se la BCE taglia i tassi.</p>
 
             <h3>Gli interessi sono garantiti?</h3>
             <p>Il <em>tasso</em> no: è variabile e ancorato ai tassi BCE. La <em>somma</em> sì, fino a
@@ -792,8 +760,7 @@
                 senso solo se quei soldi ti servono davvero fermi per tutta la durata.</p>
 
             <h3>Perché il rendimento effettivo cala se aumento il capitale?</h3>
-            <p>Perché i tassi sono a scaglioni e i tetti sono bassi: su Revolut Standard il 2% vale fino a
-                3.000€ e poi scende all'1%, su Trade Republic il tasso si ferma a 50.000€. In percentuale
+            <p>Perché i tassi sono a scaglioni e i tetti sono bassi: su Revolut Standard il 2,50% vale fino a 3.000€ e poi scende all'1%, su Trade Republic il 3% si ferma a 50.000€ e oltre si scende al tasso BCE. In percentuale
                 sul totale, più metti e meno rende.</p>
         </div>
 
@@ -824,8 +791,7 @@
             <p style="margin-top:15px;font-size:14px;color:#888;">
                 🌿 Sono link referral: se apri un conto da qui ricevo un piccolo compenso, senza alcun costo
                 aggiuntivo per te. Li ho messi entrambi proprio perché in questa pagina non c'è un unico
-                vincitore: sotto i 50.000€ conviene Trade Republic, sopra i 56.000€ Revolut Metal. La
-                classifica esce dai numeri delle tabelle, non dai link.
+                vincitore assoluto: per la liquidità ferma oggi esce davanti Trade Republic, mentre Revolut resta il conto più completo per l'uso quotidiano (e lì Metal batte Standard sopra i 20.300€ circa). La classifica esce dai numeri delle tabelle, non dai link.
                 <a href="/trasparenza.html">Leggi la pagina Trasparenza →</a>
             </p>
         </div>
@@ -835,8 +801,7 @@
             <h3>Informazioni su questa pagina</h3>
             <p>
                 Uso Revolut come conto principale da anni e Trade Republic dal 16 luglio 2026; Wise l'ho
-                aperto di recente per testare il cambio valuta. Tassi e condizioni sono verificati il 12
-                agosto 2026 sui documenti ufficiali: foglio informativo del deposito senza vincoli e listino
+                aperto di recente per testare il cambio valuta. Tassi e condizioni sono verificati il 12 agosto 2026 e riverificati il 26 ottobre 2026 sui documenti ufficiali: foglio informativo del deposito senza vincoli e listino
                 piani di Revolut, pagine informative e centro assistenza di Trade Republic, centro
                 assistenza Wise, tassi di riferimento BCE.
             </p>

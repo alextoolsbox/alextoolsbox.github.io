@@ -3,13 +3,13 @@
     "valore": "3%",
     "tipo": "ufficiale",
     "fonte": "Pagina tariffe ufficiale Trade Republic (traderepublic.com/it-it/interesse)",
-    "verificato": "2026-07-16"
+    "verificato": "2026-10-26"
   },
   "trade-republic-soglia-tasso": {
     "valore": "50.000€",
     "tipo": "ufficiale",
     "fonte": "Pagina tariffe ufficiale Trade Republic",
-    "verificato": "2026-07-16"
+    "verificato": "2026-10-26"
   },
   "fondo-garanzia-depositi": {
     "valore": "100.000€",
@@ -21,19 +21,19 @@
     "valore": "500€",
     "tipo": "ufficiale",
     "fonte": "App Wise, programma inviti",
-    "verificato": "2026-07-15"
+    "verificato": "2026-10-26"
   },
   "wise-bonus-invitante": {
     "valore": "20€",
     "tipo": "ufficiale",
     "fonte": "App Wise, programma inviti",
-    "verificato": "2026-07-15"
+    "verificato": "2026-10-26"
   },
   "wise-interesse-liquidita": {
-    "valore": "2,02%",
+    "valore": "2,25%",
     "tipo": "ufficiale",
-    "fonte": "App/sito Wise (dato già al netto della commissione di gestione dello 0,26%)",
-    "verificato": "2026-08-05"
+    "fonte": "Sito Wise, pagina Interessi (wise.com/it/interest, tasso a 7 giorni al 23/09/2026, già al netto della commissione annuale dello 0,26%)",
+    "verificato": "2026-10-26"
   },
   "satispay-bonus-invitante": {
     "valore": "30€",
@@ -45,7 +45,7 @@
     "valore": "55€",
     "tipo": "ufficiale",
     "fonte": "Foglio informativo del conto corrente e dei piani a pagamento, revolut.com/it-IT/legal/italy-information-sheet/ (versione 07/05/2026)",
-    "verificato": "2026-08-22"
+    "verificato": "2026-10-26"
   },
   "revolut-ultra-canone-annuale": {
     "valore": "540€",
@@ -54,16 +54,16 @@
     "verificato": "2026-08-22"
   },
   "revolut-ultra-tasso": {
-    "valore": "2,5%",
+    "valore": "2,75%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 100.000€, 2% oltre; versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026; fino a 100.000€, 2,50% oltre)",
+    "verificato": "2026-10-26"
   },
   "revolut-metal-canone-mensile": {
     "valore": "15,99€",
     "tipo": "ufficiale",
     "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
-    "verificato": "2026-08-22"
+    "verificato": "2026-10-26"
   },
   "revolut-metal-canone-annuale": {
     "valore": "155€",
@@ -72,40 +72,40 @@
     "verificato": "2026-08-22"
   },
   "revolut-metal-tasso": {
-    "valore": "2,25%",
+    "valore": "2,50%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 100.000€, 2% oltre; versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026; tasso unico su tutto il saldo)",
+    "verificato": "2026-10-26"
   },
   "revolut-standard-tasso": {
-    "valore": "2%",
+    "valore": "2,50%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026; fino a 3.000€, 1% oltre)",
+    "verificato": "2026-10-26"
   },
   "revolut-standard-soglia": {
     "valore": "3.000€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026)",
+    "verificato": "2026-10-26"
   },
   "revolut-premium-tasso": {
-    "valore": "2%",
+    "valore": "2,50%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 6.000€, 1,25% oltre; versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026; fino a 6.000€, 1,25% oltre)",
+    "verificato": "2026-10-26"
   },
   "revolut-premium-soglia": {
     "valore": "6.000€",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026)",
+    "verificato": "2026-10-26"
   },
   "revolut-premium-canone-mensile": {
     "valore": "9,99€",
     "tipo": "ufficiale",
     "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
-    "verificato": "2026-08-22"
+    "verificato": "2026-10-26"
   },
   "revolut-premium-canone-annuale": {
     "valore": "100€",
@@ -114,16 +114,16 @@
     "verificato": "2026-08-22"
   },
   "revolut-plus-tasso": {
-    "valore": "2%",
+    "valore": "2,50%",
     "tipo": "ufficiale",
-    "fonte": "Foglio Informativo del Conto deposito senza vincoli (fino a 3.000€, 1% oltre — stessi scaglioni di Standard; versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "fonte": "Foglio Informativo del Conto deposito senza vincoli (versione aggiornata 15/10/2026; fino a 3.000€, 1% oltre — stessi scaglioni di Standard)",
+    "verificato": "2026-10-26"
   },
   "revolut-plus-canone-mensile": {
     "valore": "3,99€",
     "tipo": "ufficiale",
     "fonte": "Foglio informativo del conto corrente e dei piani a pagamento (versione 07/05/2026)",
-    "verificato": "2026-08-22"
+    "verificato": "2026-10-26"
   },
   "revolut-plus-canone-annuale": {
     "valore": "40€",
@@ -135,13 +135,13 @@
     "valore": "5.000.000€",
     "tipo": "ufficiale",
     "fonte": "Foglio Informativo del Conto deposito senza vincoli, tetto massimo depositabile per depositante (versione aggiornata 20/08/2026)",
-    "verificato": "2026-08-22"
+    "verificato": "2026-10-26"
   },
   "wise-bonus-soglia-condizione": {
     "valore": "250€",
     "tipo": "ufficiale",
     "fonte": "App Wise, programma inviti (soglia di pagamenti/trasferimenti per sbloccare il bonus di chi invita)",
-    "verificato": "2026-07-15"
+    "verificato": "2026-10-26"
   },
   "earnapp-guadagno-mensile": {
     "valore": "8$/mese",
@@ -195,19 +195,19 @@
     "valore": "0€",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale HYPE",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "hype-piano-next-canone": {
     "valore": "2,90€/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale HYPE",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "hype-piano-premium-canone": {
     "valore": "9,90€/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale HYPE",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "hype-piano-business-canone": {
     "valore": "2,90€/mese",
@@ -219,54 +219,54 @@
     "valore": "0 €/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale N26",
-    "verificato": "2026-08-26"
+    "verificato": "2026-10-26"
   },
   "n26-piano-smart-canone": {
     "valore": "4,90 €/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale N26",
-    "verificato": "2026-08-26"
+    "verificato": "2026-10-26"
   },
   "n26-piano-go-canone": {
     "valore": "9,90 €/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale N26",
-    "verificato": "2026-08-26"
+    "verificato": "2026-10-26"
   },
   "n26-piano-metal-canone": {
     "valore": "16,90 €/mese",
     "tipo": "ufficiale",
     "fonte": "Pagina piani ufficiale N26",
-    "verificato": "2026-08-26"
+    "verificato": "2026-10-26"
   },
   "n26-instant-savings-standard-tasso": {
     "valore": "0,30%",
     "tipo": "ufficiale",
     "fonte": "N26 Support EU — N26 Instant Savings",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "n26-instant-savings-smart-tasso": {
     "valore": "0,30%",
     "tipo": "ufficiale",
     "fonte": "N26 Support EU — N26 Instant Savings",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "n26-instant-savings-go-tasso": {
     "valore": "0,50%",
     "tipo": "ufficiale",
     "fonte": "N26 Support EU — N26 Instant Savings",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "n26-instant-savings-metal-tasso": {
     "valore": "1,50%",
     "tipo": "ufficiale",
     "fonte": "N26 Support EU — N26 Instant Savings",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   },
   "n26-instant-savings-metal-promo-tasso": {
     "valore": "2,25%",
     "tipo": "ufficiale",
     "fonte": "N26 Support EU — N26 Instant Savings",
-    "verificato": "2026-08-27"
+    "verificato": "2026-10-26"
   }
 }
