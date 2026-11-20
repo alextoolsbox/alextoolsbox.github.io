@@ -30,10 +30,10 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Interessi sulla liquidità 2026: quanto rendono davvero i soldi fermi",
-        "description": "Confronto sul rendimento netto reale della liquidità tra Trade Republic, Revolut e Wise, al netto di ritenuta del 26%, imposta di bollo, canone del piano e commissioni di gestione. Dati verificati a ottobre 2026.",
+        "description": "Confronto sul rendimento netto reale della liquidità tra Trade Republic, Revolut e Wise, al netto di ritenuta del 26%, imposta di bollo, canone del piano e commissioni di gestione. Dati verificati a novembre 2026.",
         "author": { "@type": "Person", "name": "Alex" }, "publisher": { "@type": "Organization", "name": "AlexToolsBox" },
         "datePublished": "2026-08-12",
-        "dateModified": "2026-10-26"
+        "dateModified": "2026-11-20"
     }
     </script>
 
@@ -48,7 +48,7 @@
                 "name": "Quanto rendono davvero 10.000 euro fermi sul conto?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Su Trade Republic con il 3% per nuovi clienti sono circa 188€ netti all'anno, con il tasso ordinario (BCE, 2,5%) circa 151€. Su Revolut Standard circa 73€. I numeri sono già al netto della ritenuta del 26% e dell'imposta di bollo da 34,20€. Il tasso lordo pubblicizzato non è quello che incassi."
+                    "text": "Su Trade Republic, aprendo il conto a dicembre 2026 con il 4% per nuovi clienti fino al 1° marzo 2027 e poi il 2,5%, sono circa 178€ netti nel primo anno; con il tasso ordinario (2,5%) circa 151€. Su Revolut Standard circa 73€. I numeri sono già al netto della ritenuta del 26% e dell'imposta di bollo da 34,20€. Il tasso lordo pubblicizzato non è quello che incassi."
                 }
             },
             {
@@ -278,7 +278,7 @@
     <div class="hero">
         <h1>Interessi sulla liquidità: quanto rendono davvero i soldi fermi</h1>
         <p class="hero-description">
-            Trade Republic dice 3%, Revolut Ultra dice 2,75%, Wise dice 2,25%. Nessuno di questi numeri è
+            Trade Republic dice 4%, Revolut Ultra dice 2,75%, Wise dice 2,32%. Nessuno di questi numeri è
             quello che ti arriva sul conto, e non sono nemmeno confrontabili tra loro. Ho rifatto i conti
             sui miei conti veri, togliendo tutto quello che di solito non viene scritto.
         </p>
@@ -293,7 +293,7 @@
                 Tra il tasso in pubblicità e quello che incassi ci sono quattro voci: <strong>ritenuta del
                 26%</strong>, <strong><a href="/guide/imposta-di-bollo-conto-corrente/">imposta di bollo</a></strong>, <strong>canone del piano</strong> e
                 <strong>commissioni di gestione</strong>. Su alcuni importi si mangiano più della metà del
-                rendimento. Il risultato, con i tassi di ottobre 2026: <strong>Trade Republic</strong> esce davanti a ogni capitale, perché non ha canone, paga il 3% sui primi 50.000€ (nuovi clienti) e il tasso BCE del 2,5% oltre. <strong>Revolut Metal</strong> ha senso solo rispetto a Revolut Standard, da circa 20.300€ in su. <strong>Wise</strong> è più competitivo di quanto sembri — batte Revolut Standard già da 4.600€ circa — ma paga il prezzo di non essere un deposito garantito.
+                rendimento. Il risultato, con i tassi di novembre 2026: <strong>Trade Republic</strong> resta il riferimento tra i conti a vista senza canone — 4% sui primi 20.000€ per i nuovi clienti fino al 1° marzo 2027, poi 2,5% su tutto — con un'eccezione: tra circa 5.000 e 9.000€ il bollo fisso da 34,20€ lo fa scavalcare dal Salvadanaio Satispay, che però è un fondo, non un deposito. <strong>Revolut Metal</strong> ha senso solo rispetto a Revolut Standard, da circa 20.300€ in su. <strong>Wise</strong> è più competitivo di quanto sembri — batte Revolut Standard già da 4.300€ circa — ma paga il prezzo di non essere un deposito garantito.
             </p>
         </div>
 
@@ -309,7 +309,7 @@
             <input type="number" id="mcAmount" min="0.01" step="100" placeholder="Es. 20000" inputmode="decimal">
             <label for="mcTrStatus">Condizione Trade Republic</label>
             <select id="mcTrStatus">
-                <option value="new">Nuovo cliente: 3% fino a 50.000€</option>
+                <option value="new">Nuovo cliente: 4% fino a 20.000€ fino al 01/03/2027, poi 2,5%</option>
                 <option value="existing">Cliente esistente senza promo: 2,5% (tasso BCE)</option>
             </select>
             <label for="mcRevolutPlan">Piano Revolut</label>
@@ -329,7 +329,7 @@
             Republic, oppure scegli "Confronta tutti i piani" per vederli tutti insieme. Stima
             indicativa. Trade Republic e Revolut: ritenuta 26% e bollo 34,20€/anno se il capitale
             supera 5.000€, calcolati come nelle tabelle sotto. Wise: tasso netto composito già pubblicato
-            in questa pagina (~1,47%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento annualizzato stimato 2,61% (14/09/2026) al netto della ritenuta 26% e del bollo dello 0,20% indicato da Satispay (~1,73% netto). Trade Republic: 3% (o 2,5% ordinario) fino a 50.000€ e tasso BCE 2,5% sull'eccedenza, come indica la FAQ ufficiale. N26 Instant Savings non è disponibile con IBAN
+            in questa pagina (~1,52%), costante a ogni capitale. Satispay Salvadanaio Remunerato: rendimento annualizzato stimato 2,62% (02/11/2026) al netto della ritenuta 26% e del bollo dello 0,20% indicato da Satispay (~1,74% netto). Trade Republic nuovo cliente: 4% sui primi 20.000€ per i giorni che mancano da oggi al 1° marzo 2027, poi 2,5%; 2,5% sull'eccedenza; il calcolo copre 12 mesi a partire da oggi. N26 Instant Savings non è disponibile con IBAN
             italiano e HYPE non paga interessi sulla liquidità: compaiono in tabella per completezza, non nel
             calcolo. I tassi cambiano nel tempo: verifica sempre le condizioni ufficiali prima di decidere.
         </p>
@@ -345,9 +345,11 @@
             }
             var TAX = 0.26, BOLLO_CC = 34.20, BOLLO_SOGLIA = 5000;
             function bolloCC(cap) { return cap > BOLLO_SOGLIA ? BOLLO_CC : 0; }
-            var trCap = Math.min(amount, 50000);
-            var trRate = trStatus === "new" ? 0.03 : 0.025;
-            var trLordo = trCap * trRate + Math.max(0, amount - 50000) * 0.025;
+            var oggi = new Date(); oggi.setHours(0, 0, 0, 0);
+            var giorniPromo = Math.max(0, Math.min(365, Math.round((new Date(2027, 2, 1) - oggi) / 86400000)));
+            var trCap = Math.min(amount, 20000);
+            var trRate = trStatus === "new" ? (0.04 * giorniPromo + 0.025 * (365 - giorniPromo)) / 365 : 0.025;
+            var trLordo = trCap * trRate + Math.max(0, amount - 20000) * 0.025;
             var trNetto = trLordo * (1 - TAX) - bolloCC(amount);
             var piani = [
                 { chiave: "standard", nome: "Standard", soglia: 3000, r1: 0.025, r2: 0.01, canoneMese: 0 },
@@ -371,8 +373,8 @@
                 var pianoScelto = piani.filter(function(p) { return p.chiave === revolutPlan; })[0] || piani[0];
                 revolutRisultati = [calcolaPiano(pianoScelto)];
             }
-            var wiseNetto = amount * 0.01465;
-            var satispayNetto = amount * (0.0261 * (1 - TAX) - 0.002);
+            var wiseNetto = amount * 0.01517;
+            var satispayNetto = amount * (0.0262 * (1 - TAX) - 0.002);
             var righe = [
                 { nome: trStatus === "new" ? "Trade Republic (nuovo cliente)" : "Trade Republic (esistente)", netto: trNetto }
             ].concat(revolutRisultati).concat([
@@ -420,9 +422,9 @@
         </div>
 
         <!-- CONTESTO -->
-        <h2>Dove sono i tassi a ottobre 2026</h2>
+        <h2>Dove sono i tassi a novembre 2026</h2>
         <p>
-            Il tasso sui depositi della BCE è al <strong>2,50%</strong>, in vigore dal 16 settembre 2026 dopo il rialzo di 25 punti base deciso il 10 settembre: il secondo del 2026, dopo quello dell'11 giugno (dal 2,00% al 2,25%). La prossima riunione è il <strong>29 ottobre 2026</strong>. Dopo il rialzo sono saliti anche i tassi sulla liquidità: Revolut ha alzato tutti i piani (Foglio Informativo del 15 ottobre), Wise Interessi è passato da 2,02% a 2,25%, il Salvadanaio Satispay da 2,37% a 2,61%.
+            Il tasso sui depositi della BCE è al <strong>2,50%</strong>, in vigore dal 16 settembre 2026 dopo il rialzo di 25 punti base deciso il 10 settembre: il secondo del 2026, dopo quello dell'11 giugno (dal 2,00% al 2,25%). Il <strong>29 ottobre</strong> la BCE ha lasciato i tassi invariati; la prossima riunione è il <strong>17 dicembre 2026</strong>, e una parte del mercato si aspetta un altro rialzo. Dopo il rialzo di settembre sono saliti anche i tassi sulla liquidità: Revolut ha alzato tutti i piani (Foglio Informativo del 15 ottobre, confermato a novembre), Wise Interessi è passato da 2,02% ad agosto a 2,32% (10 novembre), il Salvadanaio Satispay da 2,37% a 2,62%. Il 13 novembre Trade Republic ha cambiato l'offerta per i nuovi clienti: dal 3% fino a 50.000€ al <strong>4% fino a 20.000€, valido fino al 1° marzo 2027</strong>.
         </p>
         <p>
             Perché conta: i tassi che ti offrono sulla liquidità sono <strong>variabili</strong> e agganciati
@@ -440,8 +442,8 @@
 
         <h3>1. Ritenuta del 26%</h3>
         <p>
-            Sugli interessi si paga il 26%, per tutti e tre, senza eccezioni. Un 3% lordo diventa
-            <strong>2,22% netto</strong> prima ancora di contare il resto.
+            Sugli interessi si paga il 26%, per tutti e tre, senza eccezioni. Un 4% lordo diventa
+            <strong>2,96% netto</strong> prima ancora di contare il resto.
         </p>
 
         <h3>2. Imposta di bollo: 34,20€, ma solo sopra i 5.000€</h3>
@@ -475,7 +477,7 @@
             Riguarda solo Wise: <strong>0,26% annuo</strong> sugli euro, perché il prodotto è un fondo e non
             un deposito. Qui però c'è una differenza che è facilissimo sbagliare: <strong>Wise pubblica il
             tasso già al netto della sua commissione</strong>, gli altri pubblicano il lordo. Mettere il
-            2,25% di Wise nella stessa colonna del 3% di Trade Republic significa confrontare due numeri
+            2,32% di Wise nella stessa colonna del 4% di Trade Republic significa confrontare due numeri
             che non sono la stessa cosa — è l'errore che ho evitato rifacendo tutti i conti sul netto
             finale.
         </p>
@@ -490,38 +492,38 @@
         <table class="plans-table">
             <tr>
                 <th>Capitale fermo</th>
-                <th>💹 Trade Republic<br><small>3% nuovi clienti</small></th>
+                <th>💹 Trade Republic<br><small>nuovo cliente: 4% fino al 01/03/2027, poi 2,5%</small></th>
                 <th>💹 Trade Republic<br><small>2,5% ordinario (BCE)</small></th>
                 <th>💳 Revolut Standard<br><small>gratuito</small></th>
             </tr>
-            <tr><td><strong>1.000€</strong></td><td>22€</td><td>18€</td><td>18€</td></tr>
-            <tr><td><strong>3.000€</strong></td><td>67€</td><td>56€</td><td>56€</td></tr>
-            <tr><td><strong>5.000€</strong></td><td>111€</td><td>92€</td><td>70€</td></tr>
-            <tr><td><strong>10.000€</strong></td><td>188€</td><td>151€</td><td>73€</td></tr>
-            <tr><td><strong>20.000€</strong></td><td>410€</td><td>336€</td><td>147€</td></tr>
-            <tr><td><strong>30.000€</strong></td><td>632€</td><td>521€</td><td>221€</td></tr>
-            <tr><td><strong>50.000€</strong></td><td>1.076€</td><td>891€</td><td>369€</td></tr>
-            <tr><td><strong>75.000€</strong></td><td>1.538€</td><td>1.353€</td><td>554€</td></tr>
-            <tr><td><strong>100.000€</strong></td><td>2.001€</td><td>1.816€</td><td>739€</td></tr>
+            <tr><td><strong>1.000€</strong></td><td>21€</td><td>18€</td><td>18€</td></tr>
+            <tr><td><strong>3.000€</strong></td><td>64€</td><td>56€</td><td>56€</td></tr>
+            <tr><td><strong>5.000€</strong></td><td>106€</td><td>92€</td><td>70€</td></tr>
+            <tr><td><strong>10.000€</strong></td><td>178€</td><td>151€</td><td>73€</td></tr>
+            <tr><td><strong>20.000€</strong></td><td>391€</td><td>336€</td><td>147€</td></tr>
+            <tr><td><strong>30.000€</strong></td><td>576€</td><td>521€</td><td>221€</td></tr>
+            <tr><td><strong>50.000€</strong></td><td>946€</td><td>891€</td><td>369€</td></tr>
+            <tr><td><strong>75.000€</strong></td><td>1.408€</td><td>1.353€</td><td>554€</td></tr>
+            <tr><td><strong>100.000€</strong></td><td>1.871€</td><td>1.816€</td><td>739€</td></tr>
         </table>
         </div>
         <p style="font-size:14px;color:#888;">
-            Ipotesi: capitale fermo 12 mesi, tassi costanti, giacenza media pari al capitale. Trade Republic: 3% (nuovi clienti) o 2,5% fino a 50.000€ e tasso BCE 2,5% oltre, come da FAQ ufficiale. Tassi verificati sui documenti ufficiali il 26 ottobre 2026. Dettagli Revolut nella
+            Ipotesi: capitale fermo 12 mesi, tassi costanti, giacenza media pari al capitale. Trade Republic nuovo cliente: conto aperto il 1° dicembre 2026, 4% sui primi 20.000€ per i 90 giorni fino al 1° marzo 2027, poi 2,5%; 2,5% sull'eccedenza. Tassi verificati sui documenti ufficiali il 20 novembre 2026. Dettagli Revolut nella
             <a href="/revolut/piani.html">guida piani</a> e nella
             <a href="/revolut/deposito-senza-vincoli.html">guida al deposito senza vincoli</a>; dettagli
             Trade Republic nella <a href="/trade-republic/interessi-liquidita.html">guida interessi</a>.
         </p>
 
         <p>
-            Due cose saltano all'occhio. La prima: <strong>Trade Republic domina</strong>, e non è nemmeno vicino — a 30.000€ rende più del doppio di Revolut Standard. La seconda: oltre i 50.000€ il 3% promozionale finisce, ma la colonna <strong>non si blocca</strong>: sull'eccedenza Trade Republic riconosce il tasso BCE (2,5%). Nella prima versione di questa pagina avevo considerato zero interessi oltre i 50.000€: la FAQ ufficiale dice il contrario, e questo cambia le conclusioni più sotto.
+            Due cose saltano all'occhio. La prima: <strong>Trade Republic domina</strong>, e non è nemmeno vicino — a 30.000€ rende più del doppio di Revolut Standard, anche al solo tasso ordinario. La seconda: la nuova promo al 4% pesa meno di quanto sembri. Copre solo i primi 20.000€ e scade il 1° marzo 2027, quindi chi apre a dicembre ne gode per tre mesi: sul primo anno vale circa 27€ netti in più ogni 10.000€ rispetto al 2,5%, e al massimo 55€ in tutto. Con la vecchia offerta (3% fino a 50.000€, senza scadenza) un nuovo cliente da 50.000€ portava a casa circa 1.076€ netti l'anno; oggi sono circa 946€.
         </p>
 
         <div class="alex-tip">
             <span class="alex-label">💡 Alex's Tip</span>
-            <em>"Il 3% dei nuovi clienti è la voce che fa la differenza più grande di tutte, molto più della
-            scelta tra un conto e l'altro. Se stai aprendo adesso, quella finestra vale il doppio di
-            qualsiasi ottimizzazione tu possa fare dopo. Io Trade Republic l'ho aperto a luglio proprio per
-            questo."</em>
+            <em>"Con il 3% fino a 50.000€ la promo per i nuovi clienti era la voce più pesante di tutte. Il nuovo 4%
+            è più vistoso ma vale meno: tre mesi su 20.000€. Non aprirei Trade Republic per la promo: lo aprirei per
+            il 2,5% ordinario senza canone, che resta il miglior tasso a vista di questa pagina. Io l'ho aperto a luglio e
+            il ragionamento regge anche adesso."</em>
         </div>
 
         <!-- TABELLA 2 -->
@@ -604,7 +606,7 @@
         </div>
 
         <p>
-            E il confronto con Trade Republic? Con i tassi di ottobre 2026 <strong>Revolut Metal non lo supera a nessun capitale</strong>: sopra i 50.000€ entrambi pagano il 2,50% lordo, ma su Metal resta il canone da 191,88€ l'anno. Nella versione di agosto di questa pagina indicavo un sorpasso da circa 56.000€, calcolato senza gli interessi BCE sull'eccedenza di Trade Republic.
+            E il confronto con Trade Republic? Con i tassi di novembre 2026 <strong>Revolut Metal non lo supera a nessun capitale</strong>: oltre la promo entrambi pagano il 2,50% lordo, ma su Metal resta il canone da 191,88€ l'anno. Nella versione di agosto di questa pagina indicavo un sorpasso da circa 56.000€, calcolato senza gli interessi BCE sull'eccedenza di Trade Republic.
         </p>
 
         <!-- DEPOSITO O FONDO -->
@@ -691,22 +693,22 @@
         <h2>E Wise? Più competitivo di quanto pensassi</h2>
         <p>
             Wise l'ho aperto per testare il cambio valuta, non per gli interessi, e mi aspettavo di
-            liquidarlo in due righe. Rifacendo i conti sul dato ufficiale — <strong>2,25%</strong> sull'euro, aggiornato al 23 settembre 2026 (era 2,02% ad agosto) — è uscito il contrario.
+            liquidarlo in due righe. Rifacendo i conti sul dato ufficiale — <strong>2,32%</strong> sull'euro, aggiornato al 10 novembre 2026 (era 2,02% ad agosto, 2,25% a settembre) — è uscito il contrario.
         </p>
         <p>
-            Quel 2,25% è <em>già al netto</em> della commissione di gestione: restano da togliere la ritenuta del 26% e lo 0,20% di IVAFE, e il netto effettivo si assesta intorno all'<strong>1,47%</strong>, praticamente costante a ogni capitale — perché Wise non ha scaglioni né tetti.
+            Quel 2,32% è <em>già al netto</em> della commissione di gestione: restano da togliere la ritenuta del 26% e lo 0,20% di IVAFE, e il netto effettivo si assesta intorno all'<strong>1,52%</strong>, praticamente costante a ogni capitale — perché Wise non ha scaglioni né tetti.
             Ed è proprio l'assenza di scaglioni a renderlo interessante dove gli altri si spengono:
         </p>
         <ul>
-            <li>✅ <strong>Batte Revolut Standard da circa 4.600€ in su</strong>, e il distacco cresce: a 50.000€ sono 732€ contro 369€</li>
-            <li>✅ <strong>Batte Revolut Metal fino a circa 58.700€</strong>, perché non ha canone</li>
-            <li>❌ <strong>Non batte mai Trade Republic</strong>, né con la promo né al tasso ordinario</li>
+            <li>✅ <strong>Batte Revolut Standard da circa 4.300€ in su</strong>, e il distacco cresce: a 50.000€ sono 758€ contro 369€</li>
+            <li>✅ <strong>Batte Revolut Metal fino a circa 67.900€</strong>, perché non ha canone</li>
+            <li>⚖️ <strong>Batte Trade Republic al tasso ordinario solo tra circa 5.000 e 10.300€</strong>, dove pesa il bollo fisso da 34,20€; non batte mai Trade Republic con la promo per i nuovi clienti</li>
         </ul>
         <p>
             Detto questo, il numero non è tutto: <strong>non è un deposito garantito</strong>, ti costa il
             quadro RW ogni anno, e il tasso di un fondo monetario si muove con il mercato senza che nessuno
             te lo comunichi. Per me resta lo strumento del cambio valuta, con gli interessi come extra —
-            ma se già ce l'hai e ci tieni della liquidità sopra i 4.600€, sta lavorando meglio di quanto
+            ma se già ce l'hai e ci tieni della liquidità sopra i 4.300€, sta lavorando meglio di quanto
             immagini. Il confronto sull'uso quotidiano è
             <a href="/confronti/wise-vs-revolut.html">Wise vs Revolut</a>.
         </p>
@@ -716,7 +718,7 @@
         <p>
             Il <strong>Salvadanaio Remunerato di Satispay</strong> non è un conto deposito: sono quote del
             fondo monetario Amundi Euro Liquidity Select, e Satispay stessa parla di un rendimento
-            annualizzato <em>stimato</em> del 2,61% (al 14 settembre 2026), al netto dei costi del fondo ma al lordo delle imposte. Togliendo la ritenuta del 26% e lo 0,20% di bollo il netto è circa l'1,73%: leggermente sopra Trade Republic ordinario fino a circa 28.500€ (dove pesa il bollo fisso) e poco sotto oltre,
+            annualizzato <em>stimato</em> del 2,62% (al 2 novembre 2026), al netto dei costi del fondo ma al lordo delle imposte. Togliendo la ritenuta del 26% e lo 0,20% di bollo il netto è circa l'1,74%: sopra Trade Republic ordinario tra circa 5.000 e 30.800€ (dove pesa il bollo fisso), sopra Trade Republic con la promo nuovi clienti solo tra 5.000 e 8.900€ circa, e sotto in tutti gli altri casi,
             ma resta un investimento in un fondo, non un deposito garantito: lo trovi nel calcolatore sopra
             e nel dettaglio nella <a href="/satispay/salvadanaio.html">guida al Salvadanaio Remunerato</a>.
         </p>
@@ -724,6 +726,9 @@
             <strong>N26 Instant Savings</strong> esiste, ma richiede un IBAN tedesco: con l'IBAN italiano che
             N26 assegna in Italia non è attivabile, quindi non entra nel confronto. <strong>HYPE</strong> non
             remunera la liquidità su nessuno dei suoi piani: zero interessi, a prescindere dal capitale.
+        </p>
+        <p>
+            Fuori da questo confronto ma da tenere d'occhio: <strong>ING Conto Arancio</strong> è un conto deposito non vincolato, con tasso base dello 0,20% lordo. Per i nuovi clienti che aprono entro il 20 dicembre 2026 e accreditano almeno 1.000€ al mese c'è il <strong>4% lordo per 12 mesi fino a 200.000€</strong>: circa 2,76% netto dopo ritenuta e bollo dello 0,20%, il rendimento più alto del momento, ma solo per un anno e solo con lo stipendio in ING. Dettagli nella <a href="/ing/conto-arancio.html">guida al Conto Arancio</a>.
         </p>
 
         <!-- COSA SCEGLIEREI -->
@@ -733,7 +738,7 @@
                 del bollo, nessun canone, tasso pieno. Aprire un piano a pagamento per queste cifre è una
                 perdita certa, non un rischio.</li>
             <li>✅ <strong>Tra 5.000 e 50.000€</strong> — ancora Trade Republic, con un occhio alla fascia 5.000-6.850€ di giacenza media dove il bollo morde.</li>
-            <li>✅ <strong>Tra 50.000 e 100.000€</strong> — Trade Republic resta davanti: 3% sui primi 50.000€ se sei nuovo cliente, tasso BCE sul resto, nessun canone. Revolut Metal ha senso solo se Revolut lo usi già come conto principale e vuoi tenere lì la liquidità.</li>
+            <li>✅ <strong>Tra 50.000 e 100.000€</strong> — Trade Republic resta davanti: 2,5% su tutto (più il 4% sui primi 20.000€ fino a marzo 2027 se sei nuovo cliente), nessun canone. Revolut Metal ha senso solo se Revolut lo usi già come conto principale e vuoi tenere lì la liquidità.</li>
             <li>✅ <strong>Oltre i 100.000€</strong> — i tassi continuano a correre (Trade Republic al tasso BCE, Revolut Metal al 2,50%), ma <strong>nessuna garanzia copre oltre i 100.000€ per istituto</strong>. Lì il
                 tema non è più il decimale di rendimento: è dividere il capitale su più istituti e valutare
                 strumenti diversi dalla liquidità a vista.</li>
@@ -742,8 +747,8 @@
         <!-- FAQ -->
         <h2>Domande frequenti</h2>
         <div class="faq">
-            <h3>Il 3% di Trade Republic dura per sempre?</h3>
-            <p>No, è un'offerta per nuovi clienti. Il tasso ordinario segue quello sui depositi BCE (2,5% da settembre 2026) e, come tutti gli altri, è variabile: può scendere se la BCE taglia i tassi.</p>
+            <h3>Il 4% di Trade Republic dura per sempre?</h3>
+            <p>No, è un'offerta per nuovi clienti sui primi 20.000€, valida fino al 1° marzo 2027. Il tasso ordinario oggi è il 2,5%, come il tasso sui depositi BCE, e come tutti gli altri è variabile: sale o scende con le decisioni della BCE.</p>
 
             <h3>Gli interessi sono garantiti?</h3>
             <p>Il <em>tasso</em> no: è variabile e ancorato ai tassi BCE. La <em>somma</em> sì, fino a
@@ -760,7 +765,7 @@
                 senso solo se quei soldi ti servono davvero fermi per tutta la durata.</p>
 
             <h3>Perché il rendimento effettivo cala se aumento il capitale?</h3>
-            <p>Perché i tassi sono a scaglioni e i tetti sono bassi: su Revolut Standard il 2,50% vale fino a 3.000€ e poi scende all'1%, su Trade Republic il 3% si ferma a 50.000€ e oltre si scende al tasso BCE. In percentuale
+            <p>Perché i tassi sono a scaglioni e i tetti sono bassi: su Revolut Standard il 2,50% vale fino a 3.000€ e poi scende all'1%, su Trade Republic il 4% promozionale si ferma a 20.000€ e oltre si scende al 2,5%. In percentuale
                 sul totale, più metti e meno rende.</p>
         </div>
 
@@ -801,7 +806,7 @@
             <h3>Informazioni su questa pagina</h3>
             <p>
                 Uso Revolut come conto principale da anni e Trade Republic dal 16 luglio 2026; Wise l'ho
-                aperto di recente per testare il cambio valuta. Tassi e condizioni sono verificati il 12 agosto 2026 e riverificati il 26 ottobre 2026 sui documenti ufficiali: foglio informativo del deposito senza vincoli e listino
+                aperto di recente per testare il cambio valuta. Tassi e condizioni sono verificati il 12 agosto 2026 e riverificati il 26 ottobre e il 20 novembre 2026 sui documenti ufficiali: foglio informativo del deposito senza vincoli e listino
                 piani di Revolut, pagine informative e centro assistenza di Trade Republic, centro
                 assistenza Wise, tassi di riferimento BCE.
             </p>

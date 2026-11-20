@@ -1,15 +1,15 @@
 {
   "trade-republic-tasso-nuovi-clienti": {
-    "valore": "3%",
+    "valore": "4%",
     "tipo": "ufficiale",
-    "fonte": "Pagina tariffe ufficiale Trade Republic (traderepublic.com/it-it/interesse)",
-    "verificato": "2026-10-26"
+    "fonte": "Pagina tariffe ufficiale Trade Republic (traderepublic.com/it-it/interesse): 4% nuovi clienti fino a 20.000€, valido fino al 01/03/2027",
+    "verificato": "2026-11-20"
   },
   "trade-republic-soglia-tasso": {
-    "valore": "50.000€",
+    "valore": "20.000€",
     "tipo": "ufficiale",
     "fonte": "Pagina tariffe ufficiale Trade Republic",
-    "verificato": "2026-10-26"
+    "verificato": "2026-11-20"
   },
   "fondo-garanzia-depositi": {
     "valore": "100.000€",
@@ -30,10 +30,10 @@
     "verificato": "2026-10-26"
   },
   "wise-interesse-liquidita": {
-    "valore": "2,25%",
+    "valore": "2,32%",
     "tipo": "ufficiale",
-    "fonte": "Sito Wise, pagina Interessi (wise.com/it/interest, tasso a 7 giorni al 23/09/2026, già al netto della commissione annuale dello 0,26%)",
-    "verificato": "2026-10-26"
+    "fonte": "Sito Wise, pagina Interessi (wise.com/it/interest, tasso a 7 giorni al 10/11/2026, già al netto della commissione annuale dello 0,26%)",
+    "verificato": "2026-11-20"
   },
   "satispay-bonus-invitante": {
     "valore": "30€",
